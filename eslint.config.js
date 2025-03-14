@@ -4,6 +4,7 @@ const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 const prettierConfig = require('eslint-config-prettier');
 const eslintPlugingPrettierRecommended = require('eslint-plugin-prettier/recommended');
+const htmlPlugin = require('eslint-plugin-html');
 
 module.exports = tseslint.config(
   {
@@ -58,5 +59,6 @@ module.exports = tseslint.config(
       eslintPlugingPrettierRecommended,
     ],
     rules: {},
+    plugins: { htmlPlugin },
   }
 );
