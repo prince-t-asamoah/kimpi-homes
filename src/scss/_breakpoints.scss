@@ -1,0 +1,15 @@
+$breakpoints: (
+  'mobile': 600px,
+  'tablet': 900px,
+  'desktop': 1200px,
+);
+
+@mixin for-breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}. Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
