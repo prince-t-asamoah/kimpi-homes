@@ -1,0 +1,90 @@
+$base-font-size: 16px;
+
+@function rem($pixels) {
+  @return calc($pixels / 16px) * 1rem;
+}
+
+:root {
+  font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+  font-size: 100%;
+}
+
+body,
+.body {
+  font-size: rem(16px); // 1rem
+  line-height: rem(24px); // 1.5rem
+  font-weight: 400; // Regular
+}
+
+.body-lg {
+  font-size: rem(16px); // 1rem
+  line-height: rem(24px); // 1.5rem
+  font-weight: 500; // Medium
+}
+
+.body-sm {
+  font-size: rem(14px); // 0.875rem
+  line-height: rem(24px); // 1.5rem
+  font-weight: 400; // Regular
+}
+
+h1,
+.h1 {
+  font-size: rem(64px); // 4rem
+  line-height: rem(74px); // 4.625rem
+  font-weight: 700; // Bold
+}
+
+h2,
+.h2 {
+  font-size: rem(56px); // 3.5rem
+  line-height: rem(64px); // 4rem
+  font-weight: 600; // Semi-Bold
+}
+
+h3,
+.h3 {
+  font-size: rem(48px); // 3rem
+  line-height: rem(56px); // 3.5rem
+  font-weight: 600; // Semi-Bold
+}
+
+h4,
+.h4 {
+  font-size: rem(40px); // 2.5rem
+  line-height: rem(48px); // 3rem
+  font-weight: 600; // Semi-Bold
+}
+
+h5,
+.h5 {
+  font-size: rem(32px); // 2rem
+  line-height: rem(40px); // 2.5rem
+  font-weight: 600; // Semi-Bold
+}
+
+h6,
+.h6 {
+  font-size: rem(24px); // 1.5rem
+  line-height: rem(32px); // 2rem
+  font-weight: 600; // Semi-Bold
+}
+
+p,
+.p {
+  font-size: rem(16px); // 1rem
+  line-height: rem(32px); // 2rem
+  font-weight: 400; // Regular
+}
+
+.p-2 {
+  font-size: rem(16px); // 1rem
+  line-height: rem(24px); // 1.5rem
+  font-weight: 400; // Regular
+}
+
+.p-sm {
+  font-size: rem(12px); // 0.75rem
+  line-height: rem(16px); // 1rem
+  font-weight: 400; // Regular
+}
