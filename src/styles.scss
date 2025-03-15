@@ -1,1 +1,6 @@
-@use './scss/main.scss';
+@charset 'utf-8';
+
+@use './scss/reset';
+@use './scss/typography';
+@use './scss/spacing';
+@use './scss/colors';
