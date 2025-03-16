@@ -1,8 +1,9 @@
-@mixin button-lg-filled {
+@mixin button-filled {
   color: white;
   padding: var(--sp-8) var(--sp-10);
   background-color: var(--brand-300);
   font-weight: 700;
+  text-align: center;
   border-radius: 0.25rem;
   &:hover {
     background-color: var(--brand-200);
