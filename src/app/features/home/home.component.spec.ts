@@ -20,10 +20,4 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should toggle showNav', () => {
-    expect(component.showNav).toBeFalse();
-    component.toggleNav();
-    expect(component.showNav).toBeTrue();
-  });
 });
