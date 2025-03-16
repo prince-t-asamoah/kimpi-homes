@@ -35,6 +35,9 @@
             "prerender": true,
             "ssr": {
               "entry": "src/server.ts"
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/scss"]
             }
           },
           "configurations": {
