@@ -25,14 +25,13 @@
 
       .top-right {
         display: flex;
-        gap: var(--sp-5);
+        gap: var(--sp-6);
 
         .search-btn {
-          color: var(--neutral-400);
+          color: var(--neutral-500);
         }
 
         .menu-btn {
-          color: var(--brand-300);
           padding: var(--sp-2);
           width: 1.5rem;
           height: 1.5rem;
@@ -46,21 +45,24 @@
           .bar3 {
             width: 100%;
             height: 0.094rem;
-            background-color: var(--brand-300);
+            background-color: var(--neutral-500);
             transition: 0.4s;
             display: block;
           }
 
           .bar1.active {
             transform: translate(0, 8px) rotate(-45deg);
+            background-color: var(--brand-300);
           }
 
           .bar2.active {
             opacity: 0;
+            background-color: var(--brand-300);
           }
 
           .bar3.active {
             transform: translate(0, -8px) rotate(45deg);
+            background-color: var(--brand-300);
           }
         }
       }
@@ -171,6 +173,7 @@
           transition: all 0.3s ease-in-out;
         }
       }
+
       .login-link {
         @include components.button-filled;
       }
