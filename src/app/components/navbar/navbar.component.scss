@@ -95,9 +95,11 @@
       .login {
         margin: 0 var(--sp-9);
         margin-top: var(--sp-8);
-        
+
         .login-link {
-          @include components.button-lg-filled;
+          @include components.button-filled;
+          padding-top: var(--sp-4);
+          padding-bottom: var(--sp-4);
           width: 100%;
           display: block;
         }
@@ -161,7 +163,7 @@
         }
       }
       .login-link {
-        @include components.button-lg-filled;
+        @include components.button-filled;
       }
     }
   }
