@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -12,17 +12,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class NavbarComponent {
   showNav = false;
-
-  constructor(private readonly router: Router) {}
-
-  isLinkActive(route: string): boolean {
-    return this.router.isActive(this.router.createUrlTree([route]), {
-      paths: 'exact',
-      queryParams: 'exact',
-      fragment: 'ignored',
-      matrixParams: 'ignored',
-    });
-  }
 
   toggleNav(): void {
     this.showNav = !this.showNav;
