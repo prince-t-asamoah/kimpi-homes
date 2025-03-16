@@ -1,66 +1,68 @@
-<header class="mobile">
-  <div class="navbar">
+<div class="navbar">
+  <header class="mobile">
+    <div class="navbar">
+      <nav aria-label="Site Logo">
+        <a routerLink="/" class="site-logo">KimpiHomes</a>
+      </nav>
+      <button class="menu-btn" (click)="toggleNav()" aria-label="Menu">
+        <div [ngClass]="showNav ? 'bar1 active' : 'bar1'"></div>
+        <div [ngClass]="showNav ? 'bar2 active' : 'bar2'"></div>
+        <div [ngClass]="showNav ? 'bar3 active' : 'bar3'"></div>
+      </button>
+    </div>
+    <div [ngClass]="showNav ? 'main-navigation active' : 'main-navigation'">
+      <nav aria-label="Main Navigation">
+        <ul class="links">
+          <li class="link">
+            <a routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+          <li class="link">
+            <a routerLink="/shop" routerLinkActive="active">Shop</a>
+          </li>
+          <li class="link">
+            <a routerLink="#" routerLinkActive="active">About</a>
+          </li>
+          <li class="link">
+            <a routerLink="#" routerLinkActive="active">FAQs</a>
+          </li>
+          <li class="link">
+            <a routerLink="#" routerLinkActive="active">News</a>
+          </li>
+        </ul>
+      </nav>
+      <nav aria-label="Login" class="login">
+        <a routerLink="#" class="login-link">Login</a>
+      </nav>
+    </div>
+  </header>
+  <header class="desktop">
     <nav aria-label="Site Logo">
       <a routerLink="/" class="site-logo">KimpiHomes</a>
     </nav>
-    <button class="menu-btn" (click)="toggleNav()" aria-label="Menu">
-      <div [ngClass]="showNav ? 'bar1 active' : 'bar1'"></div>
-      <div [ngClass]="showNav ? 'bar2 active' : 'bar2'"></div>
-      <div [ngClass]="showNav ? 'bar3 active' : 'bar3'"></div>
-    </button>
-  </div>
-  <nav
-    [ngClass]="showNav ? 'main-navigation active' : 'main-navigation'"
-    aria-label="Main Navigation">
-    <ul class="links">
-      <li class="link">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
-      </li>
-      <li class="link">
-        <a routerLink="/shop" routerLinkActive="active">Shop</a>
-      </li>
-      <li class="link">
-        <a routerLink="#" routerLinkActive="active">About</a>
-      </li>
-      <li class="link">
-        <a routerLink="#" routerLinkActive="active">FAQs</a>
-      </li>
-      <li class="link">
-        <a routerLink="#" routerLinkActive="active">News</a>
-      </li>
-      <li class="button-link">
-        <a routerLink="#" routerLinkActive="active">Login</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-<header class="desktop">
-  <nav aria-label="Site Logo">
-    <a routerLink="/" class="site-logo">KimpiHomes</a>
-  </nav>
-  <nav aria-label="Main Navigation" class="main-navigation">
-    <ul class="links">
-      <li class="link">
-        <a routerLink="/home" routerLinkActive="active">Home</a>
-      </li>
-      <li class="link">
-        <a routerLink="/shop" routerLinkActive="active">Shop</a>
-      </li>
-      <li class="link">
-        <a routerLink="#" routerLinkActive="active">About</a>
-      </li>
-      <li class="link">
-        <a routerLink="#" routerLinkActive="active">FAQs</a>
-      </li>
-      <li class="link">
-        <a routerLink="#" routerLinkActive="active">News</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="navbar-right">
-    <button type="button" aria-label="Search" class="search-btn">
-      <fa-icon icon="magnifying-glass"></fa-icon>
-    </button>
-    <a routerLink="#" class="login-link">Login</a>
-  </div>
-</header>
+    <nav aria-label="Main Navigation" class="main-navigation">
+      <ul class="links">
+        <li class="link">
+          <a routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li class="link">
+          <a routerLink="/shop" routerLinkActive="active">Shop</a>
+        </li>
+        <li class="link">
+          <a routerLink="#" routerLinkActive="active">About</a>
+        </li>
+        <li class="link">
+          <a routerLink="#" routerLinkActive="active">FAQs</a>
+        </li>
+        <li class="link">
+          <a routerLink="#" routerLinkActive="active">News</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="navbar-right">
+      <button type="button" aria-label="Search" class="search-btn">
+        <fa-icon icon="magnifying-glass"></fa-icon>
+      </button>
+      <a routerLink="#" class="login-link">Login</a>
+    </div>
+  </header>
+</div>
