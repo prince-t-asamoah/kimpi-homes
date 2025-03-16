@@ -23,36 +23,45 @@
         color: var(--brand-300);
       }
 
-      .menu-btn {
-        color: var(--brand-300);
-        padding: var(--sp-2);
-        width: 1.5rem;
-        height: 1.5rem;
+      .top-right {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: var(--sp-4);
+        gap: var(--sp-5);
 
-        .bar1,
-        .bar2,
-        .bar3 {
-          width: 100%;
-          height: 0.094rem;
-          background-color: var(--brand-300);
-          transition: 0.4s;
-          display: block;
+        .search-btn {
+          color: var(--neutral-400);
         }
 
-        .bar1.active {
-          transform: translate(0, 8px) rotate(-45deg);
-        }
+        .menu-btn {
+          color: var(--brand-300);
+          padding: var(--sp-2);
+          width: 1.5rem;
+          height: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: var(--sp-4);
 
-        .bar2.active {
-          opacity: 0;
-        }
+          .bar1,
+          .bar2,
+          .bar3 {
+            width: 100%;
+            height: 0.094rem;
+            background-color: var(--brand-300);
+            transition: 0.4s;
+            display: block;
+          }
 
-        .bar3.active {
-          transform: translate(0, -8px) rotate(45deg);
+          .bar1.active {
+            transform: translate(0, 8px) rotate(-45deg);
+          }
+
+          .bar2.active {
+            opacity: 0;
+          }
+
+          .bar3.active {
+            transform: translate(0, -8px) rotate(45deg);
+          }
         }
       }
     }

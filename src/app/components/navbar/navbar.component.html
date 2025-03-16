@@ -4,11 +4,16 @@
       <nav aria-label="Site Logo">
         <a routerLink="/" class="site-logo">KimpiHomes</a>
       </nav>
-      <button class="menu-btn" (click)="toggleNav()" aria-label="Menu">
-        <div [ngClass]="showNav ? 'bar1 active' : 'bar1'"></div>
-        <div [ngClass]="showNav ? 'bar2 active' : 'bar2'"></div>
-        <div [ngClass]="showNav ? 'bar3 active' : 'bar3'"></div>
-      </button>
+      <div class="top-right">
+        <button type="button" aria-label="Search" class="search-btn">
+          <fa-icon icon="magnifying-glass"></fa-icon>
+        </button>
+        <button class="menu-btn" (click)="toggleNav()" aria-label="Menu">
+          <div [ngClass]="showNav ? 'bar1 active' : 'bar1'"></div>
+          <div [ngClass]="showNav ? 'bar2 active' : 'bar2'"></div>
+          <div [ngClass]="showNav ? 'bar3 active' : 'bar3'"></div>
+        </button>
+      </div>
     </div>
     <div [ngClass]="showNav ? 'main-navigation active' : 'main-navigation'">
       <nav aria-label="Main Navigation">
