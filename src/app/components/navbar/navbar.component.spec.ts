@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import {
   FaIconLibrary,
   FontAwesomeModule,
@@ -12,6 +12,7 @@ describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
   let faIconLibrary: FaIconLibrary;
+  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -25,6 +26,8 @@ describe('NavbarComponent', () => {
     fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
     faIconLibrary = TestBed.inject(FaIconLibrary);
+    router = TestBed.inject(Router);
+
     faIconLibrary.addIconPacks(fas);
     fixture.detectChanges();
   });
@@ -43,5 +46,10 @@ describe('NavbarComponent', () => {
     expect(component.showSearchProductBar).toBeFalse();
     component.toggleSearchProductBar();
     expect(component.showSearchProductBar).toBeTrue();
+  });
+
+  it('should navigate to homepage when home link is clicked', async () => {
+    await router.navigateByUrl('/home');
+    expect(router.url).toEqual('/home');
   });
 });
