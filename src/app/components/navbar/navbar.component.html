@@ -5,17 +5,27 @@
         <a routerLink="/" class="site-logo">KimpiHomes</a>
       </nav>
       <div class="top-right">
-        <button type="button" aria-label="Search" class="search-btn">
+        <button
+          type="button"
+          aria-label="Search"
+          class="search-btn"
+          (click)="toggleSearchProductBar()">
           <fa-icon icon="magnifying-glass"></fa-icon>
         </button>
-        <button class="menu-btn" (click)="toggleNav()" aria-label="Menu">
-          <div [ngClass]="showNav ? 'bar1 active' : 'bar1'"></div>
-          <div [ngClass]="showNav ? 'bar2 active' : 'bar2'"></div>
-          <div [ngClass]="showNav ? 'bar3 active' : 'bar3'"></div>
+        <button
+          class="menu-btn"
+          (click)="toggleMainNavigation()"
+          aria-label="Menu">
+          <div [ngClass]="showMainNavigation ? 'bar1 active' : 'bar1'"></div>
+          <div [ngClass]="showMainNavigation ? 'bar2 active' : 'bar2'"></div>
+          <div [ngClass]="showMainNavigation ? 'bar3 active' : 'bar3'"></div>
         </button>
       </div>
     </div>
-    <div [ngClass]="showNav ? 'main-navigation active' : 'main-navigation'">
+    <div
+      [ngClass]="
+        showMainNavigation ? 'main-navigation active' : 'main-navigation'
+      ">
       <nav aria-label="Main Navigation">
         <ul class="links">
           <li class="link">
@@ -38,6 +48,21 @@
       <nav aria-label="Login" class="login">
         <a routerLink="#" class="login-link">Login</a>
       </nav>
+    </div>
+    <div
+      [ngClass]="
+        showSearchProductBar
+          ? 'search-product-bar active'
+          : 'search-product-bar'
+      ">
+      <div class="search-product-bar-container">
+        <fa-icon icon="magnifying-glass"></fa-icon>
+        <input
+          type="search"
+          id="searchProductsInput"
+          aria-label="Search Products"
+          placeholder="Search Products" />
+      </div>
     </div>
   </header>
   <header class="desktop">

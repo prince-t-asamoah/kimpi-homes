@@ -11,9 +11,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   encapsulation: ViewEncapsulation.None,
 })
 export class NavbarComponent {
-  showNav = false;
+  showMainNavigation = false;
+  showSearchProductBar = false;
 
-  toggleNav(): void {
-    this.showNav = !this.showNav;
+  toggleMainNavigation(): void {
+    this.showMainNavigation = !this.showMainNavigation;
+    this.showSearchProductBar = false;
+  }
+
+  toggleSearchProductBar(): void {
+    this.showSearchProductBar = !this.showSearchProductBar;
+    this.showMainNavigation = false;
   }
 }

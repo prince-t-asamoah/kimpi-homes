@@ -19,9 +19,15 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should toggle showNav', () => {
-    expect(component.showNav).toBeFalse();
-    component.toggleNav();
-    expect(component.showNav).toBeTrue();
+  it('should toggle showMainNavigation', () => {
+    expect(component.showMainNavigation).toBeFalse();
+    component.toggleMainNavigation();
+    expect(component.showMainNavigation).toBeTrue();
+  });
+
+  it('should toggle showSearchBar', () => {
+    expect(component.showSearchProductBar).toBeFalse();
+    component.toggleSearchProductBar();
+    expect(component.showSearchProductBar).toBeTrue();
   });
 });
