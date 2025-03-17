@@ -1,4 +1,4 @@
-/* CSS Reset - Modern Approach (2025) with serp.co integration, anchor link reset, and button resets */
+/* CSS Reset - Modern Approach (2025) with serp.co integration, anchor link reset, button resets, and input resets */
 
 /* Box sizing rules */
 *,
@@ -89,8 +89,10 @@ time,
 mark,
 audio,
 video,
-button {
-  /* Added button to selector list */
+button,
+input,
+textarea,
+select {
   margin: 0;
   padding: 0;
   border: 0;
@@ -172,6 +174,23 @@ button {
   -webkit-appearance: none; /* remove default browser styling */
   -moz-appearance: none;
   appearance: none;
+}
+
+/* input resets */
+input,
+textarea,
+select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
