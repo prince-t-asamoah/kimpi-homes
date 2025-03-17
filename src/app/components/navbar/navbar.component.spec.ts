@@ -52,4 +52,9 @@ describe('NavbarComponent', () => {
     await router.navigateByUrl('/home');
     expect(router.url).toEqual('/home');
   });
+
+  it('should navigate to shop page when shop link is clicked', async () => {
+    await router.navigateByUrl('/shop');
+    expect(router.url).toEqual('/shop');
+  });
 });
