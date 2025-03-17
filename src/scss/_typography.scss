@@ -1,90 +1,124 @@
-$base-font-size: 16px;
-
-@function rem($pixels) {
-  @return calc($pixels / 16px) * 1rem;
-}
-
 :root {
-  font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
-  font-size: 100%;
+  font-size: 100%; // For Accessiblity
 }
 
-body,
-.body {
-  font-size: rem(16px); // 1rem
-  line-height: rem(24px); // 1.5rem
-  font-weight: 400; // Regular
+/* Body Text */
+$text-body-font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+$text-body-font-size: 1rem; //16px
+$text-body-line-height: 1.5rem; // 24px
+$text-body-font-weight: 400; // Regular
+
+$text-body-lg-font-weight: 500; // Medium
+
+$text-body-sm: 0.875rem; // 14px
+$text-body-sm-line-height: 1.5rem; // 24px
+$text-body-sm-font-weight: 400; // Regular
+
+/* Headings */
+$text-h1: 4rem; // 64px
+$text-h1-line-height: 4.625rem; // 74px
+$text-h1-font-weight: 700; // Bold
+
+$text-h2: 3.5rem; // 56px
+$text-h2-line-height: 4rem; // 64px
+$text-h2-font-weight: 600; // Semi-Bold
+
+$text-h3: 3rem; // rem(48px)
+$text-h3-line-height: 3.5rem; // 56px
+$text-h3-font-weight: 600; // Semi-Bold
+
+$text-h4: 2.5rem; // 40px
+$text-h4-line-height: 3rem; // 48px
+$text-h4-font-weight: 600; // Semi-Bold
+
+$text-h5: 2rem; // 32px
+$text-h5-line-height: 2.5rem; // 40px
+$text-h5-font-weight: 600; // Semi-Bold
+
+$text-h6: 1.5rem; // 24px
+$text-h6-line-height: 2rem; // 32px
+$text-h6-font-weight: 600; // Semi-Bold
+
+/* Paragraphs */
+$text-pg: 1rem; // 16px
+$text-pg-line-height: 2rem; // 32px
+$text-pg-font-weight: 400; // Regular
+
+$text-pg-2-line-height: 1.5rem; // 24px
+
+$text-pg-sm: 0.75rem; // 12px
+$text-pg-sm-line-height: 1rem; // 16px
+$text-pg-sm-font-weight: 400; // Regular
+
+body {
+  font-family: $text-body-font-family;
+  font-size: $text-body-font-size;
+  line-height: $text-body-line-height;
+  font-weight: $text-body-font-weight;
 }
 
-.body-lg {
-  font-size: rem(16px); // 1rem
-  line-height: rem(24px); // 1.5rem
-  font-weight: 500; // Medium
+h1 {
+  font-size: $text-h1;
+  line-height: $text-h1-line-height;
+  font-weight: $text-h1-font-weight;
 }
 
-.body-sm {
-  font-size: rem(14px); // 0.875rem
-  line-height: rem(24px); // 1.5rem
-  font-weight: 400; // Regular
+h2 {
+  font-size: $text-h2;
+  line-height: $text-h2-line-height;
+  font-weight: $text-h2-font-weight;
 }
 
-h1,
-.h1 {
-  font-size: rem(64px); // 4rem
-  line-height: rem(74px); // 4.625rem
-  font-weight: 700; // Bold
+h3 {
+  font-size: $text-h3;
+  line-height: $text-h3-line-height;
+  font-weight: $text-h3-font-weight;
 }
 
-h2,
-.h2 {
-  font-size: rem(56px); // 3.5rem
-  line-height: rem(64px); // 4rem
-  font-weight: 600; // Semi-Bold
+h4 {
+  font-size: $text-h4;
+  line-height: $text-h4-line-height;
+  font-weight: $text-h4-font-weight;
 }
 
-h3,
-.h3 {
-  font-size: rem(48px); // 3rem
-  line-height: rem(56px); // 3.5rem
-  font-weight: 600; // Semi-Bold
+h5 {
+  font-size: $text-h5;
+  line-height: $text-h5-line-height;
+  font-weight: $text-h5-font-weight;
 }
 
-h4,
-.h4 {
-  font-size: rem(40px); // 2.5rem
-  line-height: rem(48px); // 3rem
-  font-weight: 600; // Semi-Bold
+h6 {
+  font-size: $text-h6;
+  line-height: $text-h6-line-height;
+  font-weight: $text-h6-font-weight;
 }
 
-h5,
-.h5 {
-  font-size: rem(32px); // 2rem
-  line-height: rem(40px); // 2.5rem
-  font-weight: 600; // Semi-Bold
+p {
+  font-size: $text-pg;
+  line-height: $text-pg-line-height;
+  font-weight: $text-pg-font-weight;
 }
 
-h6,
-.h6 {
-  font-size: rem(24px); // 1.5rem
-  line-height: rem(32px); // 2rem
-  font-weight: 600; // Semi-Bold
+@mixin p2 {
+  font-size: $text-pg;
+  line-height: $text-pg-2-line-height;
+  font-weight: $text-pg-font-weight;
 }
 
-p,
-.p {
-  font-size: rem(16px); // 1rem
-  line-height: rem(32px); // 2rem
-  font-weight: 400; // Regular
+@mixin p-sm {
+  font-size: $text-pg-sm;
+  line-height: $text-pg-sm-line-height;
+  font-weight: $text-pg-sm-font-weight;
 }
 
-.p-2 {
-  font-size: rem(16px); // 1rem
-  line-height: rem(24px); // 1.5rem
-  font-weight: 400; // Regular
+@mixin body-sm {
+  font-size: $text-body-sm;
+  line-height: $text-body-sm-line-height;
+  font-weight: $text-body-sm-font-weight;
 }
 
-.p-sm {
-  font-size: rem(12px); // 0.75rem
-  line-height: rem(16px); // 1rem
-  font-weight: 400; // Regular
+@mixin body-lg {
+  font-size: $text-body;
+  line-height: $text-body-line-height;
+  font-weight: $text-body-lg-font-weight;
 }
