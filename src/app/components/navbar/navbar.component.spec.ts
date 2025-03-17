@@ -1,20 +1,31 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NavbarComponent } from './navbar.component';
 import { RouterModule } from '@angular/router';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { NavbarComponent } from './navbar.component';
 import { routes } from '../../app.routes';
-import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
+  let faIconLibrary: FaIconLibrary;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarComponent, RouterModule.forRoot(routes), FaIconLibrary],
+      imports: [
+        NavbarComponent,
+        RouterModule.forRoot(routes),
+        FontAwesomeModule,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
+    faIconLibrary = TestBed.inject(FaIconLibrary);
+    faIconLibrary.addIconPacks(fas);
     fixture.detectChanges();
   });
 
