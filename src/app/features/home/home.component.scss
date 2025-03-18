@@ -4,4 +4,17 @@
 .homepage {
   position: relative;
   min-height: 100vh;
+
+  .main-content {
+    position: relative;
+    top: 6.875rem;
+
+    @include breakpoints.for-breakpoint('tablet') {
+      top: 6.688rem;
+    }
+
+    @include breakpoints.for-breakpoint('desktop') {
+      top: 9.375rem;
+    }
+  }
 }
