@@ -1,0 +1,37 @@
+@use 'breakpoints';
+
+.language-bar {
+  background-color: var(--neutral-400);
+  padding: var(--sp-8) var(--sp-9);
+  display: flex;
+  justify-content: end;
+
+  @include breakpoints.for-breakpoint('tablet') {
+    padding-left: var(--sp-13);
+    padding-right: var(--sp-13);
+  }
+
+  @include breakpoints.for-breakpoint('desktop') {
+    padding-left: var(--sp-18);
+    padding-right: var(--sp-18);
+  }
+
+  .language-bar-btn {
+    color: var(--neutral-400);
+    background-color: white;
+    padding: var(--sp-2) var(--sp-6);
+    border-radius: var(--sp-3);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-4);
+
+    .globe-icon {
+      margin-right: var(--sp-3);
+    }
+
+    .text {
+      display: flex;
+      gap: var(--sp-5);
+    }
+  }
+}
