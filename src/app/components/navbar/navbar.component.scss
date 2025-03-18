@@ -3,21 +3,29 @@
 @use 'typography';
 
 .navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+
   header.mobile {
-    position: absolute;
-    width: 100%;
-    top: 0;
+    position: relative;
 
     @include breakpoints.for-breakpoint('desktop') {
       display: none;
     }
 
-    .navbar {
+    .header-container {
       padding: var(--sp-8) var(--sp-11);
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--neutral-200);
+      position: relative;
+
+      @include breakpoints.for-breakpoint('tablet') {
+        padding-left: var(--sp-13);
+        padding-right: var(--sp-13);
+      }
 
       .site-logo {
         color: var(--brand-300);
@@ -68,78 +76,13 @@
       }
     }
 
-    .search-product-bar {
-      width: 100%;
-      height: calc(100vh - 3.25rem);
-      background-color: var(--neutral-100);
-      visibility: hidden;
-      position: absolute;
-      top: 3.25rem;
-      opacity: 0;
-      z-index: 3;
-
-      &.active {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .search-product-bar-container {
-        width: 100%;
-        display: flex;
-        padding: var(--sp-8);
-      }
-
-      .search-product-bar-input {
-        background-color: white;
-        display: flex;
-        flex: 1;
-        align-items: center;
-        gap: var(--sp-4);
-        border: 1px solid var(--neutral-300);
-        border-radius: var(--sp-5);
-        padding-left: var(--sp-8);
-
-        input[type='search'] {
-          color: var(--neutral-400);
-          border-radius: var(--sp-4);
-          width: 100%;
-          padding: var(--sp-5);
-
-          &::placeholder {
-            @include typography.p-sm;
-          }
-
-          &::-webkit-search-cancel-button {
-            -webkit-appearance: none;
-            height: 1rem;
-            width: 1rem;
-            border-radius: 50rem;
-            background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
-              no-repeat 50% 50%;
-            background-size: contain;
-            opacity: 0;
-            pointer-events: none;
-          }
-
-          &:focus::-webkit-search-cancel-button {
-            opacity: 0.3;
-            pointer-events: all;
-          }
-
-          .back-btn {
-            color: var(--neutral-200);
-          }
-        }
-      }
-    }
-
     .main-navigation {
       background-color: white;
       width: 100%;
-      height: calc(100vh - 3.25rem);
+      height: calc(100vh - 6.75rem);
       visibility: hidden;
-      top: 3.25rem;
       position: absolute;
+      top: 3.25rem;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
       z-index: 3;
@@ -180,6 +123,72 @@
           padding-bottom: var(--sp-4);
           width: 100%;
           display: block;
+        }
+      }
+    }
+
+    .search-product-bar {
+      width: 100%;
+      height: calc(100vh - 6.75rem);
+      background-color: var(--neutral-100);
+      visibility: hidden;
+      position: absolute;
+      top: 3.25rem;
+      opacity: 0;
+      z-index: 3;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .search-product-bar-container {
+        width: 100%;
+        display: flex;
+        padding: var(--sp-9);
+      }
+
+      .search-product-bar-input {
+        background-color: white;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        gap: var(--sp-4);
+        border: 1px solid var(--neutral-300);
+        border-radius: var(--sp-5);
+        padding-left: var(--sp-8);
+
+        input[type='search'] {
+          color: var(--neutral-400);
+          border-radius: var(--sp-4);
+          width: 100%;
+          padding: var(--sp-5);
+
+          &::placeholder {
+            @include typography.p-sm;
+          }
+
+          &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50rem;
+            background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+              no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          &:focus::-webkit-search-cancel-button {
+            opacity: 0.3;
+            pointer-events: all;
+          }
+
+          .back-btn {
+            color: var(--neutral-200);
+          }
         }
       }
     }
