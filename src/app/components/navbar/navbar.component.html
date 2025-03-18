@@ -97,9 +97,17 @@
       </ul>
     </nav>
     <div class="navbar-right">
-      <button type="button" aria-label="Search" class="search-btn">
-        <fa-icon icon="magnifying-glass"></fa-icon>
-      </button>
+      <div class="search-product-input">
+        <fa-icon
+          icon="magnifying-glass"
+          class="search-icon"
+          aria-label="Search Icon"></fa-icon>
+        <input
+          id="searchProductsInput"
+          type="search"
+          aria-label="Search Products"
+          placeholder="Search Products" />
+      </div>
       <a routerLink="#" class="login-link">Login</a>
     </div>
   </header>
