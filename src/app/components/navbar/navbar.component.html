@@ -56,12 +56,19 @@
           : 'search-product-bar'
       ">
       <div class="search-product-bar-container">
-        <fa-icon icon="magnifying-glass"></fa-icon>
-        <input
-          type="search"
-          id="searchProductsInput"
-          aria-label="Search Products"
-          placeholder="Search Products" />
+        <div class="search-product-bar-input">
+          <button
+            type="button"
+            class="back-btn"
+            (click)="toggleSearchProductBar()">
+            <fa-icon icon="arrow-left"></fa-icon>
+          </button>
+          <input
+            type="search"
+            id="searchProductsInput"
+            aria-label="Search Products"
+            placeholder="Search Products" />
+        </div>
       </div>
     </div>
   </header>
