@@ -226,6 +226,24 @@
       align-items: center;
       gap: var(--sp-10);
 
+      .navbar-right-buttons {
+        display: flex;
+        gap: var(--sp-4);
+      }
+
+      .navbar-right-btn {
+        padding: var(--sp-4);
+        border-radius: var(--sp-4);
+        color: var(--neutral-400);
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+          background-color: var(--neutral-200);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
       .search-product-input {
         min-width: 18.75rem;
         border: 1px solid var(--neutral-300);
@@ -244,16 +262,11 @@
 
           @include components.search-input-cancel;
         }
-      }
 
-      .search-icon {
-        color: var(--neutral-400);
-        padding: var(--sp-4) var(--sp-6);
-        padding-right: var(--sp-5);
-
-        &:hover {
-          background-color: var(--neutral-200);
-          transition: all 0.3s ease-in-out;
+        .search-icon {
+          color: var(--neutral-400);
+          padding: var(--sp-4) var(--sp-6);
+          padding-right: var(--sp-5);
         }
       }
 
