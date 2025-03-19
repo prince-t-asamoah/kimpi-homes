@@ -13,6 +13,9 @@
           (click)="toggleSearchProductBar()">
           <fa-icon icon="magnifying-glass"></fa-icon>
         </button>
+        <button class="user-avatar-btn" aria-label="User Avatar">
+          <fa-icon icon="user-circle"></fa-icon>
+        </button>
         <button
           class="menu-btn"
           (click)="toggleMainNavigation()"
@@ -97,7 +100,7 @@
       </ul>
     </nav>
     <div class="navbar-right">
-      <div class="search-product-input">
+      <div class="search-product-input" style="display: none">
         <fa-icon
           icon="magnifying-glass"
           class="search-icon"
@@ -118,8 +121,11 @@
           aria-label="Shopping Cart">
           <fa-icon icon="shopping-cart"></fa-icon>
         </button>
+        <button class="user-avatar-btn" aria-label="User Avatar">
+          <fa-icon icon="user-circle" class="user-avatar-icon"></fa-icon>
+        </button>
+        <a routerLink="#" class="login-link" style="display: none">Login</a>
       </div>
-      <a routerLink="#" class="login-link">Login</a>
     </div>
   </header>
 </div>
