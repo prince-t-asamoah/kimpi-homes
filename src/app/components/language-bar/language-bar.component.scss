@@ -21,7 +21,7 @@
     background-color: white;
     padding: var(--sp-2) var(--sp-6);
     border-radius: var(--sp-3);
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: var(--sp-4);
 
@@ -32,6 +32,19 @@
     .text {
       display: flex;
       gap: var(--sp-5);
+    }
+  }
+
+  .language-bar-menu {
+    height: calc(100vh - 7.438rem);
+    position: absolute;
+    top: 7.313rem;
+    left: 0;
+    right: 0;
+    padding: var(--sp-11) var(--sp-6);
+
+    .title {
+      text-align: center;
     }
   }
 }
