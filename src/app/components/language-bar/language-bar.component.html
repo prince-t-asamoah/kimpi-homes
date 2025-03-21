@@ -1,11 +1,45 @@
 <div class="language-bar">
-  <button type="button" class="language-bar-btn">
+  <button
+    type="button"
+    class="language-bar-btn"
+    aria-label="Close Language and Country">
     <fa-icon icon="globe" class="globe-icon"></fa-icon>
     <span class="text">
       <span class="country">USA</span> | <span class="lang">English</span>
     </span>
   </button>
-  <div class="language-bar-menu">
-    <h6 class="title">Select your language and country</h6>
-  </div>
+  <dialog #languageBarDialog class="language-bar-menu" open>
+    <button type="button" class="close-language-form-btn">
+      <fa-icon icon="close"></fa-icon>
+    </button>
+    <div class="language-bar-form-container">
+      <h6 class="title">Select your language and country</h6>
+      <form
+        class="language-bar-form"
+        (submit)="$event.preventDefault()"
+        method="dialog">
+        <label class="language-form-input">
+          <span class="label"> Country </span>
+          <select class="country-select">
+            <option value="">Select your country</option>
+            @for (country of countries; track country) {
+              <option [value]="country.name.toLocaleLowerCase()">
+                {{ country.name }} &lpar;{{ country.defaultLang }}&rpar;
+              </option>
+            }
+          </select>
+        </label>
+        <label class="language-form-input">
+          <span class="label"> Language </span>
+          <select class="language-select">
+            <option value="">Select your language</option>
+            @for (language of languages; track language) {
+              <option [value]="language.id">{{ language.name }}</option>
+            }
+          </select>
+        </label>
+        <button type="submit" class="save-btn">Save</button>
+      </form>
+    </div>
+  </dialog>
 </div>
