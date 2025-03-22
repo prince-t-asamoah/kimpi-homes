@@ -24,4 +24,8 @@ describe('LanguageBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have internationlization form dialog', () => {
+    expect(component.languageBarDialog).toBeTruthy();
+  });
 });
