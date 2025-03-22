@@ -1,15 +1,21 @@
 <div class="language-bar">
   <button
     type="button"
+    id="openLanguageFormButton"
     class="language-bar-btn"
-    aria-label="Close Language and Country">
+    (click)="openLanguageForm()">
     <fa-icon icon="globe" class="globe-icon"></fa-icon>
     <span class="text">
       <span class="country">USA</span> | <span class="lang">English</span>
     </span>
   </button>
-  <dialog #languageBarDialog class="language-bar-menu" open>
-    <button type="button" class="close-language-form-btn">
+  <dialog #languageBarDialog class="language-bar-menu">
+    <button
+      type="button"
+      id="closeLanguageFormButton"
+      class="close-language-form-btn"
+      aria-label="Close Language and Country"
+      (click)="closeLanguageForm()">
       <fa-icon icon="close"></fa-icon>
     </button>
     <div class="language-bar-form-container">
