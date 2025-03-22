@@ -14,14 +14,16 @@ export class LanguageBarComponent {
   countries = countries;
   languages = languages;
 
-  openDialog(): void {
-    if (this.languageBarDialog()?.nativeElement.open) {
-      this.languageBarDialog()?.nativeElement.close();
+  openLanguageForm(): void {
+    const dialogEl = this.languageBarDialog()?.nativeElement;
+    if (!dialogEl) return;
+    if (dialogEl.open) {
+      dialogEl.close();
     }
-    this.languageBarDialog()?.nativeElement.showModal();
+    dialogEl.showModal();
   }
 
-  closeDialog(): void {
+  closeLanguageForm(): void {
     this.languageBarDialog()?.nativeElement.close();
   }
 }
