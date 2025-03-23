@@ -46,6 +46,10 @@ $text-pg-font-weight: 400; // Regular
 
 $text-pg-2-line-height: 1.5rem; // 24px
 
+$text-pg-lg: 1.125rem; // 18px
+$text-pg-lg-line-height: 1.5rem; // 24px
+$text-pg-lg-font-weight: 400; // Regular
+
 $text-pg-sm: 0.75rem; // 12px
 $text-pg-sm-line-height: 1rem; // 16px
 $text-pg-sm-font-weight: 400; // Regular
@@ -99,10 +103,52 @@ p {
   font-weight: $text-pg-font-weight;
 }
 
+@mixin h1 {
+  font-size: $text-h1;
+  line-height: $text-h1-line-height;
+  font-weight: $text-h1-font-weight;
+}
+
+@mixin h2 {
+  font-size: $text-h2;
+  line-height: $text-h2-line-height;
+  font-weight: $text-h2-font-weight;
+}
+
+@mixin h3 {
+  font-size: $text-h3;
+  line-height: $text-h3-line-height;
+  font-weight: $text-h3-font-weight;
+}
+
+@mixin h4 {
+  font-size: $text-h4;
+  line-height: $text-h4-line-height;
+  font-weight: $text-h4-font-weight;
+}
+
+@mixin h5 {
+  font-size: $text-h5;
+  line-height: $text-h5-line-height;
+  font-weight: $text-h5-font-weight;
+}
+
+@mixin h6 {
+  font-size: $text-h6;
+  line-height: $text-h6-line-height;
+  font-weight: $text-h6-font-weight;
+}
+
 @mixin p2 {
   font-size: $text-pg;
   line-height: $text-pg-2-line-height;
   font-weight: $text-pg-font-weight;
+}
+
+@mixin p-lg {
+  font-size: $text-pg-lg;
+  line-height: $text-pg-lg-line-height;
+  font-weight: $text-pg-lg-font-weight;
 }
 
 @mixin p-sm {
