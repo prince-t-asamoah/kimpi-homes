@@ -9,6 +9,7 @@
   .main-content {
     position: relative;
     top: 6.875rem;
+    z-index: -1;
 
     @include breakpoints.for-breakpoint('tablet') {
       top: 6.688rem;
