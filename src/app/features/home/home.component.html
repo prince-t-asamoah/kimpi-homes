@@ -1,4 +1,58 @@
 <div class="homepage">
   <app-navbar></app-navbar>
-  <main class="main-content"></main>
+  <main class="main-content">
+    <section class="hero">
+      <div class="content">
+        <h1 class="title">Quality Furniture for Every Home & Office</h1>
+        <p class="description">
+          Your ultimate destination for premium furniture that blends elegance,
+          comfort, and functionality. Whether you're revamping your living room,
+          upgrading your office ,we bring you an exquisite collection tailored
+          to your taste.
+        </p>
+        <div class="links">
+          <a routerLink="/shop" class="shop-link">Shop Now</a>
+          <a routerLink="#" class="learn-more-link">Learn More</a>
+        </div>
+      </div>
+      <div class="media-slider">
+        <div class="media-slider-container">
+          <div class="current-media-slider-container">
+            <div class="semi-circle"></div>
+            <img
+              src="./assets/images/home/hero-placeholder-1.png"
+              alt="Current carousel" />
+          </div>
+          <ul class="media-slider-indicator">
+            <li class="media-slider-item">
+              <div class="semi-circle"></div>
+              <img
+                src="./assets/images/home/hero-placeholder-2.png"
+                alt="Chair 1" />
+            </li>
+            <li class="media-slider-item">
+              <div class="semi-circle"></div>
+              <img
+                src="./assets/images/home/hero-placeholder-3.png"
+                alt="Chair 2" />
+            </li>
+            <li class="media-slider-item">
+              <div class="semi-circle"></div>
+              <img
+                src="./assets/images/home/hero-placeholder-4.png"
+                alt="Chair 4" />
+            </li>
+          </ul>
+        </div>
+        <div class="media-slider-controls">
+          <button type="button" aria-label="Previous Item">
+            <fa-icon icon="arrow-left" class="icon"></fa-icon>
+          </button>
+          <button type="button" aria-label="Next Item">
+            <fa-icon icon="arrow-right" class="icon"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 </div>
