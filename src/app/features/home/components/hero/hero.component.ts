@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [FontAwesomeModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
