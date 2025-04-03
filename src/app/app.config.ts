@@ -4,19 +4,13 @@ import {
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
 import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
-import {
-  Armchair,
-  Banknote,
-  LucideAngularModule,
-  Trophy,
-  Truck,
-} from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
+import { routes } from './app.routes';
+import iconLibrary from './data/icon-library';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,7 +18,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     importProvidersFrom(
-      LucideAngularModule.pick({ Trophy, Armchair, Truck, Banknote })
+      LucideAngularModule.pick({
+        ...iconLibrary,
+      })
     ),
   ],
 };
