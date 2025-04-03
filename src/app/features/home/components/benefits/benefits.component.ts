@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-benefits',
-  imports: [FontAwesomeModule],
+  imports: [LucideAngularModule],
   templateUrl: './benefits.component.html',
   styleUrl: './benefits.component.scss',
 })
