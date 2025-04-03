@@ -3,27 +3,22 @@
 @use 'typography';
 
 .hero {
-  padding: var(--sp-15) var(--sp-8);
   display: flex;
   flex-direction: column;
 
   @include breakpoints.for-breakpoint('tablet') {
-    padding: var(--sp-17) var(--sp-11);
   }
 
   @include breakpoints.for-breakpoint('desktop') {
-    padding: var(--sp-18) var(--sp-18);
     flex-direction: row;
     justify-content: space-between;
   }
 
   .content {
     @include breakpoints.for-breakpoint('desktop') {
-      padding-right: var(--sp-10);
     }
 
     @include breakpoints.for-breakpoint('desktop-large') {
-      padding-right: var(--sp-20);
     }
 
     .title {
