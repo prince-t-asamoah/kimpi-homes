@@ -10,12 +10,15 @@
     position: relative;
     top: 6.875rem;
     z-index: -1;
+    padding: var(--sp-15) var(--sp-9);
 
     @include breakpoints.for-breakpoint('tablet') {
+      padding: var(--sp-18) var(--sp-11);
       top: 6.688rem;
     }
 
     @include breakpoints.for-breakpoint('desktop') {
+      padding: var(--sp-10) var(--sp-18);
       top: 9.375rem;
     }
 
