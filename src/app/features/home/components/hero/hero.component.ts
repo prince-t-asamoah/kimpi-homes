@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-hero',
-  imports: [FontAwesomeModule],
+  imports: [LucideAngularModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

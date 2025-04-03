@@ -1,13 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LanguageBarComponent } from './language-bar.component';
-import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { DebugElement, ElementRef, Signal } from '@angular/core';
+import {
+  DebugElement,
+  ElementRef,
+  importProvidersFrom,
+  Signal,
+} from '@angular/core';
+import iconLibrary from '../../data/icon-library';
+import { LucideAngularModule } from 'lucide-angular';
 
 describe('LanguageBarComponent', () => {
   let component: LanguageBarComponent;
   let fixture: ComponentFixture<LanguageBarComponent>;
-  let faIconLibrary: FaIconLibrary;
   let internationalizationForm: Signal<
     ElementRef<HTMLDialogElement> | undefined
   >;
@@ -16,15 +20,19 @@ describe('LanguageBarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LanguageBarComponent],
+      providers: [
+        importProvidersFrom(
+          LucideAngularModule.pick({
+            ...iconLibrary,
+          })
+        ),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LanguageBarComponent);
-    faIconLibrary = TestBed.inject(FaIconLibrary);
     component = fixture.componentInstance;
     internationalizationForm = fixture.componentInstance.languageBarDialog;
     debugElement = fixture.debugElement;
-
-    faIconLibrary.addIconPacks(fas);
     fixture.detectChanges();
   });
 

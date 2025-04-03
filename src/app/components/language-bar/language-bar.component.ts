@@ -1,10 +1,10 @@
 import { Component, ElementRef, viewChild } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { countries, languages } from '../../data/internalization';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-language-bar',
-  imports: [FontAwesomeModule],
+  imports: [LucideAngularModule],
   templateUrl: './language-bar.component.html',
   styleUrl: './language-bar.component.scss',
 })
