@@ -1,0 +1,40 @@
+@use 'typography';
+
+.product-categories {
+  margin-top: var(--sp-15);
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      @include typography.h6;
+    }
+  }
+
+  .categories-list {
+    display: flex;
+    overflow-x: hidden;
+    min-width: 200%;
+    column-gap: var(--sp-8);
+    margin-top: var(--sp-14);
+
+    .categories-list-item {
+      img {
+        background-color: var(--neutral-200);
+        width: 12.691rem;
+        height: 12.691rem;
+        max-width: none;
+        object-fit: cover;
+        border-radius: var(--sp-6);
+      }
+
+      p {
+        color: var(--neutral-400);
+        text-align: center;
+        margin-top: var(--sp-11);
+      }
+    }
+  }
+}
