@@ -1,5 +1,6 @@
 @use 'typography';
 @use 'breakpoints';
+@use 'components';
 
 .product-categories {
   margin-top: var(--sp-15);
@@ -68,6 +69,99 @@
         color: var(--neutral-400);
         text-align: center;
         margin-top: var(--sp-11);
+      }
+    }
+  }
+
+  .flash-sale {
+    background-color: var(--neutral-200);
+    margin-top: var(--sp-18);
+    border-radius: var(--sp-5);
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints.for-breakpoint('tablet') {
+      margin-top: var(--sp-19);
+      flex-direction: row;
+    }
+
+    @include breakpoints.for-breakpoint('desktop') {
+      margin-top: var(--sp-21);
+    }
+
+    .flash-sale-image-container {
+      flex: 1;
+      border-top-right-radius: var(--sp-5);
+      border-top-left-radius: var(--sp-5);
+
+      @include breakpoints.for-breakpoint('tablet') {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: var(--sp-5);
+        border-top-left-radius: var(--sp-5);
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .flash-sale-info {
+      flex: 1;
+      padding: var(--sp-15) var(--sp-10);
+      background-color: var(--neutral-500);
+      border-bottom-right-radius: var(--sp-5);
+      border-bottom-left-radius: var(--sp-5);
+
+      @include breakpoints.for-breakpoint('tablet') {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: var(--sp-5);
+        border-top-right-radius: var(--sp-5);
+      }
+
+      @include breakpoints.for-breakpoint('desktop') {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: var(--sp-21);
+        padding-bottom: var(--sp-21);
+      }
+
+      h3 {
+        color: white;
+        @include typography.h6;
+      }
+
+      p {
+        color: white;
+        margin-top: var(--sp-5);
+        @include typography.p2;
+      }
+
+      .flash-sale-info-break {
+        display: none;
+
+        @include breakpoints.for-breakpoint('desktop') {
+          display: block;
+        }
+      }
+
+      .learn-more-btn {
+        @include components.button-filled;
+        width: 100%;
+        display: inline-block;
+        margin-top: var(--sp-13);
+
+        @include breakpoints.for-breakpoint('tablet') {
+          width: auto;
+        }
+
+        @include breakpoints.for-breakpoint('desktop') {
+          cursor: pointer;
+        }
       }
     }
   }
