@@ -1,7 +1,20 @@
 @use 'typography';
+@use 'breakpoints';
 
 .product-categories {
   margin-top: var(--sp-15);
+
+  @include breakpoints.for-breakpoint('tablet') {
+    margin-top: var(--sp-20);
+  }
+
+  @include breakpoints.for-breakpoint('desktop-large') {
+    margin-top: var(--sp-22);
+  }
+
+  @include breakpoints.for-breakpoint('desktop-xlarge') {
+    margin-top: var(--sp-23);
+  }
 
   header {
     display: flex;
@@ -10,15 +23,26 @@
 
     h2 {
       @include typography.h6;
+
+      @include breakpoints.for-breakpoint('tablet') {
+        @include typography.h5;
+      }
     }
+  }
+
+  .categories-list-container {
+    overflow: hidden;
   }
 
   .categories-list {
     display: flex;
-    overflow-x: hidden;
-    min-width: 200%;
+    min-width: 100%;
     column-gap: var(--sp-8);
     margin-top: var(--sp-14);
+
+    @include breakpoints.for-breakpoint('desktop') {
+      column-gap: var(--sp-10);
+    }
 
     .categories-list-item {
       img {
@@ -28,6 +52,16 @@
         max-width: none;
         object-fit: cover;
         border-radius: var(--sp-6);
+
+        @include breakpoints.for-breakpoint('tablet') {
+          width: 16.919rem;
+          height: 16.919rem;
+        }
+
+        @include breakpoints.for-breakpoint('desktop') {
+          width: 22.563rem;
+          height: 22.563rem;
+        }
       }
 
       p {
