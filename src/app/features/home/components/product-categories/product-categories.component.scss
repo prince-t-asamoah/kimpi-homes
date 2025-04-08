@@ -91,20 +91,31 @@
 
     .flash-sale-image-container {
       flex: 1;
-      border-top-right-radius: var(--sp-5);
-      border-top-left-radius: var(--sp-5);
+      border-top-right-radius: var(--sp-4);
+      border-top-left-radius: var(--sp-4);
 
       @include breakpoints.for-breakpoint('tablet') {
         border-top-right-radius: 0;
         border-top-left-radius: 0;
-        border-bottom-left-radius: var(--sp-5);
-        border-top-left-radius: var(--sp-5);
+        border-bottom-left-radius: var(--sp-4);
+        border-top-left-radius: var(--sp-4);
+      }
+
+      @include breakpoints.for-breakpoint('desktop') {
+        border-bottom-left-radius: var(--sp-4);
       }
 
       img {
         object-fit: cover;
         height: 100%;
         width: 100%;
+        border-top-right-radius: var(--sp-4);
+        border-top-left-radius: var(--sp-4);
+
+        @include breakpoints.for-breakpoint('tablet') {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: var(--sp-4);
+        }
       }
     }
 
@@ -112,14 +123,14 @@
       flex: 1;
       padding: var(--sp-15) var(--sp-10);
       background-color: var(--neutral-500);
-      border-bottom-right-radius: var(--sp-5);
-      border-bottom-left-radius: var(--sp-5);
+      border-bottom-right-radius: var(--sp-4);
+      border-bottom-left-radius: var(--sp-4);
 
       @include breakpoints.for-breakpoint('tablet') {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        border-bottom-right-radius: var(--sp-5);
-        border-top-right-radius: var(--sp-5);
+        border-bottom-right-radius: var(--sp-4);
+        border-top-right-radius: var(--sp-4);
       }
 
       @include breakpoints.for-breakpoint('desktop') {
