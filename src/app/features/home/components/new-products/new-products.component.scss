@@ -1,0 +1,28 @@
+@use 'typography';
+@use 'breakpoints';
+
+.new-products {
+  margin-top: var(--sp-18);
+
+  @include breakpoints.for-breakpoint('tablet') {
+    margin-top: var(--sp-20);
+  }
+
+  @include breakpoints.for-breakpoint('desktop-large') {
+    margin-top: var(--sp-21);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--sp-15);
+
+    h2 {
+      @include typography.h6;
+
+      @include breakpoints.for-breakpoint('tablet') {
+        @include typography.h5;
+      }
+    }
+  }
+}
