@@ -25,4 +25,43 @@
       }
     }
   }
+
+  .new-products-list-container {
+    overflow: hidden;
+
+    .new-products-list {
+      display: flex;
+      column-gap: var(--sp-8);
+      min-width: 100%;
+
+      @include breakpoints.for-breakpoint('desktop') {
+        column-gap: var(--sp-10);
+      }
+
+      .new-products-list-item {
+        img {
+          object-fit: cover;
+          border-radius: var(--sp-4);
+          min-width: 236px;
+          min-height: 316px;
+
+          @include breakpoints.for-breakpoint('tablet') {
+            min-width: 316px;
+            min-height: 422px;
+          }
+
+          @include breakpoints.for-breakpoint('desktop') {
+            min-width: 421px;
+            min-height: 562px;
+          }
+        }
+
+        .new-product-list-category {
+          color: var(--neutral-500);
+          text-align: center;
+          margin-top: var(--sp-10);
+        }
+      }
+    }
+  }
 }
