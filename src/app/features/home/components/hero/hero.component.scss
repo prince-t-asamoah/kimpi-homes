@@ -76,6 +76,11 @@
     margin-top: var(--sp-20);
     gap: var(--sp-9);
 
+    img {
+      position: relative;
+      z-index: -1;
+    }
+
     @include breakpoints.for-breakpoint('tablet') {
       min-width: 45.25rem;
       gap: var(--sp-11);
