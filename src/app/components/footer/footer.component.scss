@@ -7,10 +7,40 @@
   padding: var(--sp-10);
   padding-top: var(--sp-12);
 
+  @include breakpoints.for-breakpoint('tablet') {
+    padding: var(--sp-10);
+  }
+
+  @include breakpoints.for-breakpoint('desktop') {
+    padding: var(--sp-18);
+  }
+
+  .footer-content {
+    @include breakpoints.for-breakpoint('desktop-xxlarge') {
+      width: 1440px;
+      margin: 0 auto;
+      padding: 0 var(--sp-18);
+    }
+  }
+
   .newsletter {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoints.for-breakpoint('tablet') {
+      text-align: left;
+    }
+
+    @include breakpoints.for-breakpoint('desktop') {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     .newsletter-info {
+      @include breakpoints.for-breakpoint('desktop') {
+        flex-basis: 50%;
+      }
       h2 {
         @include typography.p-lg;
         color: white;
@@ -24,11 +54,24 @@
     }
 
     .newsletter-subscription {
+      @include breakpoints.for-breakpoint('desktop') {
+        flex-basis: 40%;
+      }
+
       .newsletter-subscription-form {
         margin-top: var(--sp-7);
         display: flex;
         flex-direction: column;
         gap: var(--sp-5);
+
+        @include breakpoints.for-breakpoint('tablet') {
+          width: 50%;
+        }
+
+        @include breakpoints.for-breakpoint('desktop') {
+          flex-direction: row;
+          width: 100%;
+        }
 
         input {
           @include typography.p-sm;
@@ -39,6 +82,10 @@
 
           &::placeholder {
             color: white;
+          }
+
+          @include breakpoints.for-breakpoint('desktop') {
+            width: 100%;
           }
         }
 
@@ -52,6 +99,9 @@
             &::hover {
               background-color: var(--neutral-500);
             }
+
+            padding-left: var(--sp-10);
+            padding-right: var(--sp-10);
           }
         }
       }
