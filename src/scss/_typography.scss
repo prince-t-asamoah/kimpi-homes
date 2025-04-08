@@ -61,6 +61,15 @@ body {
   font-weight: $text-body-font-weight;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--neutral-700);
+}
+
 h1 {
   font-size: $text-h1;
   line-height: $text-h1-line-height;
