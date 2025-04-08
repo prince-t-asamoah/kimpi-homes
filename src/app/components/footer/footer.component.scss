@@ -1,0 +1,73 @@
+@use 'typography';
+@use 'breakpoints';
+
+.footer {
+  color: white;
+  background-color: var(--neutral-500);
+  padding: var(--sp-10);
+  padding-top: var(--sp-12);
+
+  .newsletter {
+    text-align: center;
+
+    .newsletter-info {
+      h2 {
+        @include typography.p-lg;
+        color: white;
+        margin-bottom: var(--sp-8);
+      }
+
+      p {
+        margin-bottom: var(--sp-5);
+        @include typography.p-sm;
+      }
+    }
+
+    .newsletter-subscription {
+      .newsletter-subscription-form {
+        margin-top: var(--sp-7);
+        display: flex;
+        flex-direction: column;
+        gap: var(--sp-5);
+
+        input {
+          @include typography.p-sm;
+          color: white;
+          border: 2px solid white;
+          border-radius: var(--sp-3);
+          padding: var(--sp-6);
+
+          &::placeholder {
+            color: white;
+          }
+        }
+
+        button {
+          @include typography.p-sm;
+          background-color: white;
+          border-radius: var(--sp-3);
+          padding: var(--sp-6);
+
+          @include breakpoints.for-breakpoint('desktop') {
+            &::hover {
+              background-color: var(--neutral-500);
+            }
+          }
+        }
+      }
+
+      .newsletter-subscription-info {
+        @include typography.p-sm;
+        margin-top: var(--sp-6);
+
+        .newsletter-policy-link {
+          text-decoration: underline;
+
+          @include breakpoints.for-breakpoint('desktop') {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
