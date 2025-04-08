@@ -4,6 +4,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { BenefitsComponent } from './components/benefits/benefits.component';
 import { ProductCategoriesComponent } from './components/product-categories/product-categories.component';
 import { NewProductsComponent } from './components/new-products/new-products.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { NewProductsComponent } from './components/new-products/new-products.com
     BenefitsComponent,
     ProductCategoriesComponent,
     NewProductsComponent,
+    FooterComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
