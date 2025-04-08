@@ -5,3 +5,8 @@
 @use './scss/typography';
 @use './scss/spacing';
 @use './scss/colors';
+
+app-footer,
+app-navbar {
+  display: block;
+}
