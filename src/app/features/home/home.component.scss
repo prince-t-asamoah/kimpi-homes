@@ -7,24 +7,22 @@
   min-height: 100vh;
 
   .main-content {
-    position: relative;
-    top: 6.875rem;
-    z-index: -1;
     padding: var(--sp-15) var(--sp-9);
+    margin-top: 7.313rem;
 
     @include breakpoints.for-breakpoint('tablet') {
       padding: var(--sp-18) var(--sp-11);
-      top: 6.688rem;
     }
 
     @include breakpoints.for-breakpoint('desktop') {
-      padding: var(--sp-10) var(--sp-18);
-      top: 9.375rem;
+      padding: var(--sp-17) var(--sp-18);
+      margin-top: 7.875rem;
     }
 
     @include breakpoints.for-breakpoint('desktop-xxlarge') {
       max-width: 1440px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
