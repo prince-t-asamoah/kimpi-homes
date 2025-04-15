@@ -24,10 +24,6 @@
       gap: var(--sp-19);
     }
 
-    @include breakpoints.for-breakpoint('desktop') {
-      gap: var(--sp-20);
-    }
-
     @include breakpoints.for-breakpoint('desktop-xxlarge') {
       width: 1440px;
       margin: 0 auto;
@@ -53,6 +49,12 @@
           flex-basis: 40%;
         }
 
+        .newsletter-info-body {
+          @include breakpoints.for-breakpoint('desktop') {
+            @include typography.p2;
+          }
+        }
+
         h2 {
           @include typography.p-lg;
           color: white;
@@ -67,7 +69,7 @@
 
       .newsletter-subscription {
         @include breakpoints.for-breakpoint('desktop') {
-          flex-basis: 40%;
+          flex-basis: 30%;
         }
 
         .newsletter-subscription-form {
@@ -133,11 +135,12 @@
       }
     }
 
-    .footer-links {
+    .footer-main-links {
       display: flex;
       flex-direction: column;
       text-align: center;
       gap: var(--sp-12);
+      padding-bottom: var(--sp-10);
 
       @include breakpoints.for-breakpoint('tablet') {
         flex-direction: row;
@@ -154,6 +157,12 @@
         margin-bottom: var(--sp-10);
       }
 
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
       .quick-links,
       .company-links,
       .legal-service-links,
@@ -168,6 +177,51 @@
 
         li {
           @include typography.p-sm;
+        }
+      }
+    }
+
+    .footer-other-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-8);
+      border-top: 1px solid white;
+      padding-top: var(--sp-13);
+      @include typography.p-sm;
+
+      @include breakpoints.for-breakpoint('desktop') {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: var(--sp-11);
+      }
+
+      .copyright-info {
+        text-align: center;
+      }
+
+      .security-policies-links {
+        @include breakpoints.for-breakpoint('tablet') {
+          display: none;
+        }
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+
+      .social-media-links {
+        padding-top: var(--sp-8);
+        padding-bottom: var(--sp-5);
+
+        @include breakpoints.for-breakpoint('tablet') {
+          padding: 0;
+        }
+
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: var(--sp-8);
         }
       }
     }
