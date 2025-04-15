@@ -4,7 +4,7 @@ $breakpoints: (
   'desktop': 1024px,
   'desktop-large': 1280px,
   'desktop-xlarge': 1440px,
-  'desktop-xxlarge': 1920px,
+  'desktop-xxlarge': 1650px,
 );
 
 @mixin for-breakpoint($breakpoint) {
