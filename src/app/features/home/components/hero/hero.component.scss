@@ -174,40 +174,5 @@
         }
       }
     }
-
-    .media-slider-controls {
-      display: flex;
-      justify-content: center;
-      gap: var(--sp-4);
-
-      @include breakpoints.for-breakpoint('desktop') {
-        gap: var(--sp-7);
-      }
-
-      button {
-        background-color: var(--neutral-200);
-        width: 1.368rem;
-        height: 1.368rem;
-        border-radius: 100%;
-        color: var(--neutral-400);
-        padding: var(--sp-4);
-
-        @include breakpoints.for-breakpoint('tablet') {
-          width: 2.75rem;
-          height: 2.75rem;
-        }
-
-        .icon {
-          display: flex;
-          place-content: center;
-          position: relative;
-          bottom: var(--sp-2);
-
-          @include breakpoints.for-breakpoint('tablet') {
-            bottom: 0;
-          }
-        }
-      }
-    }
   }
 }
