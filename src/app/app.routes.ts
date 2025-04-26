@@ -8,7 +8,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent, title: 'Kimpi Homes | Home' },
   { path: 'shop', component: ShopComponent, title: 'Kimpi Homes | Shop' },
   {
-    path: 'about-us',
+    path: 'about',
     component: AboutUsComponent,
     title: 'Kimpi Homes | About Us',
   },
