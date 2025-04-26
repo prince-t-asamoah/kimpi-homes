@@ -96,10 +96,10 @@ app-navbar {
 .media-slider-controls {
   display: flex;
   justify-content: center;
-  gap: var(--sp-4);
+  gap: $space-4;
 
   @include for-breakpoint('desktop') {
-    gap: var(--sp-7);
+    gap: $space-7;
   }
 
   button {
@@ -108,7 +108,7 @@ app-navbar {
     height: 1.368rem;
     border-radius: 100%;
     color: var(--neutral-400);
-    padding: var(--sp-4);
+    padding: $space-4;
 
     @include for-breakpoint('tablet') {
       width: 2.75rem;
@@ -119,7 +119,7 @@ app-navbar {
       display: flex;
       place-content: center;
       position: relative;
-      bottom: var(--sp-2);
+      bottom: $space-2;
 
       @include for-breakpoint('tablet') {
         bottom: 0;

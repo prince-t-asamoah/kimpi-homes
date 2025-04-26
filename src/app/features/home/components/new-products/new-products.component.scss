@@ -1,21 +1,22 @@
 @use 'typography' as *;
 @use 'breakpoints' as *;
+@use 'spacing' as *;
 
 .new-products {
-  margin-top: var(--sp-18);
+  margin-top: $space-18;
 
   @include for-breakpoint('tablet') {
-    margin-top: var(--sp-20);
+    margin-top: $space-20;
   }
 
   @include for-breakpoint('desktop-large') {
-    margin-top: var(--sp-21);
+    margin-top: $space-21;
   }
 
   header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--sp-15);
+    margin-bottom: $space-15;
 
     h2 {
       @include heading-6;
@@ -31,17 +32,17 @@
 
     .new-products-list {
       display: flex;
-      column-gap: var(--sp-8);
+      column-gap: $space-8;
       min-width: 100%;
 
       @include for-breakpoint('desktop') {
-        column-gap: var(--sp-10);
+        column-gap: $space-10;
       }
 
       .new-products-list-item {
         img {
           object-fit: cover;
-          border-radius: var(--sp-4);
+          border-radius: $space-4;
           min-width: 236px;
           min-height: 316px;
 
@@ -59,7 +60,7 @@
         .new-product-list-category {
           color: var(--neutral-500);
           text-align: center;
-          margin-top: var(--sp-10);
+          margin-top: $space-10;
         }
       }
     }

@@ -1,6 +1,7 @@
 @use 'breakpoints' as *;
 @use 'components';
 @use 'typography' as *;
+@use 'spacing' as *;
 
 .hero {
   display: flex;
@@ -28,7 +29,7 @@
       @include paragraph-2;
 
       color: var(--neutral-400);
-      margin-top: var(--sp-10);
+      margin-top: $space-10;
 
       @include for-breakpoint('desktop-large') {
         @include paragraph-large;
@@ -38,17 +39,17 @@
     .links {
       display: flex;
       flex-direction: column;
-      gap: var(--sp-5);
-      margin-top: var(--sp-14);
+      gap: $space-5;
+      margin-top: $space-14;
 
       @include for-breakpoint('tablet') {
         flex-direction: row;
-        gap: var(--sp-10);
+        gap: $space-10;
       }
 
       .shop-link,
       .learn-more-link {
-        padding: var(--sp-10);
+        padding: $space-10;
       }
 
       .shop-link {
@@ -64,8 +65,8 @@
   .media-slider {
     display: flex;
     flex-direction: column;
-    margin-top: var(--sp-20);
-    gap: var(--sp-9);
+    margin-top: $space-20;
+    gap: $space-9;
 
     img {
       position: relative;
@@ -74,7 +75,7 @@
 
     @include for-breakpoint('tablet') {
       min-width: 45.25rem;
-      gap: var(--sp-11);
+      gap: $space-11;
     }
 
     @include for-breakpoint('desktop') {
@@ -92,9 +93,9 @@
 
       .current-media-slider-container {
         width: 84.44%;
-        padding-top: var(--sp-5);
-        padding-left: var(--sp-8);
-        padding-right: var(--sp-12);
+        padding-top: $space-5;
+        padding-left: $space-8;
+        padding-right: $space-12;
         position: relative;
         display: flex;
         place-content: center;

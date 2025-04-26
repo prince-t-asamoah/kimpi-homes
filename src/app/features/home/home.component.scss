@@ -1,25 +1,24 @@
-@use 'breakpoints';
-@use 'components';
-@use 'typography';
+@use 'breakpoints' as *;
+@use 'spacing' as *;
 
 .homepage {
   position: relative;
   min-height: 100vh;
 
   .main-content {
-    padding: var(--sp-15) var(--sp-9);
+    padding: $space-15 $space-9;
     margin-top: 7.313rem;
 
-    @include breakpoints.for-breakpoint('tablet') {
-      padding: var(--sp-18) var(--sp-11);
+    @include for-breakpoint('tablet') {
+      padding: $space-18 $space-11;
     }
 
-    @include breakpoints.for-breakpoint('desktop') {
-      padding: var(--sp-17) var(--sp-18);
+    @include for-breakpoint('desktop') {
+      padding: $space-17 $space-18;
       margin-top: 7.875rem;
     }
 
-    @include breakpoints.for-breakpoint('desktop-xxlarge') {
+    @include for-breakpoint('desktop-xxlarge') {
       max-width: 1440px;
       margin-left: auto;
       margin-right: auto;
