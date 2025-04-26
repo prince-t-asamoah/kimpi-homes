@@ -51,14 +51,6 @@
       .learn-more-link {
         padding: $space-10;
       }
-
-      .shop-link {
-        @include components.button-filled;
-      }
-
-      .learn-more-link {
-        @include components.button-outlined;
-      }
     }
   }
 

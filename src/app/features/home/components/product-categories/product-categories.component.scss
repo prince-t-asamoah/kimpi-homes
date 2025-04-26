@@ -162,7 +162,6 @@
       }
 
       .learn-more-btn {
-        @include components.button-filled;
         width: 100%;
         display: inline-block;
         margin-top: $space-13;
