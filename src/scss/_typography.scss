@@ -1,179 +1,77 @@
-:root {
-  font-size: 100%; // For Accessiblity
+@mixin heading-1 {
+  font-size: 4rem;
+  line-height: 4.625rem;
+  font-weight: 700;
 }
 
-/* Body Text */
-$text-body-font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
-$text-body-font-size: 1rem; //16px
-$text-body-line-height: 1.5rem; // 24px
-$text-body-font-weight: 400; // Regular
-
-$text-body-lg-font-weight: 500; // Medium
-
-$text-body-sm: 0.875rem; // 14px
-$text-body-sm-line-height: 1.5rem; // 24px
-$text-body-sm-font-weight: 400; // Regular
-
-/* Headings */
-$text-h1: 4rem; // 64px
-$text-h1-line-height: 4.625rem; // 74px
-$text-h1-font-weight: 700; // Bold
-
-$text-h2: 3.5rem; // 56px
-$text-h2-line-height: 4rem; // 64px
-$text-h2-font-weight: 600; // Semi-Bold
-
-$text-h3: 3rem; // rem(48px)
-$text-h3-line-height: 3.5rem; // 56px
-$text-h3-font-weight: 600; // Semi-Bold
-
-$text-h4: 2.5rem; // 40px
-$text-h4-line-height: 3rem; // 48px
-$text-h4-font-weight: 600; // Semi-Bold
-
-$text-h5: 2rem; // 32px
-$text-h5-line-height: 2.5rem; // 40px
-$text-h5-font-weight: 600; // Semi-Bold
-
-$text-h6: 1.5rem; // 24px
-$text-h6-line-height: 2rem; // 32px
-$text-h6-font-weight: 600; // Semi-Bold
-
-/* Paragraphs */
-$text-pg: 1rem; // 16px
-$text-pg-line-height: 2rem; // 32px
-$text-pg-font-weight: 400; // Regular
-
-$text-pg-2-line-height: 1.5rem; // 24px
-
-$text-pg-lg: 1.125rem; // 18px
-$text-pg-lg-line-height: 1.5rem; // 24px
-$text-pg-lg-font-weight: 600; // Regular
-
-$text-pg-sm: 0.75rem; // 12px
-$text-pg-sm-line-height: 1rem; // 16px
-$text-pg-sm-font-weight: 400; // Regular
-
-body {
-  font-family: $text-body-font-family;
-  font-size: $text-body-font-size;
-  line-height: $text-body-line-height;
-  font-weight: $text-body-font-weight;
+@mixin heading-2 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 600;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--neutral-700);
+@mixin heading-3 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 600;
 }
 
-h1 {
-  font-size: $text-h1;
-  line-height: $text-h1-line-height;
-  font-weight: $text-h1-font-weight;
+@mixin heading-4 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 600;
 }
 
-h2 {
-  font-size: $text-h2;
-  line-height: $text-h2-line-height;
-  font-weight: $text-h2-font-weight;
+@mixin heading-5 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
 }
 
-h3 {
-  font-size: $text-h3;
-  line-height: $text-h3-line-height;
-  font-weight: $text-h3-font-weight;
+@mixin heading-6 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
 }
 
-h4 {
-  font-size: $text-h4;
-  line-height: $text-h4-line-height;
-  font-weight: $text-h4-font-weight;
+@mixin paragraph-1 {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
 }
 
-h5 {
-  font-size: $text-h5;
-  line-height: $text-h5-line-height;
-  font-weight: $text-h5-font-weight;
+@mixin paragraph-2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
-h6 {
-  font-size: $text-h6;
-  line-height: $text-h6-line-height;
-  font-weight: $text-h6-font-weight;
+@mixin paragraph-large {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
-p {
-  font-size: $text-pg;
-  line-height: $text-pg-line-height;
-  font-weight: $text-pg-font-weight;
+@mixin paragraph-small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
 }
 
-@mixin h1 {
-  font-size: $text-h1;
-  line-height: $text-h1-line-height;
-  font-weight: $text-h1-font-weight;
+@mixin body-small {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
-@mixin h2 {
-  font-size: $text-h2;
-  line-height: $text-h2-line-height;
-  font-weight: $text-h2-font-weight;
+@mixin body-medium {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 
-@mixin h3 {
-  font-size: $text-h3;
-  line-height: $text-h3-line-height;
-  font-weight: $text-h3-font-weight;
-}
-
-@mixin h4 {
-  font-size: $text-h4;
-  line-height: $text-h4-line-height;
-  font-weight: $text-h4-font-weight;
-}
-
-@mixin h5 {
-  font-size: $text-h5;
-  line-height: $text-h5-line-height;
-  font-weight: $text-h5-font-weight;
-}
-
-@mixin h6 {
-  font-size: $text-h6;
-  line-height: $text-h6-line-height;
-  font-weight: $text-h6-font-weight;
-}
-
-@mixin p2 {
-  font-size: $text-pg;
-  line-height: $text-pg-2-line-height;
-  font-weight: $text-pg-font-weight;
-}
-
-@mixin p-lg {
-  font-size: $text-pg-lg;
-  line-height: $text-pg-lg-line-height;
-  font-weight: $text-pg-lg-font-weight;
-}
-
-@mixin p-sm {
-  font-size: $text-pg-sm;
-  line-height: $text-pg-sm-line-height;
-  font-weight: $text-pg-sm-font-weight;
-}
-
-@mixin body-sm {
-  font-size: $text-body-sm;
-  line-height: $text-body-sm-line-height;
-  font-weight: $text-body-sm-font-weight;
-}
-
-@mixin body-lg {
-  font-size: $text-body;
-  line-height: $text-body-line-height;
-  font-weight: $text-body-lg-font-weight;
+@mixin body-large {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
