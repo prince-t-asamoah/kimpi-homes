@@ -2,22 +2,103 @@
 
 @use './scss/reset';
 @use './scss/utilities';
-@use './scss/typography';
-@use './scss/spacing';
 @use './scss/colors';
-@use './scss/breakpoints';
+@use 'typography' as *;
+@use 'spacing' as *;
+@use 'breakpoints' as *;
 
+// Base Styles
+:root {
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
+  @include body-small;
+
+  @include for-breakpoint('tablet') {
+    @include body-medium;
+  }
+
+  @include for-breakpoint('desktop') {
+    @include body-large;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--neutral-700);
+}
+
+h1,
+.heading-1 {
+  @include heading-1;
+}
+
+h2,
+.heading-2 {
+  @include heading-2;
+}
+
+h3,
+.heading-3 {
+  @include heading-3;
+}
+
+h4,
+.heading-4 {
+  @include heading-4;
+}
+
+h5,
+.heading-5 {
+  @include heading-5;
+}
+
+h6,
+.heading-6 {
+  @include heading-6;
+}
+
+p,
+.paragraph-1 {
+  @include paragraph-1;
+}
+
+.paragraph-2 {
+  @include paragraph-2;
+}
+
+.paragraph-large {
+  @include paragraph-large;
+}
+
+.paragraph-small {
+  @include paragraph-small;
+}
+
+// App Components
 app-footer,
 app-navbar {
   display: block;
 }
 
+// UI Components
 .media-slider-controls {
   display: flex;
   justify-content: center;
   gap: var(--sp-4);
 
-  @include breakpoints.for-breakpoint('desktop') {
+  @include for-breakpoint('desktop') {
     gap: var(--sp-7);
   }
 
@@ -29,7 +110,7 @@ app-navbar {
     color: var(--neutral-400);
     padding: var(--sp-4);
 
-    @include breakpoints.for-breakpoint('tablet') {
+    @include for-breakpoint('tablet') {
       width: 2.75rem;
       height: 2.75rem;
     }
@@ -40,7 +121,7 @@ app-navbar {
       position: relative;
       bottom: var(--sp-2);
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         bottom: 0;
       }
     }
