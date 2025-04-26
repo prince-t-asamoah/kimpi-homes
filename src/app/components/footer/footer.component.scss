@@ -1,5 +1,5 @@
-@use 'typography';
-@use 'breakpoints';
+@use 'typography' as *;
+@use 'breakpoints' as *;
 
 .footer {
   color: white;
@@ -7,11 +7,11 @@
   padding: var(--sp-10);
   padding-top: var(--sp-12);
 
-  @include breakpoints.for-breakpoint('tablet') {
+  @include for-breakpoint('tablet') {
     padding: var(--sp-12);
   }
 
-  @include breakpoints.for-breakpoint('desktop') {
+  @include for-breakpoint('desktop') {
     padding: var(--sp-18);
   }
 
@@ -20,11 +20,11 @@
     flex-direction: column;
     gap: var(--sp-13);
 
-    @include breakpoints.for-breakpoint('tablet') {
+    @include for-breakpoint('tablet') {
       gap: var(--sp-19);
     }
 
-    @include breakpoints.for-breakpoint('desktop-xxlarge') {
+    @include for-breakpoint('desktop-xxlarge') {
       width: 1440px;
       margin: 0 auto;
       padding: 0 var(--sp-18);
@@ -35,40 +35,40 @@
       display: flex;
       flex-direction: column;
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         text-align: left;
       }
 
-      @include breakpoints.for-breakpoint('desktop') {
+      @include for-breakpoint('desktop') {
         flex-direction: row;
         justify-content: space-between;
       }
 
       .newsletter-info {
-        @include breakpoints.for-breakpoint('desktop') {
+        @include for-breakpoint('desktop') {
           flex-basis: 40%;
         }
 
         .newsletter-info-body {
-          @include breakpoints.for-breakpoint('desktop') {
-            @include typography.p2;
+          @include for-breakpoint('desktop') {
+            @include paragraph-2;
           }
         }
 
         h2 {
-          @include typography.p-lg;
+          @include paragraph-large;
           color: white;
           margin-bottom: var(--sp-8);
         }
 
         p {
           margin-bottom: var(--sp-5);
-          @include typography.p-sm;
+          @include paragraph-small;
         }
       }
 
       .newsletter-subscription {
-        @include breakpoints.for-breakpoint('desktop') {
+        @include for-breakpoint('desktop') {
           flex-basis: 30%;
         }
 
@@ -78,17 +78,17 @@
           flex-direction: column;
           gap: var(--sp-5);
 
-          @include breakpoints.for-breakpoint('tablet') {
+          @include for-breakpoint('tablet') {
             width: 50%;
           }
 
-          @include breakpoints.for-breakpoint('desktop') {
+          @include for-breakpoint('desktop') {
             flex-direction: row;
             width: 100%;
           }
 
           input {
-            @include typography.p-sm;
+            @include paragraph-small;
             color: white;
             border: 2px solid white;
             border-radius: var(--sp-3);
@@ -98,18 +98,18 @@
               color: white;
             }
 
-            @include breakpoints.for-breakpoint('desktop') {
+            @include for-breakpoint('desktop') {
               width: 100%;
             }
           }
 
           button {
-            @include typography.p-sm;
+            @include paragraph-small;
             background-color: white;
             border-radius: var(--sp-3);
             padding: var(--sp-6);
 
-            @include breakpoints.for-breakpoint('desktop') {
+            @include for-breakpoint('desktop') {
               &::hover {
                 background-color: var(--neutral-500);
               }
@@ -121,13 +121,13 @@
         }
 
         .newsletter-subscription-info {
-          @include typography.p-sm;
+          @include paragraph-small;
           margin-top: var(--sp-6);
 
           .newsletter-policy-link {
             text-decoration: underline;
 
-            @include breakpoints.for-breakpoint('desktop') {
+            @include for-breakpoint('desktop') {
               cursor: pointer;
             }
           }
@@ -142,17 +142,17 @@
       gap: var(--sp-12);
       padding-bottom: var(--sp-10);
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         flex-direction: row;
         text-align: left;
       }
 
-      @include breakpoints.for-breakpoint('desktop') {
+      @include for-breakpoint('desktop') {
         width: 70%;
       }
 
       h3 {
-        @include typography.p-lg;
+        @include paragraph-large;
         color: white;
         margin-bottom: var(--sp-10);
       }
@@ -176,7 +176,7 @@
         gap: var(--sp-9);
 
         li {
-          @include typography.p-sm;
+          @include paragraph-small;
         }
       }
     }
@@ -187,9 +187,9 @@
       gap: var(--sp-8);
       border-top: 1px solid white;
       padding-top: var(--sp-13);
-      @include typography.p-sm;
+      @include paragraph-small;
 
-      @include breakpoints.for-breakpoint('desktop') {
+      @include for-breakpoint('desktop') {
         flex-direction: row;
         justify-content: space-between;
         padding-top: var(--sp-11);
@@ -200,7 +200,7 @@
       }
 
       .security-policies-links {
-        @include breakpoints.for-breakpoint('tablet') {
+        @include for-breakpoint('tablet') {
           display: none;
         }
 
@@ -214,7 +214,7 @@
         padding-top: var(--sp-8);
         padding-bottom: var(--sp-5);
 
-        @include breakpoints.for-breakpoint('tablet') {
+        @include for-breakpoint('tablet') {
           padding: 0;
         }
 

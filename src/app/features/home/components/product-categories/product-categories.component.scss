@@ -1,19 +1,19 @@
-@use 'typography';
-@use 'breakpoints';
+@use 'typography' as *;
+@use 'breakpoints' as *;
 @use 'components';
 
 .product-categories {
   margin-top: var(--sp-15);
 
-  @include breakpoints.for-breakpoint('tablet') {
+  @include for-breakpoint('tablet') {
     margin-top: var(--sp-20);
   }
 
-  @include breakpoints.for-breakpoint('desktop-large') {
+  @include for-breakpoint('desktop-large') {
     margin-top: var(--sp-22);
   }
 
-  @include breakpoints.for-breakpoint('desktop-xlarge') {
+  @include for-breakpoint('desktop-xlarge') {
     margin-top: var(--sp-23);
   }
 
@@ -23,10 +23,10 @@
     align-items: center;
 
     h2 {
-      @include typography.h6;
+      @include heading-6;
 
-      @include breakpoints.for-breakpoint('tablet') {
-        @include typography.h5;
+      @include for-breakpoint('tablet') {
+        @include heading-5;
       }
     }
   }
@@ -41,7 +41,7 @@
     column-gap: var(--sp-8);
     margin-top: var(--sp-14);
 
-    @include breakpoints.for-breakpoint('desktop') {
+    @include for-breakpoint('desktop') {
       column-gap: var(--sp-10);
     }
 
@@ -54,12 +54,12 @@
         object-fit: cover;
         border-radius: var(--sp-6);
 
-        @include breakpoints.for-breakpoint('tablet') {
+        @include for-breakpoint('tablet') {
           width: 16.919rem;
           height: 16.919rem;
         }
 
-        @include breakpoints.for-breakpoint('desktop') {
+        @include for-breakpoint('desktop') {
           width: 22.563rem;
           height: 22.563rem;
         }
@@ -80,12 +80,12 @@
     display: flex;
     flex-direction: column;
 
-    @include breakpoints.for-breakpoint('tablet') {
+    @include for-breakpoint('tablet') {
       margin-top: var(--sp-19);
       flex-direction: row;
     }
 
-    @include breakpoints.for-breakpoint('desktop') {
+    @include for-breakpoint('desktop') {
       margin-top: var(--sp-21);
     }
 
@@ -94,14 +94,14 @@
       border-top-right-radius: var(--sp-4);
       border-top-left-radius: var(--sp-4);
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         border-top-right-radius: 0;
         border-top-left-radius: 0;
         border-bottom-left-radius: var(--sp-4);
         border-top-left-radius: var(--sp-4);
       }
 
-      @include breakpoints.for-breakpoint('desktop') {
+      @include for-breakpoint('desktop') {
         border-bottom-left-radius: var(--sp-4);
       }
 
@@ -112,7 +112,7 @@
         border-top-right-radius: var(--sp-4);
         border-top-left-radius: var(--sp-4);
 
-        @include breakpoints.for-breakpoint('tablet') {
+        @include for-breakpoint('tablet') {
           border-top-right-radius: 0;
           border-bottom-left-radius: var(--sp-4);
         }
@@ -126,14 +126,14 @@
       border-bottom-right-radius: var(--sp-4);
       border-bottom-left-radius: var(--sp-4);
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: var(--sp-4);
         border-top-right-radius: var(--sp-4);
       }
 
-      @include breakpoints.for-breakpoint('desktop') {
+      @include for-breakpoint('desktop') {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -143,19 +143,19 @@
 
       h3 {
         color: white;
-        @include typography.h6;
+        @include heading-6;
       }
 
       p {
         color: white;
         margin-top: var(--sp-5);
-        @include typography.p2;
+        @include paragraph-2;
       }
 
       .flash-sale-info-break {
         display: none;
 
-        @include breakpoints.for-breakpoint('desktop') {
+        @include for-breakpoint('desktop') {
           display: block;
         }
       }
@@ -166,11 +166,11 @@
         display: inline-block;
         margin-top: var(--sp-13);
 
-        @include breakpoints.for-breakpoint('tablet') {
+        @include for-breakpoint('tablet') {
           width: auto;
         }
 
-        @include breakpoints.for-breakpoint('desktop') {
+        @include for-breakpoint('desktop') {
           cursor: pointer;
         }
       }

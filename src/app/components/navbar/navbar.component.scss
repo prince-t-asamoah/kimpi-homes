@@ -1,6 +1,6 @@
-@use 'breakpoints';
+@use 'breakpoints' as *;
 @use 'components';
-@use 'typography';
+@use 'typography' as *;
 
 .navbar {
   position: fixed;
@@ -12,7 +12,7 @@
     position: relative;
     background-color: white;
 
-    @include breakpoints.for-breakpoint('desktop') {
+    @include for-breakpoint('desktop') {
       display: none;
     }
 
@@ -24,7 +24,7 @@
       border-bottom: 1px solid var(--neutral-200);
       position: relative;
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         padding-left: var(--sp-13);
         padding-right: var(--sp-13);
       }
@@ -183,7 +183,7 @@
           padding: var(--sp-5);
 
           &::placeholder {
-            @include typography.p-sm;
+            @include paragraph-small;
           }
 
           @include components.search-input-cancel;
@@ -207,7 +207,7 @@
     position: absolute;
     background-color: white;
 
-    @include breakpoints.for-breakpoint('desktop') {
+    @include for-breakpoint('desktop') {
       display: flex;
     }
 

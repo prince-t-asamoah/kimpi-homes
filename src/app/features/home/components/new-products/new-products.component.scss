@@ -1,14 +1,14 @@
-@use 'typography';
-@use 'breakpoints';
+@use 'typography' as *;
+@use 'breakpoints' as *;
 
 .new-products {
   margin-top: var(--sp-18);
 
-  @include breakpoints.for-breakpoint('tablet') {
+  @include for-breakpoint('tablet') {
     margin-top: var(--sp-20);
   }
 
-  @include breakpoints.for-breakpoint('desktop-large') {
+  @include for-breakpoint('desktop-large') {
     margin-top: var(--sp-21);
   }
 
@@ -18,10 +18,10 @@
     margin-bottom: var(--sp-15);
 
     h2 {
-      @include typography.h6;
+      @include heading-6;
 
-      @include breakpoints.for-breakpoint('tablet') {
-        @include typography.h5;
+      @include for-breakpoint('tablet') {
+        @include heading-5;
       }
     }
   }
@@ -34,7 +34,7 @@
       column-gap: var(--sp-8);
       min-width: 100%;
 
-      @include breakpoints.for-breakpoint('desktop') {
+      @include for-breakpoint('desktop') {
         column-gap: var(--sp-10);
       }
 
@@ -45,12 +45,12 @@
           min-width: 236px;
           min-height: 316px;
 
-          @include breakpoints.for-breakpoint('tablet') {
+          @include for-breakpoint('tablet') {
             min-width: 316px;
             min-height: 422px;
           }
 
-          @include breakpoints.for-breakpoint('desktop') {
+          @include for-breakpoint('desktop') {
             min-width: 421px;
             min-height: 562px;
           }

@@ -1,36 +1,36 @@
-@use 'typography';
-@use 'breakpoints';
+@use 'typography' as *;
+@use 'breakpoints' as *;
 
 .service-offer {
   display: flex;
   flex-direction: column;
   margin-top: var(--sp-18);
 
-  @include breakpoints.for-breakpoint('desktop') {
+  @include for-breakpoint('desktop') {
     margin-top: var(--sp-20);
   }
 
-  @include breakpoints.for-breakpoint('desktop-large') {
+  @include for-breakpoint('desktop-large') {
     flex-direction: row;
     margin-top: var(--sp-23);
     gap: var(--sp-15);
   }
 
   p {
-    @include typography.p2;
+    @include paragraph-2;
     color: var(--neutral-400);
   }
 
   .introduction {
     h2 {
-      @include typography.h5;
+      @include heading-5;
       margin-bottom: var(--sp-10);
     }
 
     .line-break {
       display: none;
 
-      @include breakpoints.for-breakpoint('tablet') {
+      @include for-breakpoint('tablet') {
         display: block;
       }
     }
@@ -42,7 +42,7 @@
     flex-direction: column;
     gap: var(--sp-14);
 
-    @include breakpoints.for-breakpoint('tablet') {
+    @include for-breakpoint('tablet') {
       margin-top: var(--sp-16);
 
       display: grid;
@@ -79,7 +79,7 @@
     min-width: fit-content;
     display: none;
 
-    @include breakpoints.for-breakpoint('desktop-large') {
+    @include for-breakpoint('desktop-large') {
       display: block;
     }
 
