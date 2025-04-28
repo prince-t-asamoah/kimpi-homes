@@ -87,9 +87,11 @@ p,
 }
 
 // App Components
+app-navbar,
 app-footer,
-app-navbar {
+app-language-bar {
   display: block;
+  height: auto;
 }
 
 // UI Components
