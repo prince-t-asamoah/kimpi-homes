@@ -1,100 +1,91 @@
-<div class="navbar">
-  <app-language-bar></app-language-bar>
-  <header>
-    <div class="header-container">
-      <nav aria-label="Site Logo">
-        <a routerLink="/" class="site-logo">KimpiHomes</a>
-      </nav>
-      <nav aria-label="Main Navigation" class="desktop-main-navigation">
-        <ul class="links">
-          <li class="link">
-            <a routerLink="/home" routerLinkActive="active">Home</a>
-          </li>
-          <li class="link">
-            <a routerLink="/shop" routerLinkActive="active">Shop</a>
-          </li>
-          <li class="link">
-            <a routerLink="/about" routerLinkActive="active">About</a>
-          </li>
-          <li class="link">
-            <a routerLink="#" routerLinkActive="active">FAQs</a>
-          </li>
-          <li class="link">
-            <a routerLink="#" routerLinkActive="active">News</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="top-right">
+<header class="navbar-content">
+  <nav aria-label="Site Logo">
+    <a routerLink="/" class="site-logo">KimpiHomes</a>
+  </nav>
+  <nav aria-label="Main Navigation" class="desktop main-navigation">
+    <ul class="links">
+      <li class="link">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="link">
+        <a routerLink="/shop" routerLinkActive="active">Shop</a>
+      </li>
+      <li class="link">
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="link">
+        <a routerLink="#" routerLinkActive="active">FAQs</a>
+      </li>
+      <li class="link">
+        <a routerLink="#" routerLinkActive="active">News</a>
+      </li>
+    </ul>
+  </nav>
+  <nav
+    aria-label="Main Navigation"
+    [ngClass]="
+      showMainNavigation
+        ? 'mobile main-navigation active'
+        : 'mobile main-navigation'
+    ">
+    <ul class="links">
+      <li class="link">
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="link">
+        <a routerLink="/shop" routerLinkActive="active">Shop</a>
+      </li>
+      <li class="link">
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="link">
+        <a routerLink="#" routerLinkActive="active">FAQs</a>
+      </li>
+      <li class="link">
+        <a routerLink="#" routerLinkActive="active">News</a>
+      </li>
+      <li class="link login">
+        <a routerLink="#" class="button-filled">Login</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="top-right">
+    <button
+      type="button"
+      aria-label="Search"
+      class="search-btn"
+      (click)="toggleSearchProductBar()"
+      (blur)="toggleSearchProductBar()">
+      <lucide-icon name="search"></lucide-icon>
+    </button>
+    <button class="user-avatar-btn" aria-label="User Avatar">
+      <lucide-icon name="user"></lucide-icon>
+    </button>
+    <button class="menu-btn" (click)="toggleMainNavigation()" aria-label="Menu">
+      <div [ngClass]="showMainNavigation ? 'bar1 active' : 'bar1'"></div>
+      <div [ngClass]="showMainNavigation ? 'bar2 active' : 'bar2'"></div>
+      <div [ngClass]="showMainNavigation ? 'bar3 active' : 'bar3'"></div>
+    </button>
+  </div>
+
+  <div
+    [ngClass]="
+      showSearchProductBar ? 'search-product-bar active' : 'search-product-bar'
+    ">
+    <div class="search-product-bar-container">
+      <div class="search-product-bar-input">
         <button
           type="button"
-          aria-label="Search"
-          class="search-btn"
-          (click)="toggleSearchProductBar()"
-          (blur)="toggleSearchProductBar()">
-          <lucide-icon name="search"></lucide-icon>
+          class="back-btn"
+          (click)="toggleSearchProductBar()">
+          <lucide-icon name="chevron-left"></lucide-icon>
         </button>
-        <button class="user-avatar-btn" aria-label="User Avatar">
-          <lucide-icon name="user"></lucide-icon>
-        </button>
-        <button
-          class="menu-btn"
-          (click)="toggleMainNavigation()"
-          aria-label="Menu">
-          <div [ngClass]="showMainNavigation ? 'bar1 active' : 'bar1'"></div>
-          <div [ngClass]="showMainNavigation ? 'bar2 active' : 'bar2'"></div>
-          <div [ngClass]="showMainNavigation ? 'bar3 active' : 'bar3'"></div>
-        </button>
+        <input
+          type="search"
+          id="searchProductsInput"
+          aria-label="Search Products"
+          placeholder="Search Products" />
       </div>
     </div>
-    <div
-      [ngClass]="
-        showMainNavigation ? 'main-navigation active' : 'main-navigation'
-      ">
-      <nav aria-label="Main Navigation" class="mobile-main-navigation">
-        <ul class="links">
-          <li class="link">
-            <a routerLink="/home" routerLinkActive="active">Home</a>
-          </li>
-          <li class="link">
-            <a routerLink="/shop" routerLinkActive="active">Shop</a>
-          </li>
-          <li class="link">
-            <a routerLink="/about" routerLinkActive="active">About</a>
-          </li>
-          <li class="link">
-            <a routerLink="#" routerLinkActive="active">FAQs</a>
-          </li>
-          <li class="link">
-            <a routerLink="#" routerLinkActive="active">News</a>
-          </li>
-        </ul>
-      </nav>
-
-      <nav aria-label="Login" class="login">
-        <a routerLink="#" class="login-link">Login</a>
-      </nav>
-    </div>
-    <div
-      [ngClass]="
-        showSearchProductBar
-          ? 'search-product-bar active'
-          : 'search-product-bar'
-      ">
-      <div class="search-product-bar-container">
-        <div class="search-product-bar-input">
-          <button
-            type="button"
-            class="back-btn"
-            (click)="toggleSearchProductBar()">
-            <lucide-icon name="chevron-left"></lucide-icon>
-          </button>
-          <input
-            type="search"
-            id="searchProductsInput"
-            aria-label="Search Products"
-            placeholder="Search Products" />
-        </div>
-      </div>
-    </div>
-  </header>
-</div>
+  </div>
+</header>
