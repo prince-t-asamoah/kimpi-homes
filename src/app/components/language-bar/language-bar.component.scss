@@ -2,129 +2,136 @@
 @use 'components';
 @use 'spacing' as *;
 
-.language-bar {
+app-language-bar {
   background-color: var(--neutral-400);
-  padding: $space-8 $space-9;
-  display: flex;
-  justify-content: end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
-  @include for-breakpoint('tablet') {
-    padding-left: $space-13;
-    padding-right: $space-13;
-  }
-
-  @include for-breakpoint('desktop') {
-    padding-left: $space-18;
-    padding-right: $space-18;
-  }
-
-  fa-icon {
-    color: var(--neutral-400);
-  }
-
-  .language-bar-btn {
-    color: var(--neutral-400);
-    background-color: white;
-    padding: $space-2 $space-6;
-    border-radius: $space-3;
+  .language-bar-content {
+    padding: $space-8 $space-9;
     display: flex;
-    align-items: center;
-    gap: $space-4;
-
-    .globe-icon {
-      margin-right: $space-3;
-    }
-
-    .text {
-      display: flex;
-      gap: $space-5;
-    }
-  }
-
-  .language-bar-menu {
-    border: 0;
-    margin: 0;
-    margin-top: 3.5rem;
-    min-width: 100vw;
-    min-height: 100%;
-    transition: 0.4s;
+    justify-content: end;
 
     @include for-breakpoint('tablet') {
-      min-width: 30.75rem;
-      margin-left: auto;
+      padding-left: $space-13;
+      padding-right: $space-13;
     }
 
     @include for-breakpoint('desktop') {
-      min-width: 34.313rem;
+      padding-left: $space-18;
+      padding-right: $space-18;
     }
 
-    &::backdrop {
-      top: 3.5rem;
-
-      background-color: var(--neutral-400);
-      opacity: 0.3;
+    fa-icon {
+      color: var(--neutral-400);
     }
 
-    .close-language-form-btn {
-      width: 25px;
-      height: 25px;
-      border-radius: $space-4;
-      transition: 0.5s;
+    .language-bar-btn {
+      color: var(--neutral-400);
+      background-color: white;
+      padding: $space-2 $space-6;
+      border-radius: $space-3;
+      display: flex;
+      align-items: center;
+      gap: $space-4;
 
-      @include for-breakpoint('desktop') {
-        &:hover {
-          background-color: var(--neutral-200);
-        }
+      .globe-icon {
+        margin-right: $space-3;
+      }
+
+      .text {
+        display: flex;
+        gap: $space-5;
       }
     }
 
-    .title {
-      text-align: center;
-      margin-top: $space-20;
+    .language-bar-menu {
+      border: 0;
+      margin: 0;
+      margin-top: 3.5rem;
+      min-width: 100vw;
+      min-height: 100%;
+      transition: 0.4s;
 
       @include for-breakpoint('tablet') {
-        margin-top: $space-20;
+        min-width: 30.75rem;
+        margin-left: auto;
       }
-    }
 
-    .language-bar-form {
-      margin-top: $space-15;
-      display: flex;
-      flex-direction: column;
-      gap: $space-10;
+      @include for-breakpoint('desktop') {
+        min-width: 34.313rem;
+      }
 
-      .language-form-input {
-        display: flex;
-        flex-direction: column;
+      &::backdrop {
+        top: 3.5rem;
 
-        .label {
-          font-weight: 700;
-          margin-bottom: $space-2;
-        }
+        background-color: var(--neutral-400);
+        opacity: 0.3;
+      }
 
-        select {
-          color: var(--neutral-300);
-          padding: $space-9 $space-6;
-          border: 1px solid var(--neutral-200);
-          border-radius: $space-3;
-          background: transparent;
-          background-image: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M19.5 9L12 16.5L4.5 9' stroke='%23B0B0B0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-          background-repeat: no-repeat;
-          background-position-x: 97.5%;
-          background-position-y: 0.938rem;
-          transition: 0.3s;
+      .close-language-form-btn {
+        width: 25px;
+        height: 25px;
+        border-radius: $space-4;
+        transition: 0.5s;
 
-          @include for-breakpoint('desktop') {
-            &:hover {
-              cursor: pointer;
-              background-color: var(--neutral-100);
-            }
+        @include for-breakpoint('desktop') {
+          &:hover {
+            background-color: var(--neutral-200);
           }
         }
       }
 
-      .save-btn {
-        margin-top: $space-10;
+      .title {
+        text-align: center;
+        margin-top: $space-20;
+
+        @include for-breakpoint('tablet') {
+          margin-top: $space-20;
+        }
+      }
+
+      .language-bar-form {
+        margin-top: $space-15;
+        display: flex;
+        flex-direction: column;
+        gap: $space-10;
+
+        .language-form-input {
+          display: flex;
+          flex-direction: column;
+
+          .label {
+            font-weight: 700;
+            margin-bottom: $space-2;
+          }
+
+          select {
+            color: var(--neutral-300);
+            padding: $space-9 $space-6;
+            border: 1px solid var(--neutral-200);
+            border-radius: $space-3;
+            background: transparent;
+            background-image: url("data:image/svg+xml,<svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M19.5 9L12 16.5L4.5 9' stroke='%23B0B0B0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 97.5%;
+            background-position-y: 0.938rem;
+            transition: 0.3s;
+
+            @include for-breakpoint('desktop') {
+              &:hover {
+                cursor: pointer;
+                background-color: var(--neutral-100);
+              }
+            }
+          }
+        }
+
+        .save-btn {
+          margin-top: $space-10;
+        }
       }
     }
   }
