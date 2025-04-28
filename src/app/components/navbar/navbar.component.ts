@@ -2,11 +2,10 @@ import { NgClass } from '@angular/common';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { LanguageBarComponent } from '../language-bar/language-bar.component';
 
 @Component({
   selector: 'app-navbar',
-  imports: [NgClass, LucideAngularModule, RouterModule, LanguageBarComponent],
+  imports: [NgClass, LucideAngularModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   encapsulation: ViewEncapsulation.None,
