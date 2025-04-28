@@ -5,6 +5,7 @@ import { BenefitsComponent } from './components/benefits/benefits.component';
 import { ProductCategoriesComponent } from './components/product-categories/product-categories.component';
 import { NewProductsComponent } from './components/new-products/new-products.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { LanguageBarComponent } from '../../components/language-bar/language-bar.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     ProductCategoriesComponent,
     NewProductsComponent,
     FooterComponent,
+    LanguageBarComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
