@@ -1,13 +1,44 @@
 <div class="login-content">
   <section class="login-form">
-    <header>
-      <a routerLink="/" class="site-logo"> KimpiHomes </a>
-      <h1 class="title">Login</h1>
-      <p class="info">Welcome back! Please enter your details to continue.</p>
-    </header>
+    <div class="login-form-content">
+      <header>
+        <a routerLink="/" class="site-logo"> KimpiHomes </a>
+        <h1 class="title">Login</h1>
+        <p class="title-info">
+          Welcome back! Please enter your details to continue.
+        </p>
+      </header>
+      <form>
+        <div class="form-fields">
+          <label for="email" class="form-field">
+            <span class="form-field-label">Email</span>
+            <input
+              type="email"
+              id="email"
+              class="form-field-control"
+              placeholder="john.doe@gmail.com" />
+          </label>
+          <label for="password" class="form-field">
+            <span class="form-field-label">Password</span>
+            <input
+              type="password"
+              id="password"
+              class="form-field-control"
+              placeholder="*********" />
+          </label>
+          <a routerLink="#" class="form-link forget-password-info"
+            >Forget Password?</a
+          >
+        </div>
+        <button type="submit" class="button-filled login-btn">Login</button>
+        <p class="create-account-info">
+          Don't have an account yet?
+          <a routerLink="#" class="form-link">Create an account</a>
+        </p>
+      </form>
+    </div>
   </section>
-  <div class="login-image-container">
-    <form action=""></form>
+  <section class="login-image-container">
     <img src="./assets/images/login/desktop-image.png" alt="" />
-  </div>
+  </section>
 </div>
