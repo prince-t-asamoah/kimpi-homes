@@ -5,8 +5,11 @@
 
 app-login {
   .login-content {
-    height: 100vh;
     display: flex;
+
+    @include for-breakpoint('desktop') {
+      height: 100vh;
+    }
 
     .login-form,
     .login-image-container {
@@ -53,6 +56,11 @@ app-login {
             margin-top: $space-7;
             @include paragraph-2;
           }
+
+          @include for-breakpoint('desktop') {
+            margin-top: $space-10;
+            @include paragraph-large;
+          }
         }
       }
 
@@ -83,16 +91,25 @@ app-login {
             display: flex;
             flex-direction: column;
             gap: $space-3;
-            @include paragraph-small;
 
             .form-field-label {
+              @include paragraph-small;
               font-weight: bold;
+
+              @include for-breakpoint('desktop') {
+                @include paragraph-2;
+                font-weight: bold;
+              }
             }
 
             .form-field-control {
               outline: 1px solid $neutral-200;
               border-radius: $space-2;
               padding: $space-8 $space-5;
+
+              @include for-breakpoint('desktop') {
+                @include paragraph-2;
+              }
 
               &::placeholder {
                 color: $neutral-300;
@@ -112,11 +129,19 @@ app-login {
           padding-bottom: $space-7;
           @include paragraph-small;
           font-weight: bold;
+
+          @include for-breakpoint('desktop') {
+            @include paragraph-2;
+          }
         }
 
         .forget-password-info,
         .create-account-info {
           @include paragraph-small;
+
+          @include for-breakpoint('desktop') {
+            @include paragraph-1;
+          }
         }
 
         .create-account-info {
