@@ -149,12 +149,6 @@ app-language-bar {
     .icon {
       display: flex;
       place-content: center;
-      position: relative;
-      bottom: $space-2;
-
-      @include for-breakpoint('tablet') {
-        bottom: 0;
-      }
     }
   }
 }
