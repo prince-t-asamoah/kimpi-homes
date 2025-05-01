@@ -47,6 +47,11 @@ app-navbar {
         display: flex;
         place-content: center;
 
+        @include for-breakpoint('desktop') {
+          width: 2.375rem;
+          height: 2.375rem;
+        }
+
         svg {
           width: 2rem;
           height: 2rem;
@@ -64,6 +69,8 @@ app-navbar {
         gap: $space-4;
 
         @include for-breakpoint('desktop') {
+          width: 38px;
+          height: 38px;
           display: none;
         }
 
@@ -90,6 +97,15 @@ app-navbar {
         .bar3.active {
           transform: translate(0, -8px) rotate(45deg);
           background-color: var(--brand-300);
+        }
+      }
+
+      .login-link {
+        display: none;
+        margin-left: $space-5;
+
+        @include for-breakpoint('desktop') {
+          display: inline;
         }
       }
     }
