@@ -13,6 +13,7 @@ import { LucideAngularModule } from 'lucide-angular';
 export class NavbarComponent {
   showMainNavigation = false;
   showSearchProductBar = false;
+  isAuthenticated = false;
 
   toggleMainNavigation(): void {
     this.showMainNavigation = !this.showMainNavigation;

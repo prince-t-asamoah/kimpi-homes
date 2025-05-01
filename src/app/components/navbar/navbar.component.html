@@ -58,16 +58,23 @@
       (blur)="toggleSearchProductBar()">
       <lucide-icon name="search"></lucide-icon>
     </button>
-    <button class="user-avatar-btn" aria-label="User Avatar">
-      <lucide-icon name="user"></lucide-icon>
-    </button>
+    @if (isAuthenticated) {
+      <button class="user-avatar-btn" aria-label="User Avatar">
+        <lucide-icon name="user"></lucide-icon>
+        <img
+          src="./assets/images/user-avatar.png"
+          alt="User Profile"
+          srcset="" />
+      </button>
+    } @else {
+      <a routerLink="/login" class="login-link button-filled">Login</a>
+    }
     <button class="menu-btn" (click)="toggleMainNavigation()" aria-label="Menu">
       <div [ngClass]="showMainNavigation ? 'bar1 active' : 'bar1'"></div>
       <div [ngClass]="showMainNavigation ? 'bar2 active' : 'bar2'"></div>
       <div [ngClass]="showMainNavigation ? 'bar3 active' : 'bar3'"></div>
     </button>
   </div>
-
   <div
     [ngClass]="
       showSearchProductBar ? 'search-product-bar active' : 'search-product-bar'
