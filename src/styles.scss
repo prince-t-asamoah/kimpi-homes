@@ -12,11 +12,6 @@
   font-size: 100%;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: 'Lato', 'Arial', 'Helvetica', sans-serif;
   @include body-small;
