@@ -1,0 +1,165 @@
+@use 'breakpoints' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+
+.auth-content {
+  display: flex;
+
+  @include for-breakpoint('desktop') {
+    min-height: 100vh;
+  }
+
+  .auth-form,
+  .auth-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+    padding: $space-8;
+
+    header {
+      text-align: center;
+
+      .site-logo {
+        display: block;
+        margin-bottom: $space-12;
+
+        @include for-breakpoint('desktop') {
+          text-align: left;
+        }
+      }
+
+      .title {
+        @include heading-5;
+        text-align: center;
+
+        @include for-breakpoint('desktop') {
+          @include heading-2;
+          text-align: left;
+        }
+      }
+
+      .title-info {
+        color: $neutral-400;
+        margin-top: $space-5;
+        @include paragraph-small;
+
+        @include for-breakpoint('tablet') {
+          margin-top: $space-7;
+          @include paragraph-2;
+        }
+
+        @include for-breakpoint('desktop') {
+          margin-top: $space-10;
+          @include paragraph-large;
+        }
+      }
+    }
+
+    form {
+      width: 100%;
+      margin-top: $space-8;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-10;
+      }
+
+      .form-link {
+        color: $brand-300;
+        text-decoration: underline;
+
+        &:hover {
+          color: $brand-400;
+        }
+      }
+
+      .form-fields {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $space-8;
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          gap: $space-3;
+
+          .form-field-label {
+            @include paragraph-small;
+            font-weight: bold;
+
+            @include for-breakpoint('desktop') {
+              @include paragraph-2;
+              font-weight: bold;
+            }
+          }
+
+          .form-field-control {
+            outline: 1px solid $neutral-200;
+            border-radius: $space-2;
+            padding: $space-8 $space-5;
+
+            @include for-breakpoint('desktop') {
+              @include paragraph-2;
+            }
+
+            &::placeholder {
+              color: $neutral-300;
+            }
+
+            &:focus {
+              outline: 1px solid $brand-300;
+            }
+          }
+        }
+      }
+
+      .submit-btn {
+        margin-top: $space-12;
+        width: 100%;
+        padding-top: $space-7;
+        padding-bottom: $space-7;
+        @include paragraph-small;
+        font-weight: bold;
+
+        @include for-breakpoint('desktop') {
+          @include paragraph-2;
+        }
+      }
+
+      .form-info {
+        @include paragraph-small;
+
+        @include for-breakpoint('desktop') {
+          @include paragraph-1;
+        }
+
+        &.footer {
+          text-align: center;
+          margin-top: $space-5;
+        }
+      }
+    }
+  }
+
+  .auth-image-container {
+    display: none;
+
+    @include for-breakpoint('desktop') {
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
