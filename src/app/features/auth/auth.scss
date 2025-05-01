@@ -24,6 +24,10 @@
     gap: $space-10;
     padding: $space-8;
 
+    @include for-breakpoint('desktop') {
+      padding: $space-15;
+    }
+
     header {
       text-align: center;
 
