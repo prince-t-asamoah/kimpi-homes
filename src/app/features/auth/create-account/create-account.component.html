@@ -1,0 +1,68 @@
+<div class="auth-content create-account-content">
+  <section class="auth-form">
+    <div class="auth-form-content">
+      <header>
+        <a routerLink="/" class="site-logo"> KimpiHomes </a>
+        <h1 class="title">Create an Account.</h1>
+        <p class="title-info">Join us to enjoy personalized features</p>
+      </header>
+      <form>
+        <div class="form-fields">
+          <label for="fullname" class="form-field">
+            <span class="form-field-label">Full name</span>
+            <input
+              type="text"
+              id="fullname"
+              class="form-field-control"
+              placeholder="john.doe@gmail.com" />
+          </label>
+          <label for="email" class="form-field">
+            <span class="form-field-label">Email</span>
+            <input
+              type="email"
+              id="email"
+              class="form-field-control"
+              placeholder="john.doe@gmail.com" />
+          </label>
+          <label for="password" class="form-field">
+            <span class="form-field-label">Password</span>
+            <input
+              type="password"
+              id="password"
+              class="form-field-control"
+              placeholder="*********" />
+          </label>
+          <label for="confirm-password" class="form-field">
+            <span class="form-field-label">Confirm Password</span>
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-field-control"
+              placeholder="*********" />
+          </label>
+          <div class="terms-conditions-privacy">
+            <div class="checkbox form-field">
+              <input type="checkbox" checked class="form-field-control" />
+              <span class="checkmark"></span>
+            </div>
+            <p class="form-info">
+              I have a read and agreed to the
+              <a routerLink="#" class="form-link">Terms & Conditions</a> and
+              <a routerLink="#" class="form-link">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+        <button type="submit" class="button-filled submit-btn">
+          Create an account
+        </button>
+        <p class="form-info footer login-info">
+          Alreday have an account?
+          <a routerLink="/login" class="form-link">Login</a>
+        </p>
+      </form>
+    </div>
+  </section>
+  <section class="auth-image-container">
+    <img src="./assets/images/login/desktop-image.png" alt="" />
+  </section>
+</div>

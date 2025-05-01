@@ -3,6 +3,7 @@ import { HomeComponent } from './features/home/home.component';
 import { ShopComponent } from './features/shop/shop.component';
 import { AboutUsComponent } from './features/about-us/about-us.component';
 import { LoginComponent } from './features/auth/login/login.component';
+import { CreateAccountComponent } from './features/auth/create-account/create-account.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -13,10 +14,14 @@ export const routes: Routes = [
     component: AboutUsComponent,
     title: 'Kimpi Homes | About Us',
   },
-
   {
     path: 'login',
     component: LoginComponent,
     title: 'Kimpi Homes | Login',
+  },
+  {
+    path: 'create-account',
+    component: CreateAccountComponent,
+    title: 'Kimpi Homes | Create Account',
   },
 ];
