@@ -5,7 +5,7 @@
 
 app-login {
   .login-content {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
 
     .login-form,
@@ -20,6 +20,7 @@ app-login {
       display: flex;
       flex-direction: column;
       gap: $space-10;
+      padding: $space-8;
 
       header {
         text-align: center;
@@ -37,19 +38,91 @@ app-login {
           @include heading-5;
           text-align: center;
 
-          @include for-breakpoint('tablet') {
-            @include heading-4;
-          }
-
           @include for-breakpoint('desktop') {
-            @include heading-3;
+            @include heading-2;
             text-align: left;
           }
         }
 
-        .info {
+        .title-info {
           color: $neutral-400;
           margin-top: $space-5;
+          @include paragraph-small;
+
+          @include for-breakpoint('tablet') {
+            margin-top: $space-7;
+            @include paragraph-2;
+          }
+        }
+      }
+
+      form {
+        width: 100%;
+        margin-top: $space-8;
+
+        @include for-breakpoint('tablet') {
+          margin-top: $space-10;
+        }
+
+        .form-link {
+          color: $brand-300;
+          text-decoration: underline;
+
+          &:hover {
+            color: $brand-400;
+          }
+        }
+
+        .form-fields {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: $space-8;
+
+          .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: $space-3;
+            @include paragraph-small;
+
+            .form-field-label {
+              font-weight: bold;
+            }
+
+            .form-field-control {
+              outline: 1px solid $neutral-200;
+              border-radius: $space-2;
+              padding: $space-8 $space-5;
+
+              &::placeholder {
+                color: $neutral-300;
+              }
+
+              &:focus {
+                outline: 1px solid $brand-300;
+              }
+            }
+          }
+        }
+
+        .login-btn {
+          margin-top: $space-12;
+          width: 100%;
+          padding-top: $space-7;
+          padding-bottom: $space-7;
+          @include paragraph-small;
+          font-weight: bold;
+        }
+
+        .forget-password-info,
+        .create-account-info {
+          @include paragraph-small;
+        }
+
+        .create-account-info {
+          text-align: center;
+          color: $neutral-500;
+          margin-top: $space-4;
         }
       }
     }
