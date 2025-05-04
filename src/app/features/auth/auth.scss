@@ -32,14 +32,14 @@
     header {
       text-align: center;
 
+      @include for-breakpoint('desktop') {
+        text-align: left;
+      }
+
       .site-logo {
         color: $brand-400;
-        display: block;
+        display: inline-block;
         margin-bottom: $space-12;
-
-        @include for-breakpoint('desktop') {
-          text-align: left;
-        }
       }
 
       .title {
