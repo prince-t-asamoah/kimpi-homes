@@ -62,6 +62,7 @@
         }
 
         @include for-breakpoint('desktop') {
+          text-align: left;
           margin-top: $space-10;
           @include paragraph-large;
         }
