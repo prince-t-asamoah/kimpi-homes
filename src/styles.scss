@@ -81,14 +81,17 @@ p,
   @include paragraph-small;
 }
 
-// App Components
+// App Page Components
 app-home,
 app-login,
+app-reset-password,
+app-forgot-password,
+app-create-account,
 app-navbar,
 app-footer,
 app-language-bar {
   display: block;
-  height: auto;
+  height: 100%;
 }
 
 // UI Components
