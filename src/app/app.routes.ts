@@ -5,6 +5,7 @@ import { AboutUsComponent } from './features/about-us/about-us.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { CreateAccountComponent } from './features/auth/create-account/create-account.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -26,8 +27,13 @@ export const routes: Routes = [
     title: 'Kimpi Homes | Create Account',
   },
   {
-    path: 'forget-password',
+    path: 'forgot-password',
     component: ForgotPasswordComponent,
     title: 'Kimpi Homes | Forgot Password',
+  },
+  {
+    path: 'reset-password',
+    component: ResetPasswordComponent,
+    title: 'Kimpi Homes | Reset Password',
   },
 ];
