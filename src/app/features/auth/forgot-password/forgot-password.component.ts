@@ -5,6 +5,6 @@ import { RouterModule } from '@angular/router';
   selector: 'app-forgot-password',
   imports: [RouterModule],
   templateUrl: './forgot-password.component.html',
-  styleUrls: ['../auth.scss', './forgot-password.component.scss'],
+  styleUrl: './forgot-password.component.scss',
 })
 export class ForgotPasswordComponent {}
