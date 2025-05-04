@@ -5,6 +5,7 @@
 
 .auth-content {
   display: flex;
+  height: 100%;
 
   @include for-breakpoint('desktop') {
     min-height: 100vh;
