@@ -1,0 +1,76 @@
+@use 'typography' as *;
+@use 'breakpoints' as *;
+@use 'spacing' as *;
+@use 'components';
+
+.product-categories {
+  margin-top: $space-15;
+
+  @include for-breakpoint('tablet') {
+    margin-top: $space-20;
+  }
+
+  @include for-breakpoint('desktop-large') {
+    margin-top: $space-22;
+  }
+
+  @include for-breakpoint('desktop-xlarge') {
+    margin-top: $space-23;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      @include heading-6;
+
+      @include for-breakpoint('tablet') {
+        @include heading-5;
+      }
+    }
+  }
+
+  .categories-list-container {
+    overflow: hidden;
+  }
+
+  .categories-list {
+    display: flex;
+    min-width: 100%;
+    column-gap: $space-8;
+    margin-top: $space-14;
+
+    @include for-breakpoint('desktop') {
+      column-gap: $space-10;
+    }
+
+    .categories-list-item {
+      img {
+        background-color: var(--neutral-200);
+        width: 12.691rem;
+        height: 12.691rem;
+        max-width: none;
+        object-fit: cover;
+        border-radius: $space-6;
+
+        @include for-breakpoint('tablet') {
+          width: 16.919rem;
+          height: 16.919rem;
+        }
+
+        @include for-breakpoint('desktop') {
+          width: 22.563rem;
+          height: 22.563rem;
+        }
+      }
+
+      p {
+        color: var(--neutral-400);
+        text-align: center;
+        margin-top: $space-11;
+      }
+    }
+  }
+}
