@@ -1,0 +1,19 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+
+.shop {
+  margin-top: $space-22;
+  padding: $space-8;
+  padding-right: 0;
+  padding-bottom: $space-15;
+
+  @include for-breakpoint('tablet') {
+    padding-left: $space-12;
+    padding-bottom: $space-12;
+  }
+
+  @include for-breakpoint('desktop') {
+    padding-left: $space-18;
+    padding-bottom: $space-12;
+  }
+}
