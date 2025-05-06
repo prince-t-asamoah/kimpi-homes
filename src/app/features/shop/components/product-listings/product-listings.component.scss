@@ -14,10 +14,16 @@
   }
 
   .products-filtering {
-    display: none;
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 3;
+    padding: $space-8;
 
     @include for-breakpoint('desktop') {
       display: block;
+      position: static;
       width: 12.438rem;
     }
   }
