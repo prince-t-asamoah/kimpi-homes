@@ -9,12 +9,25 @@
   gap: $space-14;
   margin-top: $space-13;
 
+  @include for-breakpoint('desktop') {
+    flex-direction: row;
+  }
+
   .products-filtering {
     display: none;
+
+    @include for-breakpoint('desktop') {
+      display: block;
+      width: 12.438rem;
+    }
   }
 
   .products-content {
     .products-filter-bar {
+      @include for-breakpoint('desktop') {
+        display: none;
+      }
+
       .filter-btn {
         display: inline-flex;
         color: $brand-400;
