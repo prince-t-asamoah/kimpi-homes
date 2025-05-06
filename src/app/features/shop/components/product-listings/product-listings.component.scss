@@ -1,6 +1,7 @@
 @use 'spacing' as *;
 @use 'typography' as *;
 @use 'colors' as *;
+@use 'breakpoints' as *;
 
 .product-listings {
   display: flex;
@@ -56,7 +57,13 @@
           grid-template-columns: repeat(auto-fill, 6.813rem);
           margin-top: $space-8;
           column-gap: $space-18;
-          row-gap: $space-6;
+          row-gap: $space-10;
+
+          @include for-breakpoint('tablet') {
+            grid-template-columns: repeat(auto-fill, 15.875rem);
+            column-gap: $space-10;
+            row-gap: $space-16;
+          }
         }
       }
     }
