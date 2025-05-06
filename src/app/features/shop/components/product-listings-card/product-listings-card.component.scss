@@ -12,6 +12,11 @@
   border-radius: $space-5;
   position: relative;
 
+  @include for-breakpoint('tablet') {
+    width: 15.875rem;
+    height: 18.5rem;
+  }
+
   @include for-breakpoint('desktop') {
     transition-duration: 0.3s;
 
@@ -38,6 +43,13 @@
     align-items: center;
     z-index: 1;
 
+    @include for-breakpoint('tablet') {
+      top: $space-5;
+      right: $space-5;
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+
     @include for-breakpoint('desktop') {
       &:hover {
         background-color: $brand-300;
@@ -48,6 +60,10 @@
       width: 0.975rem;
       color: white;
       display: inline-block;
+
+      @include for-breakpoint('tablet') {
+        width: 1.503rem;
+      }
     }
   }
 
@@ -57,6 +73,12 @@
       height: 9.75rem;
       width: 9.375rem;
       object-fit: cover;
+
+      @include for-breakpoint('tablet') {
+        border-radius: $space-5;
+        width: 15.875rem;
+        height: 12.25rem;
+      }
     }
   }
 
@@ -72,12 +94,22 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       margin-top: $space-4;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-6;
+      }
     }
 
     .product-card-price {
       @include paragraph-2;
       font-weight: bold;
       margin-top: $space-4;
+
+      @include for-breakpoint('tablet') {
+        @include paragraph-large;
+        font-weight: bold;
+        margin-top: $space-6;
+      }
     }
 
     .product-card-footer {
