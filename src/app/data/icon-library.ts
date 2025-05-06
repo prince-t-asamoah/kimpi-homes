@@ -10,6 +10,7 @@ import {
   ShoppingCart,
   X,
   Globe,
+  SlidersHorizontal,
 } from 'lucide-angular';
 
 const iconLibrary = {
@@ -24,6 +25,7 @@ const iconLibrary = {
   ShoppingCart,
   X,
   Globe,
+  SlidersHorizontal,
 };
 
 export default iconLibrary;
