@@ -22,7 +22,8 @@
         <ul class="new-arrivals-list">
           @for (product of productListings; track product.id) {
             <li>
-              <app-product-listings-card></app-product-listings-card>
+              <app-product-listings-card
+                [product]="product"></app-product-listings-card>
             </li>
           }
         </ul>
@@ -38,7 +39,8 @@
         </p>
         <ul class="top-sellers-list">
           @for (product of productListings; track product.id) {
-            <app-product-listings-card></app-product-listings-card>
+            <app-product-listings-card
+              [product]="product"></app-product-listings-card>
           }
         </ul>
       </section>
