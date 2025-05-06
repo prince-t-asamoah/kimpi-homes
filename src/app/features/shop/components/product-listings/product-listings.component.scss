@@ -11,6 +11,7 @@
 
   @include for-breakpoint('desktop') {
     flex-direction: row;
+    gap: $space-12;
   }
 
   .products-filtering {
