@@ -5,12 +5,18 @@
 .product-listings {
   display: flex;
   flex-direction: column;
-  gap: $space-15;
+  gap: $space-14;
   margin-top: $space-13;
 
   .products-filter {
     .filter-btn {
+      display: inline-flex;
       color: $brand-400;
+      gap: $space-5;
+
+      .filter-btn-icon {
+        width: 12px;
+      }
     }
   }
 
