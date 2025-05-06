@@ -93,6 +93,23 @@ app-language-bar {
   display: block;
 }
 
+//Utilities Classes
+.page-content {
+  margin-top: 6.75rem;
+
+  @include for-breakpoint('tablet') {
+    margin-top: 6.438rem;
+  }
+
+  @include for-breakpoint('desktop') {
+    margin-top: 8.125rem;
+  }
+
+  @include for-breakpoint('desktop-large') {
+    margin-top: 8.563rem;
+  }
+}
+
 // UI Components
 .button-filled {
   color: white;
