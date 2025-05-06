@@ -2,21 +2,21 @@
 @use 'spacing' as *;
 
 .home {
-  &.page-content {
-    padding: $space-15 $space-9;
+  padding: $space-15 $space-9;
 
-    @include for-breakpoint('tablet') {
-      padding: $space-18 $space-11;
-    }
-
-    @include for-breakpoint('desktop') {
-      padding: $space-17 $space-18;
-    }
-
-    @include for-breakpoint('desktop-xxlarge') {
-      max-width: 1440px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  @include for-breakpoint('tablet') {
+    padding: $space-18 $space-11;
   }
+
+  @include for-breakpoint('desktop') {
+    padding: $space-17 $space-18;
+  }
+
+  @include for-breakpoint('desktop-xxlarge') {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // &.page-content {
+  // }
 }
