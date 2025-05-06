@@ -27,6 +27,11 @@
 
     &:hover .product-card-image {
       filter: brightness(80%);
+
+      & img {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
     }
   }
 
