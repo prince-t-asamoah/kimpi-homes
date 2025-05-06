@@ -4,9 +4,8 @@
     aria-label="Add to Cart"
     class="add-to-cart-btn"
     (click)="$event.stopPropagation(); $event.preventDefault()">
-    <lucide-icon
-      name="shopping-cart"
-      class="add-to-cart-btn-icon"></lucide-icon>
+    <lucide-icon name="shopping-cart" class="add-to-cart-btn-icon">
+    </lucide-icon>
   </button>
   <div class="product-card-image">
     <img [src]="product()?.imageUrl" [alt]="product()?.name" />
@@ -20,7 +19,7 @@
         class="product-card-ratings-icon"></lucide-angular>
       <span class="product-card-ratings">{{ product()?.ratings }}</span>
       <span class="product-card-reviews">
-        &lpar;{{ product()?.reviews?.length }} &rpar; Reviews
+        &lpar;{{ product()?.reviews?.length }} Reviews&rpar;
       </span>
     </p>
   </div>
