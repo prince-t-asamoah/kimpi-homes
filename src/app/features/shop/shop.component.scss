@@ -5,18 +5,46 @@
 
 .shop {
   margin-top: $space-22;
-  padding: $space-8;
-  padding-right: 0;
+  padding-top: $space-5;
+  padding-left: $space-11;
   padding-bottom: $space-15;
+  padding-right: 0;
 
   @include for-breakpoint('tablet') {
-    padding-left: $space-12;
+    padding-left: $space-13;
     padding-bottom: $space-12;
   }
 
   @include for-breakpoint('desktop') {
+    margin-top: $space-24;
     padding-left: $space-18;
     padding-bottom: $space-12;
+  }
+
+  .product-categories {
+    margin-top: $space-15;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-18;
+    }
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-20;
+    }
+
+    .categories-list-container {
+      header {
+        padding-right: $space-8;
+      }
+
+      .categories-list {
+        margin-top: $space-10;
+
+        @include for-breakpoint('tablet') {
+          margin-top: $space-12;
+        }
+      }
+    }
   }
 
   .breadcrumb {
