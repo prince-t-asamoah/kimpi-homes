@@ -3,11 +3,12 @@
 @use 'typography' as *;
 @use 'spacing' as *;
 
-app-navbar {
+:host {
   position: fixed;
   width: 100%;
   top: 55px;
   background-color: white;
+  z-index: 2;
 
   .navbar-content {
     padding: $space-8 $space-11;

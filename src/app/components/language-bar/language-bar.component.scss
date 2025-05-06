@@ -2,12 +2,13 @@
 @use 'components';
 @use 'spacing' as *;
 
-app-language-bar {
+:host {
   background-color: var(--neutral-400);
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  z-index: 2;
 
   .language-bar-content {
     padding: $space-8 $space-9;
