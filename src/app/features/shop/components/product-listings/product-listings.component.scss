@@ -8,7 +8,7 @@
   gap: $space-14;
   margin-top: $space-13;
 
-  .products-filter {
+  .products-filter-bar {
     .filter-btn {
       display: inline-flex;
       color: $brand-400;
@@ -20,7 +20,7 @@
     }
   }
 
-  .products {
+  .products-content {
     .new-arrivals,
     .top-sellers {
       header {
