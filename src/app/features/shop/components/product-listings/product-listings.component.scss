@@ -24,20 +24,33 @@
         }
       }
     }
-    .new-arrivals,
-    .top-sellers {
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: $space-11;
 
-        h2 {
-          @include heading-6;
+    .products {
+      margin-top: $space-12;
+
+      .new-arrivals,
+      .top-sellers {
+        margin-top: $space-3;
+
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-right: $space-11;
+
+          h2 {
+            @include heading-6;
+          }
+
+          .view-all-link {
+            color: $brand-400;
+          }
         }
 
-        .view-all-link {
-          color: $brand-400;
+        .products-description {
+          margin-top: $space-8;
+          color: $neutral-400;
+          @include paragraph-small;
         }
       }
     }
