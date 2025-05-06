@@ -8,6 +8,10 @@
   gap: $space-14;
   margin-top: $space-13;
 
+  .products-filtering {
+    display: none;
+  }
+
   .products-content {
     .products-filter-bar {
       .filter-btn {
