@@ -12,6 +12,7 @@ import {
   Globe,
   SlidersHorizontal,
   Star,
+  ChevronUp,
 } from 'lucide-angular';
 
 const iconLibrary = {
@@ -21,6 +22,7 @@ const iconLibrary = {
   Banknote,
   ChevronRight,
   ChevronLeft,
+  ChevronUp,
   Search,
   User,
   ShoppingCart,
