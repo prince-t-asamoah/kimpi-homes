@@ -12,8 +12,15 @@
   border-radius: $space-5;
 
   @include for-breakpoint('desktop') {
+    transition-duration: 0.3s;
+
     &:hover {
-      background-color: $neutral-100;
+      background-color: $neutral-200;
+      transform: scale(1.01);
+    }
+
+    &:hover .product-card-image {
+      filter: brightness(80%);
     }
   }
 
