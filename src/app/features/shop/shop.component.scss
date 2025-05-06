@@ -1,5 +1,7 @@
 @use 'spacing' as *;
 @use 'breakpoints' as *;
+@use 'typography' as *;
+@use 'colors' as *;
 
 .shop {
   margin-top: $space-22;
@@ -15,5 +17,34 @@
   @include for-breakpoint('desktop') {
     padding-left: $space-18;
     padding-bottom: $space-12;
+  }
+
+  .breadcrumb {
+    .breadcrumb-list {
+      display: flex;
+      gap: $space-5;
+      @include paragraph-small;
+
+      .breadcrumb-list-item {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-4;
+
+        &:is(.active) {
+          font-weight: bold;
+        }
+
+        &:not(.active) {
+          color: $neutral-300;
+        }
+
+        .breadcrumb-icon {
+          width: 1rem;
+          padding: $space-2;
+          height: auto;
+          color: $neutral-300;
+        }
+      }
+    }
   }
 }
