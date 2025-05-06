@@ -1,6 +1,17 @@
 <app-language-bar></app-language-bar>
 <app-navbar></app-navbar>
 <main class="shop main-content">
+  <nav class="breadcrumb">
+    <ul class="breadcrumb-list">
+      <li class="breadcrumb-list-item">
+        <a routerLink="/shop">Home</a>
+      </li>
+      <li class="breadcrumb-list-item active">
+        <lucide-icon name="chevron-right" class="breadcrumb-icon"></lucide-icon>
+        <span class="breadcrumb-item-name">Shop</span>
+      </li>
+    </ul>
+  </nav>
   <app-product-categories></app-product-categories>
 </main>
 <app-footer></app-footer>
