@@ -10,6 +10,7 @@
   flex-direction: column;
   gap: $space-5;
   border-radius: $space-5;
+  position: relative;
 
   @include for-breakpoint('desktop') {
     transition-duration: 0.3s;
@@ -21,6 +22,32 @@
 
     &:hover .product-card-image {
       filter: brightness(80%);
+    }
+  }
+
+  .add-to-cart-btn {
+    position: absolute;
+    top: $space-4;
+    right: $space-3;
+    background-color: $brand-400;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    @include for-breakpoint('desktop') {
+      &:hover {
+        background-color: $brand-300;
+      }
+    }
+
+    .add-to-cart-btn-icon {
+      width: 15.6px;
+      color: white;
+      display: inline-block;
     }
   }
 
