@@ -19,6 +19,13 @@
           Shop now for exclusive discounts on stylish furniture-before the deals
           are gone
         </p>
+        <ul class="new-arrivals-list">
+          @for (product of productListings; track product.id) {
+            <li>
+              <app-product-listings-card></app-product-listings-card>
+            </li>
+          }
+        </ul>
       </section>
       <section class="top-sellers">
         <header>
@@ -29,6 +36,11 @@
           Shop our most-loved furnitures — trending, trusted, and flying off the
           shelves.
         </p>
+        <ul class="top-sellers-list">
+          @for (product of productListings; track product.id) {
+            <app-product-listings-card></app-product-listings-card>
+          }
+        </ul>
       </section>
     </div>
   </div>
