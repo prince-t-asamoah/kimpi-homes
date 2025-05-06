@@ -37,6 +37,14 @@
           justify-content: space-between;
           padding-right: $space-11;
 
+          @include for-breakpoint('tablet') {
+            padding-right: $space-13;
+          }
+
+          @include for-breakpoint('desktop') {
+            padding-right: $space-17;
+          }
+
           h2 {
             @include heading-6;
           }
