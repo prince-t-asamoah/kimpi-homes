@@ -2,12 +2,8 @@
 @use 'spacing' as *;
 
 .homepage {
-  position: relative;
-  min-height: 100vh;
-
-  .main-content {
+  &.page-content {
     padding: $space-15 $space-9;
-    margin-top: 7.313rem;
 
     @include for-breakpoint('tablet') {
       padding: $space-18 $space-11;
@@ -15,7 +11,6 @@
 
     @include for-breakpoint('desktop') {
       padding: $space-17 $space-18;
-      margin-top: 7.875rem;
     }
 
     @include for-breakpoint('desktop-xxlarge') {
