@@ -1,9 +1,4 @@
-import {
-  Component,
-  ElementRef,
-  viewChild,
-  ViewEncapsulation,
-} from '@angular/core';
+import { Component, ElementRef, viewChild } from '@angular/core';
 import { countries, languages } from '../../data/internalization';
 import { LucideAngularModule } from 'lucide-angular';
 
@@ -12,7 +7,6 @@ import { LucideAngularModule } from 'lucide-angular';
   imports: [LucideAngularModule],
   templateUrl: './language-bar.component.html',
   styleUrl: './language-bar.component.scss',
-  encapsulation: ViewEncapsulation.None,
 })
 export class LanguageBarComponent {
   languageBarDialog =

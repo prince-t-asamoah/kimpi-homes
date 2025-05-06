@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 
@@ -8,7 +8,6 @@ import { LucideAngularModule } from 'lucide-angular';
   imports: [NgClass, LucideAngularModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  encapsulation: ViewEncapsulation.None,
 })
 export class NavbarComponent {
   showMainNavigation = false;
