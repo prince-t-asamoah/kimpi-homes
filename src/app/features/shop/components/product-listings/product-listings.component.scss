@@ -8,6 +8,12 @@
   gap: $space-15;
   margin-top: $space-13;
 
+  .products-filter {
+    .filter-btn {
+      color: $brand-400;
+    }
+  }
+
   .products {
     .new-arrivals,
     .top-sellers {
