@@ -11,6 +11,7 @@ import {
   X,
   Globe,
   SlidersHorizontal,
+  Star,
 } from 'lucide-angular';
 
 const iconLibrary = {
@@ -26,6 +27,7 @@ const iconLibrary = {
   X,
   Globe,
   SlidersHorizontal,
+  Star,
 };
 
 export default iconLibrary;
