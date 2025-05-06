@@ -81,6 +81,10 @@
             column-gap: $space-10;
             row-gap: $space-16;
           }
+
+          @include for-breakpoint('desktop') {
+            margin-top: $space-11;
+          }
         }
       }
 
