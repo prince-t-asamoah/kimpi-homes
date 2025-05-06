@@ -50,6 +50,11 @@
           margin-top: $space-8;
           color: $neutral-500;
           @include paragraph-small;
+
+          @include for-breakpoint('tablet') {
+            margin-top: $space-5;
+            @include paragraph-2;
+          }
         }
 
         .product-list {
