@@ -1,7 +1,8 @@
 export interface Product {
   id: string;
+  imageUrl: string;
   name: string;
   price: number;
   ratings: number;
-  reviews: unknown;
+  reviews: unknown[];
 }
