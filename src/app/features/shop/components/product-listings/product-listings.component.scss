@@ -52,6 +52,14 @@
           color: $neutral-400;
           @include paragraph-small;
         }
+
+        .product-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 6.813rem);
+          margin-top: $space-8;
+          column-gap: $space-18;
+          row-gap: $space-6;
+        }
       }
     }
   }
