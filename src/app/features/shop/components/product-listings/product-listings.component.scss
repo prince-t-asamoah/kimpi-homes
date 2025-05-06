@@ -26,6 +26,39 @@
       position: static;
       width: 12.438rem;
     }
+
+    header {
+      margin-top: $space-5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include for-breakpoint('desktop') {
+        margin-top: $space-17;
+      }
+
+      h2 {
+        @include heading-6;
+      }
+
+      .collapse-filtering-btn {
+        display: none;
+        @include for-breakpoint('desktop') {
+          display: block;
+        }
+      }
+
+      .close-filtering-btn {
+        @include for-breakpoint('desktop') {
+          display: none;
+        }
+      }
+
+      .filter-btn-icon {
+        color: $neutral-400;
+        width: 1.5rem;
+      }
+    }
   }
 
   .products-content {
