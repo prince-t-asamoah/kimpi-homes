@@ -15,6 +15,22 @@
         <lucide-icon name="chevron-up" class="filter-btn-icon"></lucide-icon>
       </button>
     </header>
+    <div class="products-filtering-types">
+      <details class="filter-type" open>
+        <summary class="filter-type-name">Categories</summary>
+        <ul class="filter-type-list">
+          @for (category of categoriesFilter; track category.id) {
+            <li>
+              <div class="checkbox">
+                <input type="checkbox" checked class="form-field-control" />
+                <span class="checkmark"></span>
+              </div>
+              {{ category.name }}
+            </li>
+          }
+        </ul>
+      </details>
+    </div>
   </section>
   <div class="products-content">
     <div class="products-filter-bar">

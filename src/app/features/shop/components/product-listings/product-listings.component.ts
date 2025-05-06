@@ -11,4 +11,26 @@ import productListingsData from '../../data/product-listings.data';
 })
 export class ProductListingsComponent {
   productListings = productListingsData;
+  categoriesFilter = [
+    {
+      id: '1',
+      name: 'Office furniture',
+    },
+    {
+      id: '2',
+      name: 'Dinning',
+    },
+    {
+      id: '3',
+      name: 'Living room',
+    },
+    {
+      id: '4',
+      name: 'Bedroom',
+    },
+    {
+      id: '5',
+      name: 'Outdoor',
+    },
+  ];
 }
