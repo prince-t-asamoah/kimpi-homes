@@ -4,19 +4,16 @@
 @use 'colors' as *;
 
 .shop {
-  margin-top: $space-22;
   padding-top: $space-5;
   padding-left: $space-11;
   padding-bottom: $space-15;
   padding-right: 0;
 
   @include for-breakpoint('tablet') {
-    padding-left: $space-13;
     padding-bottom: $space-12;
   }
 
   @include for-breakpoint('desktop') {
-    margin-top: $space-24;
     padding-left: $space-18;
     padding-bottom: $space-12;
   }
