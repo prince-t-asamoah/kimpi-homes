@@ -1,1 +1,13 @@
-<p>product-listings-card works!</p>
+<div class="product-listings-card">
+  <div class="product-card-image">
+    <img [src]="product()?.imageUrl" [alt]="product()?.name" />
+  </div>
+  <div class="product-card-details">
+    <h3>{{ product()?.name }}</h3>
+    <p>{{ product()?.price }}</p>
+    <p>
+      <span>{{ product()?.ratings }}</span>
+      <span> &lpar;{{ product()?.reviews?.length }} &rpar; Reviews </span>
+    </p>
+  </div>
+</div>
