@@ -65,6 +65,38 @@
         width: 1.5rem;
       }
     }
+
+    .products-filtering-types {
+      margin-top: $space-10;
+
+      .filter-type {
+        display: flex;
+        flex-direction: column;
+        gap: $space-7;
+
+        @include for-breakpoint('desktop') {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .filter-type-name {
+          @include paragraph-large;
+          font-weight: 600;
+        }
+
+        .filter-type-list {
+          display: flex;
+          flex-direction: column;
+          gap: $space-6;
+
+          li {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 
   .products-content {
