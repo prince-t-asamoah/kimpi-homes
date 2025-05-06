@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
@@ -18,5 +18,6 @@ import { ProductCategoriesComponent } from '../../components/product-categories/
   ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class ShopComponent {}
