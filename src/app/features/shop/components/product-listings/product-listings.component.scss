@@ -47,6 +47,10 @@
 
           h2 {
             @include heading-6;
+
+            @include for-breakpoint('desktop') {
+              @include heading-5;
+            }
           }
 
           .view-all-link {
