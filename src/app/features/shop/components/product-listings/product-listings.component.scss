@@ -1,4 +1,6 @@
 @use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
 
 .product-listings {
   display: flex;
@@ -9,7 +11,9 @@
   .products {
     .new-arrivals,
     .top-sellers {
-      
+      h2 {
+        @include heading-6;
+      }
     }
   }
 }
