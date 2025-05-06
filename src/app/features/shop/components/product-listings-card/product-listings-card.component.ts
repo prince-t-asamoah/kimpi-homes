@@ -1,9 +1,11 @@
 import { Component, input } from '@angular/core';
 import { Product } from '../../model/product-listings.model';
+import { LucideAngularModule } from 'lucide-angular';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-listings-card',
-  imports: [],
+  imports: [LucideAngularModule, RouterModule],
   templateUrl: './product-listings-card.component.html',
   styleUrl: './product-listings-card.component.scss',
 })
