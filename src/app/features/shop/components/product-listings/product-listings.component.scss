@@ -1,0 +1,15 @@
+@use 'spacing' as *;
+
+.product-listings {
+  display: flex;
+  flex-direction: column;
+  gap: $space-15;
+  margin-top: $space-13;
+
+  .products {
+    .new-arrivals,
+    .top-sellers {
+      
+    }
+  }
+}
