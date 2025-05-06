@@ -71,6 +71,12 @@
           }
         }
       }
+
+      .top-sellers {
+        @include for-breakpoint('tablet') {
+          margin-top: $space-20;
+        }
+      }
     }
   }
 }
