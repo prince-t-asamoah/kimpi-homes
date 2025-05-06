@@ -3,11 +3,16 @@
     <img [src]="product()?.imageUrl" [alt]="product()?.name" />
   </div>
   <div class="product-card-details">
-    <h3>{{ product()?.name }}</h3>
-    <p>{{ product()?.price }}</p>
-    <p>
-      <span>{{ product()?.ratings }}</span>
-      <span> &lpar;{{ product()?.reviews?.length }} &rpar; Reviews </span>
+    <h3 class="product-card-title">{{ product()?.name }}</h3>
+    <p class="product-card-price">${{ product()?.price }}</p>
+    <p class="product-card-footer">
+      <lucide-angular
+        name="star"
+        class="product-card-ratings-icon"></lucide-angular>
+      <span class="product-card-ratings">{{ product()?.ratings }}</span>
+      <span class="product-card-reviews">
+        &lpar;{{ product()?.reviews?.length }} &rpar; Reviews
+      </span>
     </p>
   </div>
 </div>
