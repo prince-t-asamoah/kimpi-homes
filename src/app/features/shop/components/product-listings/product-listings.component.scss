@@ -74,6 +74,16 @@
         flex-direction: column;
         gap: $space-7;
 
+        .details-content {
+          overflow: hidden;
+          max-height: 0;
+          transition: max-height 0.4s ease;
+        }
+
+        &[open] .details-content {
+          max-height: 500px;
+        }
+
         @include for-breakpoint('desktop') {
           &:hover {
             cursor: pointer;
