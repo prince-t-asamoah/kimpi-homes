@@ -176,15 +176,17 @@ app-language-bar {
   height: 1.375rem;
   margin-right: $space-5;
   flex: none;
-  border-radius: $space-2;
 
-  .form-field-control {
+  input[type='checkbox'] {
     padding: 0 !important;
-    width: 1.375rem !important;
-    height: 1.375rem !important;
+    width: inherit;
+    height: inherit;
+    outline: 1px solid $neutral-300;
+    border-radius: $space-3;
 
     &:checked {
       background-color: $brand-300;
+      outline: 1.2px solid $brand-300;
 
       + .checkmark::after {
         display: flex;
@@ -201,8 +203,8 @@ app-language-bar {
   .checkmark {
     position: absolute;
     display: block;
-    width: 1.375rem;
-    height: 1.375rem;
+    width: inherit;
+    height: inherit;
     z-index: 1;
     top: 0;
     left: 0;
