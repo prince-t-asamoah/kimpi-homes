@@ -22,6 +22,12 @@
     z-index: 3;
     padding: $space-8;
 
+    @include for-breakpoint('tablet') {
+      width: 28.313rem;
+      right: 0;
+      left: auto;
+    }
+
     @include for-breakpoint('desktop') {
       display: block;
       position: static;
