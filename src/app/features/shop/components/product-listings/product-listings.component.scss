@@ -92,8 +92,8 @@
         }
 
         .filter-type-name {
-          @include paragraph-large;
           font-weight: 600;
+          font-size: 1.125rem;
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -108,7 +108,7 @@
           flex-direction: column;
           gap: $space-6;
 
-          li {
+          .filter-type-list-item {
             display: flex;
             align-items: center;
             color: $neutral-500;
