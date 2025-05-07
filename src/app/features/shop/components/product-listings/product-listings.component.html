@@ -16,23 +16,25 @@
       </button>
     </header>
     <div class="products-filtering-types">
-      <details class="filter-type">
-        <summary class="filter-type-name">Categories</summary>
-        <ul class="filter-type-list details-content">
-          @for (category of categoriesFilter; track category.id) {
-            <li class="filter-type-list-item">
-              <div class="checkbox">
-                <input
-                  type="checkbox"
-                  class="form-field-control"
-                  [id]="category.name" />
-                <span class="checkmark"></span>
-              </div>
-              <label [for]="category.name">{{ category.name }}</label>
-            </li>
-          }
-        </ul>
-      </details>
+      @for (filter of filterTypes; track filter.type) {
+        <details class="filter-type">
+          <summary class="filter-type-name">{{ filter.name }}</summary>
+          <ul class="filter-type-list details-content">
+            @for (key of filter.keys; track key.id) {
+              <li class="filter-type-list-item">
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    class="form-field-control"
+                    [id]="key.name" />
+                  <span class="checkmark"></span>
+                </div>
+                <label [for]="key.name">{{ key.name }}</label>
+              </li>
+            }
+          </ul>
+        </details>
+      }
     </div>
   </section>
   <div class="products-content">
