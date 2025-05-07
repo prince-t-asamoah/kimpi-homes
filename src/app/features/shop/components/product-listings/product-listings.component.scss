@@ -111,6 +111,15 @@
             display: flex;
             align-items: center;
             color: $neutral-400;
+            padding-left: $space-1;
+
+            label {
+              @include for-breakpoint('desktop') {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
           }
         }
       }
