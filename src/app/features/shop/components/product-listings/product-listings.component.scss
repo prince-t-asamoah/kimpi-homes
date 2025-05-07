@@ -83,6 +83,13 @@
         .filter-type-name {
           @include paragraph-large;
           font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .filter-type-icon {
+            color: $neutral-400;
+          }
         }
 
         .filter-type-list {
