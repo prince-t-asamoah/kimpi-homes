@@ -17,10 +17,13 @@
     </header>
     <div class="products-filtering-types">
       <details class="filter-type" open>
-        <summary class="filter-type-name">Categories</summary>
+        <summary class="filter-type-name">
+          Categories
+          <lucide-icon name="chevron-up" class="filter-type-icon"></lucide-icon>
+        </summary>
         <ul class="filter-type-list">
           @for (category of categoriesFilter; track category.id) {
-            <li>
+            <li class="filter-type-list-item">
               <div class="checkbox">
                 <input type="checkbox" checked class="form-field-control" />
                 <span class="checkmark"></span>
