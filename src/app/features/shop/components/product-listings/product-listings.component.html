@@ -22,10 +22,13 @@
           @for (category of categoriesFilter; track category.id) {
             <li class="filter-type-list-item">
               <div class="checkbox">
-                <input type="checkbox" checked class="form-field-control" />
+                <input
+                  type="checkbox"
+                  class="form-field-control"
+                  [id]="category.name" />
                 <span class="checkmark"></span>
               </div>
-              {{ category.name }}
+              <label [for]="category.name">{{ category.name }}</label>
             </li>
           }
         </ul>
