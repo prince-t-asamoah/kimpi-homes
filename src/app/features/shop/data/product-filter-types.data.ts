@@ -1,62 +1,75 @@
-const productFilterTypes = [
-  {
-    type: 'categories',
-    name: 'Categories',
-    keys: [
-      {
-        id: '1',
-        name: 'Office furniture',
-      },
-      {
-        id: '2',
-        name: 'Dinning',
-      },
-      {
-        id: '3',
-        name: 'Living room',
-      },
-      {
-        id: '4',
-        name: 'Bedroom',
-      },
-      {
-        id: '5',
-        name: 'Outdoor',
-      },
-    ],
-  },
-  {
-    type: 'size-dimensions',
-    name: 'Size & Dimensions',
-    keys: [
-      {
-        id: 'small',
-        name: 'Small',
-      },
-      {
-        id: 'medium',
-        name: 'Medium',
-      },
-      {
-        id: 'large',
-        name: 'Large',
-      },
-    ],
-  },
-  {
-    type: 'Availability',
-    name: 'Availability',
-    keys: [
-      {
-        id: 'in-stock',
-        name: 'In-stock',
-      },
-      {
-        id: 'pre-order',
-        name: 'Pre-order',
-      },
-    ],
-  },
-];
+import { ProductFilter } from '../model/product-listings.model';
 
-export default productFilterTypes;
+export const categoriesFilter: ProductFilter = {
+  id: 'categories',
+  name: 'Categories',
+  filterBy: [
+    {
+      id: 'office-furniture',
+      name: 'Office furniture',
+    },
+    {
+      id: 'dinning',
+      name: 'Dinning',
+    },
+    {
+      id: 'living-room',
+      name: 'Living room',
+    },
+    {
+      id: 'bedroom',
+      name: 'Bedroom',
+    },
+    {
+      id: 'outdoor',
+      name: 'Outdoor',
+    },
+  ],
+};
+
+export const sizeDimensionFilter: ProductFilter = {
+  id: 'size-dimensions',
+  name: 'Size & Dimensions',
+  filterBy: [
+    {
+      id: 'small',
+      name: 'Small',
+    },
+    {
+      id: 'medium',
+      name: 'Medium',
+    },
+    {
+      id: 'large',
+      name: 'Large',
+    },
+  ],
+};
+
+export const availabilityFilter: ProductFilter = {
+  id: 'availability',
+  name: 'Availability',
+  filterBy: [
+    {
+      id: 'in-stock',
+      name: 'In-stock',
+    },
+    {
+      id: 'pre-order',
+      name: 'Pre-order',
+    },
+  ],
+};
+
+export const pricingFilter: ProductFilter = {
+  id: 'pricing',
+  name: 'Pricing',
+  filterBy: [
+    { id: 'min-value', name: 'Min Value', value: 0 },
+    {
+      id: 'max-value',
+      name: 'Max Value',
+      value: 50000,
+    },
+  ],
+};
