@@ -14,13 +14,16 @@
     gap: $space-12;
   }
 
-  .products-filtering {
-    display: block;
+  .products-filtering-container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
     position: fixed;
     inset: 0;
     background-color: white;
     z-index: 3;
-    padding: $space-8;
+    padding: $space-10;
+    overflow-y: auto;
 
     @include for-breakpoint('tablet') {
       width: 28.313rem;
@@ -33,6 +36,7 @@
       position: static;
       width: 12.438rem;
       padding: 0;
+      padding-top: $space-16;
       z-index: 0;
       flex: none;
     }
@@ -75,10 +79,14 @@
     .products-filtering-types {
       margin-top: $space-9;
 
+      @include for-breakpoint('desktop') {
+        margin-top: $space-10;
+      }
+
       .filter-type {
         display: flex;
         flex-direction: column;
-        gap: $space-7;
+        gap: $space-9;
 
         .details-content {
           overflow: hidden;
