@@ -1,0 +1,131 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+
+.products-filtering-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  z-index: 3;
+  padding: $space-10;
+  overflow-y: auto;
+
+  @include for-breakpoint('tablet') {
+    width: 28.313rem;
+    right: 0;
+    left: auto;
+  }
+
+  @include for-breakpoint('desktop') {
+    display: block;
+    position: static;
+    width: 12.438rem;
+    padding: 0;
+    padding-top: $space-16;
+    z-index: 0;
+    flex: none;
+  }
+
+  header {
+    margin-top: $space-5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $neutral-200;
+    padding-bottom: $space-7;
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-17;
+    }
+
+    h2 {
+      @include heading-6;
+    }
+
+    .collapse-filtering-btn {
+      display: none;
+      @include for-breakpoint('desktop') {
+        display: block;
+      }
+    }
+
+    .close-filtering-btn {
+      @include for-breakpoint('desktop') {
+        display: none;
+      }
+    }
+
+    .filter-btn-icon {
+      color: $neutral-400;
+      width: 1.5rem;
+    }
+  }
+
+  .products-filtering-types {
+    margin-top: $space-9;
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-10;
+    }
+
+    .filter-type {
+      display: flex;
+      flex-direction: column;
+      gap: $space-9;
+
+      .details-content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+        margin-bottom: $space-11;
+      }
+
+      &[open] .details-content {
+        max-height: 500px;
+      }
+
+      @include for-breakpoint('desktop') {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .filter-type-name {
+        font-weight: 600;
+        font-size: 1.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .filter-type-icon {
+          color: $neutral-400;
+        }
+      }
+
+      .filter-type-list {
+        display: flex;
+        flex-direction: column;
+        gap: $space-6;
+
+        .filter-type-list-item {
+          display: flex;
+          align-items: center;
+          color: $neutral-500;
+          padding-left: $space-1;
+
+          label {
+            @include for-breakpoint('desktop') {
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
