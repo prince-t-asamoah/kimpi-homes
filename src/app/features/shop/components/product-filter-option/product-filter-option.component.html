@@ -1,0 +1,81 @@
+<details class="filter-type-option" open>
+  <summary class="filter-type-name" [ngClass]="{ 'hide-arrow': !filterName }">
+    {{ filterName }}
+  </summary>
+  <div class="details-content">
+    @if (filterType === 'checkbox') {
+      <ul class="filter-type-list">
+        @for (filter of filterBy; track filter.id) {
+          <li class="filter-type-list-item">
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                class="form-field-control"
+                [name]="filter.id"
+                [id]="filter.id"
+                [value]="filter.id"
+                (input)="onInputChange($event)" />
+              <span class="checkmark"></span>
+            </div>
+            <label [for]="filter.id">{{ filter.name }}</label>
+          </li>
+        }
+      </ul>
+    }
+
+    @if (filterType === 'radio') {
+      <ul class="filter-type-list">
+        @for (filter of filterBy; track filter.id) {
+          <li class="filter-type-list-item">
+            <div class="radio">
+              <input
+                type="radio"
+                [name]="filterId"
+                class="form-field-control"
+                [id]="filter.id"
+                (input)="onInputChange($event)"
+                [value]="filter.id" />
+              <span class="checkmark"></span>
+            </div>
+            <label [for]="filter.id">{{ filter.name }}</label>
+          </li>
+        }
+      </ul>
+    }
+
+    @if (filterType === 'range') {
+      <div class="filter-dual-slider">
+        <div class="slider-track-wrapper">
+          <div
+            class="slider-track-fill"
+            [ngStyle]="{
+              left: getRangeTrackLeft() + '%',
+              width: getRangeTrackWidth() + '%',
+            }"></div>
+          <input
+            type="range"
+            id="minValue"
+            class="slider-input"
+            [min]="minRangeValue"
+            [max]="maxRangeValue"
+            [step]="rangeStep"
+            [(ngModel)]="minRangeValue"
+            (input)="onInputChange($event)" />
+          <input
+            type="range"
+            id="maxValue"
+            class="slider-input"
+            [min]="minRangeValue"
+            [max]="maxRangeValue"
+            [step]="rangeStep"
+            [(ngModel)]="maxRangeValue"
+            (input)="onInputChange($event)" />
+        </div>
+        <div class="slider-values">
+          <output for="minValue">${{ minRangeValue }}</output>
+          <output for="maxValue">${{ maxRangeValue }}+</output>
+        </div>
+      </div>
+    }
+  </div>
+</details>
