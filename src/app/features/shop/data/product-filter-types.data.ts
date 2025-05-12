@@ -73,3 +73,26 @@ export const pricingFilter: ProductFilter = {
     },
   ],
 };
+
+export const sortingFilter: ProductFilter = {
+  id: 'sorting',
+  name: 'Sorting By',
+  filterBy: [
+    {
+      id: 'newest-arrivals',
+      name: 'Newest Arrivals',
+    },
+    {
+      id: 'price-low-high',
+      name: 'Price: Low to High',
+    },
+    {
+      id: 'price-high-low',
+      name: 'Price: High to Low',
+    },
+    {
+      id: 'name-az',
+      name: 'Name: A to Z',
+    },
+  ],
+};
