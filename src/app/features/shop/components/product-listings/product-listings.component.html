@@ -7,21 +7,21 @@
           filterName="Categories"
           [filterBy]="categoriesFilter.filterBy"
           filterType="radio"
-          (filterChange)="onFilterChange($event)">
+          (filterChange)="onFilterChange()">
         </app-product-filter-option>
         <app-product-filter-option
           [filterId]="sizeDimensionFilter.id"
           filterName="Size & Dimension"
           [filterBy]="sizeDimensionFilter.filterBy"
           filterType="radio"
-          (filterChange)="onFilterChange($event)">
+          (filterChange)="onFilterChange()">
         </app-product-filter-option>
         <app-product-filter-option
           [filterId]="availabilityFilter.id"
           filterName="Availability"
           [filterBy]="availabilityFilter.filterBy"
           filterType="radio"
-          (filterChange)="onFilterChange($event)">
+          (filterChange)="onFilterChange()">
         </app-product-filter-option>
         <app-product-filter-option
           [filterId]="priceFilter.id"
@@ -33,7 +33,7 @@
           maxRangeValueLimit="5000"
           minRangeValueLimit="0"
           [filterBy]="priceFilter.filterBy"
-          (filterChange)="onFilterChange($event)">
+          (filterChange)="onFilterChange()">
         </app-product-filter-option>
       </div>
     </app-product-filter>
@@ -43,7 +43,7 @@
           filterType="radio"
           [filterId]="sortByFilter.id"
           [filterBy]="sortByFilter.filterBy"
-          (filterChange)="onFilterChange($event)">
+          (filterChange)="onFilterChange()">
         </app-product-filter-option>
       </div>
     </app-product-filter>
