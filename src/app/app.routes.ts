@@ -6,11 +6,19 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { CreateAccountComponent } from './features/auth/create-account/create-account.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
+import { ShopHomeComponent } from './features/shop/components/shop-home/shop-home.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
   { path: 'home', component: HomeComponent, title: 'Kimpi Homes | Home' },
-  { path: 'shop', component: ShopComponent, title: 'Kimpi Homes | Shop' },
+  {
+    path: 'shop',
+    title: 'Kimpi Homes | Shop',
+    component: ShopComponent,
+    children: [
+      { path: '', component: ShopHomeComponent, title: 'Kimpi Homes | Shop' },
+    ],
+  },
   {
     path: 'about',
     component: AboutUsComponent,
