@@ -1,42 +1,53 @@
 <section class="product-listings">
-  <section class="products-filtering">
-    <header>
-      <h2>Filtering</h2>
-      <button
-        type="button"
-        aria-label="Close filtering"
-        class="close-filtering-btn">
-        <lucide-icon name="x" class="filter-btn-icon"></lucide-icon>
-      </button>
-      <button
-        type="button"
-        aria-label="Collapse filtering"
-        class="collapse-filtering-btn">
-        <lucide-icon name="chevron-up" class="filter-btn-icon"></lucide-icon>
-      </button>
-    </header>
-    <div class="products-filtering-types">
-      @for (filter of filterTypes; track filter.type) {
-        <details class="filter-type">
-          <summary class="filter-type-name">{{ filter.name }}</summary>
-          <ul class="filter-type-list details-content">
-            @for (key of filter.keys; track key.id) {
-              <li class="filter-type-list-item">
-                <div class="checkbox">
-                  <input
-                    type="checkbox"
-                    class="form-field-control"
-                    [id]="key.name" />
-                  <span class="checkmark"></span>
-                </div>
-                <label [for]="key.name">{{ key.name }}</label>
-              </li>
-            }
-          </ul>
-        </details>
-      }
-    </div>
-  </section>
+  <aside class="products-filtering-container">
+    <app-product-filter filterName="Filtering">
+      <div class="products-filtering-types">
+        <app-product-filter-option
+          [filterId]="categoriesFilter.id"
+          filterName="Categories"
+          [filterBy]="categoriesFilter.filterBy"
+          filterType="radio"
+          (filterChange)="onFilterChange($event)">
+        </app-product-filter-option>
+        <app-product-filter-option
+          [filterId]="sizeDimensionFilter.id"
+          filterName="Size & Dimension"
+          [filterBy]="sizeDimensionFilter.filterBy"
+          filterType="radio"
+          (filterChange)="onFilterChange($event)">
+        </app-product-filter-option>
+        <app-product-filter-option
+          [filterId]="availabilityFilter.id"
+          filterName="Availability"
+          [filterBy]="availabilityFilter.filterBy"
+          filterType="radio"
+          (filterChange)="onFilterChange($event)">
+        </app-product-filter-option>
+        <app-product-filter-option
+          [filterId]="priceFilter.id"
+          filterName="Price"
+          filterType="range"
+          minRangeValue="0"
+          maxRangeValue="5000"
+          rangeStep="10"
+          maxRangeValueLimit="5000"
+          minRangeValueLimit="0"
+          [filterBy]="priceFilter.filterBy"
+          (filterChange)="onFilterChange($event)">
+        </app-product-filter-option>
+      </div>
+    </app-product-filter>
+    <app-product-filter filterName="Sorting">
+      <div class="products-sorting-types">
+        <app-product-filter-option
+          filterType="radio"
+          [filterId]="sortByFilter.id"
+          [filterBy]="sortByFilter.filterBy"
+          (filterChange)="onFilterChange($event)">
+        </app-product-filter-option>
+      </div>
+    </app-product-filter>
+  </aside>
   <div class="products-content">
     <div class="products-filter-bar">
       <button type="button" class="filter-btn">
