@@ -1,0 +1,38 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;
+
+:host {
+  details::before {
+    content: none;
+  }
+}
+.product-filter-type {
+  .filter-type-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $neutral-200;
+    padding: $space-5 0;
+    @include heading-6;
+
+    .collapse-filtering-btn {
+      display: none;
+      @include for-breakpoint('desktop') {
+        display: block;
+      }
+    }
+
+    .close-filtering-btn {
+      @include for-breakpoint('desktop') {
+        display: none;
+      }
+    }
+
+    .filter-btn-icon {
+      color: $neutral-400;
+      width: 1.5rem;
+    }
+  }
+}
