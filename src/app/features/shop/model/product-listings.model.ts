@@ -6,3 +6,9 @@ export interface Product {
   ratings: number;
   reviews: unknown[];
 }
+
+export interface ProductFilter {
+  id: string;
+  name: string;
+  filterBy: { id: string; name?: string; value?: unknown }[];
+}
