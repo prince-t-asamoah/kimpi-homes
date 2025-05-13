@@ -1,3 +1,4 @@
+import { LucideAngularModule } from 'lucide-angular';
 import { Component, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { ProductFilterComponent } from '../product-filter/product-filter.component';
@@ -13,7 +14,12 @@ import { UiService } from '../../../../services/ui/ui.service';
 
 @Component({
   selector: 'app-product-filter-sidebar',
-  imports: [NgClass, ProductFilterComponent, ProductFilterOptionComponent],
+  imports: [
+    NgClass,
+    LucideAngularModule,
+    ProductFilterComponent,
+    ProductFilterOptionComponent,
+  ],
   templateUrl: './product-filter-sidebar.component.html',
   styleUrl: './product-filter-sidebar.component.scss',
 })
