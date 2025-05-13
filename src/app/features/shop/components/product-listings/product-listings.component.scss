@@ -5,10 +5,11 @@
 
 :host {
   display: flex;
-  gap: $space-14;
   margin-top: $space-16;
+  position: relative;
 
   @include for-breakpoint('desktop') {
+    gap: $space-14;
     margin-top: $space-22;
   }
 
