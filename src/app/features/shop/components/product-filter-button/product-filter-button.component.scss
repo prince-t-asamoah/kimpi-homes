@@ -1,0 +1,19 @@
+@use 'breakpoints' as *;
+@use 'spacing' as *;
+@use 'colors' as *;
+
+.product-filter-button {
+  @include for-breakpoint('desktop') {
+    display: none;
+  }
+
+  .filter-btn {
+    display: inline-flex;
+    color: $brand-400;
+    gap: $space-5;
+
+    .filter-btn-icon {
+      width: 0.75rem;
+    }
+  }
+}
