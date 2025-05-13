@@ -1,6 +1,12 @@
 <aside
   class="product-filter-sidebar"
   [ngClass]="isSidebarOpen() ? 'active' : ''">
+  <button
+    type="button"
+    class="close-filter-btn"
+    (click)="toggleSidebarOnMobile()">
+    <lucide-angular name="x" class="filter-btn-icon"></lucide-angular>
+  </button>
   <app-product-filter filterName="Filtering">
     <div class="products-filtering-types">
       <app-product-filter-option
