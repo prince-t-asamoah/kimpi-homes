@@ -147,7 +147,7 @@
     .products {
       .new-arrivals,
       .top-sellers {
-        margin-top: $space-17;
+        padding-top: $space-17;
 
         header {
           display: flex;
@@ -208,7 +208,7 @@
 
       .top-sellers {
         @include for-breakpoint('tablet') {
-          margin-top: $space-20;
+          padding-top: $space-20;
         }
       }
     }
