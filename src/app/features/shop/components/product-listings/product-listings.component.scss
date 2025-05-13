@@ -144,22 +144,6 @@
   .products-content {
     width: 100%;
 
-    .products-filter-bar {
-      @include for-breakpoint('desktop') {
-        display: none;
-      }
-
-      .filter-btn {
-        display: inline-flex;
-        color: $brand-400;
-        gap: $space-5;
-
-        .filter-btn-icon {
-          width: 0.75rem;
-        }
-      }
-    }
-
     .products {
       .new-arrivals,
       .top-sellers {
