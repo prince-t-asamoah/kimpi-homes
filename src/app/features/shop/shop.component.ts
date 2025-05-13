@@ -29,13 +29,13 @@ import { UiService } from '../../services/ui/ui.service';
 export class ShopComponent {
   private _uiService = inject(UiService);
   isFilterSidebarOpen = this._uiService.isFilterSidebarOpen;
-  mobilePageWidth = 768; //Mobile Screen Max Width
+  minDesktopScreenWidth = 1024;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     const windowTarget = event.target as Window;
     if (
-      windowTarget.innerWidth > 768 &&
+      windowTarget.innerWidth >= this.minDesktopScreenWidth &&
       this._uiService.isFilterSidebarOpen()
     ) {
       this._uiService.toggleFilterSidebar();
