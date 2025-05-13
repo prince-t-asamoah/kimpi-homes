@@ -3,213 +3,82 @@
 @use 'colors' as *;
 @use 'breakpoints' as *;
 
-.product-listings {
+:host {
   display: flex;
-  flex-direction: column;
   gap: $space-14;
-  margin-top: $space-13;
+  margin-top: $space-16;
 
   @include for-breakpoint('desktop') {
-    flex-direction: row;
-    gap: $space-12;
+    margin-top: $space-22;
   }
 
-  .products-filtering-container {
-    display: flex;
-    flex-direction: column;
-    gap: $space-8;
-    position: fixed;
-    inset: 0;
-    background-color: white;
-    z-index: 3;
-    padding: $space-10;
-    overflow-y: auto;
-
-    @include for-breakpoint('tablet') {
-      width: 28.313rem;
-      right: 0;
-      left: auto;
-    }
-
-    @include for-breakpoint('desktop') {
-      display: block;
-      position: static;
-      width: 12.438rem;
-      padding: 0;
-      padding-top: $space-16;
-      z-index: 0;
-      flex: none;
-    }
-
-    header {
-      margin-top: $space-5;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid $neutral-200;
-      padding-bottom: $space-7;
-
-      @include for-breakpoint('desktop') {
-        margin-top: $space-17;
-      }
-
-      h2 {
-        @include heading-6;
-      }
-
-      .collapse-filtering-btn {
-        display: none;
-        @include for-breakpoint('desktop') {
-          display: block;
-        }
-      }
-
-      .close-filtering-btn {
-        @include for-breakpoint('desktop') {
-          display: none;
-        }
-      }
-
-      .filter-btn-icon {
-        color: $neutral-400;
-        width: 1.5rem;
-      }
-    }
-
-    .products-filtering-types {
-      margin-top: $space-9;
-
-      @include for-breakpoint('desktop') {
-        margin-top: $space-10;
-      }
-
-      .filter-type {
-        display: flex;
-        flex-direction: column;
-        gap: $space-9;
-
-        .details-content {
-          overflow: hidden;
-          max-height: 0;
-          transition: max-height 0.4s ease;
-          margin-bottom: $space-11;
-        }
-
-        &[open] .details-content {
-          max-height: 500px;
-        }
-
-        @include for-breakpoint('desktop') {
-          &:hover {
-            cursor: pointer;
-          }
-        }
-
-        .filter-type-name {
-          font-weight: 600;
-          font-size: 1.125rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-
-          .filter-type-icon {
-            color: $neutral-400;
-          }
-        }
-
-        .filter-type-list {
-          display: flex;
-          flex-direction: column;
-          gap: $space-6;
-
-          .filter-type-list-item {
-            display: flex;
-            align-items: center;
-            color: $neutral-500;
-            padding-left: $space-1;
-
-            label {
-              @include for-breakpoint('desktop') {
-                &:hover {
-                  cursor: pointer;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .products-content {
+  .shop-home-products {
     width: 100%;
 
-    .products {
-      .new-arrivals,
-      .top-sellers {
-        padding-top: $space-17;
+    .new-arrivals,
+    .top-sellers,
+    .flash-sales {
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: $space-11;
 
-        header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding-right: $space-11;
+        @include for-breakpoint('tablet') {
+          padding-right: $space-13;
+        }
 
-          @include for-breakpoint('tablet') {
-            padding-right: $space-13;
-          }
+        @include for-breakpoint('desktop') {
+          padding-right: $space-17;
+        }
+
+        h2 {
+          @include heading-6;
 
           @include for-breakpoint('desktop') {
-            padding-right: $space-17;
-          }
-
-          h2 {
-            @include heading-6;
-
-            @include for-breakpoint('desktop') {
-              @include heading-5;
-            }
-          }
-
-          .view-all-link {
-            color: $brand-400;
+            @include heading-5;
           }
         }
 
-        .products-description {
-          margin-top: $space-8;
-          color: $neutral-500;
-          @include paragraph-small;
-
-          @include for-breakpoint('tablet') {
-            margin-top: $space-5;
-            @include paragraph-2;
-          }
-        }
-
-        .product-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, 6.813rem);
-          margin-top: $space-8;
-          column-gap: $space-18;
-          row-gap: $space-10;
-
-          @include for-breakpoint('tablet') {
-            grid-template-columns: repeat(auto-fill, 15.875rem);
-            column-gap: $space-10;
-            row-gap: $space-16;
-          }
-
-          @include for-breakpoint('desktop') {
-            margin-top: $space-11;
-          }
+        .view-all-link {
+          color: $brand-400;
         }
       }
 
-      .top-sellers {
+      .products-description {
+        margin-top: $space-8;
+        color: $neutral-500;
+        @include paragraph-small;
+
         @include for-breakpoint('tablet') {
-          padding-top: $space-20;
+          margin-top: $space-5;
+          @include paragraph-2;
         }
+      }
+
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 6.813rem);
+        margin-top: $space-8;
+        column-gap: $space-18;
+        row-gap: $space-10;
+
+        @include for-breakpoint('tablet') {
+          grid-template-columns: repeat(auto-fill, 15.875rem);
+          column-gap: $space-10;
+          row-gap: $space-16;
+        }
+
+        @include for-breakpoint('desktop') {
+          margin-top: $space-11;
+        }
+      }
+    }
+
+    .top-sellers,
+    .flash-sales {
+      @include for-breakpoint('tablet') {
+        margin-top: $space-20;
       }
     }
   }
