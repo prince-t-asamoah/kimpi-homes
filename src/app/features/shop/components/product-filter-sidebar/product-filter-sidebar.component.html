@@ -1,4 +1,6 @@
-<aside class="products-filtering-sidebar">
+<aside
+  class="products-filtering-sidebar"
+  [ngClass]="isSidebarOpen() ? 'active' : ''">
   <app-product-filter filterName="Filtering">
     <div class="products-filtering-types">
       <app-product-filter-option
@@ -47,3 +49,7 @@
     </div>
   </app-product-filter>
 </aside>
+<div
+  class="modal-backdrop"
+  [ngClass]="isSidebarOpen() ? 'active' : 'hidden'"
+  (click)="toggleSidebarOnMobile()"></div>
