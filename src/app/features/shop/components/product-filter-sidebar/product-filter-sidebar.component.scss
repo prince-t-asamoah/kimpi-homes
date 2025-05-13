@@ -4,30 +4,35 @@
 @use 'colors' as *;
 
 .products-filtering-sidebar {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: $space-8;
   position: fixed;
   inset: 0;
   background-color: white;
-  z-index: 3;
+  z-index: 100;
   padding: $space-10;
   overflow-y: auto;
+  transition: opacity 0.4s ease;
 
-  @include for-breakpoint('tablet') {
-    width: 28.313rem;
+  @include for-breakpoint('mobile-large') {
+    width: 26.563rem;
     right: 0;
     left: auto;
   }
 
   @include for-breakpoint('desktop') {
-    display: block;
+    display: flex;
     position: static;
     width: 12.438rem;
     padding: 0;
     padding-top: $space-16;
     z-index: 0;
     flex: none;
+  }
+
+  &.active {
+    display: flex;
   }
 
   header {
