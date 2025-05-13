@@ -3,6 +3,14 @@
 @use 'typography' as *;
 @use 'colors' as *;
 
+:host {
+  display: none;
+
+  @include for-breakpoint('desktop') {
+    display: block;
+  }
+}
+
 .products-filtering-sidebar {
   display: none;
   flex-direction: column;
