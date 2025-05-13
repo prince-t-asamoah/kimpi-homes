@@ -3,6 +3,8 @@
 @use 'colors' as *;
 
 .product-filter-button {
+  margin-bottom: $space-15;
+
   @include for-breakpoint('desktop') {
     display: none;
   }
