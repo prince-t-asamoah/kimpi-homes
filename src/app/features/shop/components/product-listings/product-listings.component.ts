@@ -7,7 +7,7 @@ import { ProductFilterButtonComponent } from '../product-filter-button/product-f
 import productListingsData from '../../data/product-listings.data';
 
 @Component({
-  selector: 'app-product-listings',
+  selector: 'app-shop-home-products-listings',
   imports: [
     LucideAngularModule,
     ProductListingsCardComponent,
@@ -18,6 +18,6 @@ import productListingsData from '../../data/product-listings.data';
   templateUrl: './product-listings.component.html',
   styleUrl: './product-listings.component.scss',
 })
-export class ProductListingsComponent {
+export class ShopHomeProductsListingsComponent {
   productListings = productListingsData;
 }
