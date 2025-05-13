@@ -3,15 +3,7 @@
 @use 'typography' as *;
 @use 'colors' as *;
 
-:host {
-  display: none;
-
-  @include for-breakpoint('desktop') {
-    display: block;
-  }
-}
-
-.products-filtering-sidebar {
+.product-filter-sidebar {
   display: none;
   flex-direction: column;
   gap: $space-8;
@@ -30,8 +22,9 @@
   }
 
   @include for-breakpoint('desktop') {
-    display: flex;
-    position: static;
+    display: block;
+    position: sticky;
+    top: 10rem;
     width: 12.438rem;
     padding: 0;
     z-index: 0;
