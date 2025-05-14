@@ -7,6 +7,7 @@ import { CreateAccountComponent } from './features/auth/create-account/create-ac
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 import { ShopHomeComponent } from './features/shop/components/shop-home/shop-home.component';
+import { ShopNewArrivalsComponent } from './features/shop/components/shop-new-arrivals/shop-new-arrivals.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -17,6 +18,11 @@ export const routes: Routes = [
     component: ShopComponent,
     children: [
       { path: '', component: ShopHomeComponent, title: 'Kimpi Homes | Shop' },
+      {
+        path: 'new-arrivals',
+        component: ShopNewArrivalsComponent,
+        title: 'Kimpi Homes | Shop - New Arrivals',
+      },
     ],
   },
   {

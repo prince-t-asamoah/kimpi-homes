@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { ProductListingsCardComponent } from '../product-listings-card/product-listings-card.component';
 import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product-filter-sidebar.component';
@@ -10,9 +11,10 @@ import productListingsData from '../../data/product-listings.data';
   selector: 'app-shop-home-products-listings',
   imports: [
     LucideAngularModule,
+    CommonModule,
+    RouterLink,
     ProductListingsCardComponent,
     ProductFilterSidebarComponent,
-    CommonModule,
     ProductFilterButtonComponent,
   ],
   templateUrl: './product-listings.component.html',
