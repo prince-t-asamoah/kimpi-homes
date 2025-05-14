@@ -1,0 +1,13 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+
+:host {
+  display: flex;
+  margin-top: $space-10;
+  position: relative;
+
+  @include for-breakpoint('desktop') {
+    gap: $space-14;
+    margin-top: $space-18;
+  }
+}

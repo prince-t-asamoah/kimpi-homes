@@ -1,1 +1,17 @@
-<p>shop-new-arrivals works!</p>
+<app-product-filter-sidebar></app-product-filter-sidebar>
+<div class="products-listings">
+  <app-product-filter-button></app-product-filter-button>
+  <section class="new-arrivals">
+    <header class="products-listings-header">
+      <h2>New Arrivals</h2>
+    </header>
+    <ul class="product-listings-list">
+      @for (product of productListings; track product.id) {
+        <li class="product-listings-item">
+          <app-product-listings-card
+            [product]="product"></app-product-listings-card>
+        </li>
+      }
+    </ul>
+  </section>
+</div>
