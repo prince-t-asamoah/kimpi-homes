@@ -46,4 +46,62 @@
       }
     }
   }
+
+  .products-listings {
+    .products-listings-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: $space-11;
+
+      @include for-breakpoint('tablet') {
+        padding-right: $space-13;
+      }
+
+      @include for-breakpoint('desktop') {
+        padding-right: $space-17;
+      }
+
+      h2 {
+        @include heading-6;
+
+        @include for-breakpoint('desktop') {
+          @include heading-5;
+        }
+      }
+
+      .view-all-link {
+        color: $brand-400;
+      }
+    }
+
+    .products-listings-description {
+      margin-top: $space-8;
+      color: $neutral-500;
+      @include paragraph-small;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-5;
+        @include paragraph-2;
+      }
+    }
+
+    .product-listings-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 6.813rem);
+      margin-top: $space-8;
+      column-gap: $space-18;
+      row-gap: $space-10;
+
+      @include for-breakpoint('tablet') {
+        grid-template-columns: repeat(auto-fill, 15.875rem);
+        column-gap: $space-10;
+        row-gap: $space-16;
+      }
+
+      @include for-breakpoint('desktop') {
+        margin-top: $space-11;
+      }
+    }
+  }
 }
