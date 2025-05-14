@@ -1,2 +1,61 @@
 <app-product-categories></app-product-categories>
-<app-shop-home-products-listings></app-shop-home-products-listings>
+<div class="shop-home-products">
+  <app-product-filter-sidebar></app-product-filter-sidebar>
+  <div class="products-listings">
+    <app-product-filter-button></app-product-filter-button>
+    <section class="new-arrivals">
+      <header class="products-listings-header">
+        <h2>New Arrivals</h2>
+        <a routerLink="/shop/new-arrivals" class="view-all-link">View all</a>
+      </header>
+      <p class="products-listings-description">
+        Shop now for exclusive discounts on stylish furniture-before the deals
+        are gone
+      </p>
+      <ul class="product-listings-list">
+        @for (product of productListings; track product.id) {
+          <li>
+            <app-product-listings-card
+              [product]="product"></app-product-listings-card>
+          </li>
+        }
+      </ul>
+    </section>
+    <section class="top-sellers">
+      <header class="products-listings-header">
+        <h2>Top Sellers</h2>
+        <a rotuerLink="#" class="view-all-link">View all</a>
+      </header>
+      <p class="products-listings-description">
+        Discover our best-selling essentials, curated for those who appreciate
+        quality and style
+      </p>
+      <ul class="product-listings-list">
+        @for (product of productListings; track product.id) {
+          <li>
+            <app-product-listings-card
+              [product]="product"></app-product-listings-card>
+          </li>
+        }
+      </ul>
+    </section>
+    <section class="flash-sales">
+      <header class="products-listings-header">
+        <h2>Flash Sales</h2>
+        <a rotuerLink="#" class="view-all-link">View all</a>
+      </header>
+      <p class="products-listings-description">
+        Shop now for exclusive discounts on stylish furniture—before the deals
+        are gone
+      </p>
+      <ul class="product-listings-list">
+        @for (product of productListings; track product.id) {
+          <li>
+            <app-product-listings-card
+              [product]="product"></app-product-listings-card>
+          </li>
+        }
+      </ul>
+    </section>
+  </div>
+</div>
