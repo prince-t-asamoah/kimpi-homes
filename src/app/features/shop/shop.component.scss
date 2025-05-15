@@ -89,20 +89,32 @@
     }
 
     .product-listings-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 6.813rem);
+      display: flex;
       margin-top: $space-8;
-      column-gap: $space-18;
-      row-gap: $space-10;
+      column-gap: $space-8;
 
       @include for-breakpoint('tablet') {
-        grid-template-columns: repeat(auto-fill, 15.875rem);
+        margin-top: $space-10;
         column-gap: $space-10;
-        row-gap: $space-16;
       }
 
       @include for-breakpoint('desktop') {
         margin-top: $space-11;
+      }
+
+      @include for-breakpoint('tablet') {
+      }
+
+      .product-listings-list-item {
+        width: 9.375rem;
+
+        @include for-breakpoint('tablet') {
+          width: 15.875rem;
+        }
+
+        @include for-breakpoint('desktop') {
+          width: 18.125rem;
+        }
       }
     }
   }
