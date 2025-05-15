@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-carousel-button',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './carousel-button.component.html',
   styleUrl: './carousel-button.component.scss',
 })
-export class CarouselButtonComponent {}
+export class CarouselButtonComponent {
+  @Input() arrowDirection: 'left' | 'right' = 'left';
+}
