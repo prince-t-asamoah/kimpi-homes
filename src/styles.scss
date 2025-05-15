@@ -148,25 +148,6 @@ app-language-bar {
   @include for-breakpoint('desktop') {
     gap: $space-7;
   }
-
-  button {
-    background-color: var(--neutral-200);
-    width: 1.368rem;
-    height: 1.368rem;
-    border-radius: 100%;
-    color: var(--neutral-400);
-    padding: $space-4;
-
-    @include for-breakpoint('tablet') {
-      width: 2.75rem;
-      height: 2.75rem;
-    }
-
-    .icon {
-      display: flex;
-      place-content: center;
-    }
-  }
 }
 
 .checkbox,
