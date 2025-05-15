@@ -4,25 +4,16 @@
 @use 'breakpoints' as *;
 
 .product-listings-card {
-  width: 9.375rem;
-  height: 16.625rem;
   display: flex;
   flex-direction: column;
-  gap: $space-5;
   border-radius: $space-5;
   position: relative;
-
-  @include for-breakpoint('tablet') {
-    width: 15.875rem;
-    height: 18.5rem;
-  }
 
   @include for-breakpoint('desktop') {
     transition-duration: 0.3s;
 
     &:hover {
       background-color: $neutral-200;
-      transform: scale(1.01);
     }
 
     &:hover .product-card-image {
@@ -88,8 +79,14 @@
   }
 
   .product-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    margin-top: $space-9;
+
     @include for-breakpoint('desktop') {
       padding: $space-5;
+      margin-top: $space-6;
     }
 
     .product-card-title {
@@ -98,17 +95,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      margin-top: $space-4;
-
-      @include for-breakpoint('tablet') {
-        margin-top: $space-6;
-      }
     }
 
     .product-card-price {
       @include paragraph-2;
       font-weight: bold;
-      margin-top: $space-4;
       display: flex;
       align-items: center;
       gap: $space-4;
@@ -116,7 +107,6 @@
       @include for-breakpoint('tablet') {
         @include paragraph-large;
         font-weight: bold;
-        margin-top: $space-6;
       }
 
       .previous-price {
@@ -128,7 +118,6 @@
     .product-card-footer {
       @include paragraph-small;
       color: $neutral-400;
-      margin-top: $space-4;
       display: flex;
       align-items: center;
 
