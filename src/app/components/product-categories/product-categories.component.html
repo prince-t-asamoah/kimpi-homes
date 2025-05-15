@@ -3,12 +3,12 @@
     <header>
       <h2>Product Categories</h2>
       <div class="media-slider-controls">
-        <button type="button" aria-label="Previous Item">
-          <lucide-icon name="chevron-left" class="icon"></lucide-icon>
-        </button>
-        <button type="button" aria-label="Next Item">
-          <lucide-icon name="chevron-right" class="icon"></lucide-icon>
-        </button>
+        <app-carousel-button
+          arrowDirection="left"
+          class="left-carousel-button"></app-carousel-button>
+        <app-carousel-button
+          arrowDirection="right"
+          class="right-carousel-button"></app-carousel-button>
       </div>
     </header>
     <ul class="categories-list">
