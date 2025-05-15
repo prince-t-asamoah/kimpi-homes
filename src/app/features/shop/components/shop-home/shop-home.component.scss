@@ -3,7 +3,7 @@
 @use 'colors' as *;
 @use 'typography' as *;
 
-.shop-home-products {
+.main-products-listings {
   display: flex;
   margin-top: $space-16;
   position: relative;
@@ -13,12 +13,20 @@
     margin-top: $space-22;
   }
 
-  .products-listings {
-    .top-sellers,
-    .flash-sales {
-      @include for-breakpoint('tablet') {
-        margin-top: $space-20;
-      }
-    }
+  .main-products-listings-content {
+    width: 100%;
+  }
+}
+
+.flash-sales,
+.top-sellers {
+  margin-top: $space-18;
+
+  @include for-breakpoint('tablet') {
+    margin-top: $space-20;
+  }
+
+  @include for-breakpoint('desktop') {
+    margin-top: $space-18;
   }
 }
