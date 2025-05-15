@@ -1,0 +1,17 @@
+@use 'breakpoints' as *;
+@use 'colors' as *;
+@use 'spacing' as *;
+
+.carousel-button {
+  background-color: $neutral-200;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 100%;
+  color: $neutral-400;
+  padding: $space-5;
+
+  .carousel-btn-icon {
+    display: flex;
+    place-content: center;
+  }
+}
