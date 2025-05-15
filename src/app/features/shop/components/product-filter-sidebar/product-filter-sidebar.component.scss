@@ -6,7 +6,7 @@
 .product-filter-sidebar {
   display: none;
   flex-direction: column;
-  gap: $space-8;
+  gap: $space-9;
   position: fixed;
   inset: 0;
   background-color: white;
@@ -23,8 +23,9 @@
 
   @include for-breakpoint('desktop') {
     display: block;
-    position: sticky;
-    top: 10rem;
+    position: static;
+    left: 0;
+    right: auto;
     width: 12.438rem;
     padding: 0;
     z-index: 0;
