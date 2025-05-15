@@ -4,6 +4,7 @@ import { ProductCategoriesComponent } from '../../../../components/product-categ
 import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product-filter-sidebar.component';
 import { ProductFilterButtonComponent } from '../product-filter-button/product-filter-button.component';
 import { ProductListingsCardComponent } from '../product-listings-card/product-listings-card.component';
+import { ProductsCarouselComponent } from '../products-carousel/products-carousel.component';
 import productListingsData from '../../data/product-listings.data';
 
 @Component({
@@ -14,6 +15,7 @@ import productListingsData from '../../data/product-listings.data';
     ProductFilterSidebarComponent,
     ProductFilterButtonComponent,
     ProductListingsCardComponent,
+    ProductsCarouselComponent,
   ],
   templateUrl: './shop-home.component.html',
   styleUrl: './shop-home.component.scss',
