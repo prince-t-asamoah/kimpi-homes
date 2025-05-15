@@ -2,7 +2,9 @@ export interface Product {
   id: string;
   imageUrl: string;
   name: string;
-  price: number;
+  currentPrice: string;
+  previousPrice: string;
+  discount?: string;
   ratings: number;
   reviews: unknown[];
 }
