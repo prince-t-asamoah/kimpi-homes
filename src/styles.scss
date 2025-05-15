@@ -140,16 +140,6 @@ app-language-bar {
   }
 }
 
-.media-slider-controls {
-  display: flex;
-  justify-content: center;
-  gap: $space-4;
-
-  @include for-breakpoint('desktop') {
-    gap: $space-7;
-  }
-}
-
 .checkbox,
 .radio {
   position: relative;
