@@ -1,0 +1,23 @@
+@use 'spacing' as *;
+
+:host {
+  display: block;
+  overflow-x: hidden;
+  position: relative;
+  max-width: 100%;
+  height: fit-content;
+
+  app-carousel-button {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+  }
+
+  .left-carousel-button {
+    left: $space-5;
+  }
+
+  .right-carousel-button {
+    right: $space-5;
+  }
+}
