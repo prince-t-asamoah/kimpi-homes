@@ -109,11 +109,19 @@
       @include paragraph-2;
       font-weight: bold;
       margin-top: $space-4;
+      display: flex;
+      align-items: center;
+      gap: $space-4;
 
       @include for-breakpoint('tablet') {
         @include paragraph-large;
         font-weight: bold;
         margin-top: $space-6;
+      }
+
+      .previous-price {
+        color: $neutral-400;
+        text-decoration: line-through;
       }
     }
 

@@ -12,7 +12,10 @@
   </div>
   <div class="product-card-details">
     <h3 class="product-card-title">{{ product()?.name }}</h3>
-    <p class="product-card-price">${{ product()?.price }}</p>
+    <p class="product-card-price">
+      <span class="previous-price">{{ product()?.previousPrice }}</span>
+      <span class="current-price">{{ product()?.currentPrice }}</span>
+    </p>
     <p class="product-card-footer">
       <lucide-angular
         name="star"
