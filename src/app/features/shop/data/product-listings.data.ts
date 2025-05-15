@@ -46,6 +46,15 @@ const productListingsData: Product[] = [
     ratings: 4.4,
     reviews: [],
   },
+  {
+    id: '6',
+    name: 'Coffee Table with Storage',
+    imageUrl: './assets/images/shop/product-image.png',
+    currentPrice: '$499',
+    previousPrice: '$200',
+    ratings: 4.4,
+    reviews: [],
+  },
 ];
 
 export default productListingsData;
