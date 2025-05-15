@@ -71,14 +71,14 @@
       height: 0.25rem;
       background-color: $neutral-200;
       border-radius: $space-1;
+      z-index: 1;
 
       .slider-track-fill {
         position: absolute;
         top: 0;
         height: 100%;
         background-color: $brand-300;
-        border-radius: 4px;
-        z-index: 1;
+        border-radius: 0.25rem;
       }
 
       .slider-input {
