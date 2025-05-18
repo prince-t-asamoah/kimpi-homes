@@ -3,131 +3,135 @@
 @use 'colors' as *;
 @use 'breakpoints' as *;
 
-.product-listings-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: $space-5;
-  position: relative;
+:host {
+  width: inherit;
+  height: inherit;
 
-  @include for-breakpoint('desktop') {
-    transition-duration: 0.3s;
-
-    &:hover {
-      background-color: $neutral-200;
-    }
-
-    &:hover .product-card-image {
-      filter: brightness(80%);
-
-      & img {
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-    }
-  }
-
-  .add-to-cart-btn {
-    position: absolute;
-    top: $space-4;
-    right: $space-3;
-    background-color: $brand-400;
-    width: 1.75rem;
-    height: 1.75rem;
-    border-radius: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-
-    @include for-breakpoint('tablet') {
-      top: $space-5;
-      right: $space-5;
-      width: 3.125rem;
-      height: 3.125rem;
-    }
-
-    @include for-breakpoint('desktop') {
-      &:hover {
-        background-color: $brand-300;
-      }
-    }
-
-    .add-to-cart-btn-icon {
-      width: 0.975rem;
-      color: white;
-      display: inline-block;
-
-      @include for-breakpoint('tablet') {
-        width: 1.503rem;
-      }
-    }
-  }
-
-  .product-card-image {
-    img {
-      border-radius: $space-3;
-      height: 9.75rem;
-      width: 9.375rem;
-      object-fit: cover;
-
-      @include for-breakpoint('tablet') {
-        border-radius: $space-5;
-        width: 15.875rem;
-        height: 12.25rem;
-      }
-    }
-  }
-
-  .product-card-details {
+  .product-listings-card {
     display: flex;
     flex-direction: column;
-    gap: $space-5;
-    margin-top: $space-9;
+    border-radius: $space-5;
+    position: relative;
 
     @include for-breakpoint('desktop') {
-      padding: $space-5;
-      margin-top: $space-6;
+      transition-duration: 0.3s;
+
+      &:hover {
+        background-color: $neutral-200;
+      }
+
+      &:hover .product-card-image {
+        filter: brightness(80%);
+
+        & img {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
     }
 
-    .product-card-title {
-      @include paragraph-large;
-      font-weight: 700;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .product-card-price {
-      @include paragraph-2;
-      font-weight: bold;
-      display: flex;
+    .add-to-cart-btn {
+      position: absolute;
+      top: $space-4;
+      right: $space-3;
+      background-color: $brand-400;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 100%;
+      display: inline-flex;
+      justify-content: center;
       align-items: center;
-      gap: $space-4;
+      z-index: 1;
 
       @include for-breakpoint('tablet') {
-        @include paragraph-large;
-        font-weight: bold;
+        top: $space-5;
+        right: $space-5;
+        width: 3.125rem;
+        height: 3.125rem;
       }
 
-      .previous-price {
-        color: $neutral-400;
-        text-decoration: line-through;
+      @include for-breakpoint('desktop') {
+        &:hover {
+          background-color: $brand-300;
+        }
+      }
+
+      .add-to-cart-btn-icon {
+        width: 0.975rem;
+        color: white;
+        display: inline-block;
+
+        @include for-breakpoint('tablet') {
+          width: 1.503rem;
+        }
       }
     }
 
-    .product-card-footer {
-      @include paragraph-small;
-      color: $neutral-400;
-      display: flex;
-      align-items: center;
+    .product-card-image {
+      img {
+        border-radius: $space-3;
+        height: 9.75rem;
+        width: 100%;
+        object-fit: cover;
 
-      .product-card-ratings-icon {
-        width: 0.688rem;
-        margin-right: $space-3;
+        @include for-breakpoint('tablet') {
+          border-radius: $space-5;
+          height: 12.25rem;
+        }
+      }
+    }
+
+    .product-card-details {
+      display: flex;
+      flex-direction: column;
+      gap: $space-5;
+      margin-top: $space-9;
+
+      @include for-breakpoint('desktop') {
+        padding: $space-5;
+        margin-top: $space-6;
       }
 
-      .product-card-ratings {
-        margin-right: $space-3;
+      .product-card-title {
+        @include paragraph-large;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .product-card-price {
+        @include paragraph-2;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: $space-4;
+
+        @include for-breakpoint('tablet') {
+          @include paragraph-large;
+          font-weight: bold;
+        }
+
+        .previous-price {
+          color: $neutral-400;
+          text-decoration: line-through;
+        }
+      }
+
+      .product-card-footer {
+        @include paragraph-small;
+        color: $neutral-400;
+        display: flex;
+        align-items: center;
+
+        .product-card-ratings-icon {
+          width: 0.688rem;
+          margin-right: $space-3;
+        }
+
+        .product-card-ratings {
+          margin-right: $space-3;
+        }
       }
     }
   }
