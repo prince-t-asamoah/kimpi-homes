@@ -1,11 +1,22 @@
 <nav class="shop-breadcrumb">
   <ul class="breadcrumb-list">
     <li class="breadcrumb-list-item">
-      <a routerLink="/shop">Home</a>
+      <a routerLink="/shop">Shop</a>
     </li>
     <li class="breadcrumb-list-item active">
       <lucide-icon name="chevron-right" class="breadcrumb-icon"></lucide-icon>
-      <span class="breadcrumb-item-name">Shop</span>
+      @if (currentRoute === 'home' || currentRoute === 'shop') {
+        <span class="breadcrumb-item-name">Home</span>
+      }
+      @if (currentRoute === 'new-arrivals') {
+        <span class="breadcrumb-item-name">New Arrivals</span>
+      }
+      @if (currentRoute === 'top-sellers') {
+        <span class="breadcrumb-item-name">Top Sellers</span>
+      }
+      @if (currentRoute === 'flash-sales') {
+        <span class="breadcrumb-item-name">Flash Sales</span>
+      }
     </li>
   </ul>
 </nav>
