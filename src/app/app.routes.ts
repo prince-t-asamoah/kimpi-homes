@@ -17,7 +17,16 @@ export const routes: Routes = [
     title: 'Kimpi Homes | Shop',
     component: ShopComponent,
     children: [
-      { path: '', component: ShopHomeComponent, title: 'Kimpi Homes | Shop' },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        component: ShopHomeComponent,
+        title: 'Kimpi Homes | Shop',
+      },
       {
         path: 'new-arrivals',
         component: ShopNewArrivalsComponent,
