@@ -3,11 +3,10 @@
 @use 'spacing' as *;
 
 :host {
+  display: block;
   background-color: var(--neutral-400);
-  position: fixed;
+  position: sticky;
   top: 0;
-  right: 0;
-  left: 0;
   z-index: 2;
 
   .language-bar-content {

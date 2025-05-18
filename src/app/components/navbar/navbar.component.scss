@@ -4,8 +4,8 @@
 @use 'spacing' as *;
 
 :host {
-  position: fixed;
-  width: 100%;
+  display: block;
+  position: sticky;
   top: 55px;
   background-color: white;
   z-index: 2;
