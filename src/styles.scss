@@ -82,31 +82,36 @@ p,
 }
 
 // App Page Components
+app-root,
 app-home,
+app-shop,
 app-login,
 app-reset-password,
 app-forgot-password,
-app-create-account,
-app-navbar,
-app-footer,
-app-language-bar {
+app-create-account {
   display: block;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 //Utilities Classes
 .page-content {
-  margin-top: 6.75rem;
+  position: absolute;
+  top: 6.75rem;
+  width: 100%;
 
   @include for-breakpoint('tablet') {
-    margin-top: 6.438rem;
+    top: 6.438rem;
   }
 
   @include for-breakpoint('desktop') {
-    margin-top: 8.125rem;
+    top: 8.125rem;
   }
 
   @include for-breakpoint('desktop-large') {
-    margin-top: 8.563rem;
+    top: 8.563rem;
   }
 }
 
