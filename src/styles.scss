@@ -205,6 +205,16 @@ app-create-account {
   }
 }
 
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: $space-4;
+
+  @include for-breakpoint('desktop') {
+    gap: $space-7;
+  }
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;

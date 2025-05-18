@@ -30,16 +30,6 @@
         @include heading-5;
       }
     }
-
-    .categories-carousel-controls {
-      display: flex;
-      justify-content: center;
-      gap: $space-4;
-
-      @include for-breakpoint('desktop') {
-        gap: $space-7;
-      }
-    }
   }
 
   .categories-list-container {
