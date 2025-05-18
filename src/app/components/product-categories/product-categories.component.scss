@@ -47,30 +47,39 @@
     }
 
     .categories-list-item {
-      img {
-        background-color: var(--neutral-200);
-        width: 12.691rem;
-        height: 12.691rem;
-        max-width: none;
-        object-fit: cover;
-        border-radius: $space-6;
-
-        @include for-breakpoint('tablet') {
-          width: 16.919rem;
-          height: 16.919rem;
-        }
-
+      a {
         @include for-breakpoint('desktop') {
-          width: 22.563rem;
-          height: 22.563rem;
+          &:hover {
+            filter: brightness(0.7);
+            transition: filter 0.3s ease-in-out;
+          }
         }
-      }
 
-      p {
-        color: var(--neutral-400);
-        text-align: center;
-        margin-top: $space-11;
-        font-weight: 600;
+        img {
+          background-color: var(--neutral-200);
+          width: 12.691rem;
+          height: 12.691rem;
+          max-width: none;
+          object-fit: cover;
+          border-radius: $space-6;
+
+          @include for-breakpoint('tablet') {
+            width: 16.919rem;
+            height: 16.919rem;
+          }
+
+          @include for-breakpoint('desktop') {
+            width: 22.563rem;
+            height: 22.563rem;
+          }
+        }
+
+        p {
+          color: var(--neutral-400);
+          text-align: center;
+          margin-top: $space-11;
+          font-weight: 600;
+        }
       }
     }
   }
