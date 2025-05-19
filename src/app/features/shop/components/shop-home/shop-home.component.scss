@@ -3,30 +3,82 @@
 @use 'colors' as *;
 @use 'typography' as *;
 
-.main-products-listings {
-  display: flex;
-  margin-top: $space-16;
-  position: relative;
-
-  @include for-breakpoint('desktop') {
-    gap: $space-14;
-    margin-top: $space-22;
-  }
-
-  .main-products-listings-content {
+:host {
+  .product-categories {
+    position: absolute;
     width: 100%;
+    right: 0;
+    z-index: 2;
+    margin-top: $space-15;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-18;
+    }
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-20;
+    }
+
+    .categories-list-container {
+      header {
+        @include for-breakpoint('desktop') {
+          padding-right: $space-30;
+        }
+      }
+
+      .categories-list {
+        margin-top: $space-10;
+
+        @include for-breakpoint('tablet') {
+          margin-top: $space-12;
+        }
+      }
+    }
   }
-}
 
-.flash-sales,
-.top-sellers {
-  margin-top: $space-18;
+  .main-products-listings {
+    display: flex;
+    margin-top: $space-16;
+    position: relative;
 
-  @include for-breakpoint('tablet') {
-    margin-top: $space-20;
+    @include for-breakpoint('desktop') {
+      gap: $space-14;
+      margin-top: $space-22;
+    }
+
+    .main-products-listings-content {
+      width: 100%;
+
+      @include for-breakpoint('desktop') {
+        padding-right: $space-30;
+      }
+    }
   }
 
-  @include for-breakpoint('desktop') {
+  .flash-sales,
+  .top-sellers {
     margin-top: $space-18;
+    width: 100%;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-20;
+    }
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-18;
+    }
+  }
+
+  .products-listings {
+    .product-listings-list {
+      .product-listings-list-item {
+        width: 11.125rem;
+        flex: none;
+
+        @include for-breakpoint('tablet') {
+          width: 15.875rem;
+        }
+      }
+    }
   }
 }
