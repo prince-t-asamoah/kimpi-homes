@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product-filter-sidebar.component';
 import { ProductFilterButtonComponent } from '../product-filter-button/product-filter-button.component';
 import { ProductListingsCardComponent } from '../product-listings-card/product-listings-card.component';
+import { ProductsCarouselComponent } from '../products-carousel/products-carousel.component';
 import productListingsData from '../../data/product-listings.data';
 
 @Component({
@@ -10,6 +11,7 @@ import productListingsData from '../../data/product-listings.data';
     ProductFilterSidebarComponent,
     ProductFilterButtonComponent,
     ProductListingsCardComponent,
+    ProductsCarouselComponent,
   ],
   templateUrl: './shop-new-arrivals.component.html',
   styleUrl: './shop-new-arrivals.component.scss',

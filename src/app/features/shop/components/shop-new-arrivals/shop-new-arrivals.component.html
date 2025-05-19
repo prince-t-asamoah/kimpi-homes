@@ -1,12 +1,30 @@
-<app-product-filter-sidebar></app-product-filter-sidebar>
-<div class="main-products-listings-content">
-  <app-product-filter-button></app-product-filter-button>
-  <section class="new-arrivals products-listings">
-    <header class="products-listings-header">
-      <h2 class="products-listings-header-title">
-        New Arrivals <span class="products-listings-total">1,500+ items</span>
-      </h2>
-    </header>
+<div class="main-products-listings">
+  <app-product-filter-sidebar></app-product-filter-sidebar>
+  <div class="main-products-listings-content">
+    <app-product-filter-button></app-product-filter-button>
+    <section class="new-arrivals products-listings">
+      <header class="products-listings-header">
+        <h2 class="products-listings-header-title">
+          New Arrivals <span class="products-listings-total">1,500+ items</span>
+        </h2>
+      </header>
+      <ul class="product-listings-list">
+        @for (product of productListings; track product.id) {
+          <li class="product-listings-list-item">
+            <app-product-listings-card
+              [product]="product"></app-product-listings-card>
+          </li>
+        }
+      </ul>
+    </section>
+  </div>
+</div>
+<section class="products-listings">
+  <header class="products-listings-header">
+    <h2 class="products-listings-header-title">Recommended Items</h2>
+    <a rotuerLink="#" class="view-all-link">View all</a>
+  </header>
+  <app-products-carousel>
     <ul class="product-listings-list">
       @for (product of productListings; track product.id) {
         <li class="product-listings-list-item">
@@ -15,5 +33,5 @@
         </li>
       }
     </ul>
-  </section>
-</div>
+  </app-products-carousel>
+</section>
