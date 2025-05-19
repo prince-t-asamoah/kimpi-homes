@@ -73,13 +73,12 @@
             height: 22.563rem;
           }
         }
-
-        p {
-          color: var(--neutral-400);
-          text-align: center;
-          margin-top: $space-11;
-          font-weight: 600;
-        }
+      }
+      .categories-list-item-name {
+        color: var(--neutral-400);
+        text-align: center;
+        margin-top: $space-11;
+        font-weight: 600;
       }
     }
   }
