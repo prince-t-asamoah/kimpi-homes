@@ -35,17 +35,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-right: $space-11;
 
-      @include for-breakpoint('tablet') {
-        padding-right: $space-13;
-      }
-
-      @include for-breakpoint('desktop') {
-        padding-right: $space-18;
-      }
-
-      h2 {
+      .products-listings-header-title {
         @include heading-6;
 
         @include for-breakpoint('desktop') {
@@ -62,6 +53,17 @@
             transition: color 0.3s ease-in-out;
             text-decoration: underline;
           }
+        }
+      }
+
+      .products-listings-total {
+        color: $neutral-400;
+        margin-left: $space-4;
+
+        @include paragraph-small;
+
+        @include for-breakpoint('tablet') {
+          @include paragraph-2;
         }
       }
     }
