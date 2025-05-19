@@ -5,13 +5,19 @@
 
 .shop {
   padding-top: $space-7;
-  padding-left: $space-11;
+  padding-left: $space-8;
+  padding-right: $space-8;
   padding-bottom: $space-15;
-  padding-right: 0;
+
+  @include for-breakpoint('mobile-large') {
+    padding-left: $space-10;
+    padding-right: $space-10;
+  }
 
   @include for-breakpoint('tablet') {
     padding-top: $space-10;
     padding-left: $space-13;
+    padding-right: $space-13;
     padding-bottom: $space-12;
   }
 
@@ -19,30 +25,70 @@
     padding-top: $space-9;
     padding-left: $space-18;
     padding-bottom: $space-20;
+    padding-right: $space-18;
   }
 
-  .product-categories {
-    margin-top: $space-15;
+  .products-listings {
+    width: 100%;
 
-    @include for-breakpoint('tablet') {
-      margin-top: $space-18;
-    }
+    .products-listings-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: $space-11;
 
-    @include for-breakpoint('desktop') {
-      margin-top: $space-20;
-    }
-
-    .categories-list-container {
-      header {
-        padding-right: $space-8;
+      @include for-breakpoint('tablet') {
+        padding-right: $space-13;
       }
 
-      .categories-list {
-        margin-top: $space-10;
+      @include for-breakpoint('desktop') {
+        padding-right: $space-18;
+      }
 
-        @include for-breakpoint('tablet') {
-          margin-top: $space-12;
+      h2 {
+        @include heading-6;
+
+        @include for-breakpoint('desktop') {
+          @include heading-5;
         }
+      }
+
+      .view-all-link {
+        color: $brand-400;
+
+        @include for-breakpoint('desktop') {
+          &:hover {
+            color: $brand-300;
+            transition: color 0.3s ease-in-out;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .products-listings-description {
+      margin-top: $space-8;
+      color: $neutral-500;
+      @include paragraph-small;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-5;
+        @include paragraph-2;
+      }
+    }
+
+    .product-listings-list {
+      display: flex;
+      margin-top: $space-8;
+      column-gap: $space-8;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-10;
+        column-gap: $space-10;
+      }
+
+      @include for-breakpoint('desktop') {
+        margin-top: $space-11;
       }
     }
   }
