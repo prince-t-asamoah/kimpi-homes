@@ -68,6 +68,8 @@
     }
 
     .product-card-image {
+      width: inherit;
+
       img {
         border-radius: $space-3;
         height: 9.75rem;
@@ -86,6 +88,7 @@
       flex-direction: column;
       gap: $space-5;
       margin-top: $space-9;
+      width: 100%;
 
       @include for-breakpoint('desktop') {
         padding: $space-5;
