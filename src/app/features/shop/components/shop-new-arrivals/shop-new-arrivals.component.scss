@@ -10,4 +10,13 @@
     gap: $space-14;
     margin-top: $space-18;
   }
+
+  .main-products-listings-content {
+    display: flex;
+    width: 100%;
+
+    @include for-breakpoint('desktop') {
+      padding-right: $space-20;
+    }
+  }
 }
