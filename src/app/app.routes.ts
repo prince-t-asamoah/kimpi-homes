@@ -28,7 +28,7 @@ export const routes: Routes = [
         title: 'Kimpi Homes | Shop',
       },
       {
-        path: 'new-arrivals',
+        path: 'new-arrivals/:pageNumber',
         component: ShopNewArrivalsComponent,
         title: 'Kimpi Homes | Shop - New Arrivals',
       },
