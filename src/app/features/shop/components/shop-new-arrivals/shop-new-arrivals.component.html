@@ -25,19 +25,5 @@
     </section>
   </div>
 </div>
-<section class="recommended-items products-listings">
-  <header class="products-listings-header">
-    <h2 class="products-listings-header-title">Recommended Items</h2>
-    <a routerLink="#" class="view-all-link">View all</a>
-  </header>
-  <app-products-carousel>
-    <ul class="product-listings-list">
-      @for (product of productListings; track product.id) {
-        <li class="product-listings-list-item">
-          <app-product-listings-card
-            [product]="product"></app-product-listings-card>
-        </li>
-      }
-    </ul>
-  </app-products-carousel>
-</section>
+<app-recommended-products-listings
+  [productListings]="productListings"></app-recommended-products-listings>

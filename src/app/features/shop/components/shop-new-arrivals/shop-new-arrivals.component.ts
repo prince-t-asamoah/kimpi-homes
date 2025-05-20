@@ -6,6 +6,7 @@ import { ProductListingsCardComponent } from '../product-listings-card/product-l
 import { ProductsCarouselComponent } from '../products-carousel/products-carousel.component';
 import { ProductsPaginationButtonsComponent } from '../products-pagination-buttons/products-pagination-buttons.component';
 import productListingsData from '../../data/product-listings.data';
+import { RecommendedProductsListingsComponent } from '../recommended-products-listings/recommended-products-listings.component';
 
 @Component({
   selector: 'app-shop-new-arrivals',
@@ -16,6 +17,7 @@ import productListingsData from '../../data/product-listings.data';
     ProductsCarouselComponent,
     RouterLink,
     ProductsPaginationButtonsComponent,
+    RecommendedProductsListingsComponent,
   ],
   templateUrl: './shop-new-arrivals.component.html',
   styleUrl: './shop-new-arrivals.component.scss',
