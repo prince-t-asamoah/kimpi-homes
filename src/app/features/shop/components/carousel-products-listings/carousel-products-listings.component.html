@@ -1,4 +1,4 @@
-<section class="carousel-products-listings">
+<section class="carousel-product-list products-listings">
   <header class="products-listings-header">
     <h2 class="products-listings-header-title">{{ title }}</h2>
     <a [routerLink]="viewAllLink" class="view-all-link">View all</a>
@@ -11,7 +11,7 @@
       arrowDirection="left"
       class="left-carousel-button"
       (clickEvent)="scrollLeft()"></app-carousel-button>
-    <ul class="product-listings-list" #carousel>
+    <ul class="carousel product-listings-list" #carousel>
       @for (product of productListings; track product.id) {
         <li class="product-listings-list-item">
           <app-product-listings-card
