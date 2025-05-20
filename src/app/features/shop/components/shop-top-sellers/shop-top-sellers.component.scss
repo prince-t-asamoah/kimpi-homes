@@ -1,0 +1,93 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'colors' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include for-breakpoint('desktop') {
+    margin-top: $space-18;
+  }
+
+  .main-products-listings {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+
+    @include for-breakpoint('tablet') {
+      flex-direction: row;
+      gap: $space-10;
+    }
+
+    @include for-breakpoint('desktop') {
+      gap: $space-11;
+    }
+
+    .main-products-listings-content {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+
+      .new-arrivals.products-listings {
+        .products-listings-content {
+          display: flex;
+          flex-direction: column;
+          gap: $space-10;
+
+          @include for-breakpoint('tablet') {
+            gap: $space-13;
+          }
+
+          @include for-breakpoint('desktop') {
+            gap: $space-15;
+          }
+
+          .product-listings-list {
+            display: grid;
+            column-gap: $space-7;
+            row-gap: $space-10;
+            grid-template-columns: repeat(2, 1fr);
+
+            @include for-breakpoint('tablet') {
+              row-gap: $space-11;
+              grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include for-breakpoint('desktop') {
+              column-gap: $space-10;
+              row-gap: $space-14;
+            }
+
+            @include for-breakpoint('desktop-large') {
+              row-gap: $space-12;
+              grid-template-columns: repeat(4, 1fr);
+            }
+
+            .product-listings-list-item {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .recommended-items.products-listings {
+    margin-top: $space-18;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-20;
+    }
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-24;
+    }
+  }
+}
