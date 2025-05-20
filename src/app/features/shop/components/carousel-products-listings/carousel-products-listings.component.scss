@@ -79,6 +79,8 @@
       display: flex;
       margin-top: $space-8;
       column-gap: $space-8;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
 
       @include for-breakpoint('tablet') {
         margin-top: $space-10;
@@ -87,6 +89,15 @@
 
       @include for-breakpoint('desktop') {
         margin-top: $space-11;
+      }
+
+      .product-listings-list-item {
+        width: 11.125rem;
+        flex: none;
+
+        @include for-breakpoint('tablet') {
+          width: 15.875rem;
+        }
       }
     }
   }
