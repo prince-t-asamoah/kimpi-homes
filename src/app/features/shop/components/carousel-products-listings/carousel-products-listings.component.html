@@ -1,1 +1,25 @@
-<p>carousel-products-listings works!</p>
+<section class="carousel-products-listings">
+  <header class="products-listings-header">
+    <h2 class="products-listings-header-title">{{ title }}</h2>
+    <a [routerLink]="viewAllLink" class="view-all-link">View all</a>
+  </header>
+  <p class="products-listings-description">
+    {{ description }}
+  </p>
+  <div class="products-listings-content">
+    <app-carousel-button
+      arrowDirection="left"
+      class="left-carousel-button"></app-carousel-button>
+    <ul class="product-listings-list">
+      @for (product of productListings; track product.id) {
+        <li class="product-listings-list-item">
+          <app-product-listings-card
+            [product]="product"></app-product-listings-card>
+        </li>
+      }
+    </ul>
+    <app-carousel-button
+      arrowDirection="right"
+      class="right-carousel-button"></app-carousel-button>
+  </div>
+</section>

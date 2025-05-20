@@ -1,0 +1,93 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+
+.carousel-products-listings {
+  width: 100%;
+
+  .products-listings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .products-listings-header-title {
+      @include heading-6;
+
+      @include for-breakpoint('desktop') {
+        @include heading-5;
+      }
+    }
+
+    .view-all-link {
+      color: $brand-400;
+
+      @include for-breakpoint('desktop') {
+        &:hover {
+          color: $brand-300;
+          transition: color 0.3s ease-in-out;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .products-listings-total {
+      color: $neutral-400;
+      margin-left: $space-4;
+
+      @include paragraph-small;
+
+      @include for-breakpoint('tablet') {
+        @include paragraph-2;
+      }
+    }
+  }
+
+  .products-listings-description {
+    margin-top: $space-8;
+    color: $neutral-500;
+    @include paragraph-small;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-5;
+      @include paragraph-2;
+    }
+  }
+
+  .products-listings-content {
+    display: block;
+    overflow-x: hidden;
+    position: relative;
+    max-width: 100%;
+    height: fit-content;
+
+    app-carousel-button {
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+    }
+
+    .left-carousel-button {
+      left: $space-5;
+    }
+
+    .right-carousel-button {
+      right: $space-5;
+    }
+
+    .product-listings-list {
+      display: flex;
+      margin-top: $space-8;
+      column-gap: $space-8;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-10;
+        column-gap: $space-10;
+      }
+
+      @include for-breakpoint('desktop') {
+        margin-top: $space-11;
+      }
+    }
+  }
+}

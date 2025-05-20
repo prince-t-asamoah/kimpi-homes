@@ -3,65 +3,24 @@
   <app-product-filter-sidebar></app-product-filter-sidebar>
   <div class="main-products-listings-content">
     <app-product-filter-button></app-product-filter-button>
-    <section class="new-arrivals products-listings">
-      <header class="products-listings-header">
-        <h2 class="products-listings-header-title">New Arrivals</h2>
-        <a routerLink="/shop/new-arrivals/1" class="view-all-link">View all</a>
-      </header>
-      <p class="products-listings-description">
-        Shop now for exclusive discounts on stylish furniture-before the deals
-        are gone
-      </p>
-      <app-products-carousel>
-        <ul class="product-listings-list">
-          @for (product of productListings; track product.id) {
-            <li class="product-listings-list-item">
-              <app-product-listings-card
-                [product]="product"></app-product-listings-card>
-            </li>
-          }
-        </ul>
-      </app-products-carousel>
-    </section>
-    <section class="top-sellers products-listings">
-      <header class="products-listings-header">
-        <h2 class="products-listings-header-title">Top Sellers</h2>
-        <a routerLink="/shop/top-sellers/1" class="view-all-link">View all</a>
-      </header>
-      <p class="products-listings-description">
-        Discover our best-selling essentials, curated for those who appreciate
-        quality and style
-      </p>
-      <app-products-carousel>
-        <ul class="product-listings-list">
-          @for (product of productListings; track product.id) {
-            <li class="product-listings-list-item">
-              <app-product-listings-card
-                [product]="product"></app-product-listings-card>
-            </li>
-          }
-        </ul>
-      </app-products-carousel>
-    </section>
+    <app-carousel-products-listings
+      [productListings]="productListings"
+      title="New Arrivals"
+      viewAllLink="/shop/new-arrivals/1"
+      description="Shop now for exclusive discounts on stylish furniture—before the deals are">
+    </app-carousel-products-listings>
+    <app-carousel-products-listings
+      [productListings]="productListings"
+      title="Top Sellers"
+      viewAllLink="/shop/top-sellers/1"
+      description="Discover our best-selling essentials, curated for those who appreciate
+        quality and style">
+    </app-carousel-products-listings>
   </div>
 </div>
-<section class="flash-sales products-listings">
-  <header class="products-listings-header">
-    <h2 class="products-listings-header-title">Flash Sales</h2>
-    <a rotuerLink="#" class="view-all-link">View all</a>
-  </header>
-  <p class="products-listings-description">
-    Shop now for exclusive discounts on stylish furniture—before the deals are
-    gone
-  </p>
-  <app-products-carousel>
-    <ul class="product-listings-list">
-      @for (product of productListings; track product.id) {
-        <li class="product-listings-list-item">
-          <app-product-listings-card
-            [product]="product"></app-product-listings-card>
-        </li>
-      }
-    </ul>
-  </app-products-carousel>
-</section>
+<app-carousel-products-listings
+  [productListings]="productListings"
+  title="Flash Sales"
+  viewAllLink="/shop/recommended-products/1"
+  description="Shop now for exclusive discounts on stylish furniture—before the deals are">
+</app-carousel-products-listings>
