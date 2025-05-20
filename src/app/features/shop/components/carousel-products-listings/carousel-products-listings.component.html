@@ -9,8 +9,9 @@
   <div class="products-listings-content">
     <app-carousel-button
       arrowDirection="left"
-      class="left-carousel-button"></app-carousel-button>
-    <ul class="product-listings-list">
+      class="left-carousel-button"
+      (clickEvent)="scrollLeft()"></app-carousel-button>
+    <ul class="product-listings-list" #carousel>
       @for (product of productListings; track product.id) {
         <li class="product-listings-list-item">
           <app-product-listings-card
@@ -20,6 +21,7 @@
     </ul>
     <app-carousel-button
       arrowDirection="right"
-      class="right-carousel-button"></app-carousel-button>
+      class="right-carousel-button"
+      (clickEvent)="scrollRight()"></app-carousel-button>
   </div>
 </section>
