@@ -2,12 +2,19 @@
   <app-product-filter-sidebar></app-product-filter-sidebar>
   <div class="main-products-listings-content">
     <app-product-filter-button></app-product-filter-button>
-    <app-top-sellers-listings
-      currentPageRoute="/shop/top-sellers"
-      [currentPageNumber]="currantPageNumber"
+    <app-paginated-product-listings
+      class="top-sellers"
+      title="Top Sellers"
       [productListings]="productListings"
-      [totalPages]="totalPages"></app-top-sellers-listings>
+      [currentPageNumber]="currantPageNumber"
+      [totalProducts]="totalProducts"
+      [totalPages]="totalPages">
+    </app-paginated-product-listings>
   </div>
 </div>
-<app-recommended-products-listings
-  [productListings]="productListings"></app-recommended-products-listings>
+<app-carousel-products-listings
+  class="recommended-product-listings"
+  title="Recommended Products"
+  description=" Explore our curated selection of top-rated products, handpicked just for you."
+  [productListings]="productListings"
+  viewAllLink="/shop/recommended-products/1"></app-carousel-products-listings>
