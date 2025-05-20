@@ -1,1 +1,23 @@
-<p>products-pagination-buttons works!</p>
+<div class="products-pagination-buttons">
+  <button type="button" class="previous pagination-btn">
+    <lucide-icon name="chevron-left"></lucide-icon>
+    <span class="pagination-btn-text">Prev</span>
+  </button>
+  <nav class="pagination">
+    <ul class="pagination-list">
+      @for (pageNumber of pageCounter(); track pageNumber) {
+        <li class="pagination-list-item">
+          <a
+            [routerLink]="[currentPageRoute, pageNumber]"
+            routerLinkActive="active">
+            {{ pageNumber }}</a
+          >
+        </li>
+      }
+    </ul>
+  </nav>
+  <button type="button" class="next pagination-btn">
+    <span class="pagination-btn-text">Next</span>
+    <lucide-icon name="chevron-right"></lucide-icon>
+  </button>
+</div>

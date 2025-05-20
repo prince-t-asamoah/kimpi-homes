@@ -1,0 +1,111 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'breakpoints' as *;
+
+:host {
+  display: flex;
+  justify-content: center;
+  padding: $space-10 0;
+
+  .products-pagination-buttons {
+    display: flex;
+    gap: $space-6;
+    align-items: center;
+  }
+
+  .pagination-btn {
+    padding: $space-5;
+    width: 3rem;
+    height: 3rem;
+    border-radius: $space-3;
+    background-color: $brand-500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-3;
+
+    @include for-breakpoint('tablet') {
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      color: $brand-300;
+    }
+
+    @include for-breakpoint('desktop') {
+      &:hover {
+        background-color: $brand-100;
+        color: $brand-500;
+      }
+    }
+
+    &:disabled {
+      background-color: $brand-100;
+      color: $brand-200;
+      cursor: not-allowed;
+    }
+
+    @include for-breakpoint('tablet') {
+      &:disabled {
+        background-color: transparent;
+      }
+    }
+
+    .pagination-btn-text {
+      display: none;
+
+      @include for-breakpoint('tablet') {
+        display: inline;
+      }
+    }
+  }
+
+  .previous.pagination-btn {
+    @include for-breakpoint('tablet') {
+      padding-right: $space-8;
+    }
+  }
+
+  .next.pagination-btn {
+    @include for-breakpoint('tablet') {
+      padding-left: $space-8;
+    }
+  }
+
+  .pagination {
+    .pagination-list {
+      display: flex;
+      gap: $space-4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .pagination-list-item {
+        flex: 1;
+        &.hide {
+          display: none;
+        }
+
+        a {
+          padding: $space-5 $space-7;
+          border-radius: $space-3;
+          @include paragraph-small;
+          font-weight: 700;
+          color: $neutral-300;
+
+          &.active {
+            color: white;
+            background-color: $brand-400;
+          }
+
+          @include for-breakpoint('desktop') {
+            &:hover {
+              background-color: $neutral-200;
+              color: $neutral-600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
