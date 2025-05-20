@@ -1,0 +1,18 @@
+@use 'breakpoints' as *;
+@use 'spacing' as *;
+
+.paginated-product-listings {
+  .products-listings-content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+
+    @include for-breakpoint('tablet') {
+      gap: $space-13;
+    }
+
+    @include for-breakpoint('desktop') {
+      gap: $space-15;
+    }
+  }
+}

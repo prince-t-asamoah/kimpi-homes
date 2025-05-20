@@ -1,0 +1,22 @@
+<section class="paginated-product-listings products-listings">
+  <header class="products-listings-header">
+    <h2 class="products-listings-header-title">
+      {{ title }}
+      <span class="products-listings-total">{{ totalProducts }} items</span>
+    </h2>
+  </header>
+  <div class="products-listings-content">
+    <ul class="paginated product-listings-list">
+      @for (product of productListings; track product.id) {
+        <li class="product-listings-list-item">
+          <app-product-listings-card
+            [product]="product"></app-product-listings-card>
+        </li>
+      }
+    </ul>
+    <app-products-pagination-buttons
+      currentPageRoute="/shop/new-arrivals"
+      [currentPageNumber]="currentPageNumber"
+      [totalPages]="totalPages"></app-products-pagination-buttons>
+  </div>
+</section>
