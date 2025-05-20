@@ -1,1 +1,13 @@
-<p>shop-top-sellers works!</p>
+<div class="main-products-listings">
+  <app-product-filter-sidebar></app-product-filter-sidebar>
+  <div class="main-products-listings-content">
+    <app-product-filter-button></app-product-filter-button>
+    <app-top-sellers-listings
+      currentPageRoute="/shop/top-sellers"
+      [currentPageNumber]="currantPageNumber"
+      [productListings]="productListings"
+      [totalPages]="totalPages"></app-top-sellers-listings>
+  </div>
+</div>
+<app-recommended-products-listings
+  [productListings]="productListings"></app-recommended-products-listings>
