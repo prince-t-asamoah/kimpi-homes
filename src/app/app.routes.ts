@@ -8,6 +8,7 @@ import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 import { ShopHomeComponent } from './features/shop/components/shop-home/shop-home.component';
 import { ShopNewArrivalsComponent } from './features/shop/components/shop-new-arrivals/shop-new-arrivals.component';
+import { ShopTopSellersComponent } from './features/shop/components/shop-top-sellers/shop-top-sellers.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -31,6 +32,11 @@ export const routes: Routes = [
         path: 'new-arrivals/:pageNumber',
         component: ShopNewArrivalsComponent,
         title: 'Kimpi Homes | Shop - New Arrivals',
+      },
+      {
+        path: 'top-sellers/:pageNumber',
+        component: ShopTopSellersComponent,
+        title: 'Kimpi Homes | Shop - Top Sellers',
       },
     ],
   },
