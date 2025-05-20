@@ -81,12 +81,16 @@
       text-overflow: ellipsis;
 
       .pagination-list-item {
-        flex: 1;
         &.hide {
           display: none;
         }
 
         a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.375rem;
+          height: 2.375rem;
           padding: $space-5 $space-7;
           border-radius: $space-3;
           @include paragraph-small;
