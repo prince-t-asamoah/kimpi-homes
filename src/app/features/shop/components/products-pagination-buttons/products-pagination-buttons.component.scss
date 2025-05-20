@@ -28,7 +28,6 @@
 
     @include for-breakpoint('tablet') {
       width: auto;
-      // height: auto;
       background-color: transparent;
       color: $brand-300;
     }
@@ -111,6 +110,13 @@
           &.active {
             color: white;
             background-color: $brand-400;
+
+            @include for-breakpoint('desktop') {
+              &:hover {
+                color: white;
+                background-color: $brand-500;
+              }
+            }
           }
 
           @include for-breakpoint('desktop') {
