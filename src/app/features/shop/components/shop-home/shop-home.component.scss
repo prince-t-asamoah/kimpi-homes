@@ -57,6 +57,7 @@
 
   .flash-sales,
   .top-sellers {
+    display: block;
     margin-top: $space-18;
     width: 100%;
 
@@ -66,19 +67,6 @@
 
     @include for-breakpoint('desktop') {
       margin-top: $space-18;
-    }
-  }
-
-  .products-listings {
-    .product-listings-list {
-      .product-listings-list-item {
-        width: 11.125rem;
-        flex: none;
-
-        @include for-breakpoint('tablet') {
-          width: 15.875rem;
-        }
-      }
     }
   }
 }

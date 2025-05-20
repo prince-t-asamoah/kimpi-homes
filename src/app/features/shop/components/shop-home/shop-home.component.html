@@ -4,13 +4,15 @@
   <div class="main-products-listings-content">
     <app-product-filter-button></app-product-filter-button>
     <app-carousel-products-listings
-      [productListings]="productListings"
+      class="new-arrivals"
       title="New Arrivals"
       viewAllLink="/shop/new-arrivals/1"
-      description="Shop now for exclusive discounts on stylish furniture—before the deals are">
+      description="Shop now for exclusive discounts on stylish furniture—before the deals are"
+      [productListings]="productListings">
     </app-carousel-products-listings>
     <app-carousel-products-listings
       [productListings]="productListings"
+      class="top-sellers"
       title="Top Sellers"
       viewAllLink="/shop/top-sellers/1"
       description="Discover our best-selling essentials, curated for those who appreciate
@@ -19,8 +21,9 @@
   </div>
 </div>
 <app-carousel-products-listings
-  [productListings]="productListings"
+  class="flash-sales"
   title="Flash Sales"
-  viewAllLink="/shop/recommended-products/1"
-  description="Shop now for exclusive discounts on stylish furniture—before the deals are">
+  viewAllLink="/shop/flash-sales/1"
+  description="Shop now for exclusive discounts on stylish furniture—before the deals are"
+  [productListings]="productListings">
 </app-carousel-products-listings>
