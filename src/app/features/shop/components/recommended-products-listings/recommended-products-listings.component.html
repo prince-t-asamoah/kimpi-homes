@@ -1,1 +1,18 @@
-<p>recommended-products-listings works!</p>
+<section class="recommended-items products-listings">
+  <header class="products-listings-header">
+    <h2 class="products-listings-header-title">Recommended Products</h2>
+    <a routerLink="/shop/recommended-products" class="view-all-link"
+      >View all</a
+    >
+  </header>
+  <app-products-carousel>
+    <ul class="product-listings-list">
+      @for (product of productListings; track product.id) {
+        <li class="product-listings-list-item">
+          <app-product-listings-card
+            [product]="product"></app-product-listings-card>
+        </li>
+      }
+    </ul>
+  </app-products-carousel>
+</section>
