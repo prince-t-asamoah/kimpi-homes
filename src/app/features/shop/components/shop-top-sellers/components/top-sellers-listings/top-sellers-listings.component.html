@@ -1,0 +1,21 @@
+<section class="top-sellers products-listings">
+  <header class="products-listings-header">
+    <h2 class="products-listings-header-title">
+      Top Sellers <span class="products-listings-total">1,500+ items</span>
+    </h2>
+  </header>
+  <div class="products-listings-content">
+    <ul class="product-listings-list">
+      @for (product of productListings; track product.id) {
+        <li class="product-listings-list-item">
+          <app-product-listings-card
+            [product]="product"></app-product-listings-card>
+        </li>
+      }
+    </ul>
+    <app-products-pagination-buttons
+      currentPageRoute="/shop/top-sellers"
+      [currentPageNumber]="currentPageNumber"
+      [totalPages]="totalPages"></app-products-pagination-buttons>
+  </div>
+</section>
