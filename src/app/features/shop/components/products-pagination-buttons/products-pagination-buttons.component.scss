@@ -11,6 +11,7 @@
     display: flex;
     gap: $space-6;
     align-items: center;
+    max-width: 100%;
   }
 
   .pagination-btn {
@@ -27,7 +28,7 @@
 
     @include for-breakpoint('tablet') {
       width: auto;
-      height: auto;
+      // height: auto;
       background-color: transparent;
       color: $brand-300;
     }
@@ -73,11 +74,14 @@
   }
 
   .pagination {
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
     .pagination-list {
       display: flex;
       gap: $space-4;
-      overflow: hidden;
-      text-overflow: ellipsis;
 
       .pagination-list-item {
         &.hide {
