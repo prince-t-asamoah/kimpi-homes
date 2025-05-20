@@ -27,4 +27,160 @@
     padding-bottom: $space-20;
     padding-right: $space-18;
   }
+
+  .products-listings {
+    width: 100%;
+
+    .products-listings-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .products-listings-header-title {
+        @include heading-6;
+
+        @include for-breakpoint('desktop') {
+          @include heading-5;
+        }
+      }
+
+      .view-all-link {
+        color: $brand-400;
+
+        @include for-breakpoint('desktop') {
+          &:hover {
+            color: $brand-300;
+            transition: color 0.3s ease-in-out;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .products-listings-total {
+        color: $neutral-400;
+        margin-left: $space-4;
+
+        @include paragraph-small;
+
+        @include for-breakpoint('tablet') {
+          @include paragraph-2;
+        }
+      }
+    }
+
+    .products-listings-description {
+      margin-top: $space-8;
+      color: $neutral-500;
+      @include paragraph-small;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-5;
+        @include paragraph-2;
+      }
+    }
+
+    .carousel.product-listings-list {
+      display: flex;
+      margin-top: $space-8;
+      column-gap: $space-8;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-10;
+        column-gap: $space-10;
+      }
+
+      @include for-breakpoint('desktop') {
+        margin-top: $space-11;
+      }
+
+      .product-listings-list-item {
+        width: 11.125rem;
+        flex: none;
+
+        @include for-breakpoint('tablet') {
+          width: 15.875rem;
+        }
+      }
+    }
+
+    .paginated.product-listings-list {
+      display: grid;
+      margin-top: $space-8;
+      column-gap: $space-7;
+      row-gap: $space-10;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-10;
+        row-gap: $space-11;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include for-breakpoint('desktop') {
+        margin-top: $space-11;
+        column-gap: $space-10;
+        row-gap: $space-14;
+      }
+
+      @include for-breakpoint('desktop-large') {
+        row-gap: $space-12;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .product-listings-list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .recommended-product-listings {
+    margin-top: $space-18;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-20;
+    }
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-24;
+    }
+  }
+
+  app-shop-new-arrivals,
+  app-shop-top-sellers {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-18;
+    }
+
+    .main-products-listings {
+      display: flex;
+      flex-direction: column;
+      gap: $space-8;
+
+      @include for-breakpoint('tablet') {
+        flex-direction: row;
+        gap: $space-10;
+      }
+
+      @include for-breakpoint('desktop') {
+        gap: $space-11;
+      }
+
+      .main-products-listings-content {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+  }
 }
