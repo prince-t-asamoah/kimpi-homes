@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product-filter-sidebar.component';
 import { ProductFilterButtonComponent } from '../product-filter-button/product-filter-button.component';
 import { ProductListingsCardComponent } from '../product-listings-card/product-listings-card.component';
 import { ProductsCarouselComponent } from '../products-carousel/products-carousel.component';
-import productListingsData from '../../data/product-listings.data';
 import { ProductsPaginationButtonsComponent } from '../products-pagination-buttons/products-pagination-buttons.component';
+import productListingsData from '../../data/product-listings.data';
 
 @Component({
   selector: 'app-shop-new-arrivals',
@@ -20,6 +20,15 @@ import { ProductsPaginationButtonsComponent } from '../products-pagination-butto
   templateUrl: './shop-new-arrivals.component.html',
   styleUrl: './shop-new-arrivals.component.scss',
 })
-export class ShopNewArrivalsComponent {
-  productListings = productListingsData;
+export class ShopNewArrivalsComponent implements OnInit {
+  public readonly productListings = productListingsData;
+  currantPageNumber = 1;
+  totalPages = 10;
+
+  constructor(private _router: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    const pageNumber = this._router.snapshot.paramMap.get('pageNumber') ?? 1;
+    this.currantPageNumber = Number(pageNumber);
+  }
 }
