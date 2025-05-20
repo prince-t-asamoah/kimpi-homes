@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -9,4 +9,5 @@ import { LucideAngularModule } from 'lucide-angular';
 })
 export class CarouselButtonComponent {
   @Input() arrowDirection: 'left' | 'right' = 'left';
+  @Output() clickEvent = new EventEmitter<void>();
 }

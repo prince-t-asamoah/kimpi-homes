@@ -1,4 +1,8 @@
-<button type="button" aria-label="Previous Item" class="carousel-button">
+<button
+  type="button"
+  aria-label="Previous Item"
+  class="carousel-button"
+  (click)="clickEvent.emit()">
   <lucide-icon
     [name]="`chevron-${arrowDirection}`"
     class="carousel-btn-icon"></lucide-icon>
