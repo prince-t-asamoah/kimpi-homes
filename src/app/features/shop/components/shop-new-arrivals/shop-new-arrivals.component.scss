@@ -37,17 +37,31 @@
       width: 100%;
       flex-direction: column;
 
+      .new-arrivals.products-listings {
+        .products-listings-content {
+          display: flex;
+          flex-direction: column;
+          gap: $space-10;
+
+          @include for-breakpoint('tablet') {
+            gap: $space-13;
+          }
+
+          @include for-breakpoint('desktop') {
+            gap: $space-15;
+          }
+        }
+      }
+
       .product-listings-list {
         display: grid;
         column-gap: $space-7;
         row-gap: $space-10;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
 
         @include for-breakpoint('tablet') {
           row-gap: $space-11;
           grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 1fr);
         }
 
         @include for-breakpoint('desktop') {

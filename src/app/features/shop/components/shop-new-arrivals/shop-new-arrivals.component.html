@@ -8,18 +8,20 @@
           New Arrivals <span class="products-listings-total">1,500+ items</span>
         </h2>
       </header>
-      <ul class="product-listings-list">
-        @for (product of productListings; track product.id) {
-          <li class="product-listings-list-item">
-            <app-product-listings-card
-              [product]="product"></app-product-listings-card>
-          </li>
-        }
-      </ul>
-      <app-products-pagination-buttons
-        currentPageRoute="/shop/new-arrivals"
-        [currentPageNumber]="currantPageNumber"
-        [totalPages]="totalPages"></app-products-pagination-buttons>
+      <div class="products-listings-content">
+        <ul class="product-listings-list">
+          @for (product of productListings; track product.id) {
+            <li class="product-listings-list-item">
+              <app-product-listings-card
+                [product]="product"></app-product-listings-card>
+            </li>
+          }
+        </ul>
+        <app-products-pagination-buttons
+          currentPageRoute="/shop/new-arrivals"
+          [currentPageNumber]="currantPageNumber"
+          [totalPages]="totalPages"></app-products-pagination-buttons>
+      </div>
     </section>
   </div>
 </div>
