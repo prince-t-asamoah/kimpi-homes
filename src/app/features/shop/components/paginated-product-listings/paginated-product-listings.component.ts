@@ -15,4 +15,5 @@ export class PaginatedProductListingsComponent {
   @Input({ required: true }) totalPages = 10;
   @Input({ required: true }) currentPageNumber = 1;
   @Input({ required: true }) totalProducts = 0;
+  @Input({ required: true }) currentPageRoute = '';
 }

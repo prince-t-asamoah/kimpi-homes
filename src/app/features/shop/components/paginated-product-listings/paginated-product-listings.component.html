@@ -15,7 +15,7 @@
       }
     </ul>
     <app-products-pagination-buttons
-      currentPageRoute="/shop/new-arrivals"
+      [currentPageRoute]="currentPageRoute"
       [currentPageNumber]="currentPageNumber"
       [totalPages]="totalPages"></app-products-pagination-buttons>
   </div>
