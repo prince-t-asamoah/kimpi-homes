@@ -218,6 +218,6 @@ app-create-account {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 50;
+  background-color: #3d3d3d66;
+  z-index: 20;
 }
