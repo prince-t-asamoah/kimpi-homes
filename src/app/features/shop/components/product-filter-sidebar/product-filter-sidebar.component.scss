@@ -119,6 +119,13 @@
         }
       }
     }
+
+    .filter-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: $space-8;
+      margin-top: $space-10;
+    }
   }
 
   .modal-backdrop {
