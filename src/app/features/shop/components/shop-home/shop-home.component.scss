@@ -4,12 +4,8 @@
 @use 'typography' as *;
 
 :host {
-  .product-categories {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    z-index: 2;
-    margin-top: $space-15;
+  app-product-categories {
+    margin-top: $space-5;
 
     @include for-breakpoint('tablet') {
       margin-top: $space-18;
@@ -23,14 +19,6 @@
       header {
         @include for-breakpoint('desktop') {
           padding-right: $space-30;
-        }
-      }
-
-      .categories-list {
-        margin-top: $space-10;
-
-        @include for-breakpoint('tablet') {
-          margin-top: $space-12;
         }
       }
     }
