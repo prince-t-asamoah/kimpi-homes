@@ -3,82 +3,73 @@
 @use 'spacing' as *;
 @use 'components';
 
-.product-categories {
-  margin-top: $space-15;
+:host {
+  display: block;
 
-  @include for-breakpoint('tablet') {
-    margin-top: $space-20;
-  }
+  .product-categories {
+    .categories-list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  @include for-breakpoint('desktop-large') {
-    margin-top: $space-22;
-  }
+      .categories-list-title {
+        @include heading-6;
 
-  @include for-breakpoint('desktop-xlarge') {
-    margin-top: $space-23;
-  }
-
-  .categories-list-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .categories-list-title {
-      @include heading-6;
-
-      @include for-breakpoint('tablet') {
-        @include heading-5;
+        @include for-breakpoint('tablet') {
+          @include heading-5;
+        }
       }
     }
-  }
 
-  .categories-list-container {
-    overflow: hidden;
-  }
-
-  .categories-list {
-    display: flex;
-    min-width: 100%;
-    column-gap: $space-8;
-    margin-top: $space-14;
-
-    @include for-breakpoint('desktop') {
-      column-gap: $space-10;
+    .categories-list-container {
+      overflow: hidden;
     }
 
-    .categories-list-item {
-      a {
-        @include for-breakpoint('desktop') {
-          &:hover {
-            filter: brightness(0.7);
-            transition: filter 0.3s ease-in-out;
-          }
-        }
+    .categories-list {
+      display: flex;
+      min-width: 100%;
+      column-gap: $space-8;
+      margin-top: $space-12;
 
-        img {
-          background-color: var(--neutral-200);
-          width: 12.691rem;
-          height: 12.691rem;
-          max-width: none;
-          object-fit: cover;
-          border-radius: $space-6;
+      @include for-breakpoint('desktop') {
+        margin-top: $space-16;
+        column-gap: $space-10;
+      }
 
-          @include for-breakpoint('tablet') {
-            width: 16.919rem;
-            height: 16.919rem;
-          }
-
+      .categories-list-item {
+        a {
           @include for-breakpoint('desktop') {
-            width: 22.563rem;
-            height: 22.563rem;
+            &:hover {
+              filter: brightness(0.7);
+              transition: filter 0.3s ease-in-out;
+            }
+          }
+
+          img {
+            background-color: var(--neutral-200);
+            width: 12.691rem;
+            height: 12.691rem;
+            max-width: none;
+            object-fit: cover;
+            border-radius: $space-6;
+
+            @include for-breakpoint('tablet') {
+              width: 16.919rem;
+              height: 16.919rem;
+            }
+
+            @include for-breakpoint('desktop') {
+              width: 22.563rem;
+              height: 22.563rem;
+            }
           }
         }
-      }
-      .categories-list-item-name {
-        color: var(--neutral-400);
-        text-align: center;
-        margin-top: $space-11;
-        font-weight: 600;
+        .categories-list-item-name {
+          color: var(--neutral-400);
+          text-align: center;
+          margin-top: $space-11;
+          font-weight: 600;
+        }
       }
     }
   }
