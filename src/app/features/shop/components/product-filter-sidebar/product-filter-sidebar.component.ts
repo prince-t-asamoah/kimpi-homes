@@ -1,6 +1,5 @@
 import { LucideAngularModule } from 'lucide-angular';
-import { Component, inject } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { Component, effect, HostBinding, inject } from '@angular/core';
 import { ProductFilterComponent } from '../product-filter/product-filter.component';
 import { ProductFilterOptionComponent } from '../product-filter-option/product-filter-option.component';
 import {
@@ -15,7 +14,6 @@ import { UiService } from '../../../../services/ui/ui.service';
 @Component({
   selector: 'app-product-filter-sidebar',
   imports: [
-    NgClass,
     LucideAngularModule,
     ProductFilterComponent,
     ProductFilterOptionComponent,
@@ -32,6 +30,14 @@ export class ProductFilterSidebarComponent {
   sortByFilter = sortingFilter;
 
   isSidebarOpen = this.uiService.isFilterSidebarOpen;
+  @HostBinding('class.active') isActive = false;
+
+  constructor() {
+    effect(() => {
+      const open = this.uiService.isFilterSidebarOpen();
+      this.isActive = open;
+    });
+  }
 
   onFilterChange(): void {
     // Handle filter change logic here

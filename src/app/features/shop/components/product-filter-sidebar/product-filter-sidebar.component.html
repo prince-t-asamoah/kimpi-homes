@@ -1,6 +1,4 @@
-<aside
-  class="product-filter-sidebar"
-  [ngClass]="isSidebarOpen() ? 'active' : ''">
+<aside class="product-filter-sidebar">
   <button
     type="button"
     class="close-filter-btn"
@@ -55,6 +53,4 @@
     </div>
   </app-product-filter>
 </aside>
-@if (isSidebarOpen()) {
-  <div class="modal-backdrop" (click)="toggleSidebarOnMobile()"></div>
-}
+<div class="modal-backdrop" (click)="toggleSidebarOnMobile()"></div>
