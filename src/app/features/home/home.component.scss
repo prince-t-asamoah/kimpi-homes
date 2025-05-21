@@ -17,4 +17,16 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  app-product-categories {
+    margin-top: $space-19;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-18;
+    }
+
+    @include for-breakpoint('desktop') {
+      margin-top: $space-20;
+    }
+  }
 }
