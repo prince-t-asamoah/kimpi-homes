@@ -29,6 +29,13 @@
         (filterChange)="onFilterChange()">
       </app-product-filter-option>
       <app-product-filter-option
+        [filterId]="styleDesignFilter.id"
+        filterName="Style & Design"
+        [filterBy]="styleDesignFilter.filterBy"
+        filterType="radio"
+        (filterChange)="onFilterChange()">
+      </app-product-filter-option>
+      <app-product-filter-option
         [filterId]="priceFilter.id"
         filterName="Price"
         filterType="range"

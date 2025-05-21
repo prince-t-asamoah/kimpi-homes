@@ -74,6 +74,30 @@ export const pricingFilter: ProductFilter = {
   ],
 };
 
+export const styleAndDesignFilter: ProductFilter = {
+  id: 'style-design',
+  name: 'Style & Design',
+  filterBy: [
+    { id: 'modern', name: 'Modern' },
+    {
+      id: 'traditional',
+      name: 'Traditional',
+    },
+    {
+      id: 'bohemian',
+      name: 'Bohemian',
+    },
+    {
+      id: 'industrial',
+      name: 'Industrial',
+    },
+    {
+      id: 'scandinavian',
+      name: 'Scandinavian',
+    },
+  ],
+};
+
 export const sortingFilter: ProductFilter = {
   id: 'sorting',
   name: 'Sorting By',

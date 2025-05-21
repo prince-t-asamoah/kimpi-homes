@@ -8,6 +8,7 @@ import {
   availabilityFilter,
   pricingFilter,
   sortingFilter,
+  styleAndDesignFilter,
 } from '../../data/product-filter-types.data';
 import { UiService } from '../../../../services/ui/ui.service';
 
@@ -28,6 +29,7 @@ export class ProductFilterSidebarComponent {
   availabilityFilter = availabilityFilter;
   priceFilter = pricingFilter;
   sortByFilter = sortingFilter;
+  styleDesignFilter = styleAndDesignFilter;
 
   isSidebarOpen = this.uiService.isFilterSidebarOpen;
   @HostBinding('class.active') isActive = false;
