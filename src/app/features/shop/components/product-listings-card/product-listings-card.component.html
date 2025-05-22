@@ -9,8 +9,10 @@
       </lucide-icon>
     </button>
   }
-  @if (product()?.discountPercentage !== 0) {
-    <span class="product-card-discount">-13%</span>
+  @if (product()?.price?.discountPercent !== 0) {
+    <span class="product-card-discount"
+      >-{{ product()?.price?.discountPercent }}%</span
+    >
   }
   <div class="product-card-image">
     <img [src]="product()?.imageUrl" [alt]="product()?.name" />
@@ -18,16 +20,21 @@
   <div class="product-card-details">
     <h3 class="product-card-title">{{ product()?.name }}</h3>
     <p class="product-card-price">
-      <span class="previous-price">{{ product()?.previousPrice }}</span>
-      <span class="current-price">{{ product()?.currentPrice }}</span>
+      <span class="original-price"
+        >{{ product()?.price?.currency }}{{ product()?.price?.original }}</span
+      >
+      <span class="discounted-price"
+        >{{ product()?.price?.currency
+        }}{{ product()?.price?.discounted }}</span
+      >
     </p>
     <p class="product-card-footer">
       <lucide-angular
         name="star"
         class="product-card-ratings-icon"></lucide-angular>
-      <span class="product-card-ratings">{{ product()?.ratings }}</span>
+      <span class="product-card-ratings">{{ product()?.rating }}</span>
       <span class="product-card-reviews">
-        &lpar;{{ product()?.reviews?.length }} Reviews&rpar;
+        &lpar;{{ product()?.reviewsCount }} Review&lpar;s&rpar;&rpar;
       </span>
     </p>
   </div>
