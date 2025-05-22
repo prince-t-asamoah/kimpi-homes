@@ -3,21 +3,21 @@
 @use 'colors' as *;
 
 :host {
-  display: block;
+  display: flex;
+  align-items: center;
+  margin-bottom: $space-16;
 
   @include for-breakpoint('desktop') {
     display: none;
   }
 
-  .product-filter-button {
-    .filter-btn {
-      display: inline-flex;
-      color: $brand-400;
-      gap: $space-5;
+  .filter-btn {
+    display: inline-flex;
+    color: $brand-400;
+    gap: $space-5;
 
-      .filter-btn-icon {
-        width: 0.75rem;
-      }
+    .filter-btn-icon {
+      width: 0.75rem;
     }
   }
 }
