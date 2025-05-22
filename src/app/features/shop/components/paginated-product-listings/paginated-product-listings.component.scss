@@ -1,18 +1,26 @@
 @use 'breakpoints' as *;
 @use 'spacing' as *;
 
-.paginated-product-listings {
-  .products-listings-content {
-    display: flex;
-    flex-direction: column;
-    gap: $space-10;
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
 
-    @include for-breakpoint('tablet') {
-      gap: $space-13;
-    }
+  .paginated-product-listings {
+    height: 100%;
 
-    @include for-breakpoint('desktop') {
-      gap: $space-15;
+    .products-listings-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .products-listings-pagination {
+        margin-top: $space-10;
+
+        @include for-breakpoint('tablet') {
+          margin-top: $space-17;
+        }
+      }
     }
   }
 }
