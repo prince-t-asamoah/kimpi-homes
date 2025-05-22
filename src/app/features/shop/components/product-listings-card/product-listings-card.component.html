@@ -1,12 +1,14 @@
 <a routerLink="#" class="product-listings-card">
-  <button
-    type="button"
-    aria-label="Add to Cart"
-    class="add-to-cart-btn"
-    (click)="$event.stopPropagation(); $event.preventDefault()">
-    <lucide-icon name="shopping-cart" class="add-to-cart-btn-icon">
-    </lucide-icon>
-  </button>
+  @if (showAddToCartButton) {
+    <button
+      type="button"
+      aria-label="Add to Cart"
+      class="add-to-cart-btn"
+      (click)="$event.stopPropagation(); $event.preventDefault()">
+      <lucide-icon name="shopping-cart" class="add-to-cart-btn-icon">
+      </lucide-icon>
+    </button>
+  }
   <div class="product-card-image">
     <img [src]="product()?.imageUrl" [alt]="product()?.name" />
   </div>

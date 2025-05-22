@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { Product } from '../../model/product-listings.model';
@@ -11,4 +11,5 @@ import { Product } from '../../model/product-listings.model';
 })
 export class ProductListingsCardComponent {
   product = input<Product>();
+  @Input({ required: true }) showAddToCartButton!: boolean;
 }
