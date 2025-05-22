@@ -75,6 +75,19 @@
       }
     }
 
+    .product-card-discount {
+      background-color: $brand-500;
+      color: white;
+      border-radius: $space-3;
+      position: absolute;
+      top: $space-5;
+      left: $space-5;
+      padding: $space-2 $space-8;
+      z-index: 1;
+
+      @include paragraph-small;
+    }
+
     .product-card-image {
       width: inherit;
 

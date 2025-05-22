@@ -9,6 +9,9 @@
       </lucide-icon>
     </button>
   }
+  @if (product()?.discountPercentage !== 0) {
+    <span class="product-card-discount">-13%</span>
+  }
   <div class="product-card-image">
     <img [src]="product()?.imageUrl" [alt]="product()?.name" />
   </div>
