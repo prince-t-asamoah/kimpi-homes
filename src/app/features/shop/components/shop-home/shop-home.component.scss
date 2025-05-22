@@ -5,14 +5,10 @@
 
 :host {
   app-product-categories {
-    margin-top: $space-5;
+    margin-top: $space-14;
 
     @include for-breakpoint('tablet') {
       margin-top: $space-18;
-    }
-
-    @include for-breakpoint('desktop') {
-      margin-top: $space-20;
     }
 
     .categories-list-container {
