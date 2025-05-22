@@ -20,25 +20,6 @@
     }
   }
 
-  .main-products-listings {
-    display: flex;
-    margin-top: $space-16;
-    position: relative;
-
-    @include for-breakpoint('desktop') {
-      gap: $space-14;
-      margin-top: $space-22;
-    }
-
-    .main-products-listings-content {
-      width: 100%;
-
-      @include for-breakpoint('desktop') {
-        padding-right: $space-30;
-      }
-    }
-  }
-
   .flash-sales,
   .top-sellers {
     display: block;
