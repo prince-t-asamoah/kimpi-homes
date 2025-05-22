@@ -4,6 +4,7 @@ import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product
 import productListingsData from '../../data/product-listings.data';
 import { CarouselProductsListingsComponent } from '../carousel-products-listings/carousel-products-listings.component';
 import { PaginatedProductListingsComponent } from '../paginated-product-listings/paginated-product-listings.component';
+import { ShopBreadcrumbComponent } from '../shop-breadcrumb/shop-breadcrumb.component';
 
 @Component({
   selector: 'app-shop-top-sellers',
@@ -12,6 +13,7 @@ import { PaginatedProductListingsComponent } from '../paginated-product-listings
     ProductFilterSidebarComponent,
     CarouselProductsListingsComponent,
     PaginatedProductListingsComponent,
+    ShopBreadcrumbComponent,
   ],
   templateUrl: './shop-top-sellers.component.html',
   styleUrl: './shop-top-sellers.component.scss',

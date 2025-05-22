@@ -5,6 +5,7 @@ import { ProductFilterButtonComponent } from '../product-filter-button/product-f
 import { CarouselProductsListingsComponent } from '../carousel-products-listings/carousel-products-listings.component';
 import { PaginatedProductListingsComponent } from '../paginated-product-listings/paginated-product-listings.component';
 import productListingsData from '../../data/product-listings.data';
+import { ShopBreadcrumbComponent } from '../shop-breadcrumb/shop-breadcrumb.component';
 
 @Component({
   selector: 'app-shop-new-arrivals',
@@ -13,6 +14,7 @@ import productListingsData from '../../data/product-listings.data';
     ProductFilterButtonComponent,
     CarouselProductsListingsComponent,
     PaginatedProductListingsComponent,
+    ShopBreadcrumbComponent,
   ],
   templateUrl: './shop-new-arrivals.component.html',
   styleUrl: './shop-new-arrivals.component.scss',
