@@ -51,6 +51,8 @@
       }
 
       @include for-breakpoint('desktop') {
+        display: none;
+
         &:hover {
           background-color: $brand-300;
         }
@@ -64,6 +66,12 @@
         @include for-breakpoint('tablet') {
           width: 1.503rem;
         }
+      }
+    }
+
+    &:hover .add-to-cart-btn {
+      @include for-breakpoint('desktop') {
+        display: inline-flex;
       }
     }
 
