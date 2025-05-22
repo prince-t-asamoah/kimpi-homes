@@ -1,0 +1,1504 @@
+{
+  "status": "success",
+  "timestamp": "2025-05-22T14:36:00Z",
+  "data": {
+    "category": {
+      "id": "1",
+      "name": "Living Room",
+      "imageUrl": "https://example.com/images/living-room.jpg"
+    },
+    "topSellers": [
+      {
+        "id": "101",
+        "name": "Leather Sofa",
+        "price": {
+          "original": 899.99,
+          "discounted": 749.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 2,
+        "reviews": [
+          {
+            "user": {
+              "id": "1",
+              "name": "John Doe"
+            },
+            "rating": 5,
+            "comment": "Very comfortable and stylish!",
+            "createdAt": "2025-05-20T12:00:00Z"
+          },
+          {
+            "user": {
+              "id": "2",
+              "name": "Jane Smith"
+            },
+            "rating": 4,
+            "comment": "Good quality for the price.",
+            "createdAt": "2025-05-21T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "102",
+        "name": "Coffee Table",
+        "price": {
+          "original": 249.99,
+          "discounted": 199.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 2,
+        "reviews": [
+          {
+            "user": {
+              "id": "3",
+              "name": "Sara Lee"
+            },
+            "rating": 4,
+            "comment": "Looks great in my living room.",
+            "createdAt": "2025-05-18T08:30:00Z"
+          },
+          {
+            "user": {
+              "id": "4",
+              "name": "Tom Brown"
+            },
+            "rating": 5,
+            "comment": "Sturdy and easy to assemble!",
+            "createdAt": "2025-05-19T14:15:00Z"
+          }
+        ]
+      },
+      {
+        "id": "103",
+        "name": "Entertainment Center",
+        "price": {
+          "original": 499.99,
+          "discounted": 399.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 2,
+        "reviews": [
+          {
+            "user": {
+              "id": "5",
+              "name": "Mary White"
+            },
+            "rating": 5,
+            "comment": "Perfect for my TV and games.",
+            "createdAt": "2025-05-17T16:20:00Z"
+          },
+          {
+            "user": {
+              "id": "6",
+              "name": "Chris Green"
+            },
+            "rating": 4,
+            "comment": "Spacious and well-made.",
+            "createdAt": "2025-05-20T09:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "104",
+        "name": "Recliner Chair",
+        "price": {
+          "original": 349.99,
+          "discounted": 299.99,
+          "discountPercent": 14,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.9,
+        "reviewsCount": 2,
+        "reviews": [
+          {
+            "user": {
+              "id": "7",
+              "name": "Anna Black"
+            },
+            "rating": 5,
+            "comment": "So comfortable and relaxing!",
+            "createdAt": "2025-05-21T12:00:00Z"
+          },
+          {
+            "user": {
+              "id": "8",
+              "name": "Mark Johnson"
+            },
+            "rating": 4,
+            "comment": "Great addition to my living room.",
+            "createdAt": "2025-05-22T11:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "105",
+        "name": "Bookshelf",
+        "price": {
+          "original": 199.99,
+          "discounted": 159.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 2,
+        "reviews": [
+          {
+            "user": {
+              "id": "9",
+              "name": "Emily Clark"
+            },
+            "rating": 5,
+            "comment": "Perfect for all my books!",
+            "createdAt": "2025-05-19T15:30:00Z"
+          },
+          {
+            "user": {
+              "id": "10",
+              "name": "David Wilson"
+            },
+            "rating": 4,
+            "comment": "Good quality, but a bit wobbly.",
+            "createdAt": "2025-05-22T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "106",
+        "name": "Sectional Couch",
+        "price": {
+          "original": 1299.99,
+          "discounted": 999.99,
+          "discountPercent": 23,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "11",
+              "name": "Louis King"
+            },
+            "rating": 5,
+            "comment": "Spacious and very comfortable!",
+            "createdAt": "2025-05-22T13:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "107",
+        "name": "Ottoman",
+        "price": {
+          "original": 99.99,
+          "discounted": 79.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.4,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "12",
+              "name": "Jessica Adams"
+            },
+            "rating": 4,
+            "comment": "Cute and functional.",
+            "createdAt": "2025-05-20T13:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "108",
+        "name": "Side Table",
+        "price": {
+          "original": 129.99,
+          "discounted": 109.99,
+          "discountPercent": 15,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "13",
+              "name": "Robert Lee"
+            },
+            "rating": 5,
+            "comment": "Very stylish and modern!",
+            "createdAt": "2025-05-21T09:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "109",
+        "name": "Lounge Chair",
+        "price": {
+          "original": 349.99,
+          "discounted": 299.99,
+          "discountPercent": 14,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "14",
+              "name": "Sophie Brown"
+            },
+            "rating": 5,
+            "comment": "Love this chair! So comfy.",
+            "createdAt": "2025-05-19T16:45:00Z"
+          }
+        ]
+      },
+      {
+        "id": "110",
+        "name": "TV Stand",
+        "price": {
+          "original": 249.99,
+          "discounted": 199.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "15",
+              "name": "Henry Green"
+            },
+            "rating": 4,
+            "comment": "Matches well with my decor.",
+            "createdAt": "2025-05-21T08:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Floor Lamp",
+        "price": {
+          "original": 89.99,
+          "discounted": 69.99,
+          "discountPercent": 22,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "16",
+              "name": "Lucy White"
+            },
+            "rating": 5,
+            "comment": "Gives a warm glow to the room.",
+            "createdAt": "2025-05-22T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "112",
+        "name": "Accent Chair",
+        "price": {
+          "original": 179.99,
+          "discounted": 149.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "17",
+              "name": "Ella Foster"
+            },
+            "rating": 5,
+            "comment": "Perfect for my reading nook.",
+            "createdAt": "2025-05-22T11:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "113",
+        "name": "Wall Art",
+        "price": {
+          "original": 49.99,
+          "discounted": 39.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.3,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "18",
+              "name": "Mia Taylor"
+            },
+            "rating": 4,
+            "comment": "Adds a nice touch to my wall.",
+            "createdAt": "2025-05-21T15:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "114",
+        "name": "Vintage Trunk",
+        "price": {
+          "original": 150.0,
+          "discounted": 120.0,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "19",
+              "name": "Liam White"
+            },
+            "rating": 5,
+            "comment": "Beautiful and very useful.",
+            "createdAt": "2025-05-22T09:15:00Z"
+          }
+        ]
+      },
+      {
+        "id": "115",
+        "name": "Storage Ottoman",
+        "price": {
+          "original": 119.99,
+          "discounted": 99.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.4,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "20",
+              "name": "Clara Jenkins"
+            },
+            "rating": 4,
+            "comment": "Very handy for storage.",
+            "createdAt": "2025-05-20T10:00:00Z"
+          }
+        ]
+      }
+    ],
+    "newArrivals": [
+      {
+        "id": "201",
+        "name": "Sofa Bed",
+        "price": {
+          "original": 499.99,
+          "discounted": 399.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "21",
+              "name": "Owen Black"
+            },
+            "rating": 5,
+            "comment": "Great for guests!",
+            "createdAt": "2025-05-21T15:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "202",
+        "name": "Granite Coffee Table",
+        "price": {
+          "original": 299.99,
+          "discounted": 249.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "22",
+              "name": "Liam Grey"
+            },
+            "rating": 5,
+            "comment": "Beautiful design and sturdy!",
+            "createdAt": "2025-05-21T13:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "203",
+        "name": "Designer Floor Lamp",
+        "price": {
+          "original": 120.0,
+          "discounted": 99.0,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "23",
+              "name": "Ella Watson"
+            },
+            "rating": 5,
+            "comment": "Gorgeous addition to my living room!",
+            "createdAt": "2025-05-22T11:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "204",
+        "name": "Wall Shelves",
+        "price": {
+          "original": 79.99,
+          "discounted": 59.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "24",
+              "name": "Ava Roberts"
+            },
+            "rating": 4,
+            "comment": "Good quality, holds quite a bit.",
+            "createdAt": "2025-05-20T09:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "205",
+        "name": "Faux Fur Throw",
+        "price": {
+          "original": 39.99,
+          "discounted": 29.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "25",
+              "name": "Mia Scott"
+            },
+            "rating": 5,
+            "comment": "So soft and cozy!",
+            "createdAt": "2025-05-22T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "206",
+        "name": "Storage Bench",
+        "price": {
+          "original": 149.99,
+          "discounted": 129.99,
+          "discountPercent": 13,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "26",
+              "name": "Liam Taylor"
+            },
+            "rating": 5,
+            "comment": "Functional and great quality.",
+            "createdAt": "2025-05-22T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "207",
+        "name": "Modern Loveseat",
+        "price": {
+          "original": 599.99,
+          "discounted": 499.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "38",
+              "name": "Noah Wilson"
+            },
+            "rating": 5,
+            "comment": "Perfect size for small spaces!",
+            "createdAt": "2025-05-22T09:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "208",
+        "name": "Glass End Table",
+        "price": {
+          "original": 179.99,
+          "discounted": 149.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "39",
+              "name": "Emma Davis"
+            },
+            "rating": 4,
+            "comment": "Elegant and modern design.",
+            "createdAt": "2025-05-21T14:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "209",
+        "name": "Velvet Armchair",
+        "price": {
+          "original": 349.99,
+          "discounted": 299.99,
+          "discountPercent": 14,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.9,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "40",
+              "name": "Oliver Martin"
+            },
+            "rating": 5,
+            "comment": "Luxurious feel and look!",
+            "createdAt": "2025-05-22T10:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "210",
+        "name": "Console Table",
+        "price": {
+          "original": 229.99,
+          "discounted": 199.99,
+          "discountPercent": 13,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "41",
+              "name": "Sophia Clark"
+            },
+            "rating": 5,
+            "comment": "Perfect behind my sofa!",
+            "createdAt": "2025-05-21T16:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "211",
+        "name": "Rocking Chair",
+        "price": {
+          "original": 279.99,
+          "discounted": 239.99,
+          "discountPercent": 14,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "42",
+              "name": "William Taylor"
+            },
+            "rating": 5,
+            "comment": "Soothing motion, great quality!",
+            "createdAt": "2025-05-22T11:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "212",
+        "name": "Bar Cabinet",
+        "price": {
+          "original": 399.99,
+          "discounted": 349.99,
+          "discountPercent": 13,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "43",
+              "name": "Charlotte White"
+            },
+            "rating": 4,
+            "comment": "Beautiful addition to my home!",
+            "createdAt": "2025-05-21T17:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "213",
+        "name": "Decorative Mirror",
+        "price": {
+          "original": 129.99,
+          "discounted": 99.99,
+          "discountPercent": 23,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "44",
+              "name": "James Anderson"
+            },
+            "rating": 5,
+            "comment": "Makes my space look bigger!",
+            "createdAt": "2025-05-22T12:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "214",
+        "name": "Chaise Lounge",
+        "price": {
+          "original": 499.99,
+          "discounted": 399.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.9,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "45",
+              "name": "Amelia Thompson"
+            },
+            "rating": 5,
+            "comment": "Ultimate relaxation piece!",
+            "createdAt": "2025-05-21T18:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "215",
+        "name": "Nesting Tables",
+        "price": {
+          "original": 199.99,
+          "discounted": 159.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "46",
+              "name": "Benjamin Harris"
+            },
+            "rating": 4,
+            "comment": "Versatile and space-saving!",
+            "createdAt": "2025-05-22T13:00:00Z"
+          }
+        ]
+      }
+    ],
+    "flashSales": [
+      {
+        "id": "301",
+        "name": "Dining Set",
+        "price": {
+          "original": 699.99,
+          "discounted": 549.99,
+          "discountPercent": 21,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.9,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "27",
+              "name": "Audrey King"
+            },
+            "rating": 5,
+            "comment": "Great quality, love it!",
+            "createdAt": "2025-05-21T15:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "302",
+        "name": "Sofa Bed",
+        "price": {
+          "original": 499.99,
+          "discounted": 399.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "28",
+              "name": "Ethan Collins"
+            },
+            "rating": 5,
+            "comment": "Perfect for guests!",
+            "createdAt": "2025-05-22T12:45:00Z"
+          }
+        ]
+      },
+      {
+        "id": "303",
+        "name": "Cabinet Organizer",
+        "price": {
+          "original": 159.99,
+          "discounted": 139.99,
+          "discountPercent": 13,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "29",
+              "name": "Mia Corbin"
+            },
+            "rating": 5,
+            "comment": "Organizes everything beautifully!",
+            "createdAt": "2025-05-21T11:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "304",
+        "name": "Woven Baskets",
+        "price": {
+          "original": 49.99,
+          "discounted": 39.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.3,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "30",
+              "name": "Lucas Holtz"
+            },
+            "rating": 4,
+            "comment": "Functional and decorative!",
+            "createdAt": "2025-05-22T13:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "305",
+        "name": "Fabric Recliner",
+        "price": {
+          "original": 349.99,
+          "discounted": 299.99,
+          "discountPercent": 14,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "31",
+              "name": "Zoe Palmer"
+            },
+            "rating": 5,
+            "comment": "Comfortable with great support!",
+            "createdAt": "2025-05-22T14:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "306",
+        "name": "Wooden Barrel Table",
+        "price": {
+          "original": 129.99,
+          "discounted": 99.99,
+          "discountPercent": 23,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.2,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "32",
+              "name": "Nina Green"
+            },
+            "rating": 4,
+            "comment": "Unique and functional!",
+            "createdAt": "2025-05-22T15:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "307",
+        "name": "Leather Pouf",
+        "price": {
+          "original": 89.99,
+          "discounted": 69.99,
+          "discountPercent": 22,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "47",
+              "name": "Daniel Harris"
+            },
+            "rating": 5,
+            "comment": "Great footrest and extra seating!",
+            "createdAt": "2025-05-21T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "308",
+        "name": "Modern Chandelier",
+        "price": {
+          "original": 199.99,
+          "discounted": 159.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "48",
+              "name": "Lily Wilson"
+            },
+            "rating": 5,
+            "comment": "Stunning centerpiece for my room!",
+            "createdAt": "2025-05-22T09:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "309",
+        "name": "Floating Shelves",
+        "price": {
+          "original": 59.99,
+          "discounted": 49.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.4,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "49",
+              "name": "Henry Davis"
+            },
+            "rating": 4,
+            "comment": "Easy to install and sturdy!",
+            "createdAt": "2025-05-21T11:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "310",
+        "name": "Velvet Sofa",
+        "price": {
+          "original": 799.99,
+          "discounted": 699.99,
+          "discountPercent": 13,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.9,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "50",
+              "name": "Evelyn Martin"
+            },
+            "rating": 5,
+            "comment": "Luxurious and comfortable!",
+            "createdAt": "2025-05-22T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "311",
+        "name": "Acrylic Chair",
+        "price": {
+          "original": 179.99,
+          "discounted": 149.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "51",
+              "name": "Alexander Clark"
+            },
+            "rating": 4,
+            "comment": "Modern and lightweight!",
+            "createdAt": "2025-05-21T12:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "312",
+        "name": "Marble Side Table",
+        "price": {
+          "original": 229.99,
+          "discounted": 199.99,
+          "discountPercent": 13,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.8,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "52",
+              "name": "Charlotte Taylor"
+            },
+            "rating": 5,
+            "comment": "Elegant and durable!",
+            "createdAt": "2025-05-22T11:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "313",
+        "name": "Rattan Chair",
+        "price": {
+          "original": 249.99,
+          "discounted": 199.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "53",
+              "name": "William White"
+            },
+            "rating": 5,
+            "comment": "Perfect for my patio!",
+            "createdAt": "2025-05-21T13:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "314",
+        "name": "Metal Bar Cart",
+        "price": {
+          "original": 149.99,
+          "discounted": 119.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "54",
+              "name": "Sophia Anderson"
+            },
+            "rating": 4,
+            "comment": "Stylish and functional!",
+            "createdAt": "2025-05-22T12:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "315",
+        "name": "Upholstered Bench",
+        "price": {
+          "original": 199.99,
+          "discounted": 159.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "55",
+              "name": "James Wilson"
+            },
+            "rating": 5,
+            "comment": "Great for entryway seating!",
+            "createdAt": "2025-05-21T14:30:00Z"
+          }
+        ]
+      }
+    ],
+    "recommended": [
+      {
+        "id": "401",
+        "name": "Bean Bag Chair",
+        "price": {
+          "original": 69.99,
+          "discounted": 49.99,
+          "discountPercent": 29,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "33",
+              "name": "Daniel Scott"
+            },
+            "rating": 4,
+            "comment": "Fun and comfy!",
+            "createdAt": "2025-05-20T13:20:00Z"
+          }
+        ]
+      },
+      {
+        "id": "402",
+        "name": "Faux Fur Throw",
+        "price": {
+          "original": 39.99,
+          "discounted": 29.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "34",
+              "name": "Ellie King"
+            },
+            "rating": 5,
+            "comment": "Soft and cozy!",
+            "createdAt": "2025-05-22T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "403",
+        "name": "Curtains",
+        "price": {
+          "original": 49.99,
+          "discounted": 39.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.4,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "35",
+              "name": "Logan White"
+            },
+            "rating": 4,
+            "comment": "Nice and flowy.",
+            "createdAt": "2025-05-20T16:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "404",
+        "name": "Wall Shelf",
+        "price": {
+          "original": 79.99,
+          "discounted": 59.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "36",
+              "name": "Chloe Brown"
+            },
+            "rating": 5,
+            "comment": "Great for displaying decor!",
+            "createdAt": "2025-05-21T11:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "405",
+        "name": "Area Rug",
+        "price": {
+          "original": 149.99,
+          "discounted": 119.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.9,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "37",
+              "name": "Zoe Martin"
+            },
+            "rating": 5,
+            "comment": "So soft and beautiful!",
+            "createdAt": "2025-05-22T10:15:00Z"
+          }
+        ]
+      },
+      {
+        "id": "406",
+        "name": "Throw Pillow Set",
+        "price": {
+          "original": 59.99,
+          "discounted": 49.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "56",
+              "name": "Ethan Wilson"
+            },
+            "rating": 5,
+            "comment": "Comfortable and stylish!",
+            "createdAt": "2025-05-21T15:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": "407",
+        "name": "Decorative Vase",
+        "price": {
+          "original": 39.99,
+          "discounted": 29.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.3,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "57",
+              "name": "Ava Thompson"
+            },
+            "rating": 4,
+            "comment": "Beautiful centerpiece!",
+            "createdAt": "2025-05-22T09:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "408",
+        "name": "Table Lamp",
+        "price": {
+          "original": 49.99,
+          "discounted": 39.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "58",
+              "name": "Noah Davis"
+            },
+            "rating": 5,
+            "comment": "Perfect lighting for reading!",
+            "createdAt": "2025-05-21T16:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "409",
+        "name": "Picture Frames Set",
+        "price": {
+          "original": 29.99,
+          "discounted": 19.99,
+          "discountPercent": 33,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.4,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "59",
+              "name": "Olivia Martin"
+            },
+            "rating": 4,
+            "comment": "Great quality for the price!",
+            "createdAt": "2025-05-22T11:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "410",
+        "name": "Candle Holder",
+        "price": {
+          "original": 24.99,
+          "discounted": 19.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "60",
+              "name": "Liam Johnson"
+            },
+            "rating": 5,
+            "comment": "Creates a cozy atmosphere!",
+            "createdAt": "2025-05-21T17:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "411",
+        "name": "Wall Clock",
+        "price": {
+          "original": 49.99,
+          "discounted": 39.99,
+          "discountPercent": 20,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.7,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "61",
+              "name": "Emma Wilson"
+            },
+            "rating": 5,
+            "comment": "Modern and functional!",
+            "createdAt": "2025-05-22T10:45:00Z"
+          }
+        ]
+      },
+      {
+        "id": "412",
+        "name": "Plant Stand",
+        "price": {
+          "original": 39.99,
+          "discounted": 29.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.6,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "62",
+              "name": "Benjamin Taylor"
+            },
+            "rating": 4,
+            "comment": "Perfect for my indoor plants!",
+            "createdAt": "2025-05-21T18:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "413",
+        "name": "Coasters Set",
+        "price": {
+          "original": 19.99,
+          "discounted": 14.99,
+          "discountPercent": 25,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.3,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "63",
+              "name": "Charlotte Davis"
+            },
+            "rating": 5,
+            "comment": "Protects my tables beautifully!",
+            "createdAt": "2025-05-22T12:15:00Z"
+          }
+        ]
+      },
+      {
+        "id": "414",
+        "name": "Blanket Ladder",
+        "price": {
+          "original": 59.99,
+          "discounted": 49.99,
+          "discountPercent": 17,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.5,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "64",
+              "name": "William Clark"
+            },
+            "rating": 4,
+            "comment": "Functional and decorative!",
+            "createdAt": "2025-05-21T19:30:00Z"
+          }
+        ]
+      },
+      {
+        "id": "415",
+        "name": "Desk Organizer",
+        "price": {
+          "original": 29.99,
+          "discounted": 19.99,
+          "discountPercent": 33,
+          "currency": "$"
+        },
+        "imageUrl": "/assets/images/shop/product-image.png",
+        "rating": 4.4,
+        "reviewsCount": 1,
+        "reviews": [
+          {
+            "user": {
+              "id": "65",
+              "name": "Sophia White"
+            },
+            "rating": 5,
+            "comment": "Keeps my workspace tidy!",
+            "createdAt": "2025-05-22T13:30:00Z"
+          }
+        ]
+      }
+    ]
+  }
+}
