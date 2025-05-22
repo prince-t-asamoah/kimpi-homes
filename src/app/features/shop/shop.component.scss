@@ -150,19 +150,12 @@
     }
   }
 
-  app-shop-new-arrivals,
-  app-shop-top-sellers {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
   .main-products-listings {
     display: flex;
     flex-direction: column;
     gap: $space-8;
-    margin-top: $space-16;
     position: relative;
+    width: 100%;
 
     @include for-breakpoint('tablet') {
       flex-direction: row;
@@ -170,15 +163,25 @@
     }
 
     @include for-breakpoint('desktop') {
-      margin-top: $space-22;
       gap: $space-14;
     }
 
     .main-products-listings-content {
       width: 100%;
+    }
+  }
+
+  app-shop-new-arrivals,
+  app-shop-top-sellers {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .main-products-listings {
+      margin-top: $space-10;
 
       @include for-breakpoint('desktop') {
-        padding-right: $space-30;
+        margin-top: $space-18;
       }
     }
   }
