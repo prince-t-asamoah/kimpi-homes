@@ -12,12 +12,6 @@
     padding: $space-17 $space-18;
   }
 
-  @include for-breakpoint('desktop-xxlarge') {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   app-product-categories {
     margin-top: $space-19;
 

@@ -115,6 +115,13 @@ app-create-account {
   }
 }
 
+.center-page-content {
+  @include for-breakpoint('desktop-xxlarge') {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 // UI Components
 .button-filled {
   color: white;
