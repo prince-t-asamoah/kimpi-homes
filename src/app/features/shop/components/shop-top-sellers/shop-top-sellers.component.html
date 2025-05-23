@@ -6,7 +6,7 @@
     <app-paginated-product-listings
       class="top-sellers"
       title="Top Sellers"
-      [productListings]="productListings"
+      [productListings]="topSellersListings"
       [currentPageNumber]="currantPageNumber"
       [totalProducts]="totalProducts"
       [totalPages]="totalPages"
@@ -18,6 +18,6 @@
   class="recommended-product-listings"
   title="Recommended Products"
   description=" Explore our curated selection of top-rated products, handpicked just for you."
-  [productListings]="productListings"
+  [productListings]="recommendedListings"
   viewAllLink="/shop/recommended-products/1">
 </app-carousel-products-listings>
