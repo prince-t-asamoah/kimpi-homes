@@ -1,40 +1,37 @@
 <a routerLink="#" class="product-listings-card">
-  @if (showAddToCartButton) {
-    <button
-      type="button"
-      aria-label="Add to Cart"
-      class="add-to-cart-btn"
-      (click)="$event.stopPropagation(); $event.preventDefault()">
-      <lucide-icon name="shopping-cart" class="add-to-cart-btn-icon">
-      </lucide-icon>
-    </button>
-  }
-  @if (product()?.price?.discountPercent !== 0) {
+  <button
+    type="button"
+    aria-label="Add to Cart"
+    class="add-to-cart-btn"
+    (click)="$event.stopPropagation(); $event.preventDefault()">
+    <lucide-icon name="shopping-cart" class="add-to-cart-btn-icon">
+    </lucide-icon>
+  </button>
+  @if (product?.price?.discountPercent !== 0) {
     <span class="product-card-discount"
-      >-{{ product()?.price?.discountPercent }}%</span
+      >-{{ product?.price?.discountPercent }}%</span
     >
   }
   <div class="product-card-image">
-    <img [src]="product()?.imageUrl" [alt]="product()?.name" />
+    <img [src]="product?.imageUrl" [alt]="product?.name" />
   </div>
   <div class="product-card-details">
-    <h3 class="product-card-title">{{ product()?.name }}</h3>
+    <h3 class="product-card-title">{{ product?.name }}</h3>
     <p class="product-card-price">
       <span class="original-price"
-        >{{ product()?.price?.currency }}{{ product()?.price?.original }}</span
+        >{{ product?.price?.currency }}{{ product?.price?.original }}</span
       >
       <span class="discounted-price"
-        >{{ product()?.price?.currency
-        }}{{ product()?.price?.discounted }}</span
+        >{{ product?.price?.currency }}{{ product?.price?.discounted }}</span
       >
     </p>
     <p class="product-card-footer">
       <lucide-angular
         name="star"
         class="product-card-ratings-icon"></lucide-angular>
-      <span class="product-card-ratings">{{ product()?.rating }}</span>
+      <span class="product-card-ratings">{{ product?.rating }}</span>
       <span class="product-card-reviews">
-        &lpar;{{ product()?.reviewsCount }} Review&lpar;s&rpar;&rpar;
+        &lpar;{{ product?.reviewsCount }} Reviews&rpar;
       </span>
     </p>
   </div>
