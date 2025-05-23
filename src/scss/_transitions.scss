@@ -1,0 +1,25 @@
+// Transition mixins for different durations
+@mixin transition-short($properties: all, $easing: ease-in-out) {
+  transition-property: $properties;
+  transition-duration: 0.15s;
+  transition-timing-function: $easing;
+}
+
+@mixin transition-medium($properties: all, $easing: ease-in-out) {
+  transition-property: $properties;
+  transition-duration: 0.3s;
+  transition-timing-function: $easing;
+}
+
+@mixin transition-long($properties: all, $easing: ease-in-out) {
+  transition-property: $properties;
+  transition-duration: 0.5s;
+  transition-timing-function: $easing;
+}
+
+// Shorthand version that accepts all parameters
+@mixin transition($properties: all, $duration: 0.3s, $easing: ease-in-out) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $easing;
+}
