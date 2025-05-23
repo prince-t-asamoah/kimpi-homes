@@ -2,6 +2,7 @@
 @use 'spacing' as *;
 @use 'colors' as *;
 @use 'breakpoints' as *;
+@use 'transitions' as *;
 
 :host {
   width: inherit;
@@ -12,21 +13,18 @@
     flex-direction: column;
     border-radius: $space-5;
     position: relative;
+    @include transition-medium();
 
-    @include for-breakpoint('desktop') {
-      transition-duration: 0.3s;
+    &:hover {
+      background-color: $neutral-200;
+    }
 
-      &:hover {
-        background-color: $neutral-200;
-      }
+    &:hover .product-card-image {
+      filter: brightness(80%);
 
-      &:hover .product-card-image {
-        filter: brightness(80%);
-
-        & img {
-          border-bottom-right-radius: 0;
-          border-bottom-left-radius: 0;
-        }
+      & img {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
 
@@ -42,20 +40,23 @@
       justify-content: center;
       align-items: center;
       z-index: 1;
+      display: none;
+      opacity: 0;
+      transform: scale(0.8);
+      cursor: pointer;
+
+      &:hover {
+        background-color: $brand-300;
+        @include transition-medium('opacity');
+        @include transition-medium('background-color');
+        @include transition-medium('transform');
+      }
 
       @include for-breakpoint('tablet') {
         top: $space-5;
         right: $space-5;
         width: 3.125rem;
         height: 3.125rem;
-      }
-
-      @include for-breakpoint('desktop') {
-        display: none;
-
-        &:hover {
-          background-color: $brand-300;
-        }
       }
 
       .add-to-cart-btn-icon {
@@ -70,9 +71,8 @@
     }
 
     &:hover .add-to-cart-btn {
-      @include for-breakpoint('desktop') {
-        display: inline-flex;
-      }
+      display: inline-flex;
+      opacity: 1;
     }
 
     .product-card-discount {
@@ -110,9 +110,9 @@
       gap: $space-5;
       margin-top: $space-9;
       width: 100%;
+      padding: $space-5;
 
       @include for-breakpoint('desktop') {
-        padding: $space-5;
         margin-top: $space-6;
       }
 
