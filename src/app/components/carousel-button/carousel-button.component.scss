@@ -1,6 +1,7 @@
 @use 'breakpoints' as *;
 @use 'colors' as *;
 @use 'spacing' as *;
+@use 'transitions' as *;
 
 .carousel-button {
   background-color: $neutral-200;
@@ -9,6 +10,12 @@
   border-radius: 100%;
   color: $neutral-400;
   padding: $space-5;
+
+  &:hover {
+    background-color: $brand-300;
+    color: white;
+    @include transition-short('background-color');
+  }
 
   .carousel-btn-icon {
     display: flex;
