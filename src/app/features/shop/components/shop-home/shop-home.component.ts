@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 import { ProductCategoriesComponent } from '../../../../components/product-categories/product-categories.component';
-import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product-filter-sidebar.component';
 import { ProductFilterButtonComponent } from '../product-filter-button/product-filter-button.component';
 import { CarouselProductsListingsComponent } from '../carousel-products-listings/carousel-products-listings.component';
 import { ShopBreadcrumbComponent } from '../shop-breadcrumb/shop-breadcrumb.component';
@@ -13,7 +12,6 @@ import { ProductListings } from '../../model/product-listings.model';
   imports: [
     LucideAngularModule,
     ProductCategoriesComponent,
-    ProductFilterSidebarComponent,
     ProductFilterButtonComponent,
     CarouselProductsListingsComponent,
     ShopBreadcrumbComponent,
