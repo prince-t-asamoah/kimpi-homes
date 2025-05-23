@@ -15,7 +15,6 @@
       @for (product of productListings; track product.id) {
         <li class="product-listings-list-item">
           <app-product-listings-card
-            [showAddToCartButton]="false"
             [product]="product"></app-product-listings-card>
         </li>
       }
