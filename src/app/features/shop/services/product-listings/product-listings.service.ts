@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { delay, Observable } from 'rxjs';
 import { GetProductListingsAPIResponse } from '../../model/product-listings.model';
 import { ApiServiceService } from '../../../../services/api-service/api-service.service';
 
@@ -10,8 +10,8 @@ export class ProductListingsService {
   constructor(private _apiService: ApiServiceService) {}
 
   getAllProductListings(): Observable<GetProductListingsAPIResponse> {
-    return this._apiService.get<GetProductListingsAPIResponse>(
-      'assets/data/product-listings.json'
-    );
+    return this._apiService
+      .get<GetProductListingsAPIResponse>('assets/data/product-listings.json')
+      .pipe(delay(1000));
   }
 }
