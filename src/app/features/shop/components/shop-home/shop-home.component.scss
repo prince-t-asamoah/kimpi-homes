@@ -26,12 +26,6 @@
     @include for-breakpoint('desktop') {
       margin-top: $space-20;
     }
-
-    .main-products-listings-content {
-      @include for-breakpoint('desktop') {
-        padding-right: $space-30;
-      }
-    }
   }
 
   .flash-sales,
