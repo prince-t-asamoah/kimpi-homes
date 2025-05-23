@@ -23,14 +23,14 @@
           quality and style">
       </app-carousel-products-listings>
     }
+    @if (productListings && productListings.flashSales) {
+      <app-carousel-products-listings
+        class="flash-sales"
+        title="Flash Sales"
+        viewAllLink="/shop/flash-sales/1"
+        description="Shop now for exclusive discounts on stylish furniture—before the deals are"
+        [productListings]="productListings.flashSales">
+      </app-carousel-products-listings>
+    }
   </div>
 </div>
-@if (productListings && productListings.flashSales) {
-  <app-carousel-products-listings
-    class="flash-sales"
-    title="Flash Sales"
-    viewAllLink="/shop/flash-sales/1"
-    description="Shop now for exclusive discounts on stylish furniture—before the deals are"
-    [productListings]="productListings.flashSales">
-  </app-carousel-products-listings>
-}
