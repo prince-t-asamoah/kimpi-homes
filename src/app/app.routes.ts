@@ -9,7 +9,7 @@ import { ShopComponent } from './features/shop/shop.component';
 import { ShopHomeComponent } from './features/shop/components/shop-home/shop-home.component';
 import { ShopNewArrivalsComponent } from './features/shop/components/shop-new-arrivals/shop-new-arrivals.component';
 import { ShopTopSellersComponent } from './features/shop/components/shop-top-sellers/shop-top-sellers.component';
-import { ShopSearchResultsComponent } from './features/shop/shop-search-results/shop-search-results.component';
+import { ShopSearchResultsComponent } from './features/shop/components/shop-search-results/shop-search-results.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },

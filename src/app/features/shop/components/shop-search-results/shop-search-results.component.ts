@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
-import { ShopBreadcrumbComponent } from '../components/shop-breadcrumb/shop-breadcrumb.component';
-import { ProductFilterSidebarComponent } from '../components/product-filter-sidebar/product-filter-sidebar.component';
-import { ProductFilterButtonComponent } from '../components/product-filter-button/product-filter-button.component';
-import { PaginatedProductListingsComponent } from '../components/paginated-product-listings/paginated-product-listings.component';
-import { CarouselProductsListingsComponent } from '../components/carousel-products-listings/carousel-products-listings.component';
-import { ProductListingsService } from '../services/product-listings/product-listings.service';
-import { Product } from '../model/product-listings.model';
+import { ShopBreadcrumbComponent } from '../shop-breadcrumb/shop-breadcrumb.component';
+import { ProductFilterSidebarComponent } from '../product-filter-sidebar/product-filter-sidebar.component';
+import { ProductFilterButtonComponent } from '../product-filter-button/product-filter-button.component';
+import { PaginatedProductListingsComponent } from '../paginated-product-listings/paginated-product-listings.component';
+import { CarouselProductsListingsComponent } from '../carousel-products-listings/carousel-products-listings.component';
+import { ProductListingsService } from '../../services/product-listings/product-listings.service';
+import { Product } from '../../model/product-listings.model';
 
 @Component({
   selector: 'app-shop-search-results',
