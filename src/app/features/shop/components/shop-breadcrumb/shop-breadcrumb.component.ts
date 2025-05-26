@@ -13,5 +13,6 @@ export class ShopBreadcrumbComponent {
     | 'home'
     | 'new-arrivals'
     | 'top-sellers'
-    | 'flash-sales' = 'home';
+    | 'flash-sales'
+    | 'search' = 'home';
 }
