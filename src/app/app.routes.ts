@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
-import { ShopComponent } from './features/shop/shop.component';
 import { AboutUsComponent } from './features/about-us/about-us.component';
 import { LoginComponent } from './features/auth/login/login.component';
 import { CreateAccountComponent } from './features/auth/create-account/create-account.component';
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
+import { ShopComponent } from './features/shop/shop.component';
 import { ShopHomeComponent } from './features/shop/components/shop-home/shop-home.component';
 import { ShopNewArrivalsComponent } from './features/shop/components/shop-new-arrivals/shop-new-arrivals.component';
 import { ShopTopSellersComponent } from './features/shop/components/shop-top-sellers/shop-top-sellers.component';
+import { ShopSearchResultsComponent } from './features/shop/shop-search-results/shop-search-results.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -37,6 +38,11 @@ export const routes: Routes = [
         path: 'top-sellers/:pageNumber',
         component: ShopTopSellersComponent,
         title: 'Kimpi Homes | Shop - Top Sellers',
+      },
+      {
+        path: 'search',
+        component: ShopSearchResultsComponent,
+        title: 'Kimpi Homes | Shop - Search Results',
       },
     ],
   },
