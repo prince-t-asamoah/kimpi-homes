@@ -115,7 +115,7 @@ app-create-account {
   }
 }
 
-.center-page-content {
+.center-page {
   @include for-breakpoint('desktop-xxlarge') {
     max-width: 1440px;
     margin: 0 auto;
