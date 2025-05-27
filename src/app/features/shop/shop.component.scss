@@ -4,29 +4,31 @@
 @use 'colors' as *;
 
 .shop {
-  padding-top: $space-7;
-  padding-left: $space-8;
-  padding-right: $space-8;
-  padding-bottom: $space-15;
-  position: relative;
+  .main-content {
+    padding-top: $space-7;
+    padding-left: $space-8;
+    padding-right: $space-8;
+    padding-bottom: $space-15;
+    position: relative;
 
-  @include for-breakpoint('mobile-large') {
-    padding-left: $space-10;
-    padding-right: $space-10;
-  }
+    @include for-breakpoint('mobile-large') {
+      padding-left: $space-10;
+      padding-right: $space-10;
+    }
 
-  @include for-breakpoint('tablet') {
-    padding-top: $space-10;
-    padding-left: $space-13;
-    padding-right: $space-13;
-    padding-bottom: $space-12;
-  }
+    @include for-breakpoint('tablet') {
+      padding-top: $space-10;
+      padding-left: $space-13;
+      padding-right: $space-13;
+      padding-bottom: $space-12;
+    }
 
-  @include for-breakpoint('desktop') {
-    padding-top: $space-9;
-    padding-left: $space-18;
-    padding-bottom: $space-20;
-    padding-right: $space-18;
+    @include for-breakpoint('desktop') {
+      padding-top: $space-9;
+      padding-left: $space-18;
+      padding-bottom: $space-20;
+      padding-right: $space-18;
+    }
   }
 
   .products-listings {

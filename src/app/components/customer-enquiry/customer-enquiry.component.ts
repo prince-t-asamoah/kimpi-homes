@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-customer-enquiry',
-  imports: [],
+  imports: [LucideAngularModule],
   templateUrl: './customer-enquiry.component.html',
   styleUrl: './customer-enquiry.component.scss',
 })

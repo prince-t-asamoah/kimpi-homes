@@ -1,0 +1,251 @@
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+@use 'breakpoints' as *;
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  .customer-enquiry {
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+    background: url('/assets/images/customer-enquiry-bg.jpg') no-repeat center
+      center;
+    background-size: cover;
+    padding: $space-15 $space-7;
+
+    @include for-breakpoint('tablet') {
+      padding: $space-11 $space-10;
+    }
+
+    @include for-breakpoint('desktop') {
+      padding: $space-19 $space-18;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include for-breakpoint('desktop-large') {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    .contact-details {
+      display: flex;
+      gap: $space-10;
+      flex-direction: column;
+
+      @include for-breakpoint('tablet') {
+        gap: $space-16;
+      }
+
+      @include for-breakpoint('desktop') {
+        gap: $space-18;
+      }
+
+      .contact-header {
+        .contact-header-title,
+        .contact-header-description {
+          color: white;
+          text-align: center;
+
+          @include for-breakpoint('desktop') {
+            text-align: left;
+          }
+        }
+
+        .contact-header-title {
+          @include heading-6;
+
+          @include for-breakpoint('desktop') {
+            @include heading-5;
+          }
+
+          .heading-line-break {
+            display: none;
+
+            @include for-breakpoint('desktop') {
+              display: inline;
+            }
+          }
+        }
+
+        .contact-header-description {
+          @include paragraph-2;
+          margin-top: $space-5;
+        }
+      }
+
+      .contact-info {
+        background-color: white;
+        border-radius: $space-5;
+        padding: $space-10;
+        display: flex;
+        flex-direction: column;
+        gap: $space-10;
+        font-style: normal;
+
+        @include for-breakpoint('tablet') {
+          width: 34.875rem; // 558px
+          margin: 0 auto;
+        }
+
+        @include for-breakpoint('desktop') {
+          width: 25rem; // 400px
+          margin: 0;
+          padding: $space-12;
+        }
+
+        @include for-breakpoint('desktop-large') {
+          width: 33.25rem; // 600px
+        }
+
+        .contact-icon {
+          padding: $space-7;
+          color: $brand-300;
+          background-color: $brand-100;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+
+        .profile-info,
+        .contact-number,
+        .contact-email {
+          display: flex;
+          gap: $space-8;
+          align-items: center;
+        }
+
+        .contact-number .tel-number,
+        .contact-email .email-address {
+          @include paragraph-2;
+          color: $neutral-500;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .profile-info {
+          display: flex;
+          gap: $space-6;
+
+          .profile-info-picture {
+            width: 3.5rem; // 56px
+            height: 3.5rem; // 56px
+            border-radius: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          .profile-info-details {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-style: normal;
+
+            .profile-name {
+              @include heading-6;
+              width: 100%;
+            }
+
+            .profile-position {
+              @include paragraph-small;
+              color: $neutral-500;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-form-container {
+      background-color: white;
+      border-radius: $space-5;
+      padding: $space-10;
+      display: flex;
+      flex-direction: column;
+      gap: $space-10;
+
+      @include for-breakpoint('tablet') {
+        width: 34.875rem; // 558px
+        margin: 0 auto;
+      }
+
+      @include for-breakpoint('desktop') {
+        width: 33.25rem; // 532px
+        margin: 0;
+        padding: $space-12;
+        gap: $space-11;
+      }
+
+      @include for-breakpoint('desktop-large') {
+        width: 37.5rem; // 600px
+      }
+
+      .contact-form-heading {
+        @include heading-6;
+
+        @include for-breakpoint('desktop') {
+          @include heading-5;
+        }
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: $space-8;
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+          gap: $space-4;
+
+          label {
+            @include paragraph-small;
+            font-weight: bold;
+
+            @include for-breakpoint('tablet') {
+              @include paragraph-2;
+              font-weight: bold;
+            }
+          }
+
+          input,
+          textarea {
+            border: 1px solid $neutral-200;
+            border-radius: $space-3;
+            padding: $space-7 $space-5;
+
+            &::placeholder {
+              color: $neutral-300;
+            }
+          }
+
+          textarea {
+            resize: none;
+            height: 233px;
+          }
+        }
+
+        .submit-btn {
+          margin-top: $space-10;
+        }
+      }
+    }
+  }
+}
