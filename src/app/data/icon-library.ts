@@ -13,6 +13,8 @@ import {
   SlidersHorizontal,
   Star,
   ChevronUp,
+  Mail,
+  Phone,
 } from 'lucide-angular';
 
 const iconLibrary = {
@@ -30,6 +32,8 @@ const iconLibrary = {
   Globe,
   SlidersHorizontal,
   Star,
+  Mail,
+  Phone,
 };
 
 export default iconLibrary;
