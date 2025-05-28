@@ -4,6 +4,8 @@
 @use 'colors' as *;
 
 :host {
+  display: block;
+
   .overview-header {
     text-align: center;
     padding: $space-9;
@@ -35,10 +37,16 @@
   }
 
   .overview-main-content {
+    max-width: 54.125rem;
+    margin: 0 auto;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-18;
+    }
+
     .overview-stats {
       display: grid;
       row-gap: $space-10;
-      padding: $space-9;
 
       @include for-breakpoint('tablet') {
         grid-template-columns: repeat(2, 1fr);
