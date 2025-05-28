@@ -1,1 +1,93 @@
-<p>customer works!</p>
+<app-language-bar></app-language-bar>
+<app-navbar></app-navbar>
+<div class="customer page-content">
+  <div class="main-content">
+    <aside class="customer-sidebar">
+      <nav class="sidebar-navigation">
+        <ul class="sidebar-navigation-list">
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="/customer/overview"
+              class="navigation-item-link">
+              <lucide-angular
+                name="layout-grid"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Overview</span>
+            </a>
+          </li>
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="/customer/personal-details"
+              class="navigation-item-link">
+              <lucide-angular
+                name="user-round"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Personal Details</span>
+            </a>
+          </li>
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="/customer/address"
+              class="navigation-item-link">
+              <lucide-angular
+                name="house"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Address</span>
+            </a>
+          </li>
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="/customer/order-history"
+              class="navigation-item-link">
+              <lucide-angular
+                name="package"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Order History</span>
+            </a>
+          </li>
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="/customer/message"
+              class="navigation-item-link">
+              <lucide-angular
+                name="message-square-text"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Message</span>
+            </a>
+          </li>
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="/customer/account-settings"
+              class="navigation-item-link">
+              <lucide-angular
+                name="user-round-cog"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Account Settings</span>
+            </a>
+          </li>
+          <li class="navigation-list-item">
+            <a
+              routerLinkActive="active"
+              routerLink="#"
+              class="navigation-item-link">
+              <lucide-angular
+                name="log-out"
+                class="navigation-item-icon"></lucide-angular>
+              <span class="navigation-item-name">Logout</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="center-page">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <app-footer></app-footer>
+</div>
