@@ -33,4 +33,63 @@
       }
     }
   }
+
+  .overview-main-content {
+    .overview-stats {
+      display: grid;
+      row-gap: $space-10;
+      padding: $space-9;
+
+      @include for-breakpoint('tablet') {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr;
+        gap: $space-12;
+      }
+
+      @include for-breakpoint('desktop') {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: $space-11;
+      }
+
+      .overview-stats-item {
+        display: flex;
+        flex-direction: column;
+        gap: $space-12;
+        border: 1px solid $neutral-200;
+        border-radius: $space-5;
+        padding: $space-10;
+
+        .overview-stats-header {
+          display: flex;
+          align-items: center;
+          gap: $space-8;
+
+          .overview-stats-title {
+            font-weight: bold;
+          }
+
+          .overview-stats-icon {
+            background-color: $brand-100;
+            color: $brand-500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: $space-3;
+
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+
+        .overview-stats-number {
+          @include heading-5;
+        }
+      }
+    }
+  }
 }
