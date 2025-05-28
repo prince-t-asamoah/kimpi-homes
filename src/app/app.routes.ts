@@ -11,6 +11,7 @@ import { ShopNewArrivalsComponent } from './features/shop/components/shop-new-ar
 import { ShopTopSellersComponent } from './features/shop/components/shop-top-sellers/shop-top-sellers.component';
 import { ShopSearchResultsComponent } from './features/shop/components/shop-search-results/shop-search-results.component';
 import { CustomerComponent } from './features/customer/customer.component';
+import { CustomerOverviewComponent } from './features/customer/components/customer-overview/customer-overview.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -51,6 +52,14 @@ export const routes: Routes = [
     path: 'customer',
     component: CustomerComponent,
     title: 'Kimpi Homes | Customer Account',
+    children: [
+      { path: '', redirectTo: 'overview', pathMatch: 'full' },
+      {
+        path: 'overview',
+        component: CustomerOverviewComponent,
+        title: 'Kimpi Homes | Customer Overview',
+      },
+    ],
   },
   {
     path: 'about',
