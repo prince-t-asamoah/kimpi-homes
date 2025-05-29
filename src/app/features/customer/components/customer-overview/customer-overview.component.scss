@@ -39,6 +39,7 @@
   .overview-main-content {
     max-width: 54.125rem;
     margin: 0 auto;
+    margin-top: $space-15;
 
     @include for-breakpoint('tablet') {
       margin-top: $space-18;
@@ -96,6 +97,104 @@
 
         .overview-stats-number {
           @include heading-5;
+        }
+      }
+    }
+
+    .overview-recent-orders {
+      border: 1px solid $neutral-200;
+      border-radius: $space-5;
+      padding: $space-10;
+      margin-top: $space-10;
+
+      @include for-breakpoint('tablet') {
+        margin-top: $space-12;
+      }
+
+      .overview-orders-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .overview-orders-title {
+          @include heading-6;
+          margin-bottom: $space-5;
+        }
+
+        .overview-orders-link {
+          color: $brand-500;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .overview-orders-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: $space-8;
+        gap: $space-7;
+
+        .orders-list-item {
+          display: flex;
+          padding: $space-5 $space-9;
+
+          .order-item-header,
+          .order-item-details {
+            display: flex;
+            flex-direction: column;
+            gap: $space-4;
+          }
+
+          .order-item-header {
+            width: 100%;
+
+            .order-item-title {
+              font-weight: 600;
+            }
+
+            .order-item-date {
+              color: $neutral-500;
+            }
+          }
+
+          .order-item-details {
+            flex: 1;
+
+            .order-item-price {
+              font-weight: 600;
+            }
+
+            .order-item-status {
+              padding: 0 $space-4;
+              border-radius: $space-10;
+              font-size: 0.625rem;
+              text-align: center;
+              text-transform: capitalize;
+
+              &.shipping {
+                background-color: $neutral-200;
+                color: $neutral-500;
+              }
+
+              &.delivered {
+                background-color: $success-100;
+                color: $success-300;
+              }
+
+              &.processing {
+                background-color: $brand-100;
+                color: $brand-500;
+              }
+            }
+          }
+        }
+
+        .orders-list-empty {
+          text-align: center;
+          color: $neutral-400;
+          padding: $space-10 0;
         }
       }
     }

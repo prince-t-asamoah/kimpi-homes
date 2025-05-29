@@ -14,7 +14,7 @@
           class="overview-stats-icon"></lucide-angular>
         <span class="overview-stats-title">Orders</span>
       </span>
-      <span class="overview-stats-number">0</span>
+      <span class="overview-stats-number">{{ totalOrders }}</span>
     </li>
     <li class="overview-stats-item">
       <span class="overview-stats-header">
@@ -23,7 +23,7 @@
           class="overview-stats-icon"></lucide-angular>
         <span class="overview-stats-title">Shipment</span>
       </span>
-      <span class="overview-stats-number">0</span>
+      <span class="overview-stats-number">{{ totalShipment }}</span>
     </li>
     <li class="overview-stats-item">
       <span class="overview-stats-header">
@@ -32,7 +32,41 @@
           class="overview-stats-icon"></lucide-angular>
         <span class="overview-stats-title">Returns</span>
       </span>
-      <span class="overview-stats-number">0</span>
+      <span class="overview-stats-number">{{ totalReturns }}</span>
     </li>
   </ul>
+  <div class="overview-recent-orders">
+    <div class="overview-orders-header">
+      <h2 class="overview-orders-title">Recent Orders</h2>
+      <a routerLink="/customer/order-history" class="overview-orders-link"
+        >View all</a
+      >
+    </div>
+    <ul class="overview-orders-list">
+      @for (order of recentOrders; track order.id) {
+        <li class="orders-list-item">
+          <div class="order-item-header">
+            <span class="order-item-title">Order #{{ order.id }}</span>
+            <span class="order-item-date">{{
+              order.date | date: 'MMMM d, y'
+            }}</span>
+          </div>
+          <div class="order-item-details">
+            <span class="order-item-price">{{ order.total }}</span>
+            @if (order.status === 'shipping') {
+              <span class="order-item-status shipping">Shipped</span>
+            }
+            @if (order.status === 'processing') {
+              <span class="order-item-status processing">Processing</span>
+            }
+            @if (order.status === 'delivered') {
+              <span class="order-item-status delivered">Delivered</span>
+            }
+          </div>
+        </li>
+      } @empty {
+        <p class="orders-list-empty">No recent orders found.</p>
+      }
+    </ul>
+  </div>
 </div>
