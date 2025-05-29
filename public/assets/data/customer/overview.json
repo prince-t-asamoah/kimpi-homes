@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "data": {
+    "statistics": {
+      "totalOrders": 3,
+      "totalShipment": 5,
+      "totalReturns": 1
+    },
+    "recentOrders": [
+      {
+        "id": "12345",
+        "date": "2023-10-01T00:00:00Z",
+        "total": "$150.00",
+        "status": "delivered"
+      },
+      {
+        "id": "12346",
+        "date": "2023-10-02T00:00:00Z",
+        "total": "$200.00",
+        "status": "processing"
+      },
+      {
+        "id": "12347",
+        "date": "2023-10-03T00:00:00Z",
+        "total": "$75.00",
+        "status": "shipping"
+      },
+      {
+        "id": "12348",
+        "date": "2023-10-04T00:00:00Z",
+        "total": "$120.00",
+        "status": "delivered"
+      }
+    ]
+  }
+}
