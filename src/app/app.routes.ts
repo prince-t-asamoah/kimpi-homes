@@ -12,6 +12,7 @@ import { ShopTopSellersComponent } from './features/shop/components/shop-top-sel
 import { ShopSearchResultsComponent } from './features/shop/components/shop-search-results/shop-search-results.component';
 import { CustomerComponent } from './features/customer/customer.component';
 import { CustomerOverviewComponent } from './features/customer/components/customer-overview/customer-overview.component';
+import { CustomerPersonalDetailsComponent } from './features/customer/components/customer-personal-details/customer-personal-details.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -58,6 +59,11 @@ export const routes: Routes = [
         path: 'overview',
         component: CustomerOverviewComponent,
         title: 'Kimpi Homes | Customer Overview',
+      },
+      {
+        path: 'personal-details',
+        component: CustomerPersonalDetailsComponent,
+        title: 'Kimpi Homes | Customer Personal Details',
       },
     ],
   },
