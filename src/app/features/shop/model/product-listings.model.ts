@@ -1,4 +1,4 @@
-import { GetApiResponse } from '../../../model/api-response';
+import { GetApiResponse } from './../../../model/api-response';
 
 export interface Product {
   id: string;
@@ -25,10 +25,7 @@ export interface ProductFilter {
   filterBy: { id: string; name?: string; value?: unknown }[];
 }
 
-export interface GetProductListingsAPIResponse
-  extends GetApiResponse<ProductListings> {
-  status: string;
-  timestamp: string;
+export interface GetProductListingsAPIResponse extends GetApiResponse {
   data: {
     category: {
       id: string;

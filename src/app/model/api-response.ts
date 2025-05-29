@@ -1,5 +1,5 @@
-export interface GetApiResponse<T> {
+export interface GetApiResponse {
   status: string;
   timestamp: string;
-  data: T;
+  data: unknown;
 }
