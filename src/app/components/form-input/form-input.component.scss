@@ -1,0 +1,39 @@
+@use 'colors' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;
+@use 'spacing' as *;
+@use 'transitions' as *;
+
+:host {
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+
+    label {
+      @include paragraph-small;
+      font-weight: bold;
+
+      @include for-breakpoint('tablet') {
+        @include paragraph-2;
+        font-weight: bold;
+      }
+    }
+
+    input,
+    textarea {
+      border: 1px solid $neutral-200;
+      border-radius: $space-3;
+      padding: $space-7 $space-5;
+      width: 100%;
+
+      &::placeholder {
+        color: $neutral-300;
+      }
+    }
+
+    .telephone-input {
+      display: flex;
+    }
+  }
+}

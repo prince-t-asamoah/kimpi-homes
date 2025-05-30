@@ -1,0 +1,27 @@
+@if (type === 'text' || type === 'email' || type === 'password') {
+  <div class="form-field">
+    <label [htmlFor]="name">{{ label }}</label>
+    <input [type]="type" [id]="id" [name]="name" [placeholder]="placeholder" />
+  </div>
+}
+
+@if (type === 'textarea') {
+  <div class="form-field">
+    <label [htmlFor]="name">{{ label }}</label>
+    <textarea [id]="id" [name]="name" [placeholder]="placeholder"></textarea>
+  </div>
+}
+
+@if (type === 'telephone') {
+  <div class="form-field">
+    <label [htmlFor]="name">{{ label }}</label>
+    <div class="telephone-input">
+      <ng-content></ng-content>
+      <input
+        [type]="type"
+        [id]="id"
+        [name]="name"
+        [placeholder]="placeholder" />
+    </div>
+  </div>
+}
