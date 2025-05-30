@@ -1,1 +1,53 @@
-<p>user-menu works!</p>
+<button
+  class="user-menu-btn"
+  aria-label="User Avatar"
+  (click)="toggleUserMenu()"
+  (blur)="toggleUserMenu()">
+  <lucide-icon name="user"></lucide-icon>
+  <img src="./assets/images/user-avatar.png" alt="User Profile" srcset="" />
+</button>
+<div class="user-menu-content" [ngClass]="showUserMenu ? 'active' : 'hidden'">
+  <div class="user-menu-close-bar">
+    <button
+      class="user-menu-close-btn"
+      (click)="toggleUserMenu()"
+      aria-label="Close User Menu">
+      <lucide-icon name="x"></lucide-icon>
+    </button>
+  </div>
+  <div class="user-menu-dropdown">
+    <div class="user-menu-dropdown-header">
+      <img
+        src="./assets/images/user-avatar.png"
+        alt="User Profile"
+        class="user-menu-dropdown-avatar" />
+      <div class="user-menu-dropdown-info">
+        <p class="user-name">John Doe</p>
+        <p class="user-email">john.doe&commat;email.com</p>
+      </div>
+    </div>
+    <ul class="user-menu-dropdown-list">
+      <li class="user-menu-link">
+        <a routerLink="/customer/overview">Overview</a>
+      </li>
+      <li class="user-menu-link">
+        <a routerLink="/customer/personal-details">Profile</a>
+      </li>
+      <li class="user-menu-link">
+        <a routerLink="/customer/address">Address</a>
+      </li>
+      <li class="user-menu-link">
+        <a routerLink="/customer/order-history">Order History</a>
+      </li>
+      <li class="user-menu-link">
+        <a routerLink="/customer/message">Message</a>
+      </li>
+      <li class="user-menu-link">
+        <a routerLink="/customer/account-settings">Account settings</a>
+      </li>
+      <li class="user-menu-link">
+        <a routerLink="customer/logout">Logout</a>
+      </li>
+    </ul>
+  </div>
+</div>

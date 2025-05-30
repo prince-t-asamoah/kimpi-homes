@@ -1,0 +1,135 @@
+@use 'typography' as *;
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'transitions' as *;
+@use 'breakpoints' as *;
+
+:host {
+  position: relative;
+
+  .user-menu-btn {
+    color: var(--neutral-300);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    display: flex;
+    place-content: center;
+
+    @include for-breakpoint('desktop') {
+      width: 2.375rem;
+      height: 2.375rem;
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+    }
+  }
+
+  .user-menu-content {
+    position: fixed;
+    top: 3.75rem;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+
+    @include for-breakpoint('tablet') {
+      position: absolute;
+      top: 45px;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      height: auto;
+      padding: 0;
+    }
+
+    .user-menu-close-bar {
+      padding: $space-8 $space-10;
+
+      @include for-breakpoint('tablet') {
+        display: none;
+      }
+
+      .user-menu-close-btn {
+        color: $neutral-400;
+      }
+    }
+
+    .user-menu-dropdown {
+      @include for-breakpoint('tablet') {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        min-width: max-content;
+        border-radius: $space-8;
+      }
+
+      .user-menu-dropdown-header {
+        display: flex;
+        gap: $space-6;
+        align-items: center;
+        padding: $space-8 $space-10;
+        border-bottom: 1px solid $neutral-200;
+
+        .user-menu-dropdown-avatar {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 100%;
+          object-fit: cover;
+        }
+
+        .user-menu-dropdown-info {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .user-name,
+          .user-email {
+            @include paragraph-2;
+          }
+
+          .user-name {
+            font-weight: 700;
+          }
+
+          .user-email {
+            color: $neutral-500;
+          }
+        }
+      }
+
+      .user-menu-dropdown-list {
+        background-color: white;
+        border-radius: $space-5;
+        padding: $space-8 $space-8;
+        z-index: 2;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: $space-3;
+
+        @include for-breakpoint('tablet') {
+          top: 4.094rem;
+        }
+
+        .user-menu-link {
+          a {
+            color: $neutral-400;
+            padding: $space-5 $space-8;
+            display: inline-block;
+            width: 100%;
+            border-radius: $space-4;
+
+            &:hover,
+            &:active {
+              background-color: $brand-100;
+              color: $brand-400;
+              @include transition-medium('background-color', 'color');
+            }
+          }
+        }
+      }
+    }
+  }
+}

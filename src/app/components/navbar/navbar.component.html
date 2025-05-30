@@ -59,13 +59,7 @@
       <lucide-icon name="search"></lucide-icon>
     </button>
     @if (isAuthenticated) {
-      <button class="user-avatar-btn" aria-label="User Avatar">
-        <lucide-icon name="user"></lucide-icon>
-        <img
-          src="./assets/images/user-avatar.png"
-          alt="User Profile"
-          srcset="" />
-      </button>
+      <app-user-menu></app-user-menu>
     } @else {
       <a routerLink="/login" class="login-link button-filled">Login</a>
     }

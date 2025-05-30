@@ -2,6 +2,8 @@
 @use 'components';
 @use 'typography' as *;
 @use 'spacing' as *;
+@use 'colors' as *;
+@use 'transitions' as *;
 
 :host {
   display: block;
@@ -40,26 +42,6 @@
         color: var(--neutral-500);
       }
 
-      .user-avatar-btn {
-        color: var(--neutral-300);
-        width: 2rem;
-        height: 2rem;
-        border-radius: 100%;
-        display: flex;
-        place-content: center;
-
-        @include for-breakpoint('desktop') {
-          width: 2.375rem;
-          height: 2.375rem;
-        }
-
-        svg {
-          width: 2rem;
-          height: 2rem;
-          display: inline-block;
-        }
-      }
-
       .menu-btn {
         padding: $space-2;
         width: 1.5rem;
@@ -70,8 +52,8 @@
         gap: $space-4;
 
         @include for-breakpoint('desktop') {
-          width: 38px;
-          height: 38px;
+          width: 2.375rem;
+          height: 2.375rem;
           display: none;
         }
 
