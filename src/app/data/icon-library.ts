@@ -8,6 +8,7 @@ export default {
   ChevronRight: icons.ChevronRight,
   ChevronLeft: icons.ChevronLeft,
   ChevronUp: icons.ChevronUp,
+  ChevronDown: icons.ChevronDown,
   Search: icons.Search,
   User: icons.User,
   ShoppingCart: icons.ShoppingCart,
