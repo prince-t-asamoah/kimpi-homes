@@ -19,4 +19,5 @@ export class FormInputComponent {
   @Input() placeholder = '';
   @Input() value = '';
   @Input() name = '';
+  @Input() disabled = false;
 }

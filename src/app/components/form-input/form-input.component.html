@@ -1,6 +1,6 @@
 @if (type === 'text' || type === 'email' || type === 'password') {
   <div class="form-field">
-    <label [htmlFor]="name">{{ label }}</label>
+    <label [for]="id">{{ label }}</label>
     <input
       [type]="type"
       [id]="id"
@@ -12,7 +12,7 @@
 
 @if (type === 'textarea') {
   <div class="form-field">
-    <label [htmlFor]="name">{{ label }}</label>
+    <label [for]="id">{{ label }}</label>
     <textarea
       [id]="id"
       [name]="name"
@@ -23,7 +23,7 @@
 
 @if (type === 'telephone') {
   <div class="form-field">
-    <label [htmlFor]="name">{{ label }}</label>
+    <label [for]="id">{{ label }}</label>
     <div class="telephone-input">
       <ng-content></ng-content>
       <input
