@@ -104,16 +104,22 @@
         margin: 0 auto;
       }
 
-      .country-code-select {
+      .country-telephone-select {
         position: relative;
         border: 1px solid $neutral-200;
         border-top-left-radius: $space-3;
         border-bottom-left-radius: $space-3;
+        width: 120px;
 
-        .country-code-btn {
+        @include for-breakpoint('desktop') {
+          width: 150px;
+          border-radius: $space-3;
+        }
+
+        .country-telephone-btn {
           display: flex;
-          gap: $space-5;
           align-items: center;
+          justify-content: space-between;
           padding: $space-8;
           width: 100%;
           height: 100%;
@@ -126,13 +132,19 @@
             @include transition-short(background-color);
           }
 
-          .country-code-icon {
+          .country-telephone-info {
+            display: flex;
+            align-items: center;
+            gap: $space-4;
+          }
+
+          .country-telephone-icon {
             width: 1.25rem;
             height: 1.25rem;
           }
         }
 
-        .country-code-dropdown {
+        .country-telephone-dropdown {
           position: fixed;
           inset: 0;
           z-index: 10;
@@ -149,28 +161,29 @@
             z-index: 0;
           }
 
-          .country-code-header {
+          .country-telephone-header {
             display: flex;
             gap: $space-8;
             padding: $space-10 $space-8;
+            padding-top: $space-14;
 
             @include for-breakpoint('desktop') {
               display: none;
             }
 
-            .country-code-title {
+            .country-telephone-title {
               @include heading-6;
               font-weight: 700;
             }
 
-            .country-code-title-container {
+            .country-telephone-title-container {
               display: flex;
               gap: $space-10;
               align-items: center;
             }
           }
 
-          .country-code-content {
+          .country-telephone-content {
             display: flex;
             flex-direction: column;
             gap: $space-8;
@@ -180,7 +193,7 @@
               padding: 0;
             }
 
-            .country-code-search {
+            .country-telephone-search {
               display: flex;
               gap: $space-7;
               width: 100%;
@@ -192,18 +205,18 @@
                 display: none;
               }
 
-              .country-code-search-icon {
+              .country-telephone-search-icon {
                 width: 1.25rem;
                 height: 1.25rem;
                 color: $neutral-400;
               }
 
-              .country-code-search-input {
+              .country-telephone-search-input {
                 width: 100%;
               }
             }
 
-            .country-code-list {
+            .country-telephone-list {
               overflow-y: auto;
               max-height: calc(100vh - 9.375rem);
 
@@ -211,11 +224,12 @@
                 max-height: 18.75rem; //300px
               }
 
-              .code-list-item {
+              .country-telephone-item {
                 display: flex;
                 align-items: center;
                 padding: $space-6 $space-10;
                 cursor: pointer;
+                gap: $space-8;
 
                 &:hover {
                   background-color: $neutral-200;
@@ -223,6 +237,27 @@
 
                 @include for-breakpoint('desktop') {
                   padding: $space-6 $space-8;
+                  gap: $space-4;
+                }
+
+                .country-item-info {
+                  display: flex;
+                  justify-content: space-between;
+                  width: fit-content;
+
+                  .country-item-name {
+                    @include for-breakpoint('desktop') {
+                      display: none;
+                    }
+                  }
+
+                  .country-item-code {
+                    margin-left: $space-4;
+
+                    @include for-breakpoint('desktop') {
+                      margin-left: 0;
+                    }
+                  }
                 }
               }
             }

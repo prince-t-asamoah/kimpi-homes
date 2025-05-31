@@ -38,20 +38,23 @@
       name="phonenumber"
       label="Phone Number"
       placeholder="Phone number">
-      <div class="country-code-select" #telephoneNumberContainer>
+      <div class="country-telephone-select" #telephoneNumberContainer>
         <button
           type="button"
-          class="country-code-btn"
+          class="country-telephone-btn"
           (click)="toggleTelephoneDropdown()">
-          {{ selectedCountryCode }}
+          <span class="country-telephone-info">
+            <img [ngSrc]="selectedCountryData.flag" width="20" height="20" />
+            {{ selectedCountryData.code }}
+          </span>
           <lucide-angular
             name="chevron-down"
-            class="country-code-icon"></lucide-angular>
+            class="country-telephone-icon"></lucide-angular>
         </button>
         <div
-          class="country-code-dropdown"
+          class="country-telephone-dropdown"
           [ngClass]="showTelephoneDropdown ? 'active' : 'hidden'">
-          <div class="country-code-header">
+          <div class="country-telephone-header">
             <button
               type="button"
               class="close-dropdown-btn"
@@ -60,22 +63,34 @@
                 name="chevron-left"
                 class="close-icon"></lucide-angular>
             </button>
-            <h3 class="country-code-title">Select Country Code</h3>
+            <h3 class="country-telephone-title">Select Country Code</h3>
           </div>
-          <div class="country-code-content">
-            <div class="country-code-search">
+          <div class="country-telephone-content">
+            <div class="country-telephone-search">
               <lucide-angular
                 name="search"
-                class="country-code-search-icon"></lucide-angular>
+                class="country-telephone-search-icon"></lucide-angular>
               <input
                 type="text"
-                class="country-code-search-input"
-                placeholder="Search country code" />
+                class="country-telephone-search-input"
+                placeholder="Search code by country name" />
             </div>
-            <ul class="country-code-list">
-              @for (code of countryCodes; track code) {
-                <li class="code-list-item" (click)="selectCountryCode(code)">
-                  {{ code }}
+            <ul class="country-telephone-list">
+              @for (country of countryCodes; track country.id) {
+                <li
+                  class="country-telephone-item"
+                  (click)="selectCountry(country)">
+                  <img
+                    [ngSrc]="country.flag"
+                    class="country-list-flag"
+                    width="24"
+                    height="20" />
+                  <span class="country-item-info">
+                    <span class="country-item-name">{{ country.country }}</span>
+                    <span class="country-item-code"
+                      >&lpar;{{ country.code }}&rpar;</span
+                    >
+                  </span>
                 </li>
               }
             </ul>
