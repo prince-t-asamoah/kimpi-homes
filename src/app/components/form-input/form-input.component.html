@@ -1,14 +1,23 @@
 @if (type === 'text' || type === 'email' || type === 'password') {
   <div class="form-field">
     <label [htmlFor]="name">{{ label }}</label>
-    <input [type]="type" [id]="id" [name]="name" [placeholder]="placeholder" />
+    <input
+      [type]="type"
+      [id]="id"
+      [name]="name"
+      [placeholder]="placeholder"
+      [disabled]="disabled" />
   </div>
 }
 
 @if (type === 'textarea') {
   <div class="form-field">
     <label [htmlFor]="name">{{ label }}</label>
-    <textarea [id]="id" [name]="name" [placeholder]="placeholder"></textarea>
+    <textarea
+      [id]="id"
+      [name]="name"
+      [placeholder]="placeholder"
+      [disabled]="disabled"></textarea>
   </div>
 }
 
@@ -21,7 +30,8 @@
         [type]="type"
         [id]="id"
         [name]="name"
-        [placeholder]="placeholder" />
+        [placeholder]="placeholder"
+        [disabled]="disabled" />
     </div>
   </div>
 }
