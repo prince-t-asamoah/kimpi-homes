@@ -9,3 +9,82 @@
     <button type="button" class="remove-photo-btn">Remove</button>
   </div>
 </div>
+<div class="customer-profile-form">
+  <form class="profile-form">
+    <app-form-input
+      type="text"
+      id="fullname"
+      name="fullname"
+      label="Fullname"
+      placeholder="Enter your first name"></app-form-input>
+    <app-form-input
+      type="text"
+      id="username"
+      name="username"
+      label="Username"
+      placeholder="Enter your username">
+    </app-form-input>
+    <app-form-input
+      type="email"
+      id="email"
+      name="email"
+      label="Email"
+      placeholder="Enter your email address"
+      [disabled]="true">
+    </app-form-input>
+    <app-form-input
+      type="telephone"
+      id="phonenumber"
+      name="phonenumber"
+      label="Phone Number"
+      placeholder="Phone number">
+      <div class="country-code-select" #telephoneNumberContainer>
+        <button
+          type="button"
+          class="country-code-btn"
+          (click)="toggleTelephoneDropdown()">
+          {{ selectedCountryCode }}
+          <lucide-angular
+            name="chevron-down"
+            class="country-code-icon"></lucide-angular>
+        </button>
+        <div
+          class="country-code-dropdown"
+          [ngClass]="showTelephoneDropdown ? 'active' : 'hidden'">
+          <div class="country-code-header">
+            <button
+              type="button"
+              class="close-dropdown-btn"
+              (click)="toggleTelephoneDropdown()">
+              <lucide-angular
+                name="chevron-left"
+                class="close-icon"></lucide-angular>
+            </button>
+            <h3 class="country-code-title">Select Country Code</h3>
+          </div>
+          <div class="country-code-content">
+            <div class="country-code-search">
+              <lucide-angular
+                name="search"
+                class="country-code-search-icon"></lucide-angular>
+              <input
+                type="text"
+                class="country-code-search-input"
+                placeholder="Search country code" />
+            </div>
+            <ul class="country-code-list">
+              @for (code of countryCodes; track code) {
+                <li class="code-list-item" (click)="selectCountryCode(code)">
+                  {{ code }}
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+    </app-form-input>
+    <button type="submit" class="save-changes-btn button-filled">
+      Save Changes
+    </button>
+  </form>
+</div>
