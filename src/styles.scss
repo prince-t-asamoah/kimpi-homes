@@ -6,6 +6,7 @@
 @use 'typography' as *;
 @use 'spacing' as *;
 @use 'breakpoints' as *;
+@use 'transitions' as *;
 
 // Base Styles
 :root {
@@ -147,6 +148,7 @@ app-create-account {
   @include for-breakpoint('desktop') {
     &:hover {
       background-color: $brand-300;
+      @include transition-medium(background-color);
     }
   }
 }
@@ -164,6 +166,7 @@ app-create-account {
   @include for-breakpoint('desktop') {
     &:hover {
       background-color: $neutral-200;
+      @include transition-medium(background-color);
     }
   }
 }
