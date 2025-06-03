@@ -26,4 +26,6 @@ export default {
   MessageSquareText: icons.MessageSquareText,
   UserRoundCog: icons.UserRoundCog,
   LogOut: icons.LogOut,
+  ListFilter: icons.ListFilter,
+  EllipsisVertical: icons.EllipsisVertical,
 };
