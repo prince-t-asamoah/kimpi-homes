@@ -1,1 +1,12 @@
-<p>form-checkbox works!</p>
+@if (type === 'checkbox') {
+  <div class="checkbox form-field">
+    <input
+      [id]="id"
+      [name]="name"
+      type="checkbox"
+      class="form-field-control"
+      [disabled]="disabled"
+      [value]="value" />
+    <span class="checkmark"></span>
+  </div>
+}
