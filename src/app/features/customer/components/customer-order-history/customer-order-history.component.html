@@ -1,1 +1,32 @@
-<p>customer-order-history works!</p>
+<div class="order-history-header">
+  <div class="order-history-header-title">
+    <h2 class="order-history-title">Order History</h2>
+    <button type="button" class="delete-all-orders-btn button-filled">
+      Delete all orders
+    </button>
+  </div>
+  <div class="order-history-header-actions">
+    <div class="search-container">
+      <lucide-angular name="search" class="search-icon"></lucide-angular>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by order ID or date"
+        class="search-input" />
+    </div>
+    <div class="header-action-buttons">
+      <button type="button" class="sort-btn button-default">
+        Sort
+        <lucide-angular
+          name="sliders-horizontal"
+          class="actions-icon"></lucide-angular>
+      </button>
+      <button type="button" class="filter-btn button-default">
+        Filter
+        <lucide-angular
+          name="list-filter"
+          class="actions-icon"></lucide-angular>
+      </button>
+    </div>
+  </div>
+</div>

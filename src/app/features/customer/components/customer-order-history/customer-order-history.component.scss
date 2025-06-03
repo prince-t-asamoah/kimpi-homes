@@ -1,0 +1,103 @@
+@use 'colors' as *;
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: $space-12;
+  height: 100%;
+
+  @include for-breakpoint('tablet') {
+    gap: $space-16;
+    padding: $space-10;
+  }
+
+  .order-history-header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+
+    @include for-breakpoint('tablet') {
+      justify-content: space-between;
+      align-items: center;
+      gap: $space-8;
+    }
+
+    .order-history-header-title {
+      display: flex;
+      flex-direction: column;
+      gap: $space-8;
+      width: 100%;
+
+      @include for-breakpoint('tablet') {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-4;
+      }
+
+      .order-history-title {
+        @include paragraph-large;
+        font-weight: 700;
+      }
+    }
+
+    .order-history-header-actions {
+      display: flex;
+      flex-direction: column;
+      gap: $space-4;
+      width: 100%;
+
+      @include for-breakpoint('tablet') {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .search-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: $space-5;
+        border: 1px solid $neutral-200;
+        border-radius: $space-3;
+        padding: $space-6;
+
+        @include for-breakpoint('desktop') {
+          max-width: 480px;
+        }
+
+        .search-icon {
+          width: 24px;
+          height: 24px;
+          color: $neutral-400;
+        }
+
+        .search-input {
+          width: 100%;
+          color: $neutral-300;
+        }
+      }
+
+      .header-action-buttons {
+        display: flex;
+        gap: $space-6;
+        height: 100%;
+
+        .sort-btn,
+        .filter-btn {
+          padding: $space-5 $space-8;
+          width: 100%;
+
+          .actions-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: $neutral-500;
+          }
+        }
+      }
+    }
+  }
+}
