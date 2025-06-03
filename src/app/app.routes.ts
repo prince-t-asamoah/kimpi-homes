@@ -13,6 +13,7 @@ import { ShopSearchResultsComponent } from './features/shop/components/shop-sear
 import { CustomerComponent } from './features/customer/customer.component';
 import { CustomerOverviewComponent } from './features/customer/components/customer-overview/customer-overview.component';
 import { CustomerPersonalDetailsComponent } from './features/customer/components/customer-personal-details/customer-personal-details.component';
+import { CustomerAddressComponent } from './features/customer/components/customer-address/customer-address.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -64,6 +65,11 @@ export const routes: Routes = [
         path: 'personal-details',
         component: CustomerPersonalDetailsComponent,
         title: 'Kimpi Homes | Customer Personal Details',
+      },
+      {
+        path: 'address',
+        component: CustomerAddressComponent,
+        title: 'Kimpi Homes | Customer Address',
       },
     ],
   },

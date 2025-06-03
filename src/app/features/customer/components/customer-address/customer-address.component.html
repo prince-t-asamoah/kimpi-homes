@@ -1,1 +1,38 @@
-<p>customer-address works!</p>
+<form id="customerAddressForm" class="customer-address-form customer-form">
+  <app-form-select
+    id="country"
+    name="country"
+    label="Country"
+    [options]="countriesOptions"></app-form-select>
+  <app-form-input
+    type="text"
+    id="address"
+    name="address"
+    label="Address"
+    placeholder="Enter your address">
+  </app-form-input>
+  <app-form-select
+    type="text"
+    id="state"
+    name="state"
+    label="State/Province/Region"
+    placeholder="Enter your state/province/region">
+  </app-form-select>
+  <app-form-input
+    type="text"
+    id="city"
+    name="city"
+    label="City"
+    placeholder="Enter your city">
+  </app-form-input>
+  <app-form-input
+    type="text"
+    id="zipCode"
+    name="zipcode"
+    label="Zip Code"
+    placeholder="Enter your zip code">
+  </app-form-input>
+  <button type="submit" class="button-filled save-changes-btn">
+    Save Changes
+  </button>
+</form>
