@@ -171,6 +171,47 @@ app-create-account {
   }
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+
+  label,
+  .form-field-label {
+    @include paragraph-small;
+    font-weight: bold;
+
+    @include for-breakpoint('tablet') {
+      @include paragraph-2;
+      font-weight: bold;
+    }
+  }
+
+  input,
+  textarea,
+  .select {
+    outline: 1px solid $neutral-200;
+    border-radius: $space-3;
+    padding: $space-7 $space-5;
+    width: 100%;
+
+    &::placeholder {
+      color: $neutral-300;
+    }
+
+    &:disabled {
+      background-color: $neutral-200;
+      color: $neutral-400;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      background-color: $neutral-100;
+      @include transition-medium(background-color);
+    }
+  }
+}
+
 .checkbox,
 .radio {
   position: relative;
