@@ -1,0 +1,15 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+
+:host {
+  .default-address-checkbox {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+    width: 100%;
+
+    .checkbox-description {
+      color: $neutral-500;
+    }
+  }
+}
