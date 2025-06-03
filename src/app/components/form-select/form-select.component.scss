@@ -1,0 +1,85 @@
+@use 'colors' as *;
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'transitions' as *;
+@use 'typography' as *;
+
+:host {
+  .form-field {
+    .select-container {
+      position: relative;
+
+      .select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+        color: $neutral-300;
+      }
+
+      .select-dropdown {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        width: 100%;
+        background-color: $neutral-200;
+        border-radius: $space-3;
+        overflow: hidden;
+        background-color: $neutral-100;
+
+        @include for-breakpoint('desktop') {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          position: absolute;
+          inset: auto;
+          left: 0;
+          width: 100%;
+          z-index: 1;
+        }
+
+        .select-header {
+          display: flex;
+          align-items: center;
+          gap: $space-10;
+          padding: $space-8;
+
+          @include for-breakpoint('desktop') {
+            display: none;
+          }
+
+          .select-title {
+            @include heading-6;
+          }
+        }
+
+        .select-options {
+          overflow-y: auto;
+          margin-top: $space-8;
+          max-height: calc(100vh - 4.75rem);
+
+          @include for-breakpoint('desktop') {
+            max-height: 18.75rem;
+            margin-top: 0;
+          }
+
+          .select-option-item {
+            padding: $space-7 $space-11;
+            cursor: pointer;
+
+            color: $neutral-400;
+
+            &:hover {
+              background-color: $brand-100;
+              color: $brand-400;
+            }
+
+            &.selected {
+              background-color: $brand-200;
+              color: $brand-500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

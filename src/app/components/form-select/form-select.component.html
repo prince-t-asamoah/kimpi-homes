@@ -1,5 +1,35 @@
 <div class="form-field">
   <label [for]="id">{{ label }}</label>
-  <div class="telephone-input">
+  <div class="select-container" #selectContainer>
+    <input type="hidden" [id]="id" [name]="name" [value]="selectedValue" />
+    <button type="button" class="select" (click)="toggleDropdown()">
+      {{ selectedLabel || 'No Selection' }}
+      <lucide-icon name="chevron-down"></lucide-icon>
+    </button>
+    <div class="select-dropdown" [ngClass]="showDropdown ? 'active' : 'hidden'">
+      <div class="select-header">
+        <button
+          type="button"
+          class="close-dropdown-btn"
+          (click)="toggleDropdown()">
+          <lucide-icon name="chevron-left" class="close-icon"></lucide-icon>
+        </button>
+        <h3 class="select-title">Select an option</h3>
+      </div>
+      <ul class="select-options">
+        @for (option of options; track $index) {
+          <li
+            (click)="selectOption(option)"
+            class="select-option-item"
+            [ngClass]="{ selected: option.value === selectedValue }">
+            {{ option.label }}
+          </li>
+        } @empty {
+          <li class="select-option-item empty" (click)="toggleDropdown()">
+            No options available
+          </li>
+        }
+      </ul>
+    </div>
   </div>
 </div>
