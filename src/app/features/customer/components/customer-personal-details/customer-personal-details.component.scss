@@ -95,15 +95,6 @@
     flex: none;
 
     .profile-form {
-      display: flex;
-      flex-direction: column;
-      gap: $space-10;
-
-      @include for-breakpoint('tablet') {
-        max-width: 29.625rem; //474px;
-        margin: 0 auto;
-      }
-
       .country-telephone-select {
         position: relative;
         border: 1px solid $neutral-200;
@@ -154,9 +145,9 @@
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
           @include for-breakpoint('desktop') {
+            position: absolute;
             inset: auto;
             left: 0;
-            position: absolute;
             padding: 0;
             z-index: 0;
           }
@@ -262,14 +253,6 @@
               }
             }
           }
-        }
-      }
-
-      .save-changes-btn {
-        margin-top: $space-9;
-
-        @include for-breakpoint('tablet') {
-          width: fit-content;
         }
       }
     }

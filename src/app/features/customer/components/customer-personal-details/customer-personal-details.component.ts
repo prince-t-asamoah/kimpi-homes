@@ -9,7 +9,10 @@ import { CountryTelephoneData } from '../../model/personal-details.model';
   selector: 'app-customer-personal-details',
   imports: [FormInputComponent, LucideAngularModule, NgClass, NgOptimizedImage],
   templateUrl: './customer-personal-details.component.html',
-  styleUrl: './customer-personal-details.component.scss',
+  styleUrls: [
+    './customer-personal-details.component.scss',
+    '../../scss/customer-form.scss',
+  ],
 })
 export class CustomerPersonalDetailsComponent {
   showTelephoneDropdown = false;
