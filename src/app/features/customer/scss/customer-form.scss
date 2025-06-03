@@ -1,0 +1,21 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+
+  @include for-breakpoint('tablet') {
+    max-width: 34.938rem; //559px;
+    margin: 0 auto;
+  }
+}
+
+.save-changes-btn {
+  margin-top: $space-9;
+
+  @include for-breakpoint('tablet') {
+    width: fit-content;
+  }
+}
