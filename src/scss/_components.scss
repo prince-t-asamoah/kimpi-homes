@@ -1,31 +1,4 @@
-@mixin button-filled {
-  color: white;
-  padding: var(--sp-7) var(--sp-10);
-  background-color: var(--brand-300);
-  border-radius: var(--sp-3);
-  font-weight: 700;
-  text-align: center;
-  text-wrap: balance;
-
-  &:hover {
-    background-color: var(--brand-200);
-  }
-}
-
-@mixin button-outlined {
-  color: var(--brand-300);
-  padding: var(--sp-7) var(--sp-10);
-  background-color: transparent;
-  border: 1px solid var(--brand-300);
-  font-weight: 700;
-  text-align: center;
-  text-wrap: balance;
-  border-radius: var(--sp-3);
-
-  &:hover {
-    background-color: var(--neutral-200);
-  }
-}
+@use 'spacing' as *;
 
 @mixin search-input-cancel {
   &::-webkit-search-cancel-button {
@@ -46,4 +19,16 @@
     opacity: 0.3;
     pointer-events: all;
   }
+}
+
+@mixin button-component {
+  padding: $space-7 $space-10;
+  font-weight: 700;
+  text-align: center;
+  text-wrap: balance;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-5;
 }
