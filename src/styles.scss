@@ -1,12 +1,13 @@
 @charset 'utf-8';
 
-@use './scss/reset';
+@use 'reset';
 @use 'utilities';
 @use 'colors' as *;
 @use 'typography' as *;
 @use 'spacing' as *;
 @use 'breakpoints' as *;
 @use 'transitions' as *;
+@use 'components' as *;
 
 // Base Styles
 :root {
@@ -137,37 +138,37 @@ app-create-account {
 
 // UI Components
 .button-filled {
+  @include button-component;
   color: white;
-  padding: $space-7 $space-10;
   background-color: $brand-500;
-  border-radius: $space-3;
-  font-weight: 700;
-  text-align: center;
-  text-wrap: balance;
 
-  @include for-breakpoint('desktop') {
-    &:hover {
-      background-color: $brand-300;
-      @include transition-medium(background-color);
-    }
+  &:hover {
+    background-color: $brand-300;
+    @include transition-medium(background-color);
   }
 }
 
 .button-outlined {
+  @include button-component;
   color: $brand-500;
-  padding: $space-7 $space-10;
   background-color: transparent;
   border: 1px solid $brand-500;
-  font-weight: 700;
-  text-align: center;
-  text-wrap: balance;
-  border-radius: $space-3;
 
-  @include for-breakpoint('desktop') {
-    &:hover {
-      background-color: $neutral-200;
-      @include transition-medium(background-color);
-    }
+  &:hover {
+    background-color: $neutral-200;
+    @include transition-medium(background-color);
+  }
+}
+
+.button-default {
+  @include button-component;
+  color: $neutral-500;
+  background-color: $neutral-100;
+  border: 1px solid $neutral-200;
+
+  &:hover {
+    background-color: $neutral-200;
+    @include transition-medium(background-color);
   }
 }
 
