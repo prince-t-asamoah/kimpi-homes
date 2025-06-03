@@ -14,6 +14,7 @@ import { CustomerComponent } from './features/customer/customer.component';
 import { CustomerOverviewComponent } from './features/customer/components/customer-overview/customer-overview.component';
 import { CustomerPersonalDetailsComponent } from './features/customer/components/customer-personal-details/customer-personal-details.component';
 import { CustomerAddressComponent } from './features/customer/components/customer-address/customer-address.component';
+import { CustomerOrderHistoryComponent } from './features/customer/components/customer-order-history/customer-order-history.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -70,6 +71,11 @@ export const routes: Routes = [
         path: 'address',
         component: CustomerAddressComponent,
         title: 'Kimpi Homes | Customer Address',
+      },
+      {
+        path: 'order-history',
+        component: CustomerOrderHistoryComponent,
+        title: 'Kimpi Homes | Customer Order History',
       },
     ],
   },
