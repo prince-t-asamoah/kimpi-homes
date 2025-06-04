@@ -6,14 +6,10 @@
     </button>
   </div>
   <div class="order-history-header-actions">
-    <div class="search-container">
-      <lucide-angular name="search" class="search-icon"></lucide-angular>
-      <input
-        type="text"
-        id="search"
-        placeholder="Search by order ID or date"
-        class="search-input" />
-    </div>
+    <app-search-input
+      class="search-order-input"
+      [placeholder]="'Search by order ID or date'">
+    </app-search-input>
     <div class="header-action-buttons">
       <button type="button" class="sort-btn button-default">
         Sort

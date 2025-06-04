@@ -56,28 +56,11 @@
         justify-content: space-between;
       }
 
-      .search-container {
+      .search-order-input {
         width: 100%;
-        display: flex;
-        align-items: center;
-        gap: $space-5;
-        border: 1px solid $neutral-200;
-        border-radius: $space-3;
-        padding: $space-6;
 
         @include for-breakpoint('desktop') {
           max-width: 480px;
-        }
-
-        .search-icon {
-          width: 24px;
-          height: 24px;
-          color: $neutral-400;
-        }
-
-        .search-input {
-          width: 100%;
-          color: $neutral-300;
         }
       }
 

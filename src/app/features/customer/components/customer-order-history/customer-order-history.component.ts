@@ -5,6 +5,7 @@ import { SpinningLoaderComponent } from '../../../../components/spinning-loader/
 import { CustomerService } from '../../services/customer.service';
 import { CustomerOrder } from '../../model/customer.model';
 import { Subject, takeUntil } from 'rxjs';
+import { SearchInputComponent } from '../../../../components/search-input/search-input.component';
 
 @Component({
   selector: 'app-customer-order-history',
@@ -12,6 +13,7 @@ import { Subject, takeUntil } from 'rxjs';
     LucideAngularModule,
     OrderHistoryTableComponent,
     SpinningLoaderComponent,
+    SearchInputComponent,
   ],
   templateUrl: './customer-order-history.component.html',
   styleUrl: './customer-order-history.component.scss',
