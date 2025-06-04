@@ -1,12 +1,5 @@
 import { GetApiResponse } from '../../../model/api-response';
-
-export interface CustomerOrder {
-  id: string;
-  date: string;
-  total: string;
-  status: string;
-  items?: number;
-}
+import { CustomerOrder } from './customer.model';
 
 interface CustomerOverviewData {
   statistics: {
@@ -17,6 +10,6 @@ interface CustomerOverviewData {
   recentOrders: CustomerOrder[];
 }
 
-export interface GetCusomerOverviewAPIResponse extends GetApiResponse {
+export interface GetCustomerOverviewAPIResponse extends GetApiResponse {
   data: CustomerOverviewData;
 }
