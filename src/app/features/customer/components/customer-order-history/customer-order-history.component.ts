@@ -1,10 +1,57 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
+import { OrderHistoryTableComponent } from './components/order-history-table/order-history-table.component';
+import { SpinningLoaderComponent } from '../../../../components/spinning-loader/spinning-loader.component';
+import { CustomerService } from '../../services/customer.service';
+import { CustomerOrder } from '../../model/customer.model';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-customer-order-history',
-  imports: [LucideAngularModule],
+  imports: [
+    LucideAngularModule,
+    OrderHistoryTableComponent,
+    SpinningLoaderComponent,
+  ],
   templateUrl: './customer-order-history.component.html',
   styleUrl: './customer-order-history.component.scss',
 })
-export class CustomerOrderHistoryComponent {}
+export class CustomerOrderHistoryComponent implements OnInit, OnDestroy {
+  customerService = inject(CustomerService);
+  orderHistory: CustomerOrder[] = [];
+  subRef = new Subject<void>();
+  priceCurrency = '';
+  isLoading = true;
+  hasLoadingError = false;
+
+  ngOnInit(): void {
+    this.getOrders();
+  }
+
+  ngOnDestroy(): void {
+    this.subRef.next();
+    this.subRef.complete();
+  }
+
+  getOrders(): void {
+    this.hasLoadingError = false;
+    this.orderHistory = [];
+    this.customerService
+      .getOrderHistory()
+      .pipe(takeUntil(this.subRef))
+      .subscribe({
+        next: response => {
+          this.isLoading = false;
+          if (response.data) {
+            this.orderHistory = response.data.orders;
+            this.priceCurrency = response.data.currency;
+          }
+        },
+        error: error => {
+          console.error('Error fetching order history:', error);
+          this.isLoading = false;
+          this.hasLoadingError = true;
+        },
+      });
+  }
+}

@@ -1,0 +1,65 @@
+<table class="order-history-table">
+  <thead class="order-history-table-header">
+    <tr class="order-history-table-header-item">
+      <th>Order ID</th>
+      <th>Items</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>
+        Total<span *ngIf="priceCurrency">&lpar;{{ priceCurrency }}&rpar;</span>
+      </th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody class="order-history-table-body">
+    @for (order of orders; track order.id; let i = $index) {
+      <tr class="order-history-table-item">
+        <td>{{ order.id }}</td>
+        <td>{{ order.totalItems }}</td>
+        <td class="order-status">
+          <span class="badge" [ngClass]="order.status">{{ order.status }}</span>
+        </td>
+        <td>{{ order.totalPrice }}</td>
+        <td>{{ order.date | date: 'YYYY-MM-dd' }}</td>
+        <td class="order-history-table-actions">
+          <div class="actions-container">
+            <button
+              type="button"
+              class="actions-menu-btn"
+              aria-label="View Actions"
+              (click)="toggleMenu(i)">
+              <span class="sr-only">View Actions</span>
+              <lucide-angular
+                name="ellipsis-vertical"
+                class="action-icon"></lucide-angular>
+            </button>
+            @if (openMenuIndex === i) {
+              <ul class="actions-menu">
+                <li class="actions-menu-item">
+                  <button type="button" class="actions-menu-item-btn">
+                    View Details
+                  </button>
+                </li>
+                <li class="actions-menu-item">
+                  <button type="button" class="actions-menu-item-btn">
+                    Reorder
+                  </button>
+                </li>
+                <li class="actions-menu-item">
+                  <button type="button" class="actions-menu-item-btn">
+                    Delete
+                  </button>
+                </li>
+                <li class="actions-menu-item">
+                  <button type="button" class="actions-menu-item-btn">
+                    Track
+                  </button>
+                </li>
+              </ul>
+            }
+          </div>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

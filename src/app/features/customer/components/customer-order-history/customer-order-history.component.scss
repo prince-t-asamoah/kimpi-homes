@@ -100,4 +100,15 @@
       }
     }
   }
+
+  .order-history-table {
+    overflow-x: auto;
+  }
+
+  .order-history-empty {
+    .empty-orders-message {
+      text-align: center;
+      color: $neutral-400;
+    }
+  }
 }

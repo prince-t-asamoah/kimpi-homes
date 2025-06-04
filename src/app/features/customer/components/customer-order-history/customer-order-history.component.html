@@ -30,3 +30,23 @@
     </div>
   </div>
 </div>
+
+@if (isLoading && !hasLoadingError && orderHistory.length === 0) {
+  <app-spinning-loader></app-spinning-loader>
+}
+
+@if (!isLoading && !hasLoadingError && orderHistory.length === 0) {
+  <div class="order-history-empty">
+    <p class="empty-orders-message">
+      No orders found. Order products to see order details here
+    </p>
+  </div>
+}
+
+@if (!isLoading && !hasLoadingError && orderHistory.length > 0) {
+  <app-order-history-table
+    class="order-history-table"
+    [orders]="orderHistory"
+    [priceCurrency]="priceCurrency">
+  </app-order-history-table>
+}

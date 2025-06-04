@@ -1,0 +1,148 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'colors' as *;
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  .order-history-table {
+    width: 43.75rem;
+    display: flex;
+    flex-direction: column;
+
+    @include for-breakpoint('tablet') {
+      width: 62.5rem;
+    }
+
+    @include for-breakpoint('desktop') {
+      width: 100%;
+    }
+
+    thead {
+      tr {
+        text-align: left;
+        display: flex;
+        width: 100%;
+
+        th {
+          padding: $space-5;
+          flex: 1 100%;
+
+          &:last-child {
+            flex: none;
+            width: 6.25rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        td {
+          padding: $space-7 $space-5;
+          flex: 1 100%;
+          text-align: left;
+          color: $neutral-500;
+
+          &:last-child {
+            flex: none;
+            width: 6.25rem;
+            text-align: right;
+          }
+
+          &.order-status {
+            .badge {
+              display: inline-block;
+              text-transform: capitalize;
+              padding: $space-2 $space-5;
+              border-radius: $space-10;
+              width: fit-content;
+              font-size: 0.875rem;
+
+              &.processing {
+                background-color: $brand-100;
+                color: $brand-500;
+              }
+
+              &.delivered {
+                background-color: $success-100;
+                color: $success-300;
+              }
+
+              &.shipping {
+                background-color: $neutral-200;
+                color: $neutral-400;
+              }
+
+              &.cancelled {
+                background-color: $warning-100;
+                color: $warning-300;
+              }
+            }
+          }
+        }
+      }
+
+      .order-history-table-actions {
+        .actions-container {
+          position: relative;
+          width: 24px;
+          height: 24px;
+          margin-left: auto;
+
+          .actions-menu-btn {
+            width: 24px;
+            height: 24px;
+            padding: $space-3;
+            color: $neutral-500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: $space-3;
+
+            &:hover {
+              background-color: $brand-100;
+            }
+
+            .actions-icon {
+              width: 1.25rem;
+              height: 1.25rem;
+            }
+          }
+
+          .actions-menu {
+            @include for-breakpoint('desktop') {
+              position: absolute;
+              right: 0;
+              width: 150px;
+              background-color: white;
+              z-index: 1;
+              border-radius: $space-3;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .actions-menu-item {
+              .actions-menu-item-btn {
+                width: 100%;
+                padding: $space-5 $space-8;
+                text-align: left;
+                color: $neutral-500;
+
+                &:hover {
+                  background-color: $brand-100;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
