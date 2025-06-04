@@ -19,7 +19,7 @@ import { Subject, takeUntil } from 'rxjs';
 export class CustomerOrderHistoryComponent implements OnInit, OnDestroy {
   customerService = inject(CustomerService);
   orderHistory: CustomerOrder[] = [];
-  subRef = new Subject<void>();
+  private _subRef$ = new Subject<void>();
   priceCurrency = '';
   isLoading = true;
   hasLoadingError = false;
@@ -29,8 +29,8 @@ export class CustomerOrderHistoryComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subRef.next();
-    this.subRef.complete();
+    this._subRef$.next();
+    this._subRef$.complete();
   }
 
   getOrders(): void {
@@ -38,7 +38,7 @@ export class CustomerOrderHistoryComponent implements OnInit, OnDestroy {
     this.orderHistory = [];
     this.customerService
       .getOrderHistory()
-      .pipe(takeUntil(this.subRef))
+      .pipe(takeUntil(this._subRef$))
       .subscribe({
         next: response => {
           this.isLoading = false;
