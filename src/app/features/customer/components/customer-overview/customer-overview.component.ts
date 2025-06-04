@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
-import { CustomerService } from '../../services/customer.service';
-import { CustomerOrder } from '../../model/overview';
 import { Subject, takeUntil } from 'rxjs';
+import { CustomerService } from '../../services/customer.service';
+import { CustomerOrder } from './../../model/customer.model';
 
 @Component({
   selector: 'app-customer-overview',
