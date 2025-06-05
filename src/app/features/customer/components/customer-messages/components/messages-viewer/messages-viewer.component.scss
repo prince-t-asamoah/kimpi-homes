@@ -1,0 +1,113 @@
+@use 'breakpoints' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'colors' as *;
+
+:host {
+  display: block;
+  flex: 1;
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  padding: $space-8;
+  padding-top: $space-16;
+  flex: 1;
+
+  @include for-breakpoint('desktop') {
+    padding: $space-8;
+  }
+
+  @include for-breakpoint('tablet') {
+    position: static;
+    inset: auto;
+  }
+
+  .close-button-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space-10;
+
+    @include for-breakpoint('tablet') {
+      display: none;
+    }
+  }
+
+  .message-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: $space-5;
+
+    .message-header-title {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex: 1;
+
+      .message-header-title-container {
+        display: flex;
+        align-items: center;
+        gap: $space-5;
+        flex: 1;
+
+        .close-message-btn {
+          color: $neutral-500;
+
+          @include for-breakpoint('tablet') {
+            display: none;
+          }
+        }
+      }
+
+      .message-title {
+        @include paragraph-large;
+        font-weight: 700;
+      }
+
+      .message-menu-btn {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $neutral-400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .message-header-info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: $space-4;
+      padding-bottom: $space-8;
+      border-bottom: 1px solid $neutral-200;
+
+      .message-header-avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: $neutral-200;
+      }
+
+      .message-header-sender {
+        display: flex;
+        flex-direction: column;
+        @include paragraph-small;
+
+        .sender-name {
+          font-weight: 700;
+        }
+
+        .sender-timestamp {
+          color: $neutral-400;
+        }
+      }
+    }
+  }
+
+  .message-content {
+    @include paragraph-large;
+    padding: $space-8;
+    color: $neutral-400;
+  }
+}

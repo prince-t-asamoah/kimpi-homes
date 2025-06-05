@@ -1,0 +1,31 @@
+<div class="message-header">
+  <div class="message-header-title">
+    <div class="message-header-title-container">
+      <button
+        type="button"
+        class="close-message-btn"
+        (click)="closeViewer.emit()">
+        <lucide-icon name="chevron-left"></lucide-icon>
+      </button>
+      <h3 class="message-title text-ellipsis">{{ message?.title }}</h3>
+    </div>
+    <button type="button" class="message-menu-btn">
+      <span class="sr-only">Open menu</span>
+      <lucide-icon
+        name="ellipsis-vertical"
+        class="message-menu-btn-icon"></lucide-icon>
+    </button>
+  </div>
+  <div class="message-header-info">
+    <div class="message-header-avatar">
+      <img [src]="message?.avatar || ''" alt="" class="message-avatar" />
+    </div>
+    <div class="message-header-sender">
+      <span class="sender-name">{{ message?.senderName }}</span>
+      <span class="sender-timestamp">{{ message?.timestamp }}</span>
+    </div>
+  </div>
+</div>
+<div class="message-content">
+  <p class="message-text">{{ message?.message }}</p>
+</div>
