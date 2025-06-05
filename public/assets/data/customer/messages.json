@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "status": "success",
+    "code": 200,
+    "message": "Messages fetched successfully"
+  },
+  "data": [
+    {
+      "type": "message",
+      "id": "1",
+      "senderName": "John Doe",
+      "timestamp": "Mar 15, 10:30 AM",
+      "title": "Order #ORD-2023-1001 Inquiry",
+      "message": "Hi, I wanted to check the status of my order. It's been a week since I placed it.",
+      "avatar": "",
+      "messageType": "order"
+    },
+    {
+      "type": "message",
+      "id": "2",
+      "senderName": "Jane Smith",
+      "timestamp": "Mar 15, 11:45 AM",
+      "title": "Issue with Payment",
+      "message": "I'm seeing a double charge on my account. Can you help?",
+      "avatar": "",
+      "messageType": "general"
+    },
+    {
+      "type": "message",
+      "id": "3",
+      "senderName": "Michael Brown",
+      "timestamp": "Mar 16, 9:00 AM",
+      "title": "Product Inquiry - #PRD-9283",
+      "message": "Is this product available in other colors?",
+      "avatar": "",
+      "messageType": "product"
+    },
+    {
+      "type": "message",
+      "id": "4",
+      "senderName": "Emily Davis",
+      "timestamp": "Mar 16, 12:15 PM",
+      "title": "Shipping Delay",
+      "message": "My shipment is delayed. Can you provide an update?",
+      "avatar": "",
+      "messageType": "order"
+    },
+    {
+      "type": "message",
+      "id": "5",
+      "senderName": "Robert Wilson",
+      "timestamp": "Mar 17, 2:30 PM",
+      "title": "Return Request for Order #ORD-2023-1045",
+      "message": "I'd like to return a product I received yesterday.",
+      "avatar": "",
+      "messageType": "order"
+    },
+    {
+      "type": "message",
+      "id": "6",
+      "senderName": "Laura Lee",
+      "timestamp": "Mar 17, 4:45 PM",
+      "title": "Account Access Issue",
+      "message": "I'm having trouble logging into my account.",
+      "avatar": "",
+      "messageType": "general"
+    },
+    {
+      "type": "message",
+      "id": "7",
+      "senderName": "Chris Evans",
+      "timestamp": "Mar 18, 8:20 AM",
+      "title": "Warranty Information",
+      "message": "Could you tell me about the warranty on item #SKU-98765?",
+      "avatar": "",
+      "messageType": "product"
+    },
+    {
+      "type": "message",
+      "id": "8",
+      "senderName": "Angela Martinez",
+      "timestamp": "Mar 18, 10:00 AM",
+      "title": "Coupon Code Not Working",
+      "message": "The coupon code 'SPRING20' isn’t applying at checkout.",
+      "avatar": "",
+      "messageType": "general"
+    },
+    {
+      "type": "message",
+      "id": "9",
+      "senderName": "David Kim",
+      "timestamp": "Mar 18, 1:10 PM",
+      "title": "Feedback on Recent Purchase",
+      "message": "The item was great, but delivery took too long.",
+      "avatar": "",
+      "messageType": "general"
+    },
+    {
+      "type": "message",
+      "id": "10",
+      "senderName": "Sophia Chen",
+      "timestamp": "Mar 19, 3:55 PM",
+      "title": "Gift Order Confirmation",
+      "message": "I ordered a gift. Can you confirm the recipient received it?",
+      "avatar": "",
+      "messageType": "order"
+    }
+  ]
+}
