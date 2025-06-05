@@ -1,0 +1,30 @@
+<app-search-input
+  placeholder="Search messages here.."
+  id="message-search"
+  name="message-search"></app-search-input>
+<ul class="messages-list">
+  @for (message of messages; track message.id) {
+    <li
+      class="messages-list-item"
+      (click)="selectMessage.emit(message)"
+      [ngClass]="message.id === selectedMessage?.id ? 'selected' : ''">
+      <div class="message-item-header">
+        <div class="message-avatar">
+          <img [src]="message.avatar || ''" alt="" />
+        </div>
+        <div class="message-header-info">
+          <div class="message-header-sender">
+            <span class="sender-name text-ellipsis">{{
+              message.senderName
+            }}</span>
+            <span class="sender-timestamp text-ellipsis">{{
+              message.timestamp
+            }}</span>
+          </div>
+          <h3 class="message-title text-ellipsis">{{ message.title }}</h3>
+        </div>
+      </div>
+      <p class="message-text">{{ message.message }}</p>
+    </li>
+  }
+</ul>
