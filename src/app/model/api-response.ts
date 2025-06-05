@@ -1,5 +1,8 @@
 export interface GetApiResponse {
-  status: string;
-  timestamp: string;
+  meta: {
+    status: string;
+    timestamp: string;
+    message?: string;
+  };
   data: unknown;
 }
