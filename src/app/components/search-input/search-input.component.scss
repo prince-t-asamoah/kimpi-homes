@@ -14,13 +14,9 @@
     border-radius: $space-3;
     padding: $space-6;
 
-    @include for-breakpoint('desktop') {
-      max-width: 480px;
-    }
-
     .search-icon {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
       color: $neutral-400;
     }
 
