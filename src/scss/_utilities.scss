@@ -7,3 +7,9 @@
   opacity: 1;
   visibility: visible !important;
 }
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
