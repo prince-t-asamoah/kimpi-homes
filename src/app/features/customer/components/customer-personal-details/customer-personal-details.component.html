@@ -3,9 +3,14 @@
     <img src="./assets/images/customer/user-profile-photo.png" alt="" />
   </div>
   <div class="profile-photo-actions">
-    <button type="button" class="change-photo-btn button-outlined">
+    <label class="change-photo-btn button-outlined">
       Change Photo
-    </button>
+      <input
+        type="file"
+        id="profile-photo-input"
+        class="profile-photo-input"
+        accept="image/*" />
+    </label>
     <button type="button" class="remove-photo-btn">Remove</button>
   </div>
 </div>
@@ -16,13 +21,15 @@
       id="fullname"
       name="fullname"
       label="Fullname"
-      placeholder="Enter your first name"></app-form-input>
+      placeholder="Enter your fullname"
+      autocomplete="name"></app-form-input>
     <app-form-input
       type="text"
       id="username"
       name="username"
       label="Username"
-      placeholder="Enter your username">
+      placeholder="Enter your username"
+      autocomplete="username">
     </app-form-input>
     <app-form-input
       type="email"
@@ -30,6 +37,7 @@
       name="email"
       label="Email"
       placeholder="Enter your email address"
+      autocomplete="email"
       [disabled]="true">
     </app-form-input>
     <app-form-input
@@ -37,14 +45,15 @@
       id="phonenumber"
       name="phonenumber"
       label="Phone Number"
-      placeholder="Phone number">
+      placeholder="Phone number"
+      autocomplete="tel-local">
       <div class="country-telephone-select" #telephoneNumberContainer>
         <button
           type="button"
           class="country-telephone-btn"
           (click)="toggleTelephoneDropdown()">
           <span class="country-telephone-info">
-            <img [ngSrc]="selectedCountryData.flag" width="20" height="20" />
+            <img [src]="selectedCountryData.flag" width="20" height="20" />
             {{ selectedCountryData.code }}
           </span>
           <lucide-angular
@@ -81,7 +90,7 @@
                   class="country-telephone-item"
                   (click)="selectCountry(country)">
                   <img
-                    [ngSrc]="country.flag"
+                    [src]="country.flag"
                     class="country-list-flag"
                     width="24"
                     height="20" />

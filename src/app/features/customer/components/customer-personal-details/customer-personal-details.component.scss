@@ -73,6 +73,14 @@
         @include for-breakpoint('tablet') {
           width: 9.313rem;
         }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .profile-photo-input {
+          display: none;
+        }
       }
 
       .remove-photo-btn {

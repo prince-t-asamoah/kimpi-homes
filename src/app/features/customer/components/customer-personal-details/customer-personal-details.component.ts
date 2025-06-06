@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { NgClass, NgOptimizedImage } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { FormInputComponent } from '../../../../components/form-input/form-input.component';
 import telephoneCountryCodes from '../../data/country-telephone-code.data';
@@ -7,7 +7,7 @@ import { CountryTelephoneData } from '../../model/personal-details.model';
 
 @Component({
   selector: 'app-customer-personal-details',
-  imports: [FormInputComponent, LucideAngularModule, NgClass, NgOptimizedImage],
+  imports: [FormInputComponent, LucideAngularModule, NgClass],
   templateUrl: './customer-personal-details.component.html',
   styleUrls: [
     './customer-personal-details.component.scss',
