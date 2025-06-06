@@ -9,28 +9,32 @@
     id="address"
     name="address"
     label="Address"
-    placeholder="Enter your address">
+    placeholder="Enter your address"
+    autocomplete="street-address">
   </app-form-input>
   <app-form-select
     type="text"
     id="state"
     name="state"
     label="State/Province/Region"
-    placeholder="Enter your state/province/region">
+    placeholder="Enter your state/province/region"
+    autocomplete="address-level1">
   </app-form-select>
   <app-form-input
     type="text"
     id="city"
     name="city"
     label="City"
-    placeholder="Enter your city">
+    placeholder="Enter your city"
+    autocomplete="address-level2">
   </app-form-input>
   <app-form-input
     type="text"
-    id="zipCode"
+    id="zip-code"
     name="zipcode"
     label="Zip Code"
-    placeholder="Enter your zip code">
+    placeholder="Enter your zip code"
+    autocomplete="postal-code">
   </app-form-input>
   <div class="default-address-checkbox">
     <app-form-checkbox
