@@ -20,4 +20,5 @@ export class FormInputComponent {
   @Input() value = '';
   @Input() name = '';
   @Input() disabled = false;
+  @Input() autocomplete!: string;
 }

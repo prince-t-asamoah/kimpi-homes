@@ -8,43 +8,37 @@
       </header>
       <form>
         <div class="form-fields">
-          <label for="fullname" class="form-field">
-            <span class="form-field-label">Full name</span>
-            <input
-              type="text"
-              id="fullname"
-              class="form-field-control"
-              placeholder="john.doe@gmail.com" />
-          </label>
-          <label for="email" class="form-field">
-            <span class="form-field-label">Email</span>
-            <input
-              type="email"
-              id="email"
-              class="form-field-control"
-              placeholder="john.doe@gmail.com" />
-          </label>
-          <label for="password" class="form-field">
-            <span class="form-field-label">Password</span>
-            <input
-              type="password"
-              id="password"
-              class="form-field-control"
-              placeholder="*********" />
-          </label>
-          <label for="confirm-password" class="form-field">
-            <span class="form-field-label">Confirm Password</span>
-            <input
-              type="password"
-              id="confirm-password"
-              class="form-field-control"
-              placeholder="*********" />
-          </label>
+          <app-form-input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="john.doe@gmail.com"
+            label="Fullname"
+            autocomplete="username"></app-form-input>
+          <app-form-input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john.doe@gmail.com"
+            label="Email"
+            autocomplete="email"></app-form-input>
+          <app-form-input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="*********"
+            label="Password"
+            autocomplete="new-password"></app-form-input>
+          <app-form-input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="*********"
+            label="Confirm Password"
+            autocomplete="new-password">
+          </app-form-input>
           <div class="terms-conditions-privacy">
-            <div class="checkbox form-field">
-              <input type="checkbox" checked class="form-field-control" />
-              <span class="checkmark"></span>
-            </div>
+            <app-form-checkbox></app-form-checkbox>
             <p class="form-info">
               I have a read and agreed to the
               <a routerLink="#" class="form-link">Terms & Conditions</a> and

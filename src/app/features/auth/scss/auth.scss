@@ -87,47 +87,6 @@
         }
       }
 
-      .form-fields {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: $space-8;
-
-        .form-field {
-          display: flex;
-          flex-direction: column;
-          gap: $space-3;
-
-          .form-field-label {
-            @include paragraph-small;
-            font-weight: bold;
-
-            @include for-breakpoint('desktop') {
-              @include paragraph-2;
-              font-weight: bold;
-            }
-          }
-
-          .form-field-control {
-            outline: 1px solid $neutral-200;
-            border-radius: $space-2;
-            padding: $space-8 $space-5;
-
-            @include for-breakpoint('desktop') {
-              @include paragraph-2;
-            }
-
-            &::placeholder {
-              color: $neutral-300;
-            }
-
-            &:focus {
-              outline: 1px solid $brand-300;
-            }
-          }
-        }
-      }
-
       .submit-btn {
         margin-top: $space-12;
         width: 100%;
