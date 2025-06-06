@@ -78,6 +78,12 @@
         margin-top: $space-10;
       }
 
+      .form-fields {
+        display: flex;
+        flex-direction: column;
+        gap: $space-8;
+      }
+
       .form-link {
         color: $brand-300;
         text-decoration: underline;
