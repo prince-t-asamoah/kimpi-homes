@@ -1,5 +1,6 @@
 @use 'spacing' as *;
 @use 'colors' as *;
+@use '../scss/auth.scss';
 
 :host {
   display: block;
