@@ -28,4 +28,7 @@ export default {
   LogOut: icons.LogOut,
   ListFilter: icons.ListFilter,
   EllipsisVertical: icons.EllipsisVertical,
+  MailOpen: icons.MailOpen,
+  Trash2: icons.Trash2,
+  Archive: icons.Archive,
 };
