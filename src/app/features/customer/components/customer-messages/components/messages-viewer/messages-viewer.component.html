@@ -9,12 +9,12 @@
       </button>
       <h3 class="message-title text-ellipsis">{{ message?.title }}</h3>
     </div>
-    <button type="button" class="message-menu-btn">
+    <app-actions-menu class="message-actions-menu" [menuItems]="messageActions">
       <span class="sr-only">Open menu</span>
       <lucide-icon
         name="ellipsis-vertical"
         class="message-menu-btn-icon"></lucide-icon>
-    </button>
+    </app-actions-menu>
   </div>
   <div class="message-header-info">
     <div class="message-header-avatar">

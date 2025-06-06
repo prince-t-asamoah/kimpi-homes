@@ -1,1 +1,24 @@
-<p>actions-menu works!</p>
+<div class="actions-menu">
+  <button type="button" (click)="openMenu()" class="actions-menu-btn">
+    <ng-content></ng-content>
+  </button>
+  <div
+    class="actions-menu-dropdown"
+    [ngClass]="hasOpenMenu ? 'active' : 'hidden'">
+    <ul class="actions-menu-list">
+      @for (item of menuItems; track item.label) {
+        <li class="actions-menu-item" (click)="selectMenuItem(item.id)">
+          @if (item.iconName) {
+            <lucide-icon
+              [name]="item.iconName"
+              class="menu-item-icon"></lucide-icon>
+          }
+          <span class="actions-menu-item-label">{{ item.label }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</div>
+@if (hasOpenMenu) {
+  <div class="modal-backdrop" (click)="closeMenu()"></div>
+}

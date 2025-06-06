@@ -1,0 +1,94 @@
+@use 'colors' as *;
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'transitions' as *;
+@use 'typography' as *;
+
+:host {
+  display: block;
+
+  .actions-menu {
+    position: relative;
+
+    .actions-menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.5rem;
+      border-radius: $space-4;
+      color: $neutral-400;
+      padding: $space-2 0;
+
+      &:hover {
+        background-color: $neutral-200;
+        @include transition-medium(background-color, color);
+      }
+    }
+
+    .actions-menu-dropdown {
+      position: fixed;
+      background-color: white;
+      border-top-left-radius: $space-8;
+      border-top-right-radius: $space-8;
+      padding: $space-8;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+
+      @include for-breakpoint('tablet') {
+        border-radius: $space-3;
+        position: absolute;
+        top: 30px;
+        left: auto;
+        bottom: auto;
+        width: fit-content;
+        height: fit-content;
+        z-index: 1;
+        padding: $space-4;
+        background-color: $neutral-100;
+      }
+
+      .actions-menu-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: $space-2;
+
+        .actions-menu-item {
+          display: flex;
+          align-items: center;
+          gap: $space-6;
+          width: 100%;
+          text-wrap: nowrap;
+          border-radius: $space-3;
+          padding: $space-4 $space-6;
+
+          &:hover {
+            background-color: $neutral-200;
+            cursor: pointer;
+            @include transition-medium(background-color, color);
+          }
+
+          .menu-item-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: $brand-400;
+          }
+
+          .actions-menu-item-label {
+            color: $neutral-400;
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-backdrop {
+    @include for-breakpoint('tablet') {
+      display: none;
+    }
+  }
+}
