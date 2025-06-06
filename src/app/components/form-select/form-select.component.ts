@@ -21,6 +21,7 @@ export class FormSelectComponent implements OnInit {
   @Input() name = '';
   @Input() disabled = false;
   @Input() options: { value: string; label: string }[] = [];
+  @Input() autocomplete!: string;
   @ViewChild('selectContainer') selectContainer!: ElementRef;
   showDropdown = false;
   selectedValue = '';

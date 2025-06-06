@@ -1,7 +1,12 @@
 <div class="form-field">
   <label [for]="id">{{ label }}</label>
   <div class="select-container" #selectContainer>
-    <input type="hidden" [id]="id" [name]="name" [value]="selectedValue" />
+    <input
+      type="hidden"
+      [id]="id"
+      [name]="name"
+      [value]="selectedValue"
+      [autocomplete]="autocomplete" />
     <button type="button" class="select" (click)="toggleDropdown()">
       {{ selectedLabel || 'No Selection' }}
       <lucide-icon name="chevron-down"></lucide-icon>
