@@ -5,9 +5,9 @@ import {
   Input,
   Output,
 } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { CustomerMenuActionItem } from '../../model/customer.model';
-import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-actions-menu',
@@ -18,6 +18,7 @@ import { NgClass } from '@angular/common';
 export class ActionsMenuComponent {
   @Input() menuItems: CustomerMenuActionItem[] = [];
   @Output() itemSelected = new EventEmitter<string>();
+  @Output() menuToggled = new EventEmitter<ActionsMenuComponent>();
   hasOpenMenu = false;
 
   @HostListener('document:click', ['$event'])
@@ -31,6 +32,7 @@ export class ActionsMenuComponent {
 
   openMenu(): void {
     this.hasOpenMenu = true;
+    this.menuToggled.emit(this);
   }
 
   closeMenu(): void {
