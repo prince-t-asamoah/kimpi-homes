@@ -1,0 +1,53 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'breakpoints' as *;
+
+:host {
+  .notifications-checkbox-container {
+    .notifications-checkbox {
+      display: flex;
+      align-items: center;
+      gap: $space-3;
+      font-weight: 700;
+    }
+
+    .notifications-checkbox-description {
+      color: $neutral-400;
+      margin-top: $space-6;
+      @include paragraph-large;
+    }
+  }
+
+  .delete-account-actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+    margin-top: $space-15;
+
+    @include for-breakpoint('tablet') {
+      margin-top: $space-18;
+    }
+
+    .delete-account-header {
+      .delete-account-title {
+        @include paragraph-large;
+        font-weight: 700;
+      }
+
+      .delete-account-description {
+        color: $neutral-400;
+        margin-top: $space-6;
+        @include paragraph-large;
+      }
+    }
+
+    .delete-account-btn {
+      width: 100%;
+
+      @include for-breakpoint('tablet') {
+        width: fit-content;
+      }
+    }
+  }
+}

@@ -16,6 +16,7 @@ import { CustomerPersonalDetailsComponent } from './features/customer/components
 import { CustomerAddressComponent } from './features/customer/components/customer-address/customer-address.component';
 import { CustomerOrderHistoryComponent } from './features/customer/components/customer-order-history/customer-order-history.component';
 import { CustomerMessagesComponent } from './features/customer/components/customer-messages/customer-messages.component';
+import { CustomerAccountSettingsComponent } from './features/customer/customer-account-settings/customer-account-settings.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -82,6 +83,11 @@ export const routes: Routes = [
         path: 'messages',
         component: CustomerMessagesComponent,
         title: 'Kimpi Homes | Customer Messages',
+      },
+      {
+        path: 'account-settings',
+        component: CustomerAccountSettingsComponent,
+        title: 'Kimpi Homes | Customer Account Settings',
       },
     ],
   },

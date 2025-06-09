@@ -1,1 +1,51 @@
-<p>customer-account-settings works!</p>
+<form class="account-settings-form customer-form">
+  <app-form-input
+    id="current-password"
+    label="Current Password"
+    name="current-password"
+    type="password"
+    placeholder="Enter your current password"
+    autocomplete="current-password">
+  </app-form-input>
+  <app-form-input
+    id="new-password"
+    label="New Password"
+    name="new-password"
+    type="password"
+    placeholder="Enter your new password"
+    autocomplete="current-password">
+  </app-form-input>
+  <app-form-input
+    id="confirm-password"
+    label="Confirm Password"
+    name="confirm-password"
+    type="password"
+    placeholder="Enter your new password"
+    autocomplete="current-password">
+  </app-form-input>
+  <div class="notifications-checkbox-container">
+    <label class="notifications-checkbox">
+      <app-form-checkbox
+        id="notifications"
+        name="notifications"></app-form-checkbox>
+      Notifications
+    </label>
+    <p class="notifications-checkbox-description">
+      Receive newsletters, promotions and news from KimpiHomes
+    </p>
+  </div>
+  <button type="submit" class="button-filled save-changes-btn">
+    Save Changes
+  </button>
+</form>
+<div class="delete-account-actions">
+  <div class="delete-account-header">
+    <h3 class="delete-account-title">Delete Account</h3>
+    <p class="delete-account-description">
+      Permanently remove your account and all associated data
+    </p>
+  </div>
+  <button type="button" class="button-warning-filled delete-account-btn">
+    Delete Account
+  </button>
+</div>
