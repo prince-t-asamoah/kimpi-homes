@@ -9,6 +9,10 @@
     display: flex;
     padding: $space-18 $space-9;
 
+    @include for-breakpoint('desktop') {
+      gap: $space-14;
+    }
+
     @include for-breakpoint('tablet') {
       padding: $space-18 $space-14;
     }
