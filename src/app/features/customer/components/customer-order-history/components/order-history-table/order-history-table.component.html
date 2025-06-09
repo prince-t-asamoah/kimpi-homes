@@ -4,15 +4,15 @@
       <th>Order ID</th>
       <th>Items</th>
       <th>Status</th>
-      <th>Date</th>
       <th>
-        Total<span *ngIf="priceCurrency">&lpar;{{ priceCurrency }}&rpar;</span>
+        Total <span *ngIf="priceCurrency">&lpar;{{ priceCurrency }}&rpar;</span>
       </th>
+      <th>Date</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody class="order-history-table-body">
-    @for (order of orders; track order.id; let i = $index) {
+    @for (order of orders; track order.id) {
       <tr class="order-history-table-item">
         <td>{{ order.id }}</td>
         <td>{{ order.totalItems }}</td>
@@ -22,42 +22,14 @@
         <td>{{ order.totalPrice }}</td>
         <td>{{ order.date | date: 'YYYY-MM-dd' }}</td>
         <td class="order-history-table-actions">
-          <div class="actions-container">
-            <button
-              type="button"
-              class="actions-menu-btn"
-              aria-label="View Actions"
-              (click)="toggleMenu(i)">
-              <span class="sr-only">View Actions</span>
-              <lucide-angular
-                name="ellipsis-vertical"
-                class="action-icon"></lucide-angular>
-            </button>
-            @if (openMenuIndex === i) {
-              <ul class="actions-menu">
-                <li class="actions-menu-item">
-                  <button type="button" class="actions-menu-item-btn">
-                    View Details
-                  </button>
-                </li>
-                <li class="actions-menu-item">
-                  <button type="button" class="actions-menu-item-btn">
-                    Reorder
-                  </button>
-                </li>
-                <li class="actions-menu-item">
-                  <button type="button" class="actions-menu-item-btn">
-                    Delete
-                  </button>
-                </li>
-                <li class="actions-menu-item">
-                  <button type="button" class="actions-menu-item-btn">
-                    Track
-                  </button>
-                </li>
-              </ul>
-            }
-          </div>
+          <app-actions-menu
+            [menuItems]="orderActionsMenuItems"
+            (menuToggled)="closeAllMenusExceptOpened($event)">
+            <lucide-angular
+              name="ellipsis-vertical"
+              class="action-icon"></lucide-angular>
+            <span class="sr-only">View Actions</span>
+          </app-actions-menu>
         </td>
       </tr>
     }
