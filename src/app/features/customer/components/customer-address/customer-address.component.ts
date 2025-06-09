@@ -9,8 +9,8 @@ import countries from '../../data/country-telephone-code.data';
   imports: [FormSelectComponent, FormInputComponent, FormCheckboxComponent],
   templateUrl: './customer-address.component.html',
   styleUrls: [
+    '../../scss/customer-shared.scss',
     './customer-address.component.scss',
-    '../../scss/customer-form.scss',
   ],
 })
 export class CustomerAddressComponent {

@@ -10,8 +10,8 @@ import { CountryTelephoneData } from '../../model/personal-details.model';
   imports: [FormInputComponent, LucideAngularModule, NgClass],
   templateUrl: './customer-personal-details.component.html',
   styleUrls: [
+    '../../scss/customer-shared.scss',
     './customer-personal-details.component.scss',
-    '../../scss/customer-form.scss',
   ],
 })
 export class CustomerPersonalDetailsComponent {
