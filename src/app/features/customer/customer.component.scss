@@ -10,7 +10,7 @@
     padding: $space-18 $space-9;
 
     @include for-breakpoint('desktop') {
-      gap: $space-14;
+      gap: $space-22;
     }
 
     @include for-breakpoint('tablet') {
