@@ -1,32 +1,3 @@
-<div class="order-history-header">
-  <div class="order-history-header-title">
-    <h2 class="order-history-title">Order History</h2>
-    <button type="button" class="delete-all-orders-btn button-filled">
-      Delete all orders
-    </button>
-  </div>
-  <div class="order-history-header-actions">
-    <app-search-input
-      class="search-order-input"
-      [placeholder]="'Search by order ID or date'">
-    </app-search-input>
-    <div class="header-action-buttons">
-      <button type="button" class="sort-btn button-default">
-        Sort
-        <lucide-angular
-          name="sliders-horizontal"
-          class="actions-icon"></lucide-angular>
-      </button>
-      <button type="button" class="filter-btn button-default">
-        Filter
-        <lucide-angular
-          name="list-filter"
-          class="actions-icon"></lucide-angular>
-      </button>
-    </div>
-  </div>
-</div>
-
 @if (isLoading && !hasLoadingError && orderHistory.length === 0) {
   <app-spinning-loader></app-spinning-loader>
 }
@@ -40,6 +11,34 @@
 }
 
 @if (!isLoading && !hasLoadingError && orderHistory.length > 0) {
+  <div class="order-history-header">
+    <div class="order-history-header-title">
+      <h2 class="order-history-title">Order History</h2>
+      <button type="button" class="delete-all-orders-btn button-filled">
+        Delete all orders
+      </button>
+    </div>
+    <div class="order-history-header-actions">
+      <app-search-input
+        class="search-order-input"
+        [placeholder]="'Search by order ID or date'">
+      </app-search-input>
+      <div class="header-action-buttons">
+        <button type="button" class="sort-btn button-default">
+          Sort
+          <lucide-angular
+            name="sliders-horizontal"
+            class="actions-icon"></lucide-angular>
+        </button>
+        <button type="button" class="filter-btn button-default">
+          Filter
+          <lucide-angular
+            name="list-filter"
+            class="actions-icon"></lucide-angular>
+        </button>
+      </div>
+    </div>
+  </div>
   <app-order-history-table
     class="order-history-table"
     [orders]="orderHistory"
