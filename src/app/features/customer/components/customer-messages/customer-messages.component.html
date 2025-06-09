@@ -4,16 +4,18 @@
   <app-loading-error
     message="Error loading messages. Reload page to try again."></app-loading-error>
 } @else {
-  <app-messages-list
-    [messages]="messages"
-    [isLoading]="false"
-    [hasLoadingError]="false"
-    (selectMessage)="selectMessage($event)"
-    [selectedMessage]="selectedMessage"></app-messages-list>
-  @if (selectedMessage) {
-    <app-messages-viewer
-      [message]="selectedMessage"
-      (closeViewer)="closeMessageViewer()">
-    </app-messages-viewer>
-  }
+  <div class="messages-main-container">
+    <app-messages-list
+      [messages]="messages"
+      [isLoading]="false"
+      [hasLoadingError]="false"
+      (selectMessage)="selectMessage($event)"
+      [selectedMessage]="selectedMessage"></app-messages-list>
+    @if (selectedMessage) {
+      <app-messages-viewer
+        [message]="selectedMessage"
+        (closeViewer)="closeMessageViewer()">
+      </app-messages-viewer>
+    }
+  </div>
 }

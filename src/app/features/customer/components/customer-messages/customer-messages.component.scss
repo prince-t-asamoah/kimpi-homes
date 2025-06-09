@@ -1,3 +1,7 @@
+@use 'spacing' as *;
+
 :host {
-  display: flex;
+  .messages-main-container {
+    display: flex;
+  }
 }
