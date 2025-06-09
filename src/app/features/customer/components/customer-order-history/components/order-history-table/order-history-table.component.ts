@@ -1,29 +1,35 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, Input, QueryList, ViewChildren } from '@angular/core';
 import { DatePipe, NgClass, NgIf } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
-import { CustomerOrder } from '../../../../model/customer.model';
+import {
+  CustomerMenuActionItem,
+  CustomerOrder,
+} from '../../../../model/customer.model';
+import { ActionsMenuComponent } from '../../../actions-menu/actions-menu.component';
 
 @Component({
   selector: 'app-order-history-table',
-  imports: [LucideAngularModule, NgClass, NgIf, DatePipe],
+  imports: [LucideAngularModule, NgClass, NgIf, DatePipe, ActionsMenuComponent],
   templateUrl: './order-history-table.component.html',
   styleUrl: './order-history-table.component.scss',
 })
 export class OrderHistoryTableComponent {
-  openMenuIndex: number | null = null;
   @Input() orders: CustomerOrder[] = [];
   @Input() priceCurrency = '';
+  @ViewChildren(ActionsMenuComponent)
+  actionsMenus!: QueryList<ActionsMenuComponent>;
 
-  @HostListener('document:click', ['$event'])
-  handleOutsideClick(event: MouseEvent): void {
-    // Check if the click is outside the menu
-    const target = event.target as HTMLElement;
-    if (!target.closest('.order-history-table-actions')) {
-      this.openMenuIndex = null;
-    }
-  }
+  orderActionsMenuItems: CustomerMenuActionItem[] = [
+    { id: 'view', label: 'View Order', iconName: 'eye' },
+    { id: 'reorder', label: 'Reorder', iconName: 'repeat' },
+    { id: 'cancel', label: 'Cancel Order', iconName: 'circle-x' },
+  ];
 
-  toggleMenu(index: number): void {
-    this.openMenuIndex = this.openMenuIndex === index ? null : index;
+  closeAllMenusExceptOpened(openedMenu: ActionsMenuComponent): void {
+    this.actionsMenus.forEach(menu => {
+      if (menu !== openedMenu) {
+        menu.closeMenu();
+      }
+    });
   }
 }
