@@ -15,3 +15,5 @@ export interface CustomerOrderHistoryData {
   };
   currency: string;
 }
+
+export type CustomerOrderActions = 'view' | 'reorder' | 'cancel';
