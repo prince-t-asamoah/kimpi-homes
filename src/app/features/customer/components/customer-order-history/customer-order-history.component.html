@@ -12,12 +12,6 @@
 
 @if (!isLoading && !hasLoadingError && orderHistory.length > 0) {
   <div class="order-history-header">
-    <div class="order-history-header-title">
-      <h2 class="order-history-title">Order History</h2>
-      <button type="button" class="delete-all-orders-btn button-filled">
-        Delete all orders
-      </button>
-    </div>
     <div class="order-history-header-actions">
       <app-search-input
         class="search-order-input"
@@ -25,16 +19,24 @@
       </app-search-input>
       <div class="header-action-buttons">
         <button type="button" class="sort-btn button-default">
-          Sort
+          <span class="header-action-btn-text">Sort</span>
+          <span class="sr-only">Sort</span>
           <lucide-angular
             name="sliders-horizontal"
             class="actions-icon"></lucide-angular>
         </button>
         <button type="button" class="filter-btn button-default">
-          Filter
+          <span class="header-action-btn-text">Filter</span>
+          <span class="sr-only">Filter</span>
+
           <lucide-angular
             name="list-filter"
             class="actions-icon"></lucide-angular>
+        </button>
+        <button type="button" class="delete-all-orders-btn button-default">
+          <span class="header-action-btn-text">Delete all</span>
+          <lucide-angular name="trash-2" class="actions-icon"></lucide-angular>
+          <span class="sr-only">Delete all</span>
         </button>
       </div>
     </div>
