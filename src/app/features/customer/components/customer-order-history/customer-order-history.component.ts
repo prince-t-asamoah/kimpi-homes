@@ -1,11 +1,11 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
+import { Subject, takeUntil } from 'rxjs';
 import { OrderHistoryTableComponent } from './components/order-history-table/order-history-table.component';
 import { SpinningLoaderComponent } from '../../../../components/spinning-loader/spinning-loader.component';
 import { CustomerService } from '../../services/customer.service';
-import { CustomerOrder } from '../../model/customer.model';
-import { Subject, takeUntil } from 'rxjs';
 import { SearchInputComponent } from '../../../../components/search-input/search-input.component';
+import { CustomerOrder } from '../../model/customer.model';
 
 @Component({
   selector: 'app-customer-order-history',
