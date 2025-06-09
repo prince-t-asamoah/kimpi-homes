@@ -5,11 +5,10 @@
 .customer-form {
   display: flex;
   flex-direction: column;
-  gap: $space-10;
+  gap: $space-11;
 
   @include for-breakpoint('tablet') {
-    max-width: 34.938rem; //559px;
-    margin: 0 auto;
+    max-width: 50rem; //800px
   }
 }
 
