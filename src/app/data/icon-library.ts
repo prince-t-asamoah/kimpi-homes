@@ -31,4 +31,7 @@ export default {
   MailOpen: icons.MailOpen,
   Trash2: icons.Trash2,
   Archive: icons.Archive,
+  Eye: icons.Eye,
+  CircleX: icons.CircleX,
+  Repeat: icons.Repeat,
 };
