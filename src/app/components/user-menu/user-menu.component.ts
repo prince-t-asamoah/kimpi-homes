@@ -1,7 +1,14 @@
 import { NgClass } from '@angular/common';
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  inject,
+  ViewChild,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
+import { UiService } from '../../services/ui/ui.service';
 
 @Component({
   selector: 'app-user-menu',
@@ -10,6 +17,7 @@ import { LucideAngularModule } from 'lucide-angular';
   styleUrl: './user-menu.component.scss',
 })
 export class UserMenuComponent {
+  private _uiService = inject(UiService);
   showUserMenu = false;
   @ViewChild('userMenuContainer') userMenu!: ElementRef;
 
@@ -22,5 +30,10 @@ export class UserMenuComponent {
 
   toggleUserMenu(): void {
     this.showUserMenu = !this.showUserMenu;
+  }
+
+  toggleLogoutDialog(): void {
+    this.toggleUserMenu();
+    this._uiService.toggleLogoutDialog();
   }
 }
