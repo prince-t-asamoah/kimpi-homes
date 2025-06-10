@@ -45,7 +45,7 @@
         <a routerLink="#" routerLinkActive="active">News</a>
       </li>
       <li class="link login">
-        <a routerLink="#" class="button-filled">Login</a>
+        <a routerLink="#" class="button-brand-filled">Login</a>
       </li>
     </ul>
   </nav>
@@ -61,7 +61,7 @@
     @if (isAuthenticated) {
       <app-user-menu></app-user-menu>
     } @else {
-      <a routerLink="/login" class="login-link button-filled">Login</a>
+      <a routerLink="/login" class="login-link button-brand-filled">Login</a>
     }
     <button class="menu-btn" (click)="toggleMainNavigation()" aria-label="Menu">
       <div [ngClass]="showMainNavigation ? 'bar1 active' : 'bar1'"></div>
