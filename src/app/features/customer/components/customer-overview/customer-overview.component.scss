@@ -6,44 +6,15 @@
 :host {
   display: block;
 
-  .overview-header {
-    text-align: center;
-    padding: $space-9;
-    display: flex;
-    flex-direction: column;
-    gap: $space-5;
-
-    @include for-breakpoint('tablet') {
-      padding: $space-15 $space-20;
-    }
-
-    .overview-header-title {
-      @include heading-5;
-
-      @include for-breakpoint('desktop') {
-        @include heading-4;
-      }
-    }
-
-    .overview-header-description {
-      color: $neutral-400;
-
-      @include paragraph-2;
-
-      @include for-breakpoint('desktop') {
-        @include paragraph-large;
-      }
-    }
+  .overview-welcome {
+    @include paragraph-large;
+    font-weight: 600;
+    color: $neutral-700;
+    margin-bottom: $space-12;
   }
 
   .overview-main-content {
     max-width: 54.125rem;
-    margin: 0 auto;
-    margin-top: $space-15;
-
-    @include for-breakpoint('tablet') {
-      margin-top: $space-18;
-    }
 
     .overview-stats {
       display: grid;
@@ -84,13 +55,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             border-radius: $space-3;
 
             svg {
-              width: 18px;
-              height: 18px;
+              width: 1.125rem;
+              height: 1.125rem;
             }
           }
         }

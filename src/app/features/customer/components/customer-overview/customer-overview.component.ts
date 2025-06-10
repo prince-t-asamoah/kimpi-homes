@@ -10,7 +10,10 @@ import { CustomerOrder } from './../../model/customer.model';
   selector: 'app-customer-overview',
   imports: [RouterLink, LucideAngularModule, DatePipe],
   templateUrl: './customer-overview.component.html',
-  styleUrl: './customer-overview.component.scss',
+  styleUrls: [
+    '../../scss/customer-shared.scss',
+    './customer-overview.component.scss',
+  ],
 })
 export class CustomerOverviewComponent implements OnInit, OnDestroy {
   private _destroy$ = new Subject<void>();
