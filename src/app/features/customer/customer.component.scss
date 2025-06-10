@@ -77,6 +77,12 @@
 
     main {
       width: 100%;
+      padding: $space-5;
+      position: relative;
+
+      @include for-breakpoint('tablet') {
+        padding: 0;
+      }
     }
   }
 }
