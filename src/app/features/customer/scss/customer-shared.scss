@@ -19,3 +19,16 @@
     width: fit-content;
   }
 }
+
+.customer-page-title {
+  @include heading-6;
+  margin-bottom: $space-16;
+
+  @include for-breakpoint('tablet') {
+    margin-bottom: $space-15;
+  }
+
+  @include for-breakpoint('desktop') {
+    margin-bottom: $space-18;
+  }
+}
