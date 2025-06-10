@@ -9,13 +9,7 @@
   position: absolute;
   inset: 0;
   background-color: white;
-  padding: $space-8;
-  padding-top: $space-16;
   flex: 1;
-
-  @include for-breakpoint('desktop') {
-    padding: $space-8;
-  }
 
   @include for-breakpoint('tablet') {
     position: static;
