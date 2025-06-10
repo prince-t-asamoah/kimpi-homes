@@ -45,7 +45,16 @@
       Permanently remove your account and all associated data
     </p>
   </div>
-  <button type="button" class="button-warning-filled delete-account-btn">
+  <button
+    type="button"
+    class="button-warning-filled delete-account-btn"
+    (click)="toggleDeleteAccountDialog()">
     Delete Account
   </button>
 </div>
+@if (isDeleteAccountDialogOpen) {
+  <app-delete-account-dialog
+    class="delete-account-dialog"
+    (closeDialog)="toggleDeleteAccountDialog()">
+  </app-delete-account-dialog>
+}
