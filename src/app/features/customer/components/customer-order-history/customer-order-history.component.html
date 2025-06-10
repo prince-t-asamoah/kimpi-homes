@@ -1,7 +1,6 @@
 @if (isLoading && !hasLoadingError && orderHistory.length === 0) {
   <app-spinning-loader></app-spinning-loader>
 }
-
 @if (!isLoading && !hasLoadingError && orderHistory.length === 0) {
   <div class="order-history-empty">
     <p class="empty-orders-message">
@@ -9,41 +8,45 @@
     </p>
   </div>
 }
-
 @if (!isLoading && !hasLoadingError && orderHistory.length > 0) {
-  <div class="order-history-header">
-    <div class="order-history-header-actions">
-      <app-search-input
-        class="search-order-input"
-        [placeholder]="'Search by order ID or date'">
-      </app-search-input>
-      <div class="header-action-buttons">
-        <button type="button" class="sort-btn button-default">
-          <span class="header-action-btn-text">Sort</span>
-          <span class="sr-only">Sort</span>
-          <lucide-angular
-            name="sliders-horizontal"
-            class="actions-icon"></lucide-angular>
-        </button>
-        <button type="button" class="filter-btn button-default">
-          <span class="header-action-btn-text">Filter</span>
-          <span class="sr-only">Filter</span>
+  <h2 class="customer-page-title">Order History</h2>
+  <div class="order-history-main-content">
+    <div class="order-history-header">
+      <div class="order-history-header-actions">
+        <app-search-input
+          class="search-order-input"
+          [placeholder]="'Search by order ID or date'">
+        </app-search-input>
+        <div class="header-action-buttons">
+          <button type="button" class="sort-btn button-default">
+            <span class="header-action-btn-text">Sort</span>
+            <span class="sr-only">Sort</span>
+            <lucide-angular
+              name="sliders-horizontal"
+              class="actions-icon"></lucide-angular>
+          </button>
+          <button type="button" class="filter-btn button-default">
+            <span class="header-action-btn-text">Filter</span>
+            <span class="sr-only">Filter</span>
 
-          <lucide-angular
-            name="list-filter"
-            class="actions-icon"></lucide-angular>
-        </button>
-        <button type="button" class="delete-all-orders-btn button-default">
-          <span class="header-action-btn-text">Delete all</span>
-          <lucide-angular name="trash-2" class="actions-icon"></lucide-angular>
-          <span class="sr-only">Delete all</span>
-        </button>
+            <lucide-angular
+              name="list-filter"
+              class="actions-icon"></lucide-angular>
+          </button>
+          <button type="button" class="delete-all-orders-btn button-default">
+            <span class="header-action-btn-text">Delete all</span>
+            <lucide-angular
+              name="trash-2"
+              class="actions-icon"></lucide-angular>
+            <span class="sr-only">Delete all</span>
+          </button>
+        </div>
       </div>
     </div>
+    <app-order-history-table
+      class="order-history-table"
+      [orders]="orderHistory"
+      [priceCurrency]="priceCurrency">
+    </app-order-history-table>
   </div>
-  <app-order-history-table
-    class="order-history-table"
-    [orders]="orderHistory"
-    [priceCurrency]="priceCurrency">
-  </app-order-history-table>
 }

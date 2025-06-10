@@ -1,114 +1,121 @@
-<div class="customer-profile-photo">
-  <div class="profile-photo">
-    <img src="./assets/images/customer/user-profile-photo.png" alt="" />
+<h2 class="customer-page-title">Personal Details</h2>
+<div class="customer-personal-details-main-content">
+  <div class="customer-profile-photo">
+    <div class="profile-photo">
+      <img src="./assets/images/customer/user-profile-photo.png" alt="" />
+    </div>
+    <div class="profile-photo-actions">
+      <label class="change-photo-btn button-outlined">
+        Change Photo
+        <input
+          type="file"
+          id="profile-photo-input"
+          class="profile-photo-input"
+          accept="image/*" />
+      </label>
+      <button type="button" class="remove-photo-btn button-default">
+        Remove
+      </button>
+    </div>
   </div>
-  <div class="profile-photo-actions">
-    <label class="change-photo-btn button-outlined">
-      Change Photo
-      <input
-        type="file"
-        id="profile-photo-input"
-        class="profile-photo-input"
-        accept="image/*" />
-    </label>
-    <button type="button" class="remove-photo-btn">Remove</button>
-  </div>
-</div>
-<div class="customer-profile-form">
-  <form class="profile-form customer-form">
-    <app-form-input
-      type="text"
-      id="fullname"
-      name="fullname"
-      label="Fullname"
-      placeholder="Enter your fullname"
-      autocomplete="name"></app-form-input>
-    <app-form-input
-      type="text"
-      id="username"
-      name="username"
-      label="Username"
-      placeholder="Enter your username"
-      autocomplete="username">
-    </app-form-input>
-    <app-form-input
-      type="email"
-      id="email"
-      name="email"
-      label="Email"
-      placeholder="Enter your email address"
-      autocomplete="email"
-      [disabled]="true">
-    </app-form-input>
-    <app-form-input
-      type="telephone"
-      id="phonenumber"
-      name="phonenumber"
-      label="Phone Number"
-      placeholder="Phone number"
-      autocomplete="tel-local">
-      <div class="country-telephone-select" #telephoneNumberContainer>
-        <button
-          type="button"
-          class="country-telephone-btn"
-          (click)="toggleTelephoneDropdown()">
-          <span class="country-telephone-info">
-            <img [src]="selectedCountryData.flag" width="20" height="20" />
-            {{ selectedCountryData.code }}
-          </span>
-          <lucide-angular
-            name="chevron-down"
-            class="country-telephone-icon"></lucide-angular>
-        </button>
-        <div
-          class="country-telephone-dropdown"
-          [ngClass]="showTelephoneDropdown ? 'active' : 'hidden'">
-          <div class="country-telephone-header">
-            <button
-              type="button"
-              class="close-dropdown-btn"
-              (click)="toggleTelephoneDropdown()">
-              <lucide-angular
-                name="chevron-left"
-                class="close-icon"></lucide-angular>
-            </button>
-            <h3 class="country-telephone-title">Select Country Code</h3>
-          </div>
-          <div class="country-telephone-content">
-            <div class="country-telephone-search">
-              <lucide-angular
-                name="search"
-                class="country-telephone-search-icon"></lucide-angular>
-              <input
-                type="text"
-                class="country-telephone-search-input"
-                placeholder="Search code by country name" />
+  <div class="customer-profile-form">
+    <form class="profile-form customer-form">
+      <app-form-input
+        type="text"
+        id="fullname"
+        name="fullname"
+        label="Fullname"
+        placeholder="Enter your fullname"
+        autocomplete="name"></app-form-input>
+      <app-form-input
+        type="text"
+        id="username"
+        name="username"
+        label="Username"
+        placeholder="Enter your username"
+        autocomplete="username">
+      </app-form-input>
+      <app-form-input
+        type="email"
+        id="email"
+        name="email"
+        label="Email"
+        placeholder="Enter your email address"
+        autocomplete="email"
+        [disabled]="true">
+      </app-form-input>
+      <app-form-input
+        type="telephone"
+        id="phonenumber"
+        name="phonenumber"
+        label="Phone Number"
+        placeholder="Phone number"
+        autocomplete="tel-local">
+        <div class="country-telephone-select" #telephoneNumberContainer>
+          <button
+            type="button"
+            class="country-telephone-btn"
+            (click)="toggleTelephoneDropdown()">
+            <span class="country-telephone-info">
+              <img [src]="selectedCountryData.flag" width="20" height="20" />
+              {{ selectedCountryData.code }}
+            </span>
+            <lucide-angular
+              name="chevron-down"
+              class="country-telephone-icon"></lucide-angular>
+          </button>
+          <div
+            class="country-telephone-dropdown"
+            [ngClass]="showTelephoneDropdown ? 'active' : 'hidden'">
+            <div class="country-telephone-header">
+              <button
+                type="button"
+                class="close-dropdown-btn"
+                (click)="toggleTelephoneDropdown()">
+                <lucide-angular
+                  name="chevron-left"
+                  class="close-icon"></lucide-angular>
+              </button>
+              <h3 class="country-telephone-title">Select Country Code</h3>
             </div>
-            <ul class="country-telephone-list">
-              @for (country of countryCodes; track country.id) {
-                <li
-                  class="country-telephone-item"
-                  (click)="selectCountry(country)">
-                  <img
-                    [src]="country.flag"
-                    class="country-list-flag"
-                    width="24"
-                    height="20" />
-                  <span class="country-item-info">
-                    <span class="country-item-name">{{ country.country }}</span>
-                    <span class="country-item-code"
-                      >&lpar;{{ country.code }}&rpar;</span
-                    >
-                  </span>
-                </li>
-              }
-            </ul>
+            <div class="country-telephone-content">
+              <div class="country-telephone-search">
+                <lucide-angular
+                  name="search"
+                  class="country-telephone-search-icon"></lucide-angular>
+                <input
+                  type="text"
+                  class="country-telephone-search-input"
+                  placeholder="Search code by country name" />
+              </div>
+              <ul class="country-telephone-list">
+                @for (country of countryCodes; track country.id) {
+                  <li
+                    class="country-telephone-item"
+                    (click)="selectCountry(country)">
+                    <img
+                      [src]="country.flag"
+                      class="country-list-flag"
+                      width="24"
+                      height="20" />
+                    <span class="country-item-info">
+                      <span class="country-item-name">{{
+                        country.country
+                      }}</span>
+                      <span class="country-item-code"
+                        >&lpar;{{ country.code }}&rpar;</span
+                      >
+                    </span>
+                  </li>
+                }
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </app-form-input>
-    <button type="submit" class="save-changes-btn button-filled">
-      Save Changes
-    </button>
-  </form>
+      </app-form-input>
+      <button type="submit" class="save-changes-btn button-filled">
+        Save Changes
+      </button>
+    </form>
+  </div>
 </div>

@@ -4,117 +4,113 @@
 @use 'typography' as *;
 
 :host {
-  display: flex;
-  flex-direction: column;
-  gap: $space-12;
-  height: 100%;
-
-  @include for-breakpoint('tablet') {
-    gap: $space-16;
-    padding: $space-10;
-  }
-
-  .order-history-header {
+  .order-history-main-content {
     display: flex;
     flex-direction: column;
-    gap: $space-6;
+    gap: $space-14;
 
-    @include for-breakpoint('tablet') {
-      justify-content: space-between;
-      align-items: center;
-      gap: $space-8;
-    }
-
-    .order-history-header-title {
+    .order-history-header {
       display: flex;
       flex-direction: column;
-      gap: $space-8;
-      width: 100%;
+      gap: $space-6;
 
       @include for-breakpoint('tablet') {
-        flex-direction: row;
-        align-items: center;
         justify-content: space-between;
-        gap: $space-4;
-      }
-
-      .order-history-title {
-        @include paragraph-large;
-        font-weight: 700;
-      }
-    }
-
-    .order-history-header-actions {
-      display: flex;
-      flex-direction: column;
-      gap: $space-4;
-      width: 100%;
-
-      @include for-breakpoint('tablet') {
-        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        gap: $space-8;
       }
 
-      .search-order-input {
+      .order-history-header-title {
+        display: flex;
+        flex-direction: column;
+        gap: $space-8;
         width: 100%;
 
-        @include for-breakpoint('desktop') {
-          max-width: 480px;
+        @include for-breakpoint('tablet') {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: $space-4;
+        }
+
+        .order-history-title {
+          @include paragraph-large;
+          font-weight: 700;
         }
       }
 
-      .header-action-buttons {
+      .order-history-header-actions {
         display: flex;
-        gap: $space-6;
-        height: 100%;
+        flex-direction: column;
+        gap: $space-4;
+        width: 100%;
 
-        .sort-btn,
-        .filter-btn,
-        .delete-all-orders-btn {
-          padding: $space-5 $space-8;
+        @include for-breakpoint('tablet') {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .search-order-input {
           width: 100%;
 
-          .actions-icon {
-            width: 1.25rem;
-            height: 1.25rem;
-            color: $neutral-500;
+          @include for-breakpoint('desktop') {
+            max-width: 480px;
           }
         }
 
-        .header-action-btn-text {
-          display: none;
+        .header-action-buttons {
+          display: flex;
+          gap: $space-6;
+          height: 100%;
 
-          @include for-breakpoint('tablet') {
-            display: inline;
+          .sort-btn,
+          .filter-btn,
+          .delete-all-orders-btn {
+            padding: $space-5 $space-8;
+            width: 100%;
+
+            .actions-icon {
+              width: 1.25rem;
+              height: 1.25rem;
+              color: $neutral-500;
+            }
           }
-        }
 
-        .delete-all-orders-btn {
-          background-color: $warning-200;
-          color: white;
-          border: 1px solid $warning-200;
+          .header-action-btn-text {
+            display: none;
 
-          .actions-icon {
+            @include for-breakpoint('tablet') {
+              display: inline;
+            }
+          }
+
+          .delete-all-orders-btn {
+            background-color: $warning-200;
             color: white;
-          }
+            border: 1px solid $warning-200;
 
-          &:hover {
-            background-color: $warning-300;
+            .actions-icon {
+              color: white;
+            }
+
+            &:hover {
+              background-color: $warning-300;
+            }
           }
         }
       }
     }
-  }
 
-  .order-history-table {
-    overflow-x: auto;
-  }
+    .order-history-table {
+      overflow-x: auto;
+    }
 
-  .order-history-empty {
-    .empty-orders-message {
-      text-align: center;
-      color: $neutral-400;
+    .order-history-empty {
+      .empty-orders-message {
+        text-align: center;
+        color: $neutral-400;
+      }
     }
   }
 }

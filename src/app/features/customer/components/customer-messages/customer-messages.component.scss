@@ -1,7 +1,12 @@
 @use 'spacing' as *;
+@use 'breakpoints' as *;
 
 :host {
-  .messages-main-container {
+  .messages-main-content {
     display: flex;
+
+    @include for-breakpoint('tablet') {
+      gap: $space-13;
+    }
   }
 }

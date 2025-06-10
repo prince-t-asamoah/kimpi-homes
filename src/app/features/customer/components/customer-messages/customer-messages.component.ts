@@ -15,7 +15,10 @@ import { LoadingErrorComponent } from '../../../../components/loading-error/load
     LoadingErrorComponent,
   ],
   templateUrl: './customer-messages.component.html',
-  styleUrl: './customer-messages.component.scss',
+  styleUrls: [
+    '../../scss/customer-shared.scss',
+    './customer-messages.component.scss',
+  ],
 })
 export class CustomerMessagesComponent implements OnInit {
   private _customerService = inject(CustomerService);

@@ -16,7 +16,10 @@ import { CustomerOrder } from '../../model/customer.model';
     SearchInputComponent,
   ],
   templateUrl: './customer-order-history.component.html',
-  styleUrl: './customer-order-history.component.scss',
+  styleUrls: [
+    '../../scss/customer-shared.scss',
+    './customer-order-history.component.scss',
+  ],
 })
 export class CustomerOrderHistoryComponent implements OnInit, OnDestroy {
   customerService = inject(CustomerService);

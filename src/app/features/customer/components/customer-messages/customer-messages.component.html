@@ -2,9 +2,11 @@
   <app-spinning-loader></app-spinning-loader>
 } @else if (hasLoadingError) {
   <app-loading-error
-    message="Error loading messages. Reload page to try again."></app-loading-error>
+    message="Error loading messages. Reload page to try again.">
+  </app-loading-error>
 } @else {
-  <div class="messages-main-container">
+  <h2 class="customer-page-title">Messages</h2>
+  <div class="messages-main-content">
     <app-messages-list
       [messages]="messages"
       [isLoading]="false"
