@@ -83,7 +83,7 @@ p,
   @include paragraph-small;
 }
 
-// App Page Components
+// App Components
 app-root,
 app-home,
 app-shop,
@@ -96,6 +96,12 @@ app-create-account {
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+lucide-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 //Utilities Classes
@@ -137,7 +143,7 @@ app-create-account {
 }
 
 // UI Components
-.button-filled {
+.button-brand-filled {
   @include button-component;
   color: white;
   background-color: $brand-300;
@@ -148,7 +154,7 @@ app-create-account {
   }
 }
 
-.button-outlined {
+.button-brand-outlined {
   @include button-component;
   color: $brand-500;
   background-color: transparent;
@@ -164,7 +170,7 @@ app-create-account {
   @include button-component;
   color: $neutral-500;
   background-color: $neutral-100;
-  border: 1px solid $neutral-200;
+  // border: 1px solid $neutral-200;
 
   &:hover {
     background-color: $neutral-200;
@@ -313,7 +319,7 @@ app-create-account {
   z-index: 20;
 }
 
-.dialog-container {
+.modal-container {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -325,34 +331,28 @@ app-create-account {
   max-width: 40.625rem; // 650px
   box-shadow: 0 0.25rem 1.5rem rgba(0, 0, 0, 0.1);
   padding: $space-15 $space-12;
+}
 
-  .dialog-title {
-    @include heading-6;
-    font-weight: 700;
-    color: $neutral-700;
-    margin-bottom: $space-9;
-  }
+.modal-title {
+  @include heading-6;
+  font-weight: 700;
+  color: $neutral-700;
+  margin-bottom: $space-9;
+}
 
-  .dialog-content {
-    @include paragraph-large;
-    color: $neutral-500;
+.modal-content {
+  @include paragraph-large;
+  color: $neutral-500;
 
-    .dialog-description {
-      color: $neutral-400;
-      font: inherit;
-    }
-  }
-
-  .dialog-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: $space-14;
-    gap: $space-6;
+  .modal-description {
+    color: $neutral-400;
+    font: inherit;
   }
 }
 
-lucide-icon {
+.modal-actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-top: $space-14;
+  gap: $space-6;
 }
