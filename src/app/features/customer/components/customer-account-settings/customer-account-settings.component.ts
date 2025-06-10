@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormInputComponent } from '../../../components/form-input/form-input.component';
-import { FormCheckboxComponent } from '../../../components/form-checkbox/form-checkbox.component';
+import { FormCheckboxComponent } from '../../../../components/form-checkbox/form-checkbox.component';
+import { FormInputComponent } from '../../../../components/form-input/form-input.component';
 import { DeleteAccountDialogComponent } from './components/delete-account-dialog/delete-account-dialog.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { DeleteAccountDialogComponent } from './components/delete-account-dialog
   ],
   templateUrl: './customer-account-settings.component.html',
   styleUrls: [
-    '../scss/customer-shared.scss',
+    '../../scss/customer-shared.scss',
     './customer-account-settings.component.scss',
   ],
 })
