@@ -1,1 +1,17 @@
-<p>log-out-dialog works!</p>
+<div class="modal-backdrop">
+  <div class="modal-container">
+    <h2 class="modal-title">Logout?</h2>
+    <div class="modal-content">
+      <p class="modal-description">
+        You're about to log out of your account. Any unsaved changes may be
+        lost. If you're sure, click logout to proceed.
+      </p>
+    </div>
+    <div class="modal-actions">
+      <button class="button-default" (click)="cancelDialog.emit()">
+        Cancel
+      </button>
+      <button class="button-brand-filled">Logout</button>
+    </div>
+  </div>
+</div>
