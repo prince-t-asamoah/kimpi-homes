@@ -43,9 +43,6 @@
       bottom: auto;
       height: auto;
       padding: 0;
-    }
-
-    @include for-breakpoint('desktop') {
       box-shadow:
         0px 2px 4px -2px rgba(0, 0, 0, 0.08),
         0px 4px 8px -2px rgba(0, 0, 0, 0.04);
@@ -119,9 +116,11 @@
           a {
             color: $neutral-400;
             padding: $space-5 $space-8;
-            display: inline-block;
+            display: flex;
+            align-items: center;
             width: 100%;
             border-radius: $space-4;
+            gap: $space-8;
 
             &:hover,
             &:active {

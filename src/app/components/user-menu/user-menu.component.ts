@@ -5,7 +5,7 @@ import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-user-menu',
-  imports: [LucideAngularModule, NgClass, RouterLink],
+  imports: [LucideAngularModule, NgClass, RouterLink, LucideAngularModule],
   templateUrl: './user-menu.component.html',
   styleUrl: './user-menu.component.scss',
 })
