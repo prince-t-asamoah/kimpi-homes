@@ -23,11 +23,8 @@
   </nav>
   <nav
     aria-label="Main Navigation"
-    [ngClass]="
-      showMainNavigation
-        ? 'mobile main-navigation active'
-        : 'mobile main-navigation'
-    ">
+    class="mobile main-navigation"
+    [class.active]="showMainNavigation">
     <ul class="links">
       <li class="link">
         <a routerLink="/home" routerLinkActive="active">Home</a>
@@ -50,43 +47,77 @@
     </ul>
   </nav>
   <div class="top-right">
+    <div class="desktop search-product-bar">
+      <app-search-input
+        id="search-product-input-desktop"
+        class="search-product-input"
+        aria-label="Search Products"
+        placeholder="Search Products"
+        (focusEvent)="searchInputFocused()"
+        (blurEvent)="searchInputBlurred()"
+        (inputEvent)="searchInputChanged($event)">
+      </app-search-input>
+      @if (showSearchProductBar) {
+        <div class="search-product-bar-content">
+          @if (showSearchResultsList) {
+            <app-product-search-results-dropdown></app-product-search-results-dropdown>
+          } @else {
+            <app-product-search-suggestions
+              class="search-suggestions"></app-product-search-suggestions>
+          }
+        </div>
+      }
+    </div>
     <button
       type="button"
       aria-label="Search"
-      class="search-btn"
-      (click)="toggleSearchProductBar()"
-      (blur)="toggleSearchProductBar()">
+      class="search-btn navbar-action-btn"
+      (click)="toggleSearchProductBar()">
       <lucide-icon name="search"></lucide-icon>
+    </button>
+    <button type="button" class="navbar-action-btn">
+      <lucide-icon name="shopping-cart" class="cart-icon"></lucide-icon>
     </button>
     @if (isAuthenticated) {
       <app-user-menu></app-user-menu>
     } @else {
       <a routerLink="/login" class="login-link button-brand-filled">Login</a>
     }
-    <button class="menu-btn" (click)="toggleMainNavigation()" aria-label="Menu">
-      <div [ngClass]="showMainNavigation ? 'bar1 active' : 'bar1'"></div>
-      <div [ngClass]="showMainNavigation ? 'bar2 active' : 'bar2'"></div>
-      <div [ngClass]="showMainNavigation ? 'bar3 active' : 'bar3'"></div>
+    <button
+      type="button"
+      class="mobile-menu-btn navbar-action-btn"
+      (click)="toggleMainNavigation()"
+      aria-label="Mobile Navbar Menu">
+      <lucide-icon name="menu"></lucide-icon>
     </button>
   </div>
-  <div
-    [ngClass]="
-      showSearchProductBar ? 'search-product-bar active' : 'search-product-bar'
-    ">
-    <div class="search-product-bar-container">
-      <div class="search-product-bar-input">
-        <button
-          type="button"
-          class="back-btn"
-          (click)="toggleSearchProductBar()">
-          <lucide-icon name="chevron-left"></lucide-icon>
-        </button>
-        <input
-          type="search"
-          id="searchProductsInput"
-          aria-label="Search Products"
-          placeholder="Search Products" />
-      </div>
+  <div class="mobile search-product-bar" [class.active]="showSearchProductBar">
+    <div class="search-product-bar-header">
+      <button
+        type="button"
+        class="search-product-bar-close-btn"
+        aria-label="Close Search Bar"
+        (click)="toggleSearchProductBar()">
+        <lucide-icon name="chevron-left"></lucide-icon>
+      </button>
+      <app-search-input
+        class="search-product-input"
+        id="searchProductsInput"
+        aria-label="Search Products"
+        placeholder="Search Products"
+        (inputEvent)="searchInputChanged($event)">
+      </app-search-input>
+    </div>
+    <div class="search-product-bar-content">
+      @if (showSearchResultsList) {
+        <app-product-search-results-dropdown></app-product-search-results-dropdown>
+      } @else {
+        <app-product-search-suggestions
+          class="search-suggestions"></app-product-search-suggestions>
+      }
     </div>
   </div>
 </header>
+@if (showSearchProductBar) {
+  <div class="modal-backdrop search-modal"></div>
+}

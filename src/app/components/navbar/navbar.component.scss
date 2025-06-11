@@ -8,7 +8,7 @@
 :host {
   display: block;
   position: sticky;
-  top: 55px;
+  top: 3.438rem; // 55px
   background-color: white;
   z-index: 2;
 
@@ -35,14 +35,42 @@
 
     .top-right {
       display: flex;
-      gap: $space-8;
+      gap: $space-5;
       align-items: center;
+      justify-content: flex-end;
 
-      .search-btn {
-        color: var(--neutral-500);
+      @include for-breakpoint('desktop') {
+        gap: $space-8;
+        flex-basis: 40%;
       }
 
-      .menu-btn {
+      .navbar-action-btn {
+        color: $neutral-400;
+        width: 32px;
+        height: 32px;
+        flex: none;
+        padding: $space-2;
+
+        @include for-breakpoint('desktop') {
+          width: 38px;
+          height: 38px;
+        }
+
+        &:hover {
+          color: $brand-300;
+          background-color: $neutral-100;
+          border-radius: $space-4;
+          @include transition();
+        }
+      }
+
+      .search-btn {
+        @include for-breakpoint('desktop') {
+          display: none;
+        }
+      }
+
+      .mobile-menu-btn {
         padding: $space-2;
         width: 1.5rem;
         height: 1.5rem;
@@ -62,7 +90,8 @@
         .bar3 {
           width: 100%;
           height: 0.094rem;
-          background-color: var(--neutral-500);
+          color: inherit;
+          background-color: inherit;
           transition: 0.4s;
           display: block;
         }
@@ -89,6 +118,16 @@
 
         @include for-breakpoint('desktop') {
           display: inline;
+        }
+      }
+
+      .search-product-input {
+        display: none;
+        @include transition();
+
+        @include for-breakpoint('desktop') {
+          display: block;
+          width: 100%;
         }
       }
     }
@@ -174,18 +213,18 @@
       }
     }
 
-    .search-product-bar {
-      width: 100%;
-      height: calc(100vh - 6.75rem);
-      background-color: var(--neutral-100);
+    .mobile.search-product-bar {
+      background-color: $neutral-100;
       visibility: hidden;
-      position: absolute;
-      top: 3.25rem;
+      position: fixed;
+      inset: 0;
+      // top: 3.25rem;
       opacity: 0;
       z-index: 3;
 
       @include for-breakpoint('desktop') {
-        top: 4.094rem;
+        top: 56px;
+        display: none;
       }
 
       &.active {
@@ -199,33 +238,57 @@
         padding: $space-9;
       }
 
-      .search-product-bar-input {
-        background-color: white;
+      .search-product-bar-header {
         display: flex;
-        flex: 1;
         align-items: center;
-        gap: $space-4;
-        border: 1px solid var(--neutral-300);
-        border-radius: $space-5;
-        padding-left: $space-8;
+        gap: $space-5;
+        padding: $space-10 $space-8;
 
-        input[type='search'] {
-          color: var(--neutral-400);
-          border-radius: $space-4;
+        .search-product-bar-close-btn {
+          color: $neutral-400;
+        }
+
+        .search-product-input {
           width: 100%;
-          padding: $space-5;
-
-          &::placeholder {
-            @include paragraph-small;
-          }
-
-          @include components.search-input-cancel;
-
-          .back-btn {
-            color: var(--neutral-200);
-          }
         }
       }
+
+      .search-product-bar-content {
+        padding: $space-8;
+        padding-top: $space-5;
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
+
+    .desktop.search-product-bar {
+      display: none;
+      position: relative;
+      @include transition();
+
+      @include for-breakpoint('desktop') {
+        display: block;
+        width: 70%;
+      }
+
+      .search-product-bar-content {
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        padding: $space-10;
+        border-radius: $space-4;
+        z-index: 50;
+      }
+    }
+  }
+
+  .modal-backdrop {
+    display: none;
+    top: 8.313rem; // 133px;
+    right: 0.875rem; // 14px;
+
+    @include for-breakpoint('desktop') {
+      display: block;
     }
   }
 }
