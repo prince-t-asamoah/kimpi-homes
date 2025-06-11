@@ -1,0 +1,89 @@
+@use 'colors' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+
+.product-search-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+
+  .search-product-bar-header {
+    display: flex;
+    align-items: center;
+    gap: $space-5;
+    padding: $space-10 $space-8;
+
+    .search-product-bar-close-btn {
+      color: $neutral-400;
+    }
+  }
+
+  .search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $space-5;
+  }
+
+  .search-title {
+    @include paragraph-1;
+    font-weight: 700;
+  }
+
+  .clear-recent-search-btn {
+    width: 1rem;
+    height: 1rem;
+    color: $neutral-400;
+  }
+
+  .recent-search-list,
+  .popular-search-list {
+    display: flex;
+    align-items: center;
+    gap: $space-5;
+
+    .search-list-item {
+      flex: none;
+
+      a {
+        background-color: white;
+        border-radius: $space-10;
+        border: 1px solid $neutral-200;
+        text-wrap: nowrap;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        padding: $space-3;
+        padding-right: $space-7;
+
+        .search-item-image {
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: $space-10;
+        }
+
+        .search-item-text {
+          @include paragraph-xsmall;
+          color: $neutral-500;
+          margin-left: $space-5;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .recent-search-list {
+    flex-wrap: wrap;
+  }
+
+  .popular-search-list {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none; // Hide scrollbar for Firefox
+    -ms-overflow-style: none; // Hide scrollbar for IE and Edge
+
+    &::-webkit-scrollbar {
+      display: none; // Hide scrollbar for Chrome, Safari, and Opera
+    }
+  }
+}
