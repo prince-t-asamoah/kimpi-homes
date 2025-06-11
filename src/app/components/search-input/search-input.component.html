@@ -2,8 +2,11 @@
   <lucide-angular name="search" class="search-icon"></lucide-angular>
   <input
     type="text"
+    class="search-input"
     [id]="id"
     [placeholder]="placeholder"
-    class="search-input"
-    [value]="value" />
+    [value]="value"
+    (focus)="focusEvent.emit($event)"
+    (input)="inputEvent.emit($event)"
+    (blur)="blurEvent.emit($event)" />
 </div>
