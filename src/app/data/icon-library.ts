@@ -34,4 +34,5 @@ export default {
   Eye: icons.Eye,
   CircleX: icons.CircleX,
   Repeat: icons.Repeat,
+  Menu: icons.Menu,
 };
