@@ -5,6 +5,9 @@
 @use 'typography' as *;
 
 :host {
+  display: block;
+  height: 100%;
+
   .main-content {
     display: flex;
     padding: $space-18 $space-9;
