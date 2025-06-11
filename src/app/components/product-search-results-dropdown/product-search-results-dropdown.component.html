@@ -1,0 +1,14 @@
+<div class="search-results">
+  <ul class="search-results-list">
+    @for (result of results; track result) {
+      <li class="search-list-item">
+        <a [routerLink]="result.link" class="search-item-link">
+          <lucide-icon name="search" class="search-item-icon"></lucide-icon>
+          <span class="search-item-text">{{ result.highlight }}</span>
+        </a>
+      </li>
+    } @empty {
+      <li class="search-list-item no-results">No results found</li>
+    }
+  </ul>
+</div>

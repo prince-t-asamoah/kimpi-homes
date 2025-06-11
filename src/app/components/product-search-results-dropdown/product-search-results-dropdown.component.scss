@@ -1,0 +1,31 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+
+.search-results {
+  .search-results-list {
+    display: flex;
+    flex-direction: column;
+
+    .search-list-item {
+      a {
+        display: flex;
+        align-items: center;
+        gap: $space-5;
+        padding: $space-6 $space-8;
+        border-bottom: 1px solid $neutral-200;
+
+        .search-item-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          color: $neutral-400;
+        }
+      }
+    }
+  }
+
+  .no-results {
+    text-align: center;
+    color: $neutral-400;
+  }
+}
