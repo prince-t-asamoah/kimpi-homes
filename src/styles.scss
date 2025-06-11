@@ -143,6 +143,13 @@ lucide-icon {
 }
 
 // UI Components
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .button-brand-filled {
   @include button-component;
   color: white;
