@@ -4,6 +4,7 @@
 @use 'spacing' as *;
 @use 'colors' as *;
 @use 'transitions' as *;
+@use 'shadows' as *;
 
 :host {
   display: block;
@@ -190,6 +191,7 @@
 
       .links {
         display: flex;
+
         .link {
           color: var(--neutral-400);
 
@@ -218,7 +220,6 @@
       visibility: hidden;
       position: fixed;
       inset: 0;
-      // top: 3.25rem;
       opacity: 0;
       z-index: 3;
 
@@ -278,17 +279,19 @@
         padding: $space-10;
         border-radius: $space-4;
         z-index: 50;
+        @include shadow('lg');
       }
     }
   }
 
-  .modal-backdrop {
-    display: none;
+  .modal-backdrop.search-modal {
     top: 8.313rem; // 133px;
     right: 0.875rem; // 14px;
 
     @include for-breakpoint('desktop') {
-      display: block;
+      &.active {
+        display: block;
+      }
     }
   }
 }
