@@ -1,6 +1,8 @@
 @use 'colors' as *;
 @use 'spacing' as *;
 @use 'typography' as *;
+@use 'breakpoints' as *;
+@use 'transitions' as *;
 
 .product-search-suggestions {
   display: flex;
@@ -56,6 +58,12 @@
         padding: $space-3;
         padding-right: $space-7;
 
+        &:hover,
+        &:active {
+          background-color: $neutral-200;
+          @include transition-short(background-color);
+        }
+
         .search-item-image {
           width: 1.5rem;
           height: 1.5rem;
@@ -84,6 +92,10 @@
 
     &::-webkit-scrollbar {
       display: none; // Hide scrollbar for Chrome, Safari, and Opera
+    }
+
+    @include for-breakpoint('desktop') {
+      flex-wrap: wrap;
     }
   }
 }
