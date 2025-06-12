@@ -307,6 +307,10 @@
         padding: $space-10;
         border-radius: $space-4;
         z-index: 50;
+        width: 100%;
+        max-height: 400px;
+        overflow-y: auto;
+
         @include shadow('lg');
       }
     }
