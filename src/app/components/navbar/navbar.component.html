@@ -72,11 +72,15 @@
       type="button"
       aria-label="Search"
       class="search-btn navbar-action-btn"
+      aria-label="Search Products"
       (click)="toggleSearchProductBar()">
       <lucide-icon name="search"></lucide-icon>
     </button>
-    <button type="button" class="navbar-action-btn">
+    <button type="button" class="navbar-action-btn cart-btn" aria-label="Cart">
       <lucide-icon name="shopping-cart" class="cart-icon"></lucide-icon>
+      @if (cartCount > 0) {
+        <span class="cart-count">{{ cartCount }}</span>
+      }
     </button>
     @if (isAuthenticated) {
       <app-user-menu></app-user-menu>
@@ -87,7 +91,7 @@
       type="button"
       class="mobile-menu-btn navbar-action-btn"
       (click)="toggleMainNavigation()"
-      aria-label="Mobile Navbar Menu">
+      aria-label="Navbar Menu">
       <lucide-icon name="menu"></lucide-icon>
     </button>
   </div>

@@ -26,6 +26,7 @@ export class NavbarComponent {
   showSearchProductBar = false;
   showSearchResultsList = false;
   isAuthenticated = true;
+  cartCount = 0;
 
   toggleMainNavigation(): void {
     this.showMainNavigation = !this.showMainNavigation;

@@ -36,7 +36,7 @@
 
     .top-right {
       display: flex;
-      gap: $space-5;
+      gap: $space-6;
       align-items: center;
       justify-content: flex-end;
 
@@ -68,6 +68,34 @@
       .search-btn {
         @include for-breakpoint('desktop') {
           display: none;
+        }
+      }
+
+      .cart-btn {
+        position: relative;
+
+        @include for-breakpoint('desktop') {
+          margin-right: $space-5;
+        }
+
+        .cart-count {
+          position: absolute;
+          top: -0.5rem;
+          right: -0.5rem;
+          background-color: $brand-300;
+          color: white;
+          width: 1rem; // 20px
+          height: 1rem; // 20px
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include paragraph-small;
+
+          @include for-breakpoint('desktop') {
+            width: 1.25rem; // 20px
+            height: 1.25rem; // 20px
+          }
         }
       }
 
