@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NgClass } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { UserMenuComponent } from '../user-menu/user-menu.component';
 import { SearchInputComponent } from '../search-input/search-input.component';
@@ -15,6 +16,7 @@ import { ProductSearchResultsDropdownComponent } from '../product-search-results
     SearchInputComponent,
     ProductSearchSuggestionsComponent,
     ProductSearchResultsDropdownComponent,
+    NgClass,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
