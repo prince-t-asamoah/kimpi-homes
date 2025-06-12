@@ -1,0 +1,35 @@
+// Shadow variables
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-color-dark: rgba(0, 0, 0, 0.2);
+
+// Elevation levels
+$shadows: (
+  none: none,
+  xs: 0 1px 2px 0 $shadow-color,
+  sm: 0 2px 4px 0 $shadow-color,
+  md: 0 4px 8px 0 $shadow-color,
+  lg: 0 8px 16px 0 $shadow-color,
+  xl: 0 12px 24px 0 $shadow-color,
+  // Special shadows
+  inner: inset 0 1px 2px 0 $shadow-color,
+  focus: 0 0 0 3px rgba(66, 153, 225, 0.5),
+  button-hover: 0 2px 4px 0 $shadow-color-dark,
+  button-active: 0 1px 2px 0 $shadow-color-dark,
+);
+
+// Mixin to apply shadows
+@mixin shadow($level: 'md') {
+  box-shadow: map-get($shadows, $level);
+}
+
+// Transition mixin for interactive elements
+@mixin shadow-transition {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+// Utility classes for shadows
+@each $name, $value in $shadows {
+  .shadow-#{$name} {
+    box-shadow: $value;
+  }
+}
