@@ -54,13 +54,14 @@
         aria-label="Search Products"
         placeholder="Search Products"
         (focusEvent)="searchInputFocused()"
-        (blurEvent)="searchInputBlurred()"
         (inputEvent)="searchInputChanged($event)">
       </app-search-input>
       @if (showSearchProductBar) {
         <div class="search-product-bar-content">
           @if (showSearchResultsList) {
-            <app-product-search-results-dropdown></app-product-search-results-dropdown>
+            <app-product-search-results-dropdown
+              class="search-results-dropdown"
+              [results]="searchResults"></app-product-search-results-dropdown>
           } @else {
             <app-product-search-suggestions
               class="search-suggestions"></app-product-search-suggestions>
@@ -114,7 +115,8 @@
     </div>
     <div class="search-product-bar-content">
       @if (showSearchResultsList) {
-        <app-product-search-results-dropdown></app-product-search-results-dropdown>
+        <app-product-search-results-dropdown
+          [results]="searchResults"></app-product-search-results-dropdown>
       } @else {
         <app-product-search-suggestions
           class="search-suggestions"></app-product-search-suggestions>
