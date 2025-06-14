@@ -25,10 +25,6 @@
   margin-bottom: $space-16;
 
   @include for-breakpoint('tablet') {
-    margin-bottom: $space-15;
-  }
-
-  @include for-breakpoint('desktop') {
-    margin-bottom: $space-18;
+    margin-bottom: $space-12;
   }
 }
