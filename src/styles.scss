@@ -107,19 +107,11 @@ lucide-icon {
 //Utilities Classes
 .page-content {
   position: absolute;
-  top: 6.75rem;
+  top: 7.3rem;
   width: 100%;
 
-  @include for-breakpoint('tablet') {
-    top: 6.438rem;
-  }
-
   @include for-breakpoint('desktop') {
-    top: 8.125rem;
-  }
-
-  @include for-breakpoint('desktop-large') {
-    top: 8.563rem;
+    top: 8.42rem;
   }
 }
 
