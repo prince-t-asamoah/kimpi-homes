@@ -1,0 +1,38 @@
+@use 'spacing' as *;
+@use 'colors' as *;
+@use 'typography' as *;
+
+:host {
+  display: block;
+
+  .breadcrumb-navigation {
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: $space-5;
+      @include paragraph-small;
+
+      .breadcrumb-item-link {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-4;
+
+        &:is(.active) {
+          font-weight: bold;
+          color: $neutral-400;
+        }
+
+        &:not(.active) {
+          color: $neutral-300;
+        }
+
+        .breadcrumb-icon {
+          width: 1rem;
+          padding: $space-2;
+          height: auto;
+          color: $neutral-300;
+        }
+      }
+    }
+  }
+}

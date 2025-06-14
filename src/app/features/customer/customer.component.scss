@@ -8,6 +8,14 @@
   display: block;
   height: 100%;
 
+  .breadcrumb-navigation {
+    padding: $space-10 $space-8 0;
+
+    @include for-breakpoint('desktop') {
+      padding: $space-10 $space-18 0;
+    }
+  }
+
   .main-content {
     display: flex;
     padding: $space-18 $space-9;

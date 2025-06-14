@@ -1,0 +1,19 @@
+<nav class="breadcrumb-navigation" aria-label="Breadcrumb Navigation">
+  <ul class="breadcrumb-list">
+    @for (breadcrumb of breadcrumbs; track breadcrumb.label; let i = $index) {
+      <li class="breadcrumb-list-item">
+        <a
+          [routerLink]="breadcrumb.link"
+          class="breadcrumb-item-link"
+          [class.active]="breadcrumb.isActive">
+          @if (!$first) {
+            <lucide-icon
+              name="chevron-right"
+              class="breadcrumb-icon"></lucide-icon>
+          }
+          <span class="breadcrumb-item-name">{{ breadcrumb.label }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>
