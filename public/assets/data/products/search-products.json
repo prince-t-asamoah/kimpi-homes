@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "query": "sofa",
+    "searchId": "srch_abc123",
+    "responseTime": 42
+  },
+  "data": {
+    "suggestions": [
+      {
+        "itemType": "product",
+        "id": "furn_1001",
+        "name": "Modern Leather Sofa",
+        "highlight": "<strong>Sofa</strong>",
+        "thumbnail": "https://example.com/thumbs/sofa-leather-sm.jpg",
+        "price": 899.99,
+        "currency": "USD",
+        "inStock": true,
+        "productUrl": "/products/furn_1001-modern-leather-sofa",
+        "searchUrl": "/search?product_id=furn_1001"
+      },
+      {
+        "itemType": "category",
+        "id": "cat_2001",
+        "name": "Living Room Sofas",
+        "highlight": "Living Room <strong>Sofas</strong>",
+        "productCount": 87,
+        "categoryUrl": "/categories/cat_2001",
+        "searchUrl": "/furniture/sofas?category=living-room"
+      },
+      {
+        "itemType": "suggestion",
+        "id": "sugg_305",
+        "text": "sofa covers",
+        "highlight": "<strong>sofa</strong> covers",
+        "searchUrl": "/search?q=sofa+covers"
+      }
+    ],
+    "recentSearches": [
+      {
+        "itemType": "recent_search",
+        "id": "recent_102",
+        "text": "leather sofas",
+        "highlight": "<strong>leather</strong> sofas",
+        "searchVolume": 320,
+        "searchUrl": "/search?q=leather+sofas"
+      },
+      {
+        "itemType": "recent_search",
+        "id": "recent_103",
+        "text": "sectional sofas",
+        "highlight": "<strong>sectional</strong> sofas",
+        "searchVolume": 210,
+        "searchUrl": "/search?q=sectional+sofas"
+      }
+    ],
+    "popularSearches": [
+      {
+        "itemType": "popular_search",
+        "id": "pop_501",
+        "text": "sofa beds",
+        "highlight": "<strong>sofa</strong> beds",
+        "searchVolume": 1450,
+        "searchUrl": "/search?q=sofa+beds"
+      }
+    ]
+  },
+  "links": {
+    "self": "/api/search/suggest?q=sofa",
+    "fullSearch": "/api/search?q=sofa"
+  }
+}

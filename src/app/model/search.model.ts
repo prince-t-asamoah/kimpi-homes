@@ -1,13 +1,17 @@
-export interface SearchSuggestion {
-  type: 'product' | 'category' | 'brand' | 'suggestion';
-  text: string;
-  highlight: string;
-  productId?: string;
-  thumbnail?: string;
+export interface SearchItem {
+  itemType:
+    | 'product'
+    | 'category'
+    | 'suggestion'
+    | 'recent_search'
+    | 'popular_search';
+  id: string;
+  text?: string;
+  name?: string;
+  highlight?: string;
+  searchUrl: string;
   price?: number;
-  currency?: string;
-  categoryId?: string;
-  brandId?: string;
-  count?: number;
-  link?: string;
+  thumbnail?: string;
+  productCount?: number;
+  searchVolume?: number;
 }

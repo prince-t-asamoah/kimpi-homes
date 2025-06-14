@@ -1,3 +1,4 @@
+import { SearchItem } from '../../../model/search.model';
 import { GetApiResponse } from './../../../model/api-response';
 
 export interface Product {
@@ -38,6 +39,24 @@ export interface GetProductListingsAPIResponse extends GetApiResponse {
     recommended: Product[];
   };
 }
+
+export interface ProductSearchAPIResponse {
+  meta: {
+    query: string;
+    searchId: string;
+    responseTime: number;
+  };
+  data: {
+    suggestions: SearchItem[];
+    recentSearches: SearchItem[];
+    popularSearches: SearchItem[];
+  };
+  links: {
+    self: string;
+    fullSearch: string;
+  };
+}
+
 export interface ProductListings {
   category: {
     id: string;
