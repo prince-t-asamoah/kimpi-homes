@@ -2,9 +2,11 @@
   <ul class="search-results-list">
     @for (result of results; track result) {
       <li class="search-list-item">
-        <a [routerLink]="result.link" class="search-item-link">
+        <a [routerLink]="result.searchUrl" class="search-item-link">
           <lucide-icon name="search" class="search-item-icon"></lucide-icon>
-          <span class="search-item-text">{{ result.highlight }}</span>
+          <span
+            class="search-item-text"
+            [innerHTML]="getSanitizedHighlightedText(result.highlight)"></span>
         </a>
       </li>
     } @empty {
