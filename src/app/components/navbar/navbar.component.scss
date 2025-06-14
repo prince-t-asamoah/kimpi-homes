@@ -297,21 +297,29 @@
 
       @include for-breakpoint('desktop') {
         display: block;
-        width: 300px;
+        flex-basis: 100%;
       }
 
       .search-product-bar-content {
         background-color: white;
         position: absolute;
         top: 100%;
-        padding: $space-10;
         border-radius: $space-4;
         z-index: 50;
         width: 100%;
         max-height: 400px;
         overflow-y: auto;
-
         @include shadow('lg');
+
+        .search-results-dropdown {
+          display: block;
+          padding: $space-8 0;
+        }
+
+        .search-suggestions {
+          display: block;
+          padding: $space-10;
+        }
       }
     }
   }
