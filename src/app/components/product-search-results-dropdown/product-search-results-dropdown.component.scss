@@ -16,7 +16,7 @@
         display: flex;
         align-items: center;
         gap: $space-5;
-        padding: $space-6 $space-8;
+        padding: $space-7 $space-8;
         border-bottom: 1px solid $neutral-200;
 
         @include for-breakpoint('desktop') {
@@ -33,14 +33,9 @@
         }
 
         .search-item-icon {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1rem;
+          height: 1rem;
           color: $neutral-400;
-
-          @include for-breakpoint('desktop') {
-            width: 1rem;
-            height: 1rem;
-          }
         }
       }
     }
