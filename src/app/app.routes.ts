@@ -17,6 +17,7 @@ import { CustomerAddressComponent } from './features/customer/components/custome
 import { CustomerOrderHistoryComponent } from './features/customer/components/customer-order-history/customer-order-history.component';
 import { CustomerMessagesComponent } from './features/customer/components/customer-messages/customer-messages.component';
 import { CustomerAccountSettingsComponent } from './features/customer/components/customer-account-settings/customer-account-settings.component';
+import { CartComponent } from './features/cart/cart.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -115,5 +116,10 @@ export const routes: Routes = [
     path: 'reset-password',
     component: ResetPasswordComponent,
     title: 'Kimpi Homes | Reset Password',
+  },
+  {
+    path: 'cart',
+    component: CartComponent,
+    title: 'Kimpi Homes | Cart',
   },
 ];

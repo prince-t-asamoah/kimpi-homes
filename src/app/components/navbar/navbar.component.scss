@@ -71,7 +71,7 @@
         }
       }
 
-      .cart-btn {
+      .cart-link {
         position: relative;
 
         @include for-breakpoint('desktop') {
@@ -297,7 +297,7 @@
 
       @include for-breakpoint('desktop') {
         display: block;
-        width: 70%;
+        width: 300px;
       }
 
       .search-product-bar-content {

@@ -76,12 +76,12 @@
       (click)="toggleSearchProductBar()">
       <lucide-icon name="search"></lucide-icon>
     </button>
-    <button type="button" class="navbar-action-btn cart-btn" aria-label="Cart">
+    <a routerLink="/cart" class="navbar-action-btn cart-link" aria-label="Cart">
       <lucide-icon name="shopping-cart" class="cart-icon"></lucide-icon>
       @if (cartCount > 0) {
         <span class="cart-count">{{ cartCount }}</span>
       }
-    </button>
+    </a>
     @if (isAuthenticated) {
       <app-user-menu></app-user-menu>
     } @else {
