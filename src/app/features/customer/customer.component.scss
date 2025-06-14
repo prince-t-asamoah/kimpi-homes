@@ -18,7 +18,7 @@
 
   .main-content {
     display: flex;
-    padding: $space-18 $space-9;
+    padding: $space-12 $space-9;
 
     @include for-breakpoint('desktop') {
       gap: $space-22;

@@ -1,6 +1,10 @@
 <app-language-bar></app-language-bar>
 <app-navbar></app-navbar>
 <div class="customer page-content">
+  <app-breadcrumb-navigation
+    class="breadcrumb-navigation"
+    [breadcrumbs]="breadcrumbLinks">
+  </app-breadcrumb-navigation>
   <div class="main-content center-page">
     <aside class="customer-sidebar">
       <nav class="sidebar-navigation">
