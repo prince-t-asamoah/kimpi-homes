@@ -54,7 +54,8 @@
         aria-label="Search Products"
         placeholder="Search Products"
         (focusEvent)="searchInputFocused()"
-        (inputEvent)="searchInputChanged($event)">
+        (inputEvent)="searchInputChanged($event)"
+        (blurEvent)="searchInputBlurred()">
       </app-search-input>
       @if (showSearchProductBar) {
         <div class="search-product-bar-content">
