@@ -1,8 +1,12 @@
 @use 'spacing' as *;
 @use 'colors' as *;
 @use 'typography' as *;
+@use 'transitions' as *;
+@use 'breakpoints' as *;
 
 .search-results {
+  width: 100%;
+
   .search-results-list {
     display: flex;
     flex-direction: column;
@@ -15,10 +19,28 @@
         padding: $space-6 $space-8;
         border-bottom: 1px solid $neutral-200;
 
+        @include for-breakpoint('desktop') {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background-color: $neutral-200;
+          @include transition-short(background-color);
+        }
+
+        .search-item-text {
+          @include paragraph-small;
+        }
+
         .search-item-icon {
           width: 1.5rem;
           height: 1.5rem;
           color: $neutral-400;
+
+          @include for-breakpoint('desktop') {
+            width: 1rem;
+            height: 1rem;
+          }
         }
       }
     }
