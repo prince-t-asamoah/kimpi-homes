@@ -73,6 +73,9 @@
 
       .cart-link {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @include for-breakpoint('desktop') {
           margin-right: $space-5;
