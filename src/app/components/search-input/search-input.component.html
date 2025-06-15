@@ -1,12 +1,21 @@
 <div class="search-input-container">
   <lucide-angular name="search" class="search-icon"></lucide-angular>
   <input
-    type="text"
+    #searchInput
+    type="search"
     class="search-input"
     [id]="id"
     [placeholder]="placeholder"
-    [value]="value"
     (focus)="focusEvent.emit($event)"
-    (input)="inputEvent.emit($event)"
+    (input)="inputChange($event)"
     (blur)="blurEvent.emit($event)" />
+  @if (value) {
+    <button
+      type="button"
+      (click)="clearSearchInput()"
+      class="clear-search-btn"
+      aria-label="Clear Search Input">
+      <lucide-icon name="x" class="clear-search-icon"></lucide-icon>
+    </button>
+  }
 </div>
