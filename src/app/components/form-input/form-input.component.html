@@ -7,7 +7,9 @@
       [name]="name"
       [placeholder]="placeholder"
       [disabled]="disabled"
-      [autocomplete]="autocomplete" />
+      [autocomplete]="autocomplete"
+      [value]="value"
+      (input)="onInput($event)" />
   </div>
 }
 
@@ -18,7 +20,9 @@
       [id]="id"
       [name]="name"
       [placeholder]="placeholder"
-      [disabled]="disabled"></textarea>
+      [disabled]="disabled"
+      [value]="value"
+      (input)="onInput($event)"></textarea>
   </div>
 }
 
@@ -33,7 +37,9 @@
         [name]="name"
         [placeholder]="placeholder"
         [disabled]="disabled"
-        [autocomplete]="autocomplete" />
+        [autocomplete]="autocomplete"
+        [value]="value"
+        (input)="onInput($event)" />
     </div>
   </div>
 }

@@ -1,12 +1,13 @@
 @if (type === 'checkbox') {
   <div class="checkbox form-field">
     <input
-      [id]="id"
-      [name]="name"
       type="checkbox"
       class="form-field-control"
+      [id]="id"
+      [name]="name"
       [disabled]="disabled"
-      [value]="value" />
+      [checked]="isChecked"
+      (change)="onInputChange($event)" />
     <span class="checkmark"></span>
   </div>
 }

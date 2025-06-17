@@ -1,13 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, forwardRef } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-form-input',
+  standalone: true,
   imports: [LucideAngularModule],
   templateUrl: './form-input.component.html',
-  styleUrl: './form-input.component.scss',
+  styleUrls: ['./form-input.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => FormInputComponent),
+      multi: true,
+    },
+  ],
 })
-export class FormInputComponent {
+export class FormInputComponent implements ControlValueAccessor {
   @Input({ required: true }) type:
     | 'text'
     | 'password'
@@ -17,8 +26,39 @@ export class FormInputComponent {
   @Input({ required: true }) id = '';
   @Input({ required: true }) label = '';
   @Input() placeholder = '';
-  @Input() value = '';
   @Input() name = '';
   @Input() disabled = false;
   @Input() autocomplete!: string;
+
+  value = '';
+  onChange: (value: string) => void = () => {
+    /* Handle value changes */
+  };
+  // Method required by ControlValueAccessor interface
+  onTouched: () => void = () => {
+    /* Mark as touched */
+  };
+
+  writeValue(value: string | null): void {
+    this.value = value ?? '';
+  }
+
+  registerOnChange(fn: (value: string) => void): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: () => void): void {
+    this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
+  }
+
+  onInput(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.value = value;
+    this.onChange(value);
+    this.onTouched();
+  }
 }
