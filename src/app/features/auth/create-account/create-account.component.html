@@ -6,48 +6,68 @@
         <h1 class="title">Create an Account.</h1>
         <p class="title-info">Join us to enjoy personalized features</p>
       </header>
-      <form>
+      <form
+        (ngSubmit)="submitForm()"
+        [formGroup]="createAccountForm"
+        class="form"
+        novalidate>
         <div class="form-fields">
           <app-form-input
             type="text"
             id="fullname"
-            name="fullname"
             placeholder="john.doe@gmail.com"
             label="Fullname"
-            autocomplete="username"></app-form-input>
+            autocomplete="username"
+            formControlName="fullname"
+            [error]="getformErrorsByControlName('fullname')"></app-form-input>
           <app-form-input
             type="email"
             id="email"
-            name="email"
             placeholder="john.doe@gmail.com"
             label="Email"
-            autocomplete="email"></app-form-input>
+            autocomplete="email"
+            formControlName="email"
+            [error]="getformErrorsByControlName('email')"></app-form-input>
           <app-form-input
             type="password"
             id="password"
             name="password"
             placeholder="*********"
             label="Password"
-            autocomplete="new-password"></app-form-input>
+            autocomplete="new-password"
+            formControlName="password"
+            [error]="getformErrorsByControlName('password')"></app-form-input>
           <app-form-input
             type="password"
             id="confirm-password"
-            name="confirm-password"
+            name="confirmPassword"
             placeholder="*********"
             label="Confirm Password"
-            autocomplete="new-password">
+            autocomplete="new-password"
+            formControlName="confirmPassword"
+            [error]="getformErrorsByControlName('confirmPassword')">
           </app-form-input>
-          <div class="terms-conditions-privacy">
-            <app-form-checkbox></app-form-checkbox>
+          <app-form-checkbox
+            id="agreedToTerms"
+            name="agreedToTerms"
+            formControlName="agreedToTerms"
+            [error]="getformErrorsByControlName('agreedToTerms')">
             <p class="form-info">
               I have a read and agreed to the
               <a routerLink="#" class="form-link">Terms & Conditions</a> and
               <a routerLink="#" class="form-link">Privacy Policy</a>.
             </p>
-          </div>
+          </app-form-checkbox>
         </div>
-        <button type="submit" class="button-brand-filled submit-btn">
-          Create an account
+        <button
+          type="submit"
+          class="button-brand-filled submit-btn"
+          [disabled]="isSignUpInProgress">
+          @if (isSignUpInProgress) {
+            Creating account...
+          } @else {
+            Create Account
+          }
         </button>
         <p class="form-info footer login-info">
           Alreday have an account?
@@ -56,7 +76,5 @@
       </form>
     </div>
   </section>
-  <section class="auth-image-container">
-    <img src="./assets/images/login/desktop-image.png" alt="" />
-  </section>
+  <div class="auth-image-container"></div>
 </div>
