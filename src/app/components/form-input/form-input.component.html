@@ -4,12 +4,19 @@
     <input
       [type]="type"
       [id]="id"
+      [class.form-field-error]="error"
       [name]="name"
       [placeholder]="placeholder"
-      [disabled]="disabled"
       [autocomplete]="autocomplete"
       [value]="value"
-      (input)="onInput($event)" />
+      (input)="onInput($event)"
+      (blur)="onBlur()"
+      [disabled]="disabled"
+      [attr.aria-invalid]="!!error"
+      [attr.aria-describedby]="error ? 'error-' + id : null" />
+    @if (error) {
+      <p class="form-error-message">{{ error }}</p>
+    }
   </div>
 }
 
@@ -18,18 +25,26 @@
     <label [for]="id">{{ label }}</label>
     <textarea
       [id]="id"
+      [class.form-field-error]="error"
       [name]="name"
       [placeholder]="placeholder"
       [disabled]="disabled"
       [value]="value"
-      (input)="onInput($event)"></textarea>
+      (input)="onInput($event)"
+      (blur)="onBlur()"
+      [disabled]="disabled"
+      [attr.aria-invalid]="!!error"
+      [attr.aria-describedby]="error ? 'error-' + id : null"></textarea>
+    @if (error) {
+      <p class="form-error-message">{{ error }}</p>
+    }
   </div>
 }
 
 @if (type === 'telephone') {
   <div class="form-field">
     <label [for]="id">{{ label }}</label>
-    <div class="telephone-input">
+    <div class="telephone-input" [class.form-field-error]="error">
       <ng-content></ng-content>
       <input
         [type]="type"
@@ -39,7 +54,14 @@
         [disabled]="disabled"
         [autocomplete]="autocomplete"
         [value]="value"
-        (input)="onInput($event)" />
+        (input)="onInput($event)"
+        (blur)="onBlur()"
+        [disabled]="disabled"
+        [attr.aria-invalid]="!!error"
+        [attr.aria-describedby]="error ? 'error-' + id : null" />
     </div>
+    @if (error) {
+      <p class="form-error-message">{{ error }}</p>
+    }
   </div>
 }

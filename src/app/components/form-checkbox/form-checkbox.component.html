@@ -1,13 +1,23 @@
 @if (type === 'checkbox') {
-  <div class="checkbox form-field">
-    <input
-      type="checkbox"
-      class="form-field-control"
-      [id]="id"
-      [name]="name"
-      [disabled]="disabled"
-      [checked]="isChecked"
-      (change)="onInputChange($event)" />
-    <span class="checkmark"></span>
+  <div class="form-checkbox">
+    <div class="checkbox form-field">
+      <input
+        type="checkbox"
+        class="form-field-control"
+        [id]="id"
+        [name]="name"
+        [disabled]="disabled"
+        [checked]="isChecked"
+        (change)="onInput($event)"
+        (blur)="onBlur()"
+        [attr.aria-invalid]="!!error"
+        [attr.aria-describedby]="error ? 'error-' + id : null"
+        [attr.aria-label]="ariaLabel" />
+      <span class="checkmark"></span>
+    </div>
+    <ng-content></ng-content>
   </div>
+  @if (error) {
+    <p class="form-error-message" [id]="'error-' + id">{{ error }}</p>
+  }
 }
