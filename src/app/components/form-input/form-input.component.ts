@@ -27,14 +27,17 @@ export class FormInputComponent implements ControlValueAccessor {
   @Input({ required: true }) label = '';
   @Input() placeholder = '';
   @Input() name = '';
-  @Input() disabled = false;
   @Input() autocomplete!: string;
-
+  @Input() error = '';
   value = '';
+  touched = false;
+  disabled = false;
+
+  // Methods required by ControlValueAccessor interface
   onChange: (value: string) => void = () => {
     /* Handle value changes */
   };
-  // Method required by ControlValueAccessor interface
+
   onTouched: () => void = () => {
     /* Mark as touched */
   };
@@ -55,10 +58,21 @@ export class FormInputComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
+  private _markAsTouched() {
+    if (!this.touched) {
+      this.touched = true;
+    }
+  }
+
   onInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     this.value = value;
     this.onChange(value);
+    this.onTouched();
+  }
+
+  onBlur(): void {
+    this._markAsTouched();
     this.onTouched();
   }
 }

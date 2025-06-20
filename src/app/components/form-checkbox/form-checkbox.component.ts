@@ -20,12 +20,16 @@ export class FormCheckboxComponent implements ControlValueAccessor {
   @Input() name = '';
   @Input() disabled = false;
   @Input() type: 'checkbox' | 'radio' = 'checkbox';
-
+  @Input() error = '';
+  @Input() ariaLabel = '';
   isChecked = false;
+  touched = false;
+
+  // Methods required by ControlValueAccessor interface
   onChange: (value: boolean) => void = () => {
     /* Handle value changes */
   };
-  // Method required by ControlValueAccessor interface
+
   onTouched: () => void = () => {
     /* Mark as touched */
   };
@@ -46,10 +50,21 @@ export class FormCheckboxComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  onInputChange(event: Event) {
+  private _markAsTouched() {
+    if (!this.touched) {
+      this.touched = true;
+    }
+  }
+
+  onInput(event: Event) {
     const target = event.target as HTMLInputElement;
     this.isChecked = target.checked;
     this.onChange(this.isChecked);
+    this.onTouched();
+  }
+
+  onBlur(): void {
+    this._markAsTouched();
     this.onTouched();
   }
 }
