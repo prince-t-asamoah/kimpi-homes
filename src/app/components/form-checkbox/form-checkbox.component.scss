@@ -1,7 +1,14 @@
 :host {
-  .checkbox {
+  display: block;
+
+  .form-checkbox {
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
