@@ -135,7 +135,6 @@ lucide-icon {
 }
 
 // UI Components
-
 button {
   display: inline-flex;
   align-items: center;
@@ -238,7 +237,20 @@ button {
       background-color: $neutral-100;
       @include transition-medium(background-color);
     }
+
+    &:invalid {
+      outline-color: $warning-200;
+    }
   }
+}
+
+.form-field-error {
+  outline-color: $warning-200 !important;
+}
+
+.form-error-message {
+  @include paragraph-small;
+  color: $warning-200;
 }
 
 .checkbox,
