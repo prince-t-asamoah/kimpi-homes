@@ -5,11 +5,7 @@
 
 .auth-content {
   display: flex;
-  height: 100%;
-
-  @include for-breakpoint('desktop') {
-    min-height: 100vh;
-  }
+  min-height: 100vh;
 
   .auth-form,
   .auth-image-container {
@@ -47,7 +43,7 @@
         text-align: center;
 
         @include for-breakpoint('desktop') {
-          @include heading-2;
+          @include heading-4;
           text-align: left;
         }
       }
@@ -126,12 +122,11 @@
 
     @include for-breakpoint('desktop') {
       display: block;
-    }
-
-    img {
-      object-fit: cover;
+      background: url('/assets/images/auth/desktop-background.png') no-repeat;
+      background-size: cover;
+      background-position: center;
       width: 100%;
-      height: 100%;
+      min-width: 50%;
     }
   }
 }
