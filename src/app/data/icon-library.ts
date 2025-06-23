@@ -35,4 +35,7 @@ export default {
   CircleX: icons.CircleX,
   Repeat: icons.Repeat,
   Menu: icons.Menu,
+  Check: icons.Check,
+  TriangleAlert: icons.TriangleAlert,
+  Info: icons.Info,
 };
