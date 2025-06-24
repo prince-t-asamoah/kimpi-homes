@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 import { CartComponent } from './features/cart/cart.component';
 import { clientOnlyGuard } from './guards/client-only/client-only.guard';
+import { authGuard } from './guards/auth/auth.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -20,7 +21,7 @@ export const routes: Routes = [
     path: 'customer',
     loadChildren: () =>
       import('./features/customer/customer.module').then(m => m.CustomerModule),
-    canMatch: [clientOnlyGuard],
+    canMatch: [clientOnlyGuard, authGuard],
   },
   {
     path: 'about',
