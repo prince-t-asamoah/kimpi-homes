@@ -9,6 +9,7 @@ import { ProductSearchSuggestionsComponent } from '../product-search-suggestions
 import { ProductSearchResultsDropdownComponent } from '../product-search-results-dropdown/product-search-results-dropdown.component';
 import { ProductListingsService } from '../../features/shop/services/product-listings/product-listings.service';
 import { SearchItem } from '../../model/search.model';
+import { AuthService } from '../../features/auth/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -32,9 +33,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
   showMainNavigation = false;
   showSearchProductBar = false;
   showSearchResultsList = false;
-  isAuthenticated = true;
+  isAuthenticated = false;
   cartCount = 0;
   searchResults: SearchItem[] = [];
+
+  constructor(private readonly _authService: AuthService) {
+    this.isAuthenticated = this._authService.isAuthenticated;
+  }
 
   ngOnInit(): void {
     this._searchProductEvent
