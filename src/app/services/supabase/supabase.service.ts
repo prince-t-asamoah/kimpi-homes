@@ -1,12 +1,31 @@
-import { Injectable } from '@angular/core';
-import { createClient } from '@supabase/supabase-js';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { environment } from '../../../environments/environment';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SupabaseService {
-  private supabaseUrl = environment.supabaseUrl;
-  private supabaseKey = environment.supabaseKey;
-  public client = createClient(this.supabaseUrl, this.supabaseKey);
+  private _supabaseUrl = environment.supabaseUrl;
+  private _supabaseKey = environment.supabaseKey;
+  public client!: SupabaseClient;
+
+  constructor(@Inject(PLATFORM_ID) private _platformId: object) {
+    this._initializeClient();
+  }
+
+  private _initializeClient(): void {
+    if (!isPlatformBrowser(this._platformId)) {
+      throw new Error(
+        'Supabase client can only be initialized in the browser environment'
+      );
+    }
+    if (!environment.supabaseUrl || !environment.supabaseKey) {
+      throw new Error(
+        'Supabase URL and Key must be provided in environment variables'
+      );
+    }
+    this.client = createClient(this._supabaseUrl, this._supabaseKey);
+  }
 }
