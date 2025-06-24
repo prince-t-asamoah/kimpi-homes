@@ -98,4 +98,12 @@ export class AuthService {
       })
     );
   }
+
+  resetPassword(password: string): Observable<ForgotPasswordResponse> {
+    return from(
+      this._supabaseService.client.auth.updateUser({
+        password,
+      })
+    );
+  }
 }
