@@ -2,13 +2,19 @@ import { Injectable, signal } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { from, Observable } from 'rxjs';
 import { SupabaseService } from '../../../services/supabase/supabase.service';
-import { CreateAccountResponse, LoginResponse } from '../models/auth.model';
+import {
+  CreateAccountResponse,
+  ForgotPasswordResponse,
+  LoginResponse,
+} from '../models/auth.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private _isAuthenticated = signal(false);
+  private _appUrl = environment.appUrl;
 
   constructor(private readonly _supabaseService: SupabaseService) {}
 
@@ -81,6 +87,14 @@ export class AuthService {
       this._supabaseService.client.auth.signInWithPassword({
         email,
         password,
+      })
+    );
+  }
+
+  sendForgotPasswordEmail(email: string): Observable<ForgotPasswordResponse> {
+    return from(
+      this._supabaseService.client.auth.resetPasswordForEmail(email, {
+        redirectTo: `${this._appUrl}/reset-password`,
       })
     );
   }
