@@ -239,18 +239,18 @@ button {
     }
 
     &:invalid {
-      outline-color: $warning-200;
+      outline-color: $error-200;
     }
   }
 }
 
 .form-field-error {
-  outline-color: $warning-200 !important;
+  outline-color: $error-200 !important;
 }
 
 .form-error-message {
   @include paragraph-small;
-  color: $warning-200;
+  color: $error-200;
 }
 
 .checkbox,
