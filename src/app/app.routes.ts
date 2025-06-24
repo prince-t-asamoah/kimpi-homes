@@ -6,6 +6,7 @@ import { CreateAccountComponent } from './features/auth/create-account/create-ac
 import { ForgotPasswordComponent } from './features/auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './features/auth/reset-password/reset-password.component';
 import { CartComponent } from './features/cart/cart.component';
+import { clientOnlyGuard } from './guards/client-only/client-only.guard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Kimpi Homes' },
@@ -19,6 +20,7 @@ export const routes: Routes = [
     path: 'customer',
     loadChildren: () =>
       import('./features/customer/customer.module').then(m => m.CustomerModule),
+    canMatch: [clientOnlyGuard],
   },
   {
     path: 'about',
@@ -29,25 +31,30 @@ export const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     title: 'Kimpi Homes | Login',
+    canMatch: [clientOnlyGuard],
   },
   {
     path: 'create-account',
     component: CreateAccountComponent,
     title: 'Kimpi Homes | Create Account',
+    canMatch: [clientOnlyGuard],
   },
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent,
     title: 'Kimpi Homes | Forgot Password',
+    canMatch: [clientOnlyGuard],
   },
   {
     path: 'reset-password',
     component: ResetPasswordComponent,
     title: 'Kimpi Homes | Reset Password',
+    canMatch: [clientOnlyGuard],
   },
   {
     path: 'cart',
     component: CartComponent,
     title: 'Kimpi Homes | Cart',
+    canMatch: [clientOnlyGuard],
   },
 ];
