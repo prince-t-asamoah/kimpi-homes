@@ -1,0 +1,17 @@
+@for (toast of toasts; track toast.id) {
+  <div class="toast-notification" [ngClass]="toast.type" [@toastAnimation]>
+    <header class="message-header">
+      <lucide-icon
+        [name]="getIcon(toast.type)"
+        class="action-icon"></lucide-icon>
+      <span class="message-title">{{ toast.title }}</span>
+      <button
+        class="close-button"
+        aria-label="Close messsage"
+        (click)="removeToastNotification(toast.id)">
+        <lucide-icon name="x"></lucide-icon>
+      </button>
+    </header>
+    <p class="message-content">{{ toast.message }}</p>
+  </div>
+}

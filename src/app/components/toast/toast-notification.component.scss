@@ -1,0 +1,108 @@
+@use 'colors' as *;
+@use 'spacing' as *;
+@use 'typography' as *;
+@use 'breakpoints' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  position: fixed;
+  top: $space-8;
+  left: $space-8;
+  right: $space-8;
+  z-index: 1000;
+  max-width: 100%;
+  min-width: 22.188rem; // 355px
+
+  @include for-breakpoint('desktop') {
+    top: $space-10;
+    left: auto;
+  }
+
+  .toast-notification {
+    border-radius: $space-5;
+    padding: $space-9;
+    background-color: $neutral-100;
+
+    .message-header {
+      display: flex;
+      gap: $space-5;
+      align-items: center;
+
+      .message-title {
+        display: inline-block;
+        width: 100%;
+        @include paragraph-large;
+        font-weight: 700;
+      }
+
+      .action-icon {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .close-button {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $neutral-400;
+        &:hover {
+          color: $neutral-500;
+        }
+      }
+    }
+
+    .message-content {
+      color: $neutral-400;
+    }
+  }
+
+  .toast-message.success {
+    background-color: $success-100;
+
+    .message-title {
+      color: $success-400;
+    }
+
+    .action-icon {
+      color: $success-400;
+    }
+  }
+
+  .toast-message.warning {
+    background-color: $warning-100;
+
+    .message-title {
+      color: $warning-300;
+    }
+
+    .action-icon {
+      color: $warning-300;
+    }
+  }
+
+  .toast-message.info {
+    background-color: $info-100;
+
+    .message-title {
+      color: $info-400;
+    }
+
+    .action-icon {
+      color: $info-400;
+    }
+  }
+
+  .toast-message.error {
+    background-color: $error-100;
+
+    .message-title {
+      color: $error-400;
+    }
+
+    .action-icon {
+      color: $error-400;
+    }
+  }
+}
