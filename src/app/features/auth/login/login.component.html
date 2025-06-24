@@ -8,7 +8,7 @@
           Welcome back! Please enter your details to continue.
         </p>
       </header>
-      <form>
+      <form (ngSubmit)="submitForm()" [formGroup]="loginForm">
         <div class="form-fields">
           <app-form-input
             type="email"
@@ -16,22 +16,33 @@
             name="email"
             placeholder="john.doe@gmail.com"
             label="Email"
-            autocomplete="email"></app-form-input>
+            autocomplete="email"
+            formControlName="email"
+            [error]="getFormErrorsByControlName('email')"></app-form-input>
           <app-form-input
             type="password"
             id="password"
             name="password"
             placeholder="*********"
             label="Password"
-            autocomplete="new-password"></app-form-input>
+            autocomplete="new-password"
+            formControlName="password"
+            [error]="getFormErrorsByControlName('password')"></app-form-input>
           <a
             routerLink="/forgot-password"
             class="form-link forget-password-info"
             >Forgot Password?</a
           >
         </div>
-        <button type="submit" class="button-brand-filled submit-btn">
-          Login
+        <button
+          type="submit"
+          class="button-brand-filled submit-btn"
+          [disabled]="isLoginInProgress">
+          @if (isLoginInProgress) {
+            Logging in...
+          } @else {
+            Login
+          }
         </button>
         <p class="form-info footer">
           Don't have an account yet?
