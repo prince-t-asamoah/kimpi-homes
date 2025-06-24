@@ -38,15 +38,26 @@ $brand-300: #fba03c; /* Medium Brand */
 $brand-400: #ee873d; /* Medium 2 Brand  */
 $brand-500: #ea690c; /* Heavy Brand */
 
+/* Error */
+$error-100: #ffebee; /* Lightest Error */
+$error-200: #e57373; /* Lighter Error */
+$error-300: #d32f2f; /* Deepest Error */
+$error-400: #e22420; /* Darker Error */
+$error-500: #b71c1c; /* Darkest Error */
+
 /* Warning */
-$warning-100: #ffebee; /* Lightest Warning */
-$warning-200: #e57373; /* Lighter Warning */
-$warning-300: #d32f2f; /* Deepest Warning */
+$warning-100: #ffffea; /* Lightest Warning */
+$warning-200: #fffbc5; /* Lighter Warning */
+$warning-300: #fbc02d; /* Medium Warning */
+$warning-400: #f9a825; /* Medium 2 Warning */
+$warning-500: #e29400; /* Heavy Warning */
 
 /* Success */
 $success-100: #e8f5e9; /* Lightest Success */
 $success-200: #81c784; /* Lighter Success */
 $success-300: #4caf50; /* Deepest Success */
+$success-400: #348537; /* Darker Success */
+$success-500: #2e7d32; /* Darkest Success */
 
 /* Neutral */
 $neutral-100: #fafafa; /* Lightest Neutral */
@@ -60,4 +71,6 @@ $neutral-700: #262626; /* Deepest Neutral */
 /* Info */
 $info-100: #e3f2fd; /* Lightest Info */
 $info-200: #64b5f6; /* Lighter Info */
-$info-400: #2196f3; /* Deepest Info */
+$info-300: #2196f3; /* Deepest Info */
+$info-400: #1976d2; /* Darker Info */
+$info-500: #0d47a1; /* Darkest Info */
