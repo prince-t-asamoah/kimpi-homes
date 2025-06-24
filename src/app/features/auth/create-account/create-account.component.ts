@@ -63,25 +63,10 @@ export class CreateAccountComponent {
   }
 
   getformErrorsByControlName(controlName: string): string {
-    const control = this._createAccountForm.get(controlName);
-    if (!control || !control.errors || !control.touched) return '';
-    if (control.errors['required']) {
-      return 'This field is required';
-    }
-
-    if (control.errors['email']) {
-      return 'Please enter a valid email address';
-    }
-    if (control.errors['minlength']) {
-      return `Minimum length must be ${control.errors['minlength'].requiredLength} characters`;
-    }
-    if (control.errors['passwordMismatch']) {
-      return 'Passwords do not match';
-    }
-    if (control.errors['requiredTrue']) {
-      return 'You must accept the terms and conditions';
-    }
-    return '';
+    return this._authService.getformErrorsByControlName(
+      controlName,
+      this._createAccountForm
+    );
   }
 
   resetCreateAccountForm(): void {
@@ -95,16 +80,10 @@ export class CreateAccountComponent {
   }
 
   toggleAllFormControlDisable(disable: boolean): void {
-    Object.keys(this._createAccountForm.controls).forEach(controlName => {
-      const control = this._createAccountForm.get(controlName);
-      if (control) {
-        if (disable) {
-          control.disable();
-        } else {
-          control.enable();
-        }
-      }
-    });
+    this._authService.toggleAllFormControlDisable(
+      disable,
+      this._createAccountForm
+    );
   }
 
   submitForm(): void {
