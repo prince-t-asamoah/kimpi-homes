@@ -22,7 +22,8 @@ export class FormInputComponent implements ControlValueAccessor {
     | 'password'
     | 'telephone'
     | 'email'
-    | 'textarea' = 'text';
+    | 'textarea'
+    | 'hidden' = 'text';
   @Input({ required: true }) id = '';
   @Input({ required: true }) label = '';
   @Input() placeholder = '';

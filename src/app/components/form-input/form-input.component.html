@@ -20,6 +20,18 @@
   </div>
 }
 
+@if (type === 'hidden') {
+  <input
+    hidden
+    type="text"
+    [id]="id"
+    [name]="name"
+    [value]="value"
+    [disabled]="disabled"
+    [attr.aria-hidden]="true"
+    [autocomplete]="autocomplete" />
+}
+
 @if (type === 'textarea') {
   <div class="form-field">
     <label [for]="id">{{ label }}</label>
