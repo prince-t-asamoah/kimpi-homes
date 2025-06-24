@@ -1,13 +1,52 @@
 import { Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { from, Observable } from 'rxjs';
 import { SupabaseService } from '../../../services/supabase/supabase.service';
 import { CreateAccountResponse } from '../models/auth.model';
-import { from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   constructor(private readonly _supabaseService: SupabaseService) {}
+
+  getformErrorsByControlName(
+    controlName: string,
+    formGroup: FormGroup
+  ): string {
+    const control = formGroup.get(controlName);
+    if (!control || !control.errors || !control.touched) return '';
+    if (control.errors['required']) {
+      return 'This field is required';
+    }
+
+    if (control.errors['email']) {
+      return 'Please enter a valid email address';
+    }
+    if (control.errors['minlength']) {
+      return `Minimum length must be ${control.errors['minlength'].requiredLength} characters`;
+    }
+    if (control.errors['passwordMismatch']) {
+      return 'Passwords do not match';
+    }
+    if (control.errors['requiredTrue']) {
+      return 'You must accept the terms and conditions';
+    }
+    return '';
+  }
+
+  toggleAllFormControlDisable(disable: boolean, formGroup: FormGroup): void {
+    Object.keys(formGroup.controls).forEach(controlName => {
+      const control = formGroup.get(controlName);
+      if (control) {
+        if (disable) {
+          control.disable();
+        } else {
+          control.enable();
+        }
+      }
+    });
+  }
 
   createAccount(newUser: {
     fullname: string;
