@@ -69,16 +69,6 @@ export class CreateAccountComponent {
     );
   }
 
-  resetCreateAccountForm(): void {
-    this._createAccountForm.reset({
-      fullname: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-      agreedToTerms: false,
-    });
-  }
-
   toggleAllFormControlDisable(disable: boolean): void {
     this._authService.toggleAllFormControlDisable(
       disable,
@@ -117,7 +107,7 @@ export class CreateAccountComponent {
               'Account created sucessfully',
               'success'
             );
-            this.resetCreateAccountForm();
+            this._createAccountForm.reset();
           }
         },
         error: error => {
