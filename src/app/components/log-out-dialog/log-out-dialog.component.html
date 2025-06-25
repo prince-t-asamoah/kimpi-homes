@@ -8,10 +8,22 @@
       </p>
     </div>
     <div class="modal-actions">
-      <button class="button-default" (click)="closeLogoutDialog()">
+      <button
+        class="button-default"
+        (click)="closeLogoutDialog()"
+        [disabled]="isLoggingOut">
         Cancel
       </button>
-      <button class="button-brand-filled">Logout</button>
+      <button
+        class="button-brand-filled"
+        (click)="logout()"
+        [disabled]="isLoggingOut">
+        @if (isLoggingOut) {
+          Logging out...
+        } @else {
+          Logout
+        }
+      </button>
     </div>
   </div>
 </div>

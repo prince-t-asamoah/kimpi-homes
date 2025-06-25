@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { from, Observable } from 'rxjs';
 import { SupabaseService } from '../../../services/supabase/supabase.service';
@@ -6,25 +6,17 @@ import {
   CreateAccountResponse,
   ForgotPasswordResponse,
   LoginResponse,
-} from '../models/auth.model';
+  LogoutResponse,
+} from '../models/auth.api.model';
 import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private _isAuthenticated = signal(false);
   private _appUrl = environment.appUrl;
 
   constructor(private readonly _supabaseService: SupabaseService) {}
-
-  get isAuthenticated(): boolean {
-    return this._isAuthenticated();
-  }
-
-  set isAuthenticated(value: boolean) {
-    this._isAuthenticated.set(value);
-  }
 
   getformErrorsByControlName(
     controlName: string,
@@ -89,6 +81,10 @@ export class AuthService {
         password,
       })
     );
+  }
+
+  logout(): Observable<LogoutResponse> {
+    return from(this._supabaseService.client.auth.signOut());
   }
 
   sendForgotPasswordEmail(email: string): Observable<ForgotPasswordResponse> {
