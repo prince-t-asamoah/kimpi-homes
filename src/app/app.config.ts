@@ -10,9 +10,11 @@ import {
 } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideStore } from '@ngrx/store';
 import { LucideAngularModule } from 'lucide-angular';
 import { routes } from './app.routes';
 import iconLibrary from './data/icon-library';
+import { appStoreReducers, metaReducers } from './app.store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -26,5 +28,6 @@ export const appConfig: ApplicationConfig = {
         ...iconLibrary,
       })
     ),
+    [provideStore(appStoreReducers, { metaReducers })],
   ],
 };
