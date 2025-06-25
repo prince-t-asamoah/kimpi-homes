@@ -81,7 +81,10 @@ export class LoginComponent {
             'You have successfully logged in.',
             'success'
           );
-          this._authService.isAuthenticated = true;
+          this._authService.setAuthData({
+            isAuthenticated: true,
+            user: response.data.user,
+          });
           this._router.navigate(['/']);
         }
       },

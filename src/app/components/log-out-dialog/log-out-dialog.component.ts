@@ -44,6 +44,7 @@ export class LogOutDialogComponent implements OnDestroy {
           console.error('Logout error:', response.error);
         } else {
           this.closeLogoutDialog();
+          this._authService.setAuthData({ isAuthenticated: false, user: null });
           this._router.navigate(['/']);
         }
       },

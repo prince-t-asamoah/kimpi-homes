@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { from, Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
 import { SupabaseService } from '../../../services/supabase/supabase.service';
 import {
   CreateAccountResponse,
@@ -9,6 +10,8 @@ import {
   LogoutResponse,
 } from '../models/auth.api.model';
 import { environment } from '../../../../environments/environment';
+import { AuthStoreState } from '../models/auth.store.model';
+import { updateAuthState } from '../auth.store.reducers';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +19,20 @@ import { environment } from '../../../../environments/environment';
 export class AuthService {
   private _appUrl = environment.appUrl;
 
-  constructor(private readonly _supabaseService: SupabaseService) {}
+  constructor(
+    private readonly _supabaseService: SupabaseService,
+    private readonly _store: Store<AuthStoreState>
+  ) {}
+
+  setAuthData({
+    isAuthenticated,
+    user,
+  }: {
+    isAuthenticated: boolean;
+    user: AuthStoreState['user'];
+  }): void {
+    this._store.dispatch(updateAuthState({ isAuthenticated, user }));
+  }
 
   getformErrorsByControlName(
     controlName: string,
