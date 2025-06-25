@@ -1,15 +1,23 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgClass } from '@angular/common';
-import { debounceTime, distinctUntilChanged, Subject, takeUntil } from 'rxjs';
+import { AsyncPipe, NgClass } from '@angular/common';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  Observable,
+  Subject,
+  Subscription,
+} from 'rxjs';
 import { LucideAngularModule } from 'lucide-angular';
+import { Store } from '@ngrx/store';
 import { UserMenuComponent } from '../user-menu/user-menu.component';
 import { SearchInputComponent } from '../search-input/search-input.component';
 import { ProductSearchSuggestionsComponent } from '../product-search-suggestions/product-search-suggestions.component';
 import { ProductSearchResultsDropdownComponent } from '../product-search-results-dropdown/product-search-results-dropdown.component';
 import { ProductListingsService } from '../../features/shop/services/product-listings/product-listings.service';
 import { SearchItem } from '../../model/search.model';
-import { AuthService } from '../../features/auth/services/auth.service';
+import { selectIsAuthenticated } from '../../features/auth/auth.store.reducers';
+import { AppStore } from '../../model/store.model';
 
 @Component({
   selector: 'app-navbar',
@@ -21,6 +29,7 @@ import { AuthService } from '../../features/auth/services/auth.service';
     ProductSearchSuggestionsComponent,
     ProductSearchResultsDropdownComponent,
     NgClass,
+    AsyncPipe,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
@@ -33,24 +42,23 @@ export class NavbarComponent implements OnInit, OnDestroy {
   showMainNavigation = false;
   showSearchProductBar = false;
   showSearchResultsList = false;
-  isAuthenticated = false;
+  isAuthenticated$!: Observable<boolean>;
   cartCount = 0;
   searchResults: SearchItem[] = [];
+  private readonly _subscriptions: Subscription = new Subscription();
 
-  constructor(private readonly _authService: AuthService) {
-    this.isAuthenticated = this._authService.isAuthenticated;
+  constructor(private readonly _store: Store<AppStore>) {
+    this.isAuthenticated$ = this._store.select(selectIsAuthenticated);
   }
 
   ngOnInit(): void {
-    this._searchProductEvent
-      .pipe(
-        debounceTime(300),
-        distinctUntilChanged(),
-        takeUntil(this._searchProductEventSubscription)
-      )
+    const searchProductEventSub = this._searchProductEvent
+      .pipe(debounceTime(300), distinctUntilChanged())
       .subscribe(() => {
         this._getProductSearchByTerm();
       });
+
+    this._subscriptions.add(searchProductEventSub);
   }
 
   ngOnDestroy(): void {

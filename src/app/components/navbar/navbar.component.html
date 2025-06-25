@@ -84,7 +84,7 @@
         <span class="cart-count">{{ cartCount }}</span>
       }
     </a>
-    @if (isAuthenticated) {
+    @if (isAuthenticated$ | async) {
       <app-user-menu></app-user-menu>
     } @else {
       <a routerLink="/login" class="login-link button-brand-filled">Login</a>
