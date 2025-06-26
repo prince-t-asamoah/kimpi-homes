@@ -7,8 +7,8 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root',
 })
 export class SupabaseService {
-  private _supabaseUrl = environment.supabaseUrl;
-  private _supabaseKey = environment.supabaseKey;
+  private _supabaseUrl = environment.databaseUrl;
+  private _supabaseKey = environment.databaseKey;
   public client!: SupabaseClient;
 
   constructor(@Inject(PLATFORM_ID) private _platformId: object) {
@@ -21,7 +21,7 @@ export class SupabaseService {
         'Supabase client can only be initialized in the browser environment'
       );
     }
-    if (!environment.supabaseUrl || !environment.supabaseKey) {
+    if (!this._supabaseUrl || !this._supabaseKey) {
       throw new Error(
         'Supabase URL and Key must be provided in environment variables'
       );
